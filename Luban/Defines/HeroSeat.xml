@@ -1,0 +1,43 @@
+<module name="">
+
+    
+    <!-- 备战席等级配置 -->
+
+    <bean name="HeroSeatLevelConfig">
+
+        <var name="Level" type="int" />
+        <var name="UnLockSeat" type="int" />
+        <var name="NeedItems" type="(list#sep=|),RewardAndNum" />
+        <var name="BaseAttributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc1" type="string" />
+    </bean>
+    <table name="TbHeroSeatLevelConfig" value="HeroSeatLevelConfig" input="GamePlay/HeroSeatLevelConfig.xlsx"/>
+
+
+   <!-- 备战席配置 -->
+
+  <bean name="HeroSeatConfig">
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Quality" type="QualityType" />
+        <var name="Icon" type="string" />
+        <var name="NeedItems" type="(list#sep=|),RewardAndNum" />
+        <var name="SeatLevelList" type="(list#sep=|), SeatLevelListStruct" />
+    </bean>
+
+
+    <bean name="SeatLevelListStruct">
+        <var name="Level" type="int" />
+        <var name="FightNum" type="int" />
+        <var name="LevelUpItems" type="(list#sep=|),RewardAndNum" />        
+        <var name="BaseAttributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc1" type="string" />
+        <var name="ExtraAttributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc2" type="string" />
+        <var name="Desc3" type="string" />
+    </bean>
+
+
+	<table name="TbHeroSeatConfig" value="HeroSeatConfig" input="GamePlay/HeroSeatConfig.xlsx"/>
+
+</module>

@@ -1,0 +1,462 @@
+[
+  {
+    "Id": 1,
+    "PreId": 0,
+    "Type": 32,
+    "Name": "设置形象",
+    "StepList": [
+      {
+        "Step": 1,
+        "Type": 32,
+        "TipType": 0,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 0,
+        "AddMask": 0,
+        "TipText": "",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "",
+        "GuideUITwo": "",
+        "SceneType": 0
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "PreId": 1,
+    "Type": 0,
+    "Name": "引导关卡",
+    "StepList": [
+      {
+        "Step": 1,
+        "Type": 1,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [
+          16
+        ],
+        "ConditionStepDone": 0,
+        "AddMask": 1,
+        "TipText": "击杀怪物可以获得金币,金币可以升级或购买强化效果!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -100,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 250,
+          "y": 100,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleInterPanel/GoldBar",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 2,
+        "Type": 16,
+        "TipType": 10,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 0,
+        "AddMask": 1,
+        "TipText": "英灵技能可以通过点击朝着距离最近的敌人方向释放!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -400,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "GameLandUI/pve/SkillRect/cardScroll",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 3,
+        "Type": 4,
+        "TipType": 1,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 5,
+        "AddMask": 1,
+        "TipText": "花费金币可直接购买流派卡",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 160,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 200,
+          "y": 200,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleInterPanel/BuySkillBtn",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 4,
+        "Type": 30,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 4,
+        "AddMask": 1,
+        "TipText": "强化卡会带来强力特殊效果,品质越稀有,效果越强大!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 900,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 900,
+          "y": 200,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/PopUI/SchoolChooseCardPanel/Canvas/Head/TouchBar",
+        "GuideUITwo": "UIRoot/PopUI/SchoolChooseCardPanel/Canvas/Head/GuideNode2",
+        "SceneType": 1
+      },
+      {
+        "Step": 5,
+        "Type": 8,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 0,
+        "AddMask": 1,
+        "TipText": "点击已选择的强化查看具体效果!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 20,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 650,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 150,
+          "y": 150,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleTimePanel/AutoAttackBtn",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 6,
+        "Type": 5,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 1,
+        "AddMask": 1,
+        "TipText": "可以花费金币进行等级提升!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 80,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -100,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 150,
+          "y": 250,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleInterPanel/BuyExpBtn",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 7,
+        "Type": 9,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 10,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 0,
+        "AddMask": 1,
+        "TipText": "升级会解锁更多英灵登场,同时增加高品质强化出现的概率!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": -10,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -400,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 200,
+          "y": 200,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "GameLand/Canvas/FriendlySlot/Pos1",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 8,
+        "Type": 10,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 9,
+        "AddMask": 1,
+        "TipText": "每个登场的英灵都会携带已学习的技能卡进入战斗",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 200,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -100,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 400,
+          "y": 300,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "GameLandUI/pve/SkillRect/cardScroll",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 9,
+        "Type": 27,
+        "TipType": 11,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 10,
+        "AddMask": 1,
+        "TipText": "领主/精英拥有韧性,攻击/技能可以降低韧性,破韧后,怪物进入虚弱状态,此时会承受200%的额外伤害",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 300,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 600,
+          "y": 200,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 10,
+        "Type": 31,
+        "TipType": 11,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 29,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 27,
+        "AddMask": 1,
+        "TipText": "怪物已经进入虚弱状态!趁现在尽情输出吧!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": -250,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 600,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 400,
+          "y": 400,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 11,
+        "Type": 12,
+        "TipType": 8,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 0,
+        "AddMask": 1,
+        "TipText": "连续释放技能可触发Combo效果,带来额外的破韧与伤害倍率加成,快试试看吧!",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": -180,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 200,
+          "y": 200,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleInterPanel/Combo",
+        "GuideUITwo": "",
+        "SceneType": 1
+      },
+      {
+        "Step": 12,
+        "Type": 29,
+        "TipType": 1,
+        "ArrowOneType": 4,
+        "ArrowTwoType": 4,
+        "CompleteNextStep": 0,
+        "CompleteSetIdList": [],
+        "ConditionStepDone": 16,
+        "AddMask": 0,
+        "TipText": "点击自动战斗按钮开启自动战斗",
+        "Duration": 0,
+        "Icon": "",
+        "Position": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "DialogePosition": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "HighLightSize": {
+          "x": 300,
+          "y": 300,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "LoadScale": 0,
+        "GuideUI": "UIRoot/Common/BattlePanel/SubPanel/BattleTimePanel/AutoAttackBtn",
+        "GuideUITwo": "",
+        "SceneType": 1
+      }
+    ]
+  }
+]

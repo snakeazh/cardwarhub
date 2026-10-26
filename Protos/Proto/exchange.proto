@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 兑换礼包
+// ============================================================
+
+message CodeExchangeGiftsRequest {
+  string code = 1;
+}
+
+message CodeExchangeGiftsResponse {
+  PlayerExchangeGift exchange_gift = 1;
+  map<int32, int64> rewards = 2;
+  ResultItems items = 3;
+}

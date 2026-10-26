@@ -1,0 +1,1878 @@
+[
+  {
+    "Id": 10001,
+    "PreId": 0,
+    "Type": 32,
+    "ConditionType": 0,
+    "Name": "",
+    "Desc": "",
+    "AppearLv": 1,
+    "Rewards": [],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 2,
+        "DialogText": "设置形象",
+        "Duration": 5,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0.5,
+        "DialogScale": 0.8
+      }
+    ]
+  },
+  {
+    "Id": 10002,
+    "PreId": 10001,
+    "Type": 0,
+    "ConditionType": 0,
+    "Name": "引导关卡",
+    "Desc": "",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010008,
+        "Num": 3
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10003,
+    "PreId": 10002,
+    "Type": 33,
+    "ConditionType": 0,
+    "Name": "英灵升级",
+    "Desc": "在英灵页面完成1次英灵升级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1026001,
+        "Num": 10
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 4,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10004,
+    "PreId": 10003,
+    "Type": 34,
+    "ConditionType": 0,
+    "Name": "奥术卡抽取",
+    "Desc": "在商城进行一次奥术卡5连抽",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 3,
+            "Param": "100002"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10005,
+    "PreId": 10004,
+    "Type": 35,
+    "ConditionType": 0,
+    "Name": "配置卡组I",
+    "Desc": "在卡组页面完成1次卡组配置",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 2000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 4,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10006,
+    "PreId": 10005,
+    "Type": 36,
+    "ConditionType": 1,
+    "Name": "挑战关卡I",
+    "Desc": "完成1次关卡挑战",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 6,
+            "Param": "3001001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10007,
+    "PreId": 10006,
+    "Type": 37,
+    "ConditionType": 0,
+    "Name": "天赋激活I",
+    "Desc": "在世界页面激活1次普通天赋",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 0,
+            "Param": "TalentUpgrateBtn"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10008,
+    "PreId": 10007,
+    "Type": 38,
+    "ConditionType": 0,
+    "Name": "技能养成",
+    "Desc": "在英灵页面升级1次技能",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 4,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10009,
+    "PreId": 10008,
+    "Type": 39,
+    "ConditionType": 4,
+    "Name": "学习技能",
+    "Desc": "在英灵-[养成]页面学习新技能",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 14,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10010,
+    "PreId": 10009,
+    "Type": 40,
+    "ConditionType": 1,
+    "Name": "挑战关卡II",
+    "Desc": "完成1次关卡挑战",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 6,
+            "Param": "3002001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10011,
+    "PreId": 10010,
+    "Type": 41,
+    "ConditionType": 0,
+    "Name": "锻造装备I",
+    "Desc": "在英灵页面锻造1次装备",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 7,
+            "Param": "Equip"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10012,
+    "PreId": 10011,
+    "Type": 42,
+    "ConditionType": 1,
+    "Name": "挑战关卡III",
+    "Desc": "完成1次关卡挑战",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 6,
+            "Param": "3003001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10013,
+    "PreId": 10012,
+    "Type": 43,
+    "ConditionType": 0,
+    "Name": "天赋激活II",
+    "Desc": "在世界页面激活1次特殊天赋",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 0,
+            "Param": "TalentUpgrateBtn"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10014,
+    "PreId": 10013,
+    "Type": 44,
+    "ConditionType": 3,
+    "Name": "购买英灵",
+    "Desc": "在商店-[英灵]页面购买英灵\"流浪剑客\"西岚",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 8,
+            "Param": "2010001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10015,
+    "PreId": 10014,
+    "Type": 45,
+    "ConditionType": 0,
+    "Name": "配置卡组II",
+    "Desc": "在卡组页面同时配置2个英灵",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10016,
+    "PreId": 10015,
+    "Type": 46,
+    "ConditionType": 1,
+    "Name": "挑战关卡IV",
+    "Desc": "完成1次关卡挑战",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 6,
+            "Param": "3004001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10017,
+    "PreId": 10016,
+    "Type": 47,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至6级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "6"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10018,
+    "PreId": 10017,
+    "Type": 48,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至7级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "7"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10019,
+    "PreId": 10018,
+    "Type": 49,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至8级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "8"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10020,
+    "PreId": 10019,
+    "Type": 50,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至9级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "9"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10021,
+    "PreId": 10020,
+    "Type": 51,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至10级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "10"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10022,
+    "PreId": 10021,
+    "Type": 52,
+    "ConditionType": 0,
+    "Name": "装饰穿戴",
+    "Desc": "在世界页面佩戴1次装饰佩戴",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 12,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10023,
+    "PreId": 10022,
+    "Type": 53,
+    "ConditionType": 0,
+    "Name": "洗炼词条",
+    "Desc": "在装备页面进行1次词条洗炼",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 7,
+            "Param": "Equip"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10024,
+    "PreId": 10023,
+    "Type": 54,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至11级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "11"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10025,
+    "PreId": 10024,
+    "Type": 55,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至12级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "12"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10026,
+    "PreId": 10025,
+    "Type": 56,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至13级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "13"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10027,
+    "PreId": 10026,
+    "Type": 57,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至14级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "14"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10028,
+    "PreId": 10027,
+    "Type": 58,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至15级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "15"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10029,
+    "PreId": 10028,
+    "Type": 59,
+    "ConditionType": 0,
+    "Name": "宝石迷阵",
+    "Desc": "在世界页面完成1次宝石迷阵",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 13,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10030,
+    "PreId": 10029,
+    "Type": 60,
+    "ConditionType": 0,
+    "Name": "合成融合石",
+    "Desc": "在装备页面合成1次融合石",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 7,
+            "Param": "Gem"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10031,
+    "PreId": 10030,
+    "Type": 61,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至16级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "16"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10032,
+    "PreId": 10031,
+    "Type": 62,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至17级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "17"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10033,
+    "PreId": 10031,
+    "Type": 63,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至18级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "18"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10036,
+    "PreId": 10035,
+    "Type": 66,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至19级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "19"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10037,
+    "PreId": 10036,
+    "Type": 67,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至20级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "20"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10038,
+    "PreId": 10037,
+    "Type": 68,
+    "ConditionType": 0,
+    "Name": "英灵觉醒",
+    "Desc": "在英灵页面完成1次英灵觉醒",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 4,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10039,
+    "PreId": 10038,
+    "Type": 69,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至21级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "21"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  },
+  {
+    "Id": 10040,
+    "PreId": 10039,
+    "Type": 70,
+    "ConditionType": 2,
+    "Name": "角色升级",
+    "Desc": "将轮语者等级提升至22级",
+    "AppearLv": 1,
+    "Rewards": [
+      {
+        "Id": 1010001,
+        "Num": 1000
+      }
+    ],
+    "StepList": [
+      {
+        "StepId": 1,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "设置形象",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 11,
+            "Param": "22"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "1"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "3000001"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 4,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 4,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "3000002"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [
+          {
+            "Type": 1,
+            "Param": "2070003"
+          }
+        ],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 2,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      },
+      {
+        "StepId": 3,
+        "UnLockLevel": 0,
+        "DialogType": 1,
+        "DialogText": "",
+        "Duration": 0,
+        "SkipPath": [],
+        "DialogOffset": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "TypingSpeed": 0,
+        "DialogScale": 0
+      }
+    ]
+  }
+]

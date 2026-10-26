@@ -1,0 +1,31 @@
+<module name="">
+
+    <bean name="int2" valueType="1" sep=",">
+        <var name="x" type="int"/>
+        <var name="y" type="int"/>
+        <mapper target="client,server,all" codeTarget="cs-bin">
+            <option name="type" value="Unity.Mathematics.int2"/>
+            <option name="constructor" value="ExternalTypeUtil.int2"/>
+        </mapper>
+    </bean>
+
+    <bean name="float2" valueType="1" sep=",">
+        <var name="x" type="float"/>
+        <var name="y" type="float"/>
+        <mapper target="client,server,all" codeTarget="cs-bin">
+            <option name="type" value="Unity.Mathematics.float2"/>
+            <option name="constructor" value="ExternalTypeUtil.float2"/>
+        </mapper>
+    </bean>
+
+    <bean name="float3" valueType="1" sep=",">
+        <var name="x" type="float"/>
+        <var name="y" type="float"/>
+        <var name="z" type="float"/>
+        <mapper target="client,server,all" codeTarget="cs-bin">
+            <option name="type" value="Unity.Mathematics.float3"/>
+            <option name="constructor" value="ExternalTypeUtil.float3"/>
+        </mapper>
+    </bean>
+
+</module>

@@ -1,0 +1,12 @@
+<linker>
+  <!-- 纯 AOT（HYBRIDCLR 宏关闭 / WebGL 微信小游戏）模式下，
+       HotFix 入口 GameEntry.StartGame 由 ResourceInitStep 反射调用，
+       防止 IL2CPP 托管裁剪把入口裁掉。 -->
+  <assembly fullname="HotFix" preserve="all"/>
+  <!-- YooAsset 的 IFileSystem 及文件系统实现类是 internal，仅通过接口调用，
+       WebGL Medium 裁剪会把实现裁掉导致 MethodAccessException，整程序集保护。 -->
+  <assembly fullname="YooAsset" preserve="all"/>
+  <!-- Luban 配置表运行时、Newtonsoft.Json 重度依赖反射，防裁剪 -->
+  <assembly fullname="Luban.Runtime" preserve="all"/>
+  <assembly fullname="Newtonsoft.Json" preserve="all"/>
+</linker>

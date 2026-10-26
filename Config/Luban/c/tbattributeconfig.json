@@ -1,0 +1,3137 @@
+[
+  {
+    "AttributeType": 0,
+    "Name": "UI_ATTR_HEALTH",
+    "Icon": "MaximumHealthMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 1,
+    "Name": "UI_ATTR_CURRENT_HEALTH",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 2,
+    "Name": "UI_ATTR_ATTACK_POWER",
+    "Icon": "AttackPowerMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 3,
+    "Name": "UI_ATTR_MAGIC_POWER",
+    "Icon": "MagicIntensityMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 4,
+    "Name": "UI_ATTR_ATTACK_SPEED",
+    "Icon": "AttackSpeedMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 3000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 5,
+    "Name": "UI_ATTR_ARMOR",
+    "Icon": "ArmourMarking",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 4500
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 6,
+    "Name": "UI_ATTR_MAGIC_RESISTANCE",
+    "Icon": "MagicResistanceMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 4500
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 7,
+    "Name": "UI_ATTR_CRITICAL_HIT_RATE",
+    "Icon": "CriticalHitChanceMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 8,
+    "Name": "英灵最大暴击率",
+    "Icon": "CriticalHitChanceMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 9,
+    "Name": "UI_ATTR_CRITICAL_DAMAGE",
+    "Icon": "CriticalHitDamageMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 10
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 10,
+    "Name": "UI_ATTR_ARMOR_PENETRATION",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 11,
+    "Name": "UI_ATTR_MAGIC_PENETRATION",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 12,
+    "Name": "英灵百分比护甲穿透",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 13,
+    "Name": "英灵百分比魔法穿透",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 16,
+    "Name": "UI_ATTR_DODGE_VALUE",
+    "Icon": "DodgeValueMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 17,
+    "Name": "UI_ATTR_ATTACK_RANGE",
+    "Icon": "AttackRangeMarker",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 10000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 18,
+    "Name": "UI_ATTR_BALLISTIC_SIZE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 1,
+      "Maximum": 10
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 19,
+    "Name": "UI_ATTR_BALLISTIC_FIRING_RATE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 20,
+    "Name": "UI_ATTR_ATTACK_INTERVAL",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0.1,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 14,
+    "Name": "UI_ATTR_SPIRITUAL_TEMP_ARMOR_PENETRATION",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 15,
+    "Name": "UI_ATTR_SPIRITUAL_TEMP_MAGIC_PENETRATION",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 99,
+    "Name": "技能允许暴击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 21,
+    "Name": "UI_ATTR_CRITICAL_HIT_RATE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 22,
+    "Name": "UI_ATTR_FIRE_RATE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 23,
+    "Name": "力量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 24,
+    "Name": "智力",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 25,
+    "Name": "敏捷",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 26,
+    "Name": "普通攻击齐射数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 27,
+    "Name": "普通攻击伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": -100000,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 28,
+    "Name": "普通攻击附加真实伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 29,
+    "Name": "锁定普通攻击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 30,
+    "Name": "对虚弱敌人必定暴击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 31,
+    "Name": "暴击率不再生效",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 32,
+    "Name": "英灵护盾值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 89,
+    "Name": "每秒卡能碎片恢复量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 92,
+    "Name": "主动技能冷却时间上限",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 90,
+    "Name": "初始卡能值增加",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 91,
+    "Name": "卡能值上限增加",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 94,
+    "Name": "英灵卡槽数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 5
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 95,
+    "Name": "被动卡槽数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 6
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 96,
+    "Name": "技能卡槽数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 6
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 97,
+    "Name": "流派初始层数",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 13
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 98,
+    "Name": "普通攻击额外攻击次数",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 10
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 93,
+    "Name": "怪物掉落卡能碎片",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 100,
+    "Name": "解锁流派英灵加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": [
+      {
+        "Type": 2,
+        "Value": 0.1,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 3,
+        "Value": 0.1,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 4,
+        "Value": 50,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 7,
+        "Value": 0.01,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "AttributeType": 102,
+    "Name": "当前技能冷却时间修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 104,
+    "Name": "学习技能雷霆领域",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 105,
+    "Name": "英灵普攻重击技能",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 106,
+    "Name": "英灵普攻破军一击技能",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 103,
+    "Name": "学习技能风舞疾袭",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 107,
+    "Name": "英灵释放技能秘法彗星",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 108,
+    "Name": "测试全屏伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 109,
+    "Name": "学习主城技能能量迸发",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 110,
+    "Name": "怪物连续受击3次造成最大生命值伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 111,
+    "Name": "怪物斩杀线",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 112,
+    "Name": "一人成军",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 113,
+    "Name": "流派唤醒",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 114,
+    "Name": "祈祷随机强化场上英灵",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": [
+      {
+        "Type": 4,
+        "Value": 0.1,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 7,
+        "Value": 0.05,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "AttributeType": 115,
+    "Name": "站位相邻主属性加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 116,
+    "Name": "站位相邻伤害减免",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 117,
+    "Name": "周围一格内无英灵属性加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 118,
+    "Name": "学习buff效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 119,
+    "Name": "学习技能效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 120,
+    "Name": "普通攻击连击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 121,
+    "Name": "学习条件buff",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 124,
+    "Name": "英灵碎骨斩",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 125,
+    "Name": "学习专属效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 127,
+    "Name": "移除buff效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 126,
+    "Name": "学习规则",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 128,
+    "Name": "战斗货币初始数量修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 129,
+    "Name": "装备词条属性效果修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 33,
+    "Name": "英灵易损伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 35,
+    "Name": "英灵额外魔法强度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 37,
+    "Name": "单个英灵满暴击率",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 36,
+    "Name": "英灵无法回复血量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 34,
+    "Name": "英灵恢复当前生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 38,
+    "Name": "英灵普通攻击穿透数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 39,
+    "Name": "获得攻击力效果加倍",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 41,
+    "Name": "攻击力转化额外魔法强度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 40,
+    "Name": "英灵无法释放主动技能",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 42,
+    "Name": "英灵每秒恢复生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 43,
+    "Name": "英灵触发暴击概率恢复生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 44,
+    "Name": "英灵释放技能恢复最大生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 46,
+    "Name": "英灵受击伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": -1000000,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 47,
+    "Name": "英灵暴怒状态",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 48,
+    "Name": "英灵顽强意志",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": [
+      {
+        "Type": 140,
+        "Value": 0.05,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 46,
+        "Value": -0.05,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "AttributeType": 49,
+    "Name": "英灵造成伤害转化为生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 50,
+    "Name": "英灵造成物理或魔法伤害转化为真实伤害比例",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 45,
+    "Name": "英灵灵魂破绽",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 51,
+    "Name": "英灵镜像",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": -1000000,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 52,
+    "Name": "英灵连续触发暴击次数附加伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": -1000000,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 53,
+    "Name": "英灵能否被拖动",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 54,
+    "Name": "英灵每秒恢复百分比自身最大生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 55,
+    "Name": "英灵立即恢复自身百分比最大生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 56,
+    "Name": "战士系英灵伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 57,
+    "Name": "射手系英灵伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 58,
+    "Name": "法师系英灵伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 59,
+    "Name": "刺客系英灵伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 60,
+    "Name": "辅助系英灵伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 132,
+    "Name": "额外物理伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 133,
+    "Name": "额外魔法伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 134,
+    "Name": "额外真实伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 135,
+    "Name": "所有伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 136,
+    "Name": "物理伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 137,
+    "Name": "魔法伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 138,
+    "Name": "真实伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 140,
+    "Name": "伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 139,
+    "Name": "加倍伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 144,
+    "Name": "临时真实伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 145,
+    "Name": "临时加倍伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 146,
+    "Name": "附加自身最大生命值百分比的真实伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 147,
+    "Name": "UI_ATTR_BASE_DAMAGE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 148,
+    "Name": "UI_ATTR_COOLDOWN_TIME",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 1,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 149,
+    "Name": "UI_ATTR_REMAINING_COOLDOWN_TIME",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 150,
+    "Name": "UI_ATTR_REQUIRED_CARD_ENERGY",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 151,
+    "Name": "UI_ATTR_FIRE_RATE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 152,
+    "Name": "UI_ATTR_DURATION_TIME",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 153,
+    "Name": "UI_ATTR_CHARGE_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 175,
+    "Name": "UI_ATTR_PENETRATION_DAMAGE_INHERITANCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 154,
+    "Name": "UI_ATTR_PENETRATION_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 155,
+    "Name": "UI_ATTR_INHERITED_ATTACK_POWER",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 156,
+    "Name": "UI_ATTR_INHERITED_MAGIC_POWER",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 157,
+    "Name": "UI_ATTR_RANGE_VALUE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 158,
+    "Name": "UI_ATTR_SKILL_DAMAGE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 161,
+    "Name": "UI_ATTR_BURST_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 162,
+    "Name": "UI_ATTR_BURST_SPEED",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 163,
+    "Name": "技能连射伤害继承",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 159,
+    "Name": "UI_ATTR_VOLLEY_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 160,
+    "Name": "UI_ATTR_VOLLEY_ANGLE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 168,
+    "Name": "UI_ATTR_PROJECTILES_PER_WAVE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 164,
+    "Name": "UI_ATTR_SPLIT_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 165,
+    "Name": "UI_ATTR_SPLIT_DAMAGE_INHERITANCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 166,
+    "Name": "UI_ATTR_RE_SPLIT_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 167,
+    "Name": "UI_ATTR_RE_SPLIT_DAMAGE_INHERITANCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 169,
+    "Name": "UI_ATTR_EXPLOSION_RANGE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 170,
+    "Name": "UI_ATTR_ARROW_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 171,
+    "Name": "UI_ATTR_BOUNCE_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 172,
+    "Name": "UI_ATTR_CONTINUOUS_DAMAGE_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 174,
+    "Name": "UI_ATTR_SKILL_LIGHTNING_TRUE_DAMAGE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 176,
+    "Name": "UI_ATTR_SKILL_WALL_BOUNCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 177,
+    "Name": "技能击飞怪物",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 178,
+    "Name": "技能击退怪物",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 179,
+    "Name": "技能暴击落雷",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 180,
+    "Name": "技能暴击落雷大小",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 181,
+    "Name": "技能暴击伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 182,
+    "Name": "技能韧性伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 183,
+    "Name": "技能对灼烧单位额外伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1000000
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 184,
+    "Name": "技能继承怪物参数百分比",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 208,
+    "Name": "是否爆炸",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 209,
+    "Name": "技能重复释放",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 211,
+    "Name": "暗杀者冷却修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 212,
+    "Name": "暗杀者额外增伤",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 213,
+    "Name": "灼烧变为真伤",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 214,
+    "Name": "附加法强的魔法伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 215,
+    "Name": "普攻变为法球",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 216,
+    "Name": "火焰之灵质变效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 217,
+    "Name": "伊莱娅群体祝福",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 218,
+    "Name": "圣光印记效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 221,
+    "Name": "本次普通攻击必定暴击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 222,
+    "Name": "本次技能必定暴击",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 62,
+    "Name": "怪物最大生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 64,
+    "Name": "怪物攻击力",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 65,
+    "Name": "怪物魔法强度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 66,
+    "Name": "怪物攻击速度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 5000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 67,
+    "Name": "怪物物理抗性",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 5000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 68,
+    "Name": "怪物魔法抗性",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 5000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 71,
+    "Name": "怪物闪避值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 10000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 72,
+    "Name": "怪物攻击范围",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 10000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 73,
+    "Name": "怪物移动速度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 5000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 74,
+    "Name": "UI_ATTR_IMMUNE_TO_ABNORMAL_EFFECTS",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 75,
+    "Name": "UI_ATTR_IMMUNE_TO_CONTROL_EFFECTS",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 76,
+    "Name": "UI_ATTR_MONSTER_FIRST_HIT_MOVEMENT_SPEED_MODIFIER",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": -10000,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 77,
+    "Name": "UI_ATTR_MONSTER_HIT_PROBABILITY_CANNOT_PENETRATE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 78,
+    "Name": "UI_ATTR_MONSTER_HEALTH_BELOW_TRIGGER_INVINCIBILITY_AND_SPEED_BOOST",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 79,
+    "Name": "UI_ATTR_MONSTER_DEATH_SPLIT_COUNT",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 69,
+    "Name": "UI_ATTR_MONSTER_TEMPORARY_PHYSICAL_RESISTANCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 70,
+    "Name": "UI_ATTR_MONSTER_TEMPORARY_MAGIC_RESISTANCE",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 80,
+    "Name": "怪物受到力量型英灵伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 81,
+    "Name": "怪物受到敏捷型英灵伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 82,
+    "Name": "怪物受到智力型英灵伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 83,
+    "Name": "怪物韧性值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 84,
+    "Name": "怪物破韧后受到伤害加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 85,
+    "Name": "怪物虚弱时间",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 86,
+    "Name": "怪物每秒韧性恢复",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 50000
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 63,
+    "Name": "怪物当前生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 87,
+    "Name": "怪物参数",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 88,
+    "Name": "怪物闪避率",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 6,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 101,
+    "Name": "每波怪物数量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 185,
+    "Name": "所有流派初始层数",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 192,
+    "Name": "击杀敌人额外战斗货币",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 130,
+    "Name": "击杀精英或首领额外货币",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 131,
+    "Name": "击杀精英或首领血量回复",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 187,
+    "Name": "释放技能概率恢复自身生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 188,
+    "Name": "英灵攻击速度转普攻伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 186,
+    "Name": "英灵满血三维数值提高",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 189,
+    "Name": "减速效果叠加",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 190,
+    "Name": "英灵普攻次数额外魔法加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 191,
+    "Name": "英灵普攻额外真伤",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 193,
+    "Name": "英灵生命值低于百分之多少额外加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": [
+      {
+        "Type": 140,
+        "Value": 0.4,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "AttributeType": 194,
+    "Name": "英灵回合未受击加成主属性",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 195,
+    "Name": "生命值高于百分多少敌人额外伤害加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 196,
+    "Name": "生命值低于百分多少敌人额外伤害加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 197,
+    "Name": "英灵技能暴击当前冷却时间重置",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 198,
+    "Name": "对普通敌人造成的伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 199,
+    "Name": "对精英敌人造成的伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 200,
+    "Name": "对首领敌人造成的伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 201,
+    "Name": "物理伤害吸血",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 202,
+    "Name": "魔法伤害吸血",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 203,
+    "Name": "破韧状态下伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 204,
+    "Name": "破韧状态下普攻减冷却",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 4,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 205,
+    "Name": "普通攻击叠攻速",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 4,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 206,
+    "Name": "随机获得稀有强化",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 1,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 207,
+    "Name": "锁定攻击间隔",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 210,
+    "Name": "灼烧增伤",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 223,
+    "Name": "锁定攻击速度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 3,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 224,
+    "Name": "BUFF基础伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 225,
+    "Name": "BUFF百分比伤害加成",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 226,
+    "Name": "BUFF持续时间",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 227,
+    "Name": "BUFF触发间隔",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 228,
+    "Name": "BUFF叠加层数",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 229,
+    "Name": "BUFF触发概率",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 1
+    },
+    "Algorithm": "加法",
+    "Category": 2,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 231,
+    "Name": "增加攻击力",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 232,
+    "Name": "增加魔法强度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 236,
+    "Name": "增加最大生命值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 237,
+    "Name": "增加攻击间隔",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 238,
+    "Name": "增加暴击伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 239,
+    "Name": "增加冷却时间",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 233,
+    "Name": "增加技能基础伤害",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 234,
+    "Name": "增加伤害量",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 235,
+    "Name": "增加伤害修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 219,
+    "Name": "击杀增加魔法强度",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 220,
+    "Name": "祈祷效果属性修正",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 240,
+    "Name": "增加持续时间",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 241,
+    "Name": "增加效果值",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 242,
+    "Name": "根深蒂固效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  },
+  {
+    "AttributeType": 243,
+    "Name": "生命复苏效果",
+    "Icon": "",
+    "ValueLimit": {
+      "Minimum": 0,
+      "Maximum": 2.1E+09
+    },
+    "Algorithm": "加法",
+    "Category": 8,
+    "DisplayType": 0,
+    "AdditionAttributes": []
+  }
+]

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 抽卡
+// ============================================================
+
+message ChestRequest {
+  int32 pool_id = 1;
+  int32 chest_count = 2;
+}
+
+message ChestResponse {
+  PlayerChestPool pool = 1;
+  repeated int32 cards = 2;
+  ResultItems items = 3;
+  repeated RewardAndNum rewards = 4;
+}

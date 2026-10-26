@@ -1,0 +1,92 @@
+<module name="">
+
+    <!-- 任务类型 -->
+    <enum name="TaskType">
+        <var name="Daily" alias="每日任务" />
+        <var name="Weekly" alias="每周任务" />        
+        <var name="ChapterAchievements" alias="章节成就" />
+        <var name="PvPTicket" alias="竞技门票" />
+        <var name="Guild" alias="公会任务" />
+        <var name="PvPChallenge" alias="PvP挑战" />
+
+    </enum>
+
+    <!-- 刷新类型 -->
+    <enum name="RefreshTimeType">
+        <var name="Daily" alias="每日" />
+        <var name="Weekly" alias="每周" />        
+        <var name="NeverRefresh" alias="永久" />
+
+    </enum>
+
+
+
+    <!-- 任务目标类型 -->
+    <enum name="TaskTargetType">
+        <var name="DailyLoginToGames" alias="每日登录" />
+        <var name="DailyPhysicalExertion" alias="每日消耗体力" />
+        <var name="StackingACertainEffect" alias="将任意流派叠加至满层" />
+        <var name="ChallengeLevel" alias="挑战关卡" />
+        <var name="CompleteAllDifficulties" alias="完成章节所有难度" />
+        <var name="NeedPayItem" alias="花费道具购买" />   
+        <var name="DailyFree" alias="每日免费" />       
+        <var name="ChallengePvPNum" alias="挑战PvP次数" />                  
+
+        <!-- 有参数类型 -->
+        <var name="ConsumeSpecifyItemId" alias="消耗指定道具" />
+       
+    </enum>
+
+    <!-- 任务状态 -->
+    <enum name="TaskState">
+        <var name="Progress" alias="进行中" />
+        <var name="Complete" alias="已达成目标" />
+        <var name="Received" alias="已领取" />
+    </enum>
+
+    <!-- 显示面板类型 -->
+    <enum name="ShowPanelType">
+        <var name="DailyTask" alias="每日任务" />
+        <var name="MainTask" alias="成就任务" />
+    </enum>
+    
+    <!-- 任务配置 -->
+    <bean name="TaskConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="TaskType" />
+        <var name="RefreshType" type="RefreshTimeType" />
+        <var name="Name" type="string" />
+        <var name="TaskList" type="list,TaskListStruct" />
+
+	</bean>
+	<table name="TbTaskConfig" value="TaskConfig" input="GamePlay/TaskConfig.xlsx"/>
+
+    <!-- 任务类型配置 -->
+    <bean name="TaskTypeConfig" >
+        <var name="Type" type="TaskType" />
+        <var name="Name" type="string" />
+        <var name="ShowPanel" type="ShowPanelType" />
+        <var name="Desc" type="string" />
+        <var name="ActivityList" type="list,TaskActivityListStruct" />
+	</bean>
+	<table name="TbTaskTypeConfig" value="TaskTypeConfig" input="GamePlay/TaskTypeConfig.xlsx"/>
+
+    <!-- 活跃度列表结构 -->
+    <bean name="TaskActivityListStruct">
+        <var name="ActiveNum" type="int" />
+        <var name="ChestIcon" type="string" />
+        <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    </bean>
+
+    <!-- 任务列表结构 -->
+    <bean name="TaskListStruct">
+        <var name="TaskNum" type="int" />    
+        <var name="Id" type="int" />            
+        <var name="Desc" type="string" />
+        <var name="TargetType" type="TaskTargetType" />
+        <var name="TargetNum" type="int" />
+        <var name="TargetParam1" type="int" />
+        <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    </bean>
+
+</module>

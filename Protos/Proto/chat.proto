@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 聊天协议
+// ============================================================
+
+// 频道枚举
+enum ChatChannelType {
+  // 0：世界频道
+  ChannelType_WORLD = 0;
+  // 1：系统频道
+  ChannelType_SYSTEM = 1;
+}
+
+// 聊天类型
+enum ChatType {
+  // 私聊
+  ChatType_private = 0;
+  // 频道聊天
+  ChatType_channel = 1;
+}
+
+
+// 点聊天协议
+// /api/chat/toPlayer
+message ChatToPlayerRequest {
+  // 玩家id
+  int32 to_player_id = 1;
+  // 聊天消息
+  string content = 2;
+}
+message ChatToPlayerResponse {
+  
+}
+
+// 频道聊天协议
+// /api/chat/toChannel
+message ChatToChannelRequest {
+  ChatChannelType channel = 1;
+  // 聊天消息
+  string content = 2;
+}
+message ChatToChannelResponse {
+  
+}

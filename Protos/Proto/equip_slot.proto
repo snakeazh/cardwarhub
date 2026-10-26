@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// /api/equipSlot/upgrade
+message EquipSlotUpgradeRequest {
+  int32 slot = 1;
+}
+
+message EquipSlotUpgradeResponse {
+  PlayerEquipSlot equip_slot = 1;
+  ResultItems items = 2;
+}

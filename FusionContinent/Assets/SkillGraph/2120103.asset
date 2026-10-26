@@ -1,0 +1,627 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6918971559568283664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -475, y: 514}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - animation
+    - cast_time
+    - move_speed
+    _values:
+    - Attack
+    - 0.3
+    - 0
+--- !u!114 &-4443168508533185138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_AoeDamage_004
+  _nodeType: AoeDamage
+  _editorPosition: {x: 894, y: 779}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - shape
+    - range
+    - rect_width
+    - rect_height
+    - hit_effect
+    - center_source
+    - range_attr
+    _values:
+    - Circle
+    - 0
+    - 10
+    - 2
+    - XilanSkillHit01
+    - Target
+    - SkillRange
+--- !u!114 &-3762404406344970892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_AoeDamage_001
+  _nodeType: AoeDamage
+  _editorPosition: {x: 660, y: 929}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - shape
+    - range
+    - rect_width
+    - rect_height
+    - hit_effect
+    - center_source
+    - range_attr
+    _values:
+    - Circle
+    - 0
+    - 10
+    - 2
+    - XilanSkillHit01
+    - Target
+    - SkillRange
+--- !u!114 &-3468618642795288245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: -9.839996, y: 574}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    _values:
+    - XilanSkillSkyFlow05
+    - 
+    - Target
+    - 0
+    - SkillRange
+    - false
+--- !u!114 &-3237463767597832985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Branch_003
+  _nodeType: Branch
+  _editorPosition: {x: 200, y: 783}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 20
+    - 
+--- !u!114 &-2352435704670097045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_AoeDamage_003
+  _nodeType: AoeDamage
+  _editorPosition: {x: 894, y: 587}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - shape
+    - range
+    - rect_width
+    - rect_height
+    - hit_effect
+    - center_source
+    - range_attr
+    _values:
+    - Circle
+    - 0
+    - 10
+    - 2
+    - XilanSkillHit01
+    - Target
+    - SkillRange
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2120103
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2020001
+  _skillId: 2120103
+  _nodes:
+  - {fileID: -6918971559568283664}
+  - {fileID: -3762404406344970892}
+  - {fileID: -3468618642795288245}
+  - {fileID: 7292149583829232584}
+  - {fileID: -2352435704670097045}
+  - {fileID: 3903481769161608539}
+  - {fileID: 1944099593856353286}
+  - {fileID: 3375484038287827755}
+  - {fileID: -3237463767597832985}
+  - {fileID: 5113872863982058860}
+  - {fileID: -4443168508533185138}
+  - {fileID: 4883845734941185165}
+  _edges:
+  - _fromNodeId: 2020001_AoeDamage_003
+    _fromPortId: exec_out
+    _toNodeId: 2020001_ApplyBuff_003
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Sound_001
+    _fromPortId: exec_out
+    _toNodeId: 2020001_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2020001_Sound_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Loop_002
+    _fromPortId: body
+    _toNodeId: 2020001_AoeDamage_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Branch_003
+    _fromPortId: false
+    _toNodeId: 2020001_Loop_002
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2020001_Branch_003
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Branch_003
+    _fromPortId: true
+    _toNodeId: 2020001_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Loop_003
+    _fromPortId: body
+    _toNodeId: 2020001_AoeDamage_004
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Branch_001
+    _fromPortId: false
+    _toNodeId: 2020001_Loop_003
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Branch_001
+    _fromPortId: true
+    _toNodeId: 2020001_Loop_004
+    _toPortId: exec_in
+  - _fromNodeId: 2020001_Loop_004
+    _fromPortId: body
+    _toNodeId: 2020001_AoeDamage_003
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - AoeDamage
+    - Effect
+    - LoopSequential
+    - ApplyBuff
+    - Branch
+    - Sound
+    - Loop
+    _values: 0100000004000000010000000100000003000000030000000100000004000000
+--- !u!114 &1944099593856353286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Sound_001
+  _nodeType: Sound
+  _editorPosition: {x: -233, y: 558}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - sound
+    _values:
+    - 10005
+--- !u!114 &3375484038287827755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Loop_002
+  _nodeType: Loop
+  _editorPosition: {x: 427, y: 929}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: body
+    Name: Body
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - count
+    - interval
+    - count_attr
+    - interval_attr
+    - duration_attr
+    - duration
+    - times_per_second
+    - duration_loop_count
+    - times_per_second_attr
+    - duration_loop_count_attr
+    _values:
+    - 0
+    - 0.3
+    - SkillContinuousDamageNum
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+--- !u!114 &3903481769161608539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_ApplyBuff_003
+  _nodeType: ApplyBuff
+  _editorPosition: {x: 1129, y: 587}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - buff_id
+    - target
+    - duration
+    - duration_type
+    - effect_value
+    - attr_type
+    - cooldown_time
+    - skill_id
+    - probability
+    - stack
+    - tick_interval
+    _values:
+    - 10006
+    - Hit
+    - -1
+    - Once
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - 0
+--- !u!114 &4883845734941185165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Loop_004
+  _nodeType: Loop
+  _editorPosition: {x: 660, y: 608}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: body
+    Name: Body
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - count
+    - interval
+    - count_attr
+    - interval_attr
+    - duration_attr
+    - duration
+    - times_per_second
+    - duration_loop_count
+    - times_per_second_attr
+    - duration_loop_count_attr
+    _values:
+    - 0
+    - 0.15
+    - SkillContinuousDamageNum
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+--- !u!114 &5113872863982058860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Loop_003
+  _nodeType: Loop
+  _editorPosition: {x: 660, y: 764}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: body
+    Name: Body
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - count
+    - interval
+    - count_attr
+    - interval_attr
+    - duration_attr
+    - duration
+    - times_per_second
+    - duration_loop_count
+    - times_per_second_attr
+    - duration_loop_count_attr
+    _values:
+    - 0
+    - 0.15
+    - SkillContinuousDamageNum
+    - 
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+--- !u!114 &7292149583829232584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020001_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: 422, y: 748}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 30
+    - 

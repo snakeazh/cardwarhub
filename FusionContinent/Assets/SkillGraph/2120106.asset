@@ -1,0 +1,357 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5160978229337636837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Delay_001
+  _nodeType: Delay
+  _editorPosition: {x: -271, y: 522}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    _values:
+    - 1
+--- !u!114 &-4257891436388200351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Sound_001
+  _nodeType: Sound
+  _editorPosition: {x: -271, y: 249}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - sound
+    _values:
+    - 10008
+--- !u!114 &-2331131265137766359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_RecycleEffect_002
+  _nodeType: RecycleEffect
+  _editorPosition: {x: -271, y: 637}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target
+    - effectName
+    _values:
+    - All
+    - 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2120106
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2020005
+  _skillId: 2120106
+  _nodes:
+  - {fileID: 173790542562750388}
+  - {fileID: 387722243269001120}
+  - {fileID: 73175664210440505}
+  - {fileID: -5160978229337636837}
+  - {fileID: 7894192540470815350}
+  - {fileID: -2331131265137766359}
+  - {fileID: 7992209607240329310}
+  - {fileID: -4257891436388200351}
+  _edges:
+  - _fromNodeId: 2020005_Effect_002
+    _fromPortId: exec_out
+    _toNodeId: 2020005_Delay_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_RecycleEffect_002
+    _fromPortId: exec_out
+    _toNodeId: 2020005_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_Delay_001
+    _fromPortId: exec_out
+    _toNodeId: 2020005_RecycleEffect_002
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2020005_Delay_002
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_Delay_002
+    _fromPortId: exec_out
+    _toNodeId: 2020005_AoeDamage_001
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_Sound_001
+    _fromPortId: exec_out
+    _toNodeId: 2020005_Effect_002
+    _toPortId: exec_in
+  - _fromNodeId: 2020005_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2020005_Sound_001
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - AnimatedEffect
+    - Slash
+    - Projectile
+    - RecycleEffect
+    - Effect
+    - AoeDamage
+    - Delay
+    - Sound
+    _values: 010000000300000001000000010000000200000002000000010000000200000001000000
+--- !u!114 &73175664210440505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_AoeDamage_001
+  _nodeType: AoeDamage
+  _editorPosition: {x: -271, y: 1010}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - shape
+    - range
+    - rect_width
+    - rect_height
+    - hit_effect
+    - center_source
+    - range_attr
+    _values:
+    - Circle
+    - 5
+    - 10
+    - 2
+    - XilanSkillHit01
+    - Caster
+    - 
+--- !u!114 &173790542562750388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -271, y: 111}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &387722243269001120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: -271, y: 754}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - lock_x
+    - vfx_scale_attr
+    _values:
+    - GusSkillDeathSlash02
+    - 
+    - Caster
+    - 0
+    - false
+    - 
+--- !u!114 &7894192540470815350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Effect_002
+  _nodeType: Effect
+  _editorPosition: {x: -271, y: 374.5}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - rotation
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    _values:
+    - GusSkillDeathSlash01
+    - 
+    - Caster
+    - FaceTarget
+    - 0
+    - 
+    - false
+--- !u!114 &7992209607240329310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2020005_Delay_002
+  _nodeType: Delay
+  _editorPosition: {x: -271, y: 888}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    _values:
+    - 0.4

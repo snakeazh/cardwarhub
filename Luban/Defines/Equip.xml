@@ -1,0 +1,29 @@
+<module name="">
+
+    
+    <!-- 装备槽位配置 -->
+    <bean name="EquipConfig">
+
+        <var name="Id" type="int" />
+        <var name="Part" type="EquipPartType" />
+        <var name="Quality" type="QualityType" />
+        <var name="Name" type="string" />
+        <var name="Icon" type="string" />
+        <var name="EquipLevel" type="int" />
+        <var name="FightNum" type="int" />
+        <var name="EntryNum" type="int" />
+        <var name="EntryGroup" type="int" />
+        <var name="EntryFightNum" type="int" />
+        <var name="MaxEffectsNum" type="int" />
+        <var name="EffectsGroup" type="int" />
+        <var name="EffectsFightNum" type="int" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+        <var name="RefreshEntryConsume" type="(list#sep=|),RewardAndNum" />
+        <var name="FragmentItems" type="(list#sep=|),FragmentRewardAndNum" />
+        <var name="LockEffectRefreshEntryConsume" type="(list#sep=|),RewardAndNum" />
+
+    </bean>
+    
+	<table name="TbEquipConfig" value="EquipConfig" input="GamePlay/EquipConfig.xlsx"/>
+
+</module>

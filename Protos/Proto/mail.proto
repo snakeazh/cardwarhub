@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+
+// /api/mail/list 邮箱列表
+message GetMailListRequest {}
+message GetMailListResponse {
+  repeated PlayerMail mails = 1;
+}
+
+// /api/mail/batchRead 批量阅读
+message BatchReadMailRequest {
+  repeated int32 mail_ids = 1;
+}
+message BatchReadMailResponse {}
+
+// /api/mail/batchClaim 批量领取
+message BatchClaimMailRequest {
+  repeated int32 mail_ids = 1;
+}
+message BatchClaimMailResponse {
+  ResultItems items = 1;
+  map<int32, int64> rewards = 2;
+}
+
+// /api/mail/batchDelete 批量删除
+message BatchDeleteMailRequest {
+  repeated int32 mail_ids = 1;
+}
+message BatchDeleteMailResponse {}

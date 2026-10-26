@@ -1,0 +1,22 @@
+<module name="">
+
+    <!-- 效果配置 -->
+    <bean name="EffectsConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="EffectsType" />
+        <var name="EffectsId" type="int" />       
+		<var name="Attributes" type="(list#sep=|),AttributeStruct" />
+	</bean>
+	<table name="TbEffectsConfig" value="EffectsConfig" input="GamePlay/EffectsConfig.xlsx"/>
+
+    <!-- 效果类型 -->
+    <enum name="EffectsType">
+        <var name="TakeSkill" alias="技能" />
+        <var name="TakeBuff" alias="霸符" />
+        <var name="DelBuff" alias="移除霸符" />
+        <var name="TakeSpecial" alias="特殊效果" />
+        <var name="TakeDamage" alias="伤害效果" />
+    </enum>
+
+
+</module>

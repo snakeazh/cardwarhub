@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 发送道具
+// ============================================================
+
+message AddItemsRequest {
+  map<int32, int64> items = 1;
+}
+
+message AddItemsResponse {
+  ResultItems items = 1;
+}
+
+// ============================================================
+// 发送全部道具
+// ============================================================
+
+message AddItemsAllRequest {}
+
+message AddItemsAllResponse {
+  ResultItems items = 1;
+}

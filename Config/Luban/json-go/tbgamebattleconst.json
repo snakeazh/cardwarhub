@@ -1,0 +1,615 @@
+[
+  {
+    "GameFps": 60,
+    "GameReviveCount": 1,
+    "GameReviveCountMonthly": 3,
+    "InitMaxCityPopulation": 3,
+    "SalvosNumMax": 5,
+    "ContinuousAtkNumMax": 3,
+    "GoldBuyMaxLevelUp": 10,
+    "InitGameMana": 0,
+    "GameManaFragmentToEntire": 100,
+    "RecoverGameManaFragmentNum": 30,
+    "RecoverGameManaFragmentTimeLimit": 1,
+    "TeamIdRange": [
+      1,
+      5
+    ],
+    "QualityTypeList": [
+      "默认",
+      "普通",
+      "稀有",
+      "史诗",
+      "传说",
+      "终极",
+      "神话"
+    ],
+    "QualityTypeListKey": [
+      "UI_QUALITY_DEFAULT",
+      "UI_QUALITY_ORDINARY",
+      "UI_QUALITY_RARE",
+      "UI_QUALITY_EPIC",
+      "UI_QUALITY_LEGEND",
+      "UI_QUALITY_ULTIMATE",
+      "UI_QUALITY_MYTHOLOGY"
+    ],
+    "QualityTypeColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 115,
+          "y": 115,
+          "z": 115
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 115,
+          "y": 115,
+          "z": 115
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 143,
+          "y": 192,
+          "z": 222
+        }
+      },
+      {
+        "Type": 3,
+        "Color": {
+          "x": 174,
+          "y": 87,
+          "z": 176
+        }
+      },
+      {
+        "Type": 4,
+        "Color": {
+          "x": 254,
+          "y": 188,
+          "z": 64
+        }
+      },
+      {
+        "Type": 5,
+        "Color": {
+          "x": 165,
+          "y": 41,
+          "z": 40
+        }
+      },
+      {
+        "Type": 6,
+        "Color": {
+          "x": 165,
+          "y": 41,
+          "z": 40
+        }
+      }
+    ],
+    "QualityTypeDrawCardTimes": [
+      {
+        "Type": 0,
+        "Time": 0.1
+      },
+      {
+        "Type": 1,
+        "Time": 0.1
+      },
+      {
+        "Type": 2,
+        "Time": 0.2
+      },
+      {
+        "Type": 3,
+        "Time": 0.3
+      },
+      {
+        "Type": 4,
+        "Time": 0.4
+      },
+      {
+        "Type": 5,
+        "Time": 0.5
+      },
+      {
+        "Type": 6,
+        "Time": 0.6
+      }
+    ],
+    "QualityTypeEffects": [
+      {
+        "Type": 0,
+        "EffectName": "RewardEffectOrdinaryStart01",
+        "EffectName2": ""
+      },
+      {
+        "Type": 1,
+        "EffectName": "",
+        "EffectName2": ""
+      },
+      {
+        "Type": 2,
+        "EffectName": "RewardEffectRarityStart01",
+        "EffectName2": ""
+      },
+      {
+        "Type": 3,
+        "EffectName": "RewardEffectEpicStart01",
+        "EffectName2": "RewardEffectEpicLoop01"
+      },
+      {
+        "Type": 4,
+        "EffectName": "RewardEffectMythologyStart01",
+        "EffectName2": "RewardEffectLegendLoop01"
+      },
+      {
+        "Type": 5,
+        "EffectName": "RewardEffectMythologyStart01",
+        "EffectName2": "RewardEffectMythologyLoop01"
+      },
+      {
+        "Type": 6,
+        "EffectName": "RewardEffectMythologyStart01",
+        "EffectName2": "RewardEffectMythologyLoop01"
+      }
+    ],
+    "ChestPoolQualityType": [
+      {
+        "Type": 1,
+        "ShopBg": "Common"
+      },
+      {
+        "Type": 2,
+        "ShopBg": "Rare"
+      },
+      {
+        "Type": 3,
+        "ShopBg": "Epic"
+      },
+      {
+        "Type": 4,
+        "ShopBg": "Legend"
+      }
+    ],
+    "ShopQualityType": [
+      {
+        "Type": 1,
+        "ShopBg": "Common2"
+      },
+      {
+        "Type": 2,
+        "ShopBg": "Rare2"
+      },
+      {
+        "Type": 3,
+        "ShopBg": "Epic2"
+      },
+      {
+        "Type": 4,
+        "ShopBg": "Legend2"
+      }
+    ],
+    "QualityTypeFrameColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 115,
+          "y": 115,
+          "z": 115
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 184,
+          "y": 187,
+          "z": 209
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 116,
+          "y": 214,
+          "z": 253
+        }
+      },
+      {
+        "Type": 3,
+        "Color": {
+          "x": 102,
+          "y": 91,
+          "z": 214
+        }
+      },
+      {
+        "Type": 4,
+        "Color": {
+          "x": 222,
+          "y": 155,
+          "z": 74
+        }
+      },
+      {
+        "Type": 5,
+        "Color": {
+          "x": 165,
+          "y": 41,
+          "z": 40
+        }
+      },
+      {
+        "Type": 6,
+        "Color": {
+          "x": 165,
+          "y": 41,
+          "z": 40
+        }
+      }
+    ],
+    "QualityTypeFrameOutColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 115,
+          "y": 115,
+          "z": 115
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 255,
+          "y": 255,
+          "z": 255
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 255,
+          "y": 255,
+          "z": 255
+        }
+      },
+      {
+        "Type": 3,
+        "Color": {
+          "x": 226,
+          "y": 171,
+          "z": 255
+        }
+      },
+      {
+        "Type": 4,
+        "Color": {
+          "x": 255,
+          "y": 243,
+          "z": 190
+        }
+      },
+      {
+        "Type": 5,
+        "Color": {
+          "x": 132,
+          "y": 33,
+          "z": 32
+        }
+      },
+      {
+        "Type": 6,
+        "Color": {
+          "x": 132,
+          "y": 33,
+          "z": 32
+        }
+      }
+    ],
+    "ChooseCardQualityTypeColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 181,
+          "y": 218,
+          "z": 224
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 181,
+          "y": 218,
+          "z": 224
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 196,
+          "y": 175,
+          "z": 216
+        }
+      },
+      {
+        "Type": 3,
+        "Color": {
+          "x": 255,
+          "y": 180,
+          "z": 114
+        }
+      },
+      {
+        "Type": 4,
+        "Color": {
+          "x": 255,
+          "y": 215,
+          "z": 82
+        }
+      },
+      {
+        "Type": 5,
+        "Color": {
+          "x": 255,
+          "y": 215,
+          "z": 82
+        }
+      },
+      {
+        "Type": 6,
+        "Color": {
+          "x": 255,
+          "y": 215,
+          "z": 82
+        }
+      }
+    ],
+    "SchoolQualityTypeColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 255,
+          "y": 255,
+          "z": 255
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 255,
+          "y": 232,
+          "z": 232
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 255,
+          "y": 255,
+          "z": 255
+        }
+      },
+      {
+        "Type": 3,
+        "Color": {
+          "x": 246,
+          "y": 229,
+          "z": 163
+        }
+      }
+    ],
+    "BattleNumberUp": "40F52F",
+    "BattleNumberDown": "DD3422",
+    "MainAttributeTypeColors": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 176,
+          "y": 87,
+          "z": 88
+        }
+      },
+      {
+        "Type": 2,
+        "Color": {
+          "x": 87,
+          "y": 139,
+          "z": 176
+        }
+      },
+      {
+        "Type": 1,
+        "Color": {
+          "x": 87,
+          "y": 176,
+          "z": 87
+        }
+      }
+    ],
+    "EquipPartTypeList": [
+      "上衣",
+      "下装",
+      "足具",
+      "手镯",
+      "项链",
+      "耳环",
+      "武器"
+    ],
+    "EquipMaterialTypeList": [
+      "布甲",
+      "皮甲",
+      "板甲",
+      "长弓",
+      "弩",
+      "阔剑",
+      "巨剑",
+      "法杖",
+      "魔杖",
+      "匕首",
+      "袖刃"
+    ],
+    "EquipQualityTypeEntryCountList": [
+      {
+        "Type": 0,
+        "Count": 1
+      },
+      {
+        "Type": 1,
+        "Count": 1
+      },
+      {
+        "Type": 2,
+        "Count": 2
+      },
+      {
+        "Type": 3,
+        "Count": 3
+      },
+      {
+        "Type": 4,
+        "Count": 4
+      },
+      {
+        "Type": 5,
+        "Count": 4
+      },
+      {
+        "Type": 6,
+        "Count": 4
+      }
+    ],
+    "SchoolCategoryTypeNameList": [
+      "强化",
+      "技能"
+    ],
+    "RandomMaxNum": 10000,
+    "DailyDoubleRewardNum": 3,
+    "DailyStageSweepingNum": 5,
+    "AfkTimeProduce": 3600,
+    "AfkTimeLimitMax": 28800,
+    "ForgingRulesExplanation": "每次锻造会有对应的成功率;可以消耗高级锻造材料提高成功率；锻造失败会积攒充能值，充能值满额后下次锻造必定成功！",
+    "RefiningRulesExplanation": "每次洗炼会后出现高于或等于所选词条品质的词条项,每次所选数量越多,所需材料越多;",
+    "SkillCombinationEffectErrMsg": "需要同时携带【[SkillName1]】【[SkillName2]】才能上阵该连携技！",
+    "SchoolCardMaxStar": 1,
+    "MaxNumberOfLevelCanBeViewed": 1,
+    "MissRateSumBase": 500,
+    "DorpGoldBaseNumber": 2,
+    "SchoolInitBuyChooseCardGoldNum": 10,
+    "SkillInitBuyChooseCardGoldNum": 20,
+    "BattleSceneBodyEffects": [
+      {
+        "Type": 0,
+        "EffectName": "TrapTreeHit01"
+      },
+      {
+        "Type": 1,
+        "EffectName": "TrapStumpHit01"
+      }
+    ],
+    "SoliderHpGauge": [
+      300,
+      5
+    ],
+    "SkillSwiftAssaultOffset": [
+      {
+        "X": 3.5,
+        "Y": -5,
+        "Angle": -36,
+        "Reverse": 1
+      },
+      {
+        "X": -6,
+        "Y": 0,
+        "Angle": 0,
+        "Reverse": -1
+      },
+      {
+        "X": 4,
+        "Y": 1,
+        "Angle": 36,
+        "Reverse": 1
+      },
+      {
+        "X": -2.5,
+        "Y": -5,
+        "Angle": 72,
+        "Reverse": -1
+      },
+      {
+        "X": 0.5,
+        "Y": 4,
+        "Angle": -72,
+        "Reverse": -1
+      }
+    ],
+    "ShadowTriggerTime": 5,
+    "ShadowTriggerCDTime": 0,
+    "SchoolCardLockedDescColor": [
+      {
+        "Type": 0,
+        "Color": {
+          "x": 255,
+          "y": 255,
+          "z": 255
+        }
+      }
+    ],
+    "SchoolCardLockedDescTransparency": 170,
+    "MainPageStageNameColor": [
+      255,
+      255,
+      255
+    ],
+    "ComboDuration": 3,
+    "TheNumOfBuyExp": 10,
+    "EveryTimeBuyExpNum": 10,
+    "CriticalNumBase": 1200,
+    "AttackSpeedGapOfCarType": [
+      {
+        "Type": 0,
+        "Count": 1
+      },
+      {
+        "Type": 3,
+        "Count": 1.1
+      },
+      {
+        "Type": 1,
+        "Count": 1.4
+      },
+      {
+        "Type": 4,
+        "Count": 1.6
+      },
+      {
+        "Type": 2,
+        "Count": 1.8
+      }
+    ],
+    "AttackSpeedBase": 600,
+    "ComboResilienceRatio": 0.5,
+    "ComboDamageRatio": 0.2,
+    "InitialCapitalReserves": 50,
+    "ArcCardSynthetic": [
+      {
+        "Id": 1025002,
+        "Num": 100
+      }
+    ],
+    "SpecialArcCardGoldNumOne": 100,
+    "SpecialArcCardGoldNumTwo": 150,
+    "NewGuideBuilding": [
+      14001,
+      12108,
+      12101,
+      12109,
+      14001,
+      13109
+    ],
+    "KaLinBuffId": 2140104
+  }
+]

@@ -1,0 +1,15 @@
+<module name="">
+
+    
+    <!-- 任务配置 -->
+    <bean name="TicketConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="StageType" />
+        <var name="Name" type="string" />
+        <var name="TargetType" type="TaskTargetType" />
+        <var name="DailyRefreshItem" type="(list#sep=|),RewardAndNum" />
+	</bean>
+
+	<table name="TbTicketConfig" value="TicketConfig" input="GamePlay/TicketConfig.xlsx"/>
+
+</module>

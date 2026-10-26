@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 开始融合石游戏
+// ============================================================
+
+message StartFusionGemGameRequest {}
+
+message StartFusionGemGameResponse {
+  PlayerChallenge challenge = 1;
+}
+
+// ============================================================
+// 结算融合石游戏
+// ============================================================
+
+message SettleFusionGemGameRequest {
+  int32 progress = 1;
+}
+
+message SettleFusionGemGameResponse {
+  ResultItems items = 1;
+  map<int32, int64> rewards = 2;
+  PlayerChallenge challenge = 3;
+}

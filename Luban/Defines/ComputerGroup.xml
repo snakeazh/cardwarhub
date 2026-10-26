@@ -1,0 +1,85 @@
+<module name="">
+
+    <!-- 计数组配置 -->
+    <bean name="ComputerGroupConfig" >
+        <var name="Id" type="int" />
+        <var name="Desc" type="string" />
+        <var name="CounterType" type="CounterType" />
+        <var name="CounterTime" type="float" />
+        <var name="OwnerType" type="CounterOwnerType" />
+        <var name="TriggerType" type="CounterTriggerType" />
+        <var name="AddValue" type="int" />
+        <var name="MaxValue" type="int" />
+        <var name="ResetType" type="CounterResetType" />
+        <var name="ResetParam" type="float" />
+	</bean>
+	<table name="TbComputerGroupConfig" value="ComputerGroupConfig" input="GamePlay/ComputerGroupConfig.xlsx"/>
+
+
+    <!-- 计数类型 -->
+    <enum name="CounterType">
+        <var name="KillCount" alias="击杀数" />
+        <var name="AttackCount" alias="普攻次数" />
+        <var name="SkillCastCount" alias="技能释放次数" />
+        <var name="CriticalCount" alias="暴击次数" />
+        <var name="BeHitCount" alias="受击次数" />
+        <var name="ComboCount" alias="连击次数" />
+        <var name="AttributesValueCount" alias="属性值计数" />
+        <var name="round" alias="回合" />
+        <var name="Custom" alias="自定义" />
+        <var name="BattleGoldCount" alias="消耗战斗币数量" />
+        <var name="TimeCount" alias="计时" />
+        <var name="PurchaseEffectNum" alias="购买强化效果次数" />
+        <var name="PurchaseExclusiveEffectNum" alias="购买专属强化次数" />
+
+	</enum>
+
+
+    <!-- 计数归属类型 -->
+    <enum name="CounterOwnerType">
+
+        <var name="Self" alias="自己" />
+        <var name="Target" alias="目标" />
+        <var name="Pair" alias="两者组合" />
+    </enum>
+
+    <!-- 计数触发类型 -->
+    <enum name="CounterTriggerType">
+
+        <var name="KillCount" alias="击杀" />
+        <var name="AttackCount" alias="普通攻击" />
+        <var name="SkillCastCount" alias="技能释放" />
+        <var name="CriticalCount" alias="暴击" />
+        <var name="BeHitCount" alias="受击" />
+        <var name="ComboCount" alias="连击" />
+        <var name="AtkSpeedNum" alias="英灵攻速值" />
+        <var name="Custom" alias="自定义" />
+        <var name="BattleGoldNum" alias="消耗战斗币" />
+        <var name="EverySecond" alias="每秒" />
+        <var name="round" alias="回合" />
+        <var name="PurchaseEffect" alias="购买强化" />
+        <var name="PurchaseExclusiveEffect" alias="购买专属强化" />
+
+    </enum>
+
+
+    <!-- 计数重置类型 -->
+    <enum name="CounterResetType">
+
+        <var name="Never" alias="不重置" />
+        <var name="AfterTrigger" alias="触发后重置" />
+        <var name="BattleEnd" alias="战斗结束重置" />
+        <var name="TimeOut" alias="超时重置" />
+        <var name="BuffRemove" alias="霸符移除重置" />
+        
+    </enum>
+
+
+
+
+
+
+
+
+
+</module>

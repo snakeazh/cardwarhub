@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 门票领取
+// ============================================================
+
+// /api/ticket/claim
+message ClaimTicketRequest {
+  int32 ticket_id = 1;
+}
+
+message ClaimTicketResponse {
+  PlayerTicket ticket = 1;
+  ResultItems items = 2;
+}

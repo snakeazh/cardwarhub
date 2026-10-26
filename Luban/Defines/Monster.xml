@@ -1,0 +1,202 @@
+<module name="">
+
+     <!-- 机制类型 -->
+    <enum name="MonsterBuffType">
+        <var name="HpLowerThan" alias="生命值低于" />
+        <var name="RestoreHpValue" alias="恢复生命值" />
+	</enum>
+
+    <!-- 怪物类型 -->
+    <enum name="MonsterType">
+        <var name="MutatedInsect" alias="变异虫" />
+        <var name="BeeSoldier" alias="蜜蜂士兵" />
+        <var name="MagicNightmare" alias="魔法梦魇" />
+        <var name="MagicGhost" alias="魔法幽魂" />
+
+        <var name="TheFrogPrince" alias="青蛙王子" />
+        <var name="GreenBeanHero" alias="绿豆侠" />
+        <var name="Hamadryad" alias="树精" />
+        <var name="Alien" alias="外星人" />
+        <var name="JungleKnight" alias="丛林骑士" />
+        <var name="Swordslaimu" alias="剑士莱姆" />
+        <var name="Highbinders" alias="不死人" />
+
+        <var name="Slime" alias="史莱姆" />
+        <var name="Rabbit" alias="兔" />
+        <var name="Pig" alias="猪" />
+        <var name="WildPig" alias="野猪" />
+        <var name="Werewolf" alias="狼人" />
+        <var name="FatGay" alias="肥仔" />
+        <var name="WildPigKnight" alias="野猪骑士" />
+        <var name="SkeletonSoldier" alias="骷髅兵" />
+        <var name="LittleDevil" alias="小恶魔" />
+        <var name="RabbitMiner" alias="兔子矿工" />
+
+        <var name="MushroomGiant" alias="蘑菇巨人" />
+        <var name="SnowMan" alias="雪人" />
+        <var name="ViscousSlime" alias="粘稠史莱姆" />
+        <var name="SoulScarecrow" alias="灵魂草人" />
+        <var name="GoblinKnight" alias="哥布林骑士" />
+        <var name="DarkNightYoungDragon" alias="暗夜幼龙" />
+
+        <var name="BigStone" alias="巨型石兽" />
+        <var name="IceKing" alias="冰封领主" />
+        <var name="BigTortoise" alias="巨型乌龟" />
+        <var name="DragonKing" alias="混沌龙王" />
+        <var name="RockGiant" alias="岩石巨人" />
+        <var name="FireGiant" alias="火焰巨人" />
+        <var name="Goblin" alias="哥布林" />
+        <var name="GreenGiant" alias="青苔巨人" />
+		<var name="ShadowDemon" alias="暗影魔" />
+
+        <var name="MagicButterFly" alias="魔蝶" />
+        <var name="LittleWoodenSpirit" alias="小木灵" />
+        <var name="FlyBeetle" alias="飞行甲壳" />
+
+	</enum>
+	
+	<!-- 怪物卡牌 -->
+    <bean name="MonsterBattleConfig">
+        <var name="Id" type="int" />
+        <var name="Type" type="MonsterType" />
+        <var name="MoveAnimationSpeed" type="float" />
+        <var name="MonsterQuality" type="MonsterQuality" />
+        <var name="Spine" type="string" />
+        <var name="Label" type="string" />
+        <var name="SpineScale" type="float" />
+        <var name="HitBoxScale" type="float2" />
+        <var name="Shadow" type="float" />
+        <var name="ShadowSize" type="float" />
+        <var name="AtkType" type="AtkType" />
+        <var name="MoveType" type="MoveType" />
+        <var name="AbilityDesc" type="string" />
+        <var name="Bullet" type="string" />
+        <var name="BulletSpeed" type="int" />
+        <var name="SizeCorrection" type="float" />
+        <var name="Hp" type="(array#sep=|),int" />
+        <var name="Atk" type="(array#sep=|),int" />
+        <var name="AttackTime" type="float" />
+        <var name="AttackRange" type="float" />
+        <var name="MoveSpeed" type="float" />
+        <var name="ProvideExp" type="(array#sep=|),int" />
+        <var name="DropGold" type="float" />
+        <var name="GrowthCoins" type="float" />
+        <var name="JumpDistance" type="(array#sep=|),float" />
+        <var name="RetentionTime" type="(array#sep=|),float" />
+        <var name="AtkLocation" type="int2" />
+        <var name="AtlasRewards" type="(list#sep=|),RewardAndNum" />
+        <var name="LevelPropertyList" type="list,MonsterLevelPropertyList" />
+        <var name="MonsterMechanismId" type="int" />
+    </bean>
+    <table name="TbMonsterBattleConfig" value="MonsterBattleConfig" input="GamePlay/MonsterBattleConfig.xlsx"/>
+
+    <!-- 怪物等级属性 -->
+    <bean name="MonsterLevelPropertyList">
+        <var name="Level" type="int" />
+        <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+		<var name="Hp" type="int" />
+		<var name="Atk" type="int" />
+        <var name="Armor" type="int" />
+        <var name="MagicResistance" type="int" />
+		<var name="ProvideExp" type="int" />
+        <var name="DropRewards" type="(list#sep=|),RewardAndNum" />
+    </bean>
+    <!-- 怪物机制效果结构 -->
+    <bean name="BuffEffectStruct">
+        <var name="Type" type="string" />
+        <var name="Effects" type="(array#sep=,),float" />
+    </bean>
+
+    <!-- 攻击类型 -->
+    <enum name="AtkType">
+        <var name="ZhuangJi" alias="撞击" />
+        <var name="Shooting" alias="射击" />
+        <var name="Special" alias="特殊" />
+        <var name="Flame" alias="喷火" />
+        <var name="TargetCenter" alias="中心点目标位置" />
+	</enum>
+
+    <!-- 移动类型 -->
+    <enum name="MoveType">
+        <var name="ZhiXing" alias="直行" />
+        <var name="SXing" alias="斜着走" />
+        <var name="Jumping" alias="跳跃" />
+        <var name="Flying" alias="飞行" />
+        <var name="ZuanDi" alias="钻地" />
+        <var name="Motionless" alias="静止" />
+
+	</enum>
+
+
+    <!-- 怪物品质 -->
+	<enum name="MonsterQuality">
+        <var name="Ordinary" alias="普通" />
+        <var name="Elite" alias="精英" />
+        <var name="Boss" alias="BOSS" />
+	</enum>
+
+	<!-- 怪物刷新 -->
+	<enum name="RefreshType">
+        <var name="Random" alias="随机" />
+        <var name="Stack" alias="堆叠" />
+	</enum>
+	
+
+    <bean name="MonsterGenStage">
+        <var name="Day" type="int" />
+        <var name="Countdown" type="float" />
+        <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+        <var name="WaveList" type="list,MonsterGenWave" />
+    </bean>
+
+
+    <bean name="MonsterGenWave">
+        <var name="GenCards" type="(list#sep=|),CardIdNumLv" />
+		<var name="MaxMonster" type="int" />
+		<var name="Spawninterval" type="float" />
+		<var name="Score" type="int" />
+    </bean>
+
+	<bean name="CardIdNumLv" sep="_" >
+        <var name="Id" type="int" />
+        <var name="CardId" type="int#ref=TbCardBaseConfig" />
+        <var name="Lv" type="int" />
+		<var name="Num" type="int" />
+    </bean>
+	
+    <bean name="MonsterGenConfig">
+        <var name="Id" type="int" />
+        <var name="StageList" type="list,MonsterGenStage" />
+    </bean>
+    <table name="TbMonsterGenConfig" value="MonsterGenConfig" input="GamePlay/MonsterGenConfig.xlsx"/>
+
+
+
+
+    <!-- 怪物词条类型 -->
+	<enum name="MonsterEntryType">
+        <var name="ALL" alias="全部" />
+        <var name="Fury" alias="狂暴" />
+        <var name="Tenacity" alias="坚韧" />
+        <var name="Violence" alias="杀戮" />
+        <var name="Dexterous" alias="灵巧" />
+        <var name="Defense" alias="防御" />
+
+	</enum>
+    <bean name="MonsterEntryConfig">
+        <var name="Id" type="int" />
+        <var name="MonsterEntryType" type="MonsterEntryType" />
+        <var name="Name" type="string" />
+        <var name="Icon" type="string" />
+        <var name="LevelList" type="list,MonsterEntryLevelStruct" />
+    </bean>
+    <table name="TbMonsterEntryConfig" value="MonsterEntryConfig" input="GamePlay/MonsterEntryConfig.xlsx"/>
+   
+    <bean name="MonsterEntryLevelStruct">
+        <var name="Level" type="int" />
+        <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc" type="string" />
+    </bean>
+
+
+</module>

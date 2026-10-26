@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2400014416331628335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400011_Projectile_001
+  _nodeType: Projectile
+  _editorPosition: {x: 300, y: 210}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - speed
+    - damage
+    - move_type
+    - sweep_angle
+    - sweep_duration
+    - bounce_count
+    - bullet_length
+    - fixed_rotation
+    - fixed_start_x
+    - fixed_start_y
+    - max_distance
+    - max_time
+    - move_angle_offset
+    - hit_modules
+    - spawn_type
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - spawn_burn_area_on_move
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spawn_offset_x
+    - spawn_offset_y
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - KarenNormalAttack01
+    - KarenSkillHit02
+    - 10
+    - 100
+    - Straight
+    - 50
+    - 5
+    - 3
+    - 1
+    - -1
+    - -999.0
+    - -999.0
+    - 20
+    - 5
+    - 0
+    - 'Penetrate|1:0:0:0:0:0::::::0::0::0::0::0:::::0:'
+    - caster
+    - 
+    - 
+    - 
+    - 
+    - False
+    - 1
+    - 
+    - 0.00
+    - 0.00
+    - 1
+    - 
+--- !u!114 &-563166078469926683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400011_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: 82, y: 213}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2140101
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 400014
+  _skillId: 2140101
+  _nodes:
+  - {fileID: -563166078469926683}
+  - {fileID: -2400014416331628335}
+  _edges:
+  - _fromNodeId: 400011_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 400011_Projectile_001
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    _values: 0100000001000000

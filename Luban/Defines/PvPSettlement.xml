@@ -1,0 +1,13 @@
+<module name="">
+
+    <!-- 任务配置 -->
+    <bean name="PvPSettlementConfig" >
+        <var name="Id" type="int" />
+        <var name="ScoreRange" type="(list#sep=|),int" />     
+        <var name="ScoreMarkup" type="int" />
+        <var name="PvPRewards" type="(list#sep=|),RewardAndNum" />        
+	</bean>
+
+	<table name="TbPvPSettlementConfig" value="PvPSettlementConfig" input="GamePlay/PvPSettlementConfig.xlsx"/>
+
+</module>

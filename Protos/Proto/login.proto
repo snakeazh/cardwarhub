@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 登录请求（proto 客户端用二进制 body，JSON 客户端用 form-data）
+// ============================================================
+
+message LoginRequest {
+  string account = 1;
+  string password = 2;
+  string user_name = 3;
+  string code = 4;
+  string uuid = 5;
+  int32 version = 6;
+}
+
+// ============================================================
+// 登录响应
+// ============================================================
+
+message LoginResponse {
+  string token = 1;
+  User user = 2;
+  PlayerArchive archive = 3;
+  // 下发的网关地址，客户端长连接地址
+  string gateway_address = 4;
+}
+
+// ============================================================
+// 玩家存档
+// ============================================================
+
+message PlayerArchive {
+  UserPlayer player = 1;
+  PlayerBattle battle = 2;
+  PlayerChallenge challenge = 3;
+  repeated PlayerStage stages = 4;
+  repeated PlayerChapter chapters = 5;
+  PlayerSignin signin = 6;
+  PlayerActivity activity = 7;
+  repeated PlayerItem items = 8;
+  repeated PlayerCard cards = 9;
+  repeated PlayerTeam teams = 10;
+  map<int32, TaskDetail> tasks = 11;
+  map<int32, ActiveDetail> task_actives = 12;
+  repeated PlayerShop shops = 13;
+  PlayerAtlas atlas = 14;
+  repeated PlayerEquip equips = 15;
+  repeated PlayerTalent talents = 16;
+  PlayerResource resource = 17;
+  repeated PlayerShopGoods shop_goods = 18;
+  repeated PlayerChestPool chest_pools = 19;
+  PlayerExchangeGift exchange_gift = 20;
+  repeated PlayerEndlessTower endless_towers = 21;
+  repeated PlayerChallengeBoss challenge_boss = 22;
+  repeated PlayerHiddenRealmTower hidden_realm_towers = 23;
+  repeated UserCreatePlayerActivity create_player_activitys = 24;
+  repeated PlayerModule modules = 25;
+  PlayerSpeakerModule player_speaker_module = 26;
+  repeated PlayerFusionGemToC fusion_gems_v2 = 27;
+  repeated PlayerArcResonance arc_resonances = 28;
+  repeated RedDotInfo RedDots = 29;
+  repeated PlayerEquipSlot equip_slots = 30;
+  // 关卡礼包
+  repeated ChapterGiftPack chapter_gift_packs = 40;
+  // 轮语者武器
+  repeated PlayerWeapon weapons = 41;
+  repeated PlayerCycleSpeakerSkin cycle_speaker_skins = 42;
+  repeated PlayerAvatar avatars = 43;
+  repeated PlayerAvatarFrame avatar_frames = 44;
+  // 城墙
+  PlayerCityWallArchive city_wall = 45;
+  // 门票
+  repeated PlayerTicket tickets = 46;
+  // PvP 赛季信息
+  PvpSeasonInfo pvp_season_info = 47;
+  // 每日任务上次刷新时间（unix 秒；Go 端是 player_task.last_refresh_time）
+  int64 task_daily_last_refresh_time = 48;
+}

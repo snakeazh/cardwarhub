@@ -1,0 +1,86 @@
+using UIFramework.Services;
+using Cysharp.Threading.Tasks;
+using UnityEngine;
+using System.Collections.Generic;
+
+namespace Game.${Module}
+{
+    /// <summary>
+    /// ${Module}服务
+    /// 处理${Module}相关的业务逻辑和数据持久化
+    /// 创建时间: ${Date}
+    /// </summary>
+    public class ${Module}Service : GameServiceBase
+    {
+        #region 属性
+        public bool IsInitialized { get; private set; }
+        #endregion
+
+        #region 事件
+        // TODO: 添加全局事件供多个ViewModel订阅
+        // 示例:
+        // public event System.Action OnDataChanged;
+        // public event System.Action<DataType> OnItemUpdated;
+        ${Events}
+        #endregion
+
+        public override async UniTask InitializeAsync()
+        {
+            await base.InitializeAsync();
+            
+            // TODO: 初始化数据
+            LoadData();
+            
+            IsInitialized = true;
+            Debug.Log("[${Module}Service] 初始化完成");
+        }
+
+        #region 数据加载
+        private void LoadData()
+        {
+            // TODO: 从本地或服务器加载数据
+            // 示例:
+            // var json = PlayerPrefs.GetString("${Module}_Data", "");
+            // if (!string.IsNullOrEmpty(json))
+            // {
+            //     Data = JsonConvert.DeserializeObject<DataType>(json);
+            // }
+        }
+
+        public void SaveData()
+        {
+            // TODO: 保存数据到本地
+            // 示例:
+            // var json = JsonConvert.SerializeObject(Data);
+            // PlayerPrefs.SetString("${Module}_Data", json);
+        }
+        #endregion
+
+        #region 业务逻辑
+        // TODO: 添加业务逻辑方法
+        // 示例:
+        // public async UniTask<DataType> FetchDataAsync()
+        // {
+        //     // 网络请求
+        //     var response = await WebDataFun.SendGetRequest(ApiKeys.ApiEndpoint);
+        //     return JsonConvert.DeserializeObject<DataType>(response);
+        // }
+        //
+        // public void UpdateItem(int id, DataType item)
+        // {
+        //     // 更新数据
+        //     Data[id] = item;
+        //     SaveData();
+        //     
+        //     // 触发事件
+        //     OnItemUpdated?.Invoke(item);
+        // }
+        ${BusinessMethods}
+        #endregion
+
+        #region 工具方法
+        // TODO: 添加工具方法
+        ${UtilityMethods}
+        #endregion
+    }
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luban 配置工具</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topbar">
+    <span class="logo">Luban 配置工具</span>
+    <nav>
+      <button id="nav-overview" class="nav-btn">数据结构总览</button>
+      <button id="nav-reload" class="nav-btn" title="重新扫描 Defines 与 Datas">重新加载</button>
+    </nav>
+    <input id="global-search" type="search" placeholder="搜索表名 / 注释 / 字段…">
+    <span id="status-msg"></span>
+  </header>
+  <div id="layout">
+    <aside id="sidebar"></aside>
+    <main id="main"></main>
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

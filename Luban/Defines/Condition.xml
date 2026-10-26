@@ -1,0 +1,67 @@
+<module name="">
+
+
+    <!-- 条件类型 -->
+    <enum name="SpecialType">
+        <var name="GoalAttribute" alias="属性判断" />
+        <var name="WarriorNum" alias="战士数量" />
+        <var name="ArcherNum" alias="射手数量" />
+        <var name="MageNum" alias="法师数量" />
+        <var name="AssassinNum" alias="刺客数量" />
+        <var name="AssistantNum" alias="辅助数量" />
+        <var name="PowerHero" alias="力量系英灵" />
+        <var name="IntHero" alias="智力系英灵" />
+        <var name="AgHero" alias="敏捷系英灵" />
+        <var name="HeroNum" alias="英灵数量" />
+        <var name="AddDamage" alias="附加伤害" />
+        <var name="CumulativeJudgment" alias="累计判断" />
+
+	</enum>
+
+
+
+    <!-- 生效时机类型 -->
+    <enum name="EffectiveTimingType">
+        <var name="Damage" alias="伤害计算" />
+        <var name="OpeningCalculation" alias="开局计算" />
+        <var name="HeroAttackedAfter" alias="英灵受击后" />
+        <var name="HeroHealAfter" alias="英灵恢复后" />
+
+	</enum>
+
+    <!-- 比较方式类型 -->
+    <enum name="ComparisonType">
+        <var name="GreaterThanOrEqualTo" alias="大于等于" />
+        <var name="GreaterThan" alias="大于" />
+        <var name="LessThan" alias="小于" />
+        <var name="LessThanOrEqualTo" alias="小于等于" />
+        <var name="Percent" alias="百分比" />
+	</enum>
+
+    <!-- 比较值类型 -->
+    <enum name="ComparisonValueType">
+        <var name="Percent" alias="百分比" />
+        <var name="Number" alias="数值" />
+	</enum>
+
+
+    <!-- 条件配置 -->
+    <bean name="ConditionsConfig" >
+        <var name="Id" type="int" />
+        <var name="SpecialType" type="SpecialType" />
+        <var name="Attribute" type="AttributeType" />
+        <var name="EffectiveTiming" type="EffectiveTimingType" />
+        <var name="TakeNum" type="int" />
+        <var name="ComparisonType" type="ComparisonType" />
+        <var name="ComparisonValue" type="float" />
+        <var name="ComparisonValueType" type="ComparisonValueType" />
+		<var name="TakeAttributes" type="(list#sep=|),AttributeStruct" />
+        <var name="BuffId" type="int" />
+
+	</bean>
+	<table name="TbConditionsConfig" value="ConditionsConfig" input="GamePlay/ConditionsConfig.xlsx"/>
+
+
+
+    
+</module>

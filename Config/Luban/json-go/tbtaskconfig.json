@@ -1,0 +1,966 @@
+[
+  {
+    "Id": 101,
+    "Type": 0,
+    "RefreshType": 0,
+    "Name": "每日任务",
+    "TaskList": [
+      {
+        "TaskNum": 1,
+        "Id": 1001,
+        "Desc": "每日登录1次游戏",
+        "TargetType": 0,
+        "TargetNum": 1,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 2,
+        "Id": 1002,
+        "Desc": "每日消耗30体力",
+        "TargetType": 8,
+        "TargetNum": 30,
+        "TargetParam1": 1010006,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 3,
+        "Id": 1003,
+        "Desc": "将任意流派层数叠至满层",
+        "TargetType": 2,
+        "TargetNum": 1,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 4,
+        "Id": 1004,
+        "Desc": "挑战一次关卡",
+        "TargetType": 3,
+        "TargetNum": 1,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 102,
+    "Type": 1,
+    "RefreshType": 1,
+    "Name": "每周任务",
+    "TaskList": [
+      {
+        "TaskNum": 1,
+        "Id": 2001,
+        "Desc": "消耗300体力",
+        "TargetType": 8,
+        "TargetNum": 300,
+        "TargetParam1": 1010006,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 2,
+        "Id": 2002,
+        "Desc": "将任意流派层数叠至满层",
+        "TargetType": 2,
+        "TargetNum": 1,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 3,
+        "Id": 2003,
+        "Desc": "挑战一次关卡",
+        "TargetType": 3,
+        "TargetNum": 10,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 103,
+    "Type": 3,
+    "RefreshType": 0,
+    "Name": "竞技门票",
+    "TaskList": [
+      {
+        "TaskNum": 1,
+        "Id": 3001,
+        "Desc": "当日消耗25体力",
+        "TargetType": 8,
+        "TargetNum": 25,
+        "TargetParam1": 1010006,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 1
+          }
+        ]
+      },
+      {
+        "TaskNum": 2,
+        "Id": 3002,
+        "Desc": "当日消耗50体力",
+        "TargetType": 8,
+        "TargetNum": 50,
+        "TargetParam1": 1010006,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 1
+          }
+        ]
+      },
+      {
+        "TaskNum": 3,
+        "Id": 3003,
+        "Desc": "当日消耗75体力",
+        "TargetType": 8,
+        "TargetNum": 75,
+        "TargetParam1": 1010006,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 1
+          }
+        ]
+      },
+      {
+        "TaskNum": 4,
+        "Id": 3004,
+        "Desc": "竞技门票x1",
+        "TargetType": 5,
+        "TargetNum": 40,
+        "TargetParam1": 1010002,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 104,
+    "Type": 5,
+    "RefreshType": 1,
+    "Name": "赛季挑战",
+    "TaskList": [
+      {
+        "TaskNum": 1,
+        "Id": 4001,
+        "Desc": "5场奖励",
+        "TargetType": 7,
+        "TargetNum": 5,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1025007,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 2,
+        "Id": 4002,
+        "Desc": "10场奖励",
+        "TargetType": 7,
+        "TargetNum": 10,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 1500
+          }
+        ]
+      },
+      {
+        "TaskNum": 3,
+        "Id": 4003,
+        "Desc": "15场奖励",
+        "TargetType": 7,
+        "TargetNum": 15,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 2000
+          }
+        ]
+      },
+      {
+        "TaskNum": 4,
+        "Id": 4004,
+        "Desc": "20场奖励",
+        "TargetType": 7,
+        "TargetNum": 20,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 2500
+          }
+        ]
+      },
+      {
+        "TaskNum": 5,
+        "Id": 4005,
+        "Desc": "25场奖励",
+        "TargetType": 7,
+        "TargetNum": 25,
+        "TargetParam1": 0,
+        "Rewards": [
+          {
+            "Id": 1025006,
+            "Num": 3000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Id": 105,
+    "Type": 2,
+    "RefreshType": 2,
+    "Name": "章节奖励",
+    "TaskList": [
+      {
+        "TaskNum": 1,
+        "Id": 5001,
+        "Desc": "通过章节1所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 1,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 2,
+        "Id": 5002,
+        "Desc": "通过章节2所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 2,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 3,
+        "Id": 5003,
+        "Desc": "通过章节3所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 3,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 4,
+        "Id": 5004,
+        "Desc": "通过章节4所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 4,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 5,
+        "Id": 5005,
+        "Desc": "通过章节5所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 5,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 6,
+        "Id": 5006,
+        "Desc": "通过章节6所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 6,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 7,
+        "Id": 5007,
+        "Desc": "通过章节7所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 7,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 8,
+        "Id": 5008,
+        "Desc": "通过章节8所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 8,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 9,
+        "Id": 5009,
+        "Desc": "通过章节9所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 9,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 10,
+        "Id": 5010,
+        "Desc": "通过章节10所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 10,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 11,
+        "Id": 5011,
+        "Desc": "通过章节11所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 11,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 12,
+        "Id": 5012,
+        "Desc": "通过章节12所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 12,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 13,
+        "Id": 5013,
+        "Desc": "通过章节13所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 13,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 14,
+        "Id": 5014,
+        "Desc": "通过章节14所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 14,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 15,
+        "Id": 5015,
+        "Desc": "通过章节15所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 15,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 16,
+        "Id": 5016,
+        "Desc": "通过章节16所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 16,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 17,
+        "Id": 5017,
+        "Desc": "通过章节17所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 17,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 18,
+        "Id": 5018,
+        "Desc": "通过章节18所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 18,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 19,
+        "Id": 5019,
+        "Desc": "通过章节19所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 19,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 20,
+        "Id": 5020,
+        "Desc": "通过章节20所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 20,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 21,
+        "Id": 5021,
+        "Desc": "通过章节21所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 21,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 22,
+        "Id": 5022,
+        "Desc": "通过章节22所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 22,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 23,
+        "Id": 5023,
+        "Desc": "通过章节23所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 23,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 24,
+        "Id": 5024,
+        "Desc": "通过章节24所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 24,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 25,
+        "Id": 5025,
+        "Desc": "通过章节25所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 25,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 26,
+        "Id": 5026,
+        "Desc": "通过章节26所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 26,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 27,
+        "Id": 5027,
+        "Desc": "通过章节27所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 27,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 28,
+        "Id": 5028,
+        "Desc": "通过章节28所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 28,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 29,
+        "Id": 5029,
+        "Desc": "通过章节29所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 29,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 30,
+        "Id": 5030,
+        "Desc": "通过章节30所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 30,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 31,
+        "Id": 5031,
+        "Desc": "通过章节31所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 31,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 32,
+        "Id": 5032,
+        "Desc": "通过章节32所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 32,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 33,
+        "Id": 5033,
+        "Desc": "通过章节33所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 33,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 34,
+        "Id": 5034,
+        "Desc": "通过章节34所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 34,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 35,
+        "Id": 5035,
+        "Desc": "通过章节35所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 35,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 36,
+        "Id": 5036,
+        "Desc": "通过章节36所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 36,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 37,
+        "Id": 5037,
+        "Desc": "通过章节37所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 37,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 38,
+        "Id": 5038,
+        "Desc": "通过章节38所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 38,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 39,
+        "Id": 5039,
+        "Desc": "通过章节39所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 39,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 40,
+        "Id": 5040,
+        "Desc": "通过章节40所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 40,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 41,
+        "Id": 5041,
+        "Desc": "通过章节41所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 41,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 42,
+        "Id": 5042,
+        "Desc": "通过章节42所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 42,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 43,
+        "Id": 5043,
+        "Desc": "通过章节43所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 43,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 44,
+        "Id": 5044,
+        "Desc": "通过章节44所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 44,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 45,
+        "Id": 5045,
+        "Desc": "通过章节45所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 45,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 46,
+        "Id": 5046,
+        "Desc": "通过章节46所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 46,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 47,
+        "Id": 5047,
+        "Desc": "通过章节47所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 47,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 48,
+        "Id": 5048,
+        "Desc": "通过章节48所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 48,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 49,
+        "Id": 5049,
+        "Desc": "通过章节49所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 49,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      },
+      {
+        "TaskNum": 50,
+        "Id": 5050,
+        "Desc": "通过章节50所有难度",
+        "TargetType": 4,
+        "TargetNum": 3,
+        "TargetParam1": 50,
+        "Rewards": [
+          {
+            "Id": 1010001,
+            "Num": 1000
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,97 @@
+using UIFramework;
+using UnityEngine;
+using System.Collections.Generic;
+using UIFramework.Services;
+
+namespace Game.${Module}
+{
+    /// <summary>
+    /// ${PanelName} ViewModel
+    /// 创建时间: ${Date}
+    /// </summary>
+    public class ${PanelName}ViewModel : ViewModel
+    {
+        #region 属性
+        // TODO: 添加需要绑定的属性
+        // 示例:
+        // public BindableProperty<string> Title { get; } = new BindableProperty<string>("");
+        // public BindableProperty<bool> IsLoading { get; } = new BindableProperty<bool>(false);
+        // public BindableProperty<int> Count { get; } = new BindableProperty<int>(0);
+        ${Properties}
+        #endregion
+
+        #region 命令
+        // TODO: 添加命令
+        // 示例:
+        // public Command OnConfirmCommand { get; private set; }
+        // public Command<int> OnSelectCommand { get; private set; }
+        ${Commands}
+        #endregion
+
+        #region 依赖
+        private ${Module}Service mService;
+        #endregion
+
+        public override void OnCreate()
+        {
+            base.OnCreate();
+
+            // 获取Service
+            mService = GameServiceManager.Get<${Module}Service>();
+
+            // 初始化命令
+            ${CommandInit}
+
+            // 加载数据
+            LoadData();
+            
+            Debug.Log("[${PanelName}ViewModel] 创建完成");
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+            
+            // TODO: 取消订阅事件
+            
+            Debug.Log("[${PanelName}ViewModel] 销毁");
+        }
+
+        private void LoadData()
+        {
+            // TODO: 从Service或PlayerPrefs加载数据
+            // 示例:
+            // Title.Value = PlayerPrefs.GetString("${PanelName}_Title", "默认标题");
+            // Count.Value = PlayerPrefs.GetInt("${PanelName}_Count", 0);
+        }
+
+        #region 命令实现
+        // TODO: 实现命令方法
+        // 示例:
+        // private void OnConfirm()
+        // {
+        //     Debug.Log($"[${PanelName}ViewModel] 确认操作");
+        //     OnConfirmClicked?.Invoke();
+        // }
+        //
+        // private void OnSelect(int index)
+        // {
+        //     Debug.Log($"[${PanelName}ViewModel] 选择索引: {index}");
+        // }
+        ${CommandMethods}
+        #endregion
+
+        #region 公共方法
+        // TODO: 添加公共方法供外部调用
+        ${PublicMethods}
+        #endregion
+
+        #region 事件
+        // TODO: 添加事件供外部订阅
+        // 示例:
+        // public System.Action OnConfirmClicked;
+        // public System.Action<DataType> OnDataChanged;
+        ${Events}
+        #endregion
+    }
+}

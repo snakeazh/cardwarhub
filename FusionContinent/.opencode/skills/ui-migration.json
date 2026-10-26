@@ -1,0 +1,159 @@
+{
+  "name": "ui-migration",
+  "description": "QFramework UI迁移到UIFramework的完整流程规范",
+  "version": "1.0.0",
+  "steps": [
+    {
+      "id": "step-1",
+      "name": "分析原界面",
+      "description": "分析原QFramework界面的结构和逻辑",
+      "checklist": [
+        "读取原Panel的.cs文件，列出所有UI组件",
+        "识别数据字段（PlayerPrefs读取、临时变量等）",
+        "识别业务逻辑（网络请求、计算等）",
+        "识别事件和回调",
+        "确定界面打开方式（是否需要参数）"
+      ],
+      "output": "原界面结构分析报告"
+    },
+    {
+      "id": "step-2", 
+      "name": "创建ViewModel",
+      "description": "创建对应的新框架ViewModel",
+      "template": "Assets/Scripts/Game/{Module}/ViewModels/{PanelName}ViewModel.cs",
+      "rules": [
+        "继承ViewModel基类",
+        "使用BindableProperty包装所有需要绑定的数据",
+        "使用Command包装所有按钮操作",
+        "在OnCreate中初始化数据和命令",
+        "复杂业务逻辑调用Service，不要写在ViewModel中"
+      ],
+      "checklist": [
+        "创建{PanelName}ViewModel.cs文件",
+        "定义所有BindableProperty属性",
+        "定义所有Command命令",
+        "实现OnCreate()初始化方法",
+        "实现OnDestroy()清理方法（如有需要）"
+      ]
+    },
+    {
+      "id": "step-3",
+      "name": "创建/修改Service",
+      "description": "将业务逻辑抽取到Service层",
+      "template": "Assets/Scripts/Game/{Module}/Services/{Feature}Service.cs",
+      "rules": [
+        "继承GameServiceBase",
+        "Service是单例，通过GameServiceManager.Get<>获取",
+        "所有网络请求放在Service中",
+        "数据持久化（PlayerPrefs）放在Service或ViewModel",
+        "提供全局事件供多个ViewModel订阅"
+      ],
+      "checklist": [
+        "识别需要抽取的业务逻辑",
+        "创建或修改对应的Service",
+        "将网络请求迁移到Service",
+        "添加全局事件（如需要）",
+        "在GameMainController中注册Service"
+      ]
+    },
+    {
+      "id": "step-4",
+      "name": "创建新Panel",
+      "description": "创建新框架的Panel类，复用原界面UI组件",
+      "template": "Assets/Scripts/UI/{Path}/{PanelName}New.cs",
+      "rules": [
+        "继承UIPanel<TViewModel>",
+        "添加[PrefabPath]特性指定预制体路径",
+        "Awake中获取原Panel引用",
+        "OnBindViewModel中绑定数据和事件",
+        "OnUnbindViewModel中清理监听",
+        "不要重新定义UI组件字段，直接使用原Panel的"
+      ],
+      "checklist": [
+        "创建{PanelName}New.cs",
+        "添加[PrefabPath(\"{PrefabPath}\")]特性",
+        "Awake中获取{PanelName}组件",
+        "实现OnBindViewModel绑定属性",
+        "实现OnUnbindViewModel清理监听",
+        "实现OnOpen/OnShow/OnHide生命周期"
+      ]
+    },
+    {
+      "id": "step-5",
+      "name": "配置预制体",
+      "description": "在Unity中配置预制体",
+      "steps": [
+        "选中原预制体",
+        "添加新Panel组件（{PanelName}New）",
+        "确认原Panel组件保留",
+        "检查层级配置（UIRootConfig）",
+        "测试预制体是否能正常实例化"
+      ]
+    },
+    {
+      "id": "step-6",
+      "name": "修改打开方式",
+      "description": "将所有打开该界面的代码改为新框架方式",
+      "old-code": "UIKit.OpenPanel<{PanelName}>();",
+      "new-code": "var vm = new {PanelName}ViewModel();\nvm.OnCreate();\nUIManager.OpenPanel<{PanelName}New, {PanelName}ViewModel>(vm)\n    .SetLevel(UILevel.{Level})\n    .Open();",
+      "checklist": [
+        "搜索所有打开该界面的代码",
+        "替换为新框架打开方式",
+        "传递必要的ViewModel参数",
+        "设置正确的UILevel层级"
+      ]
+    },
+    {
+      "id": "step-7",
+      "name": "测试验证",
+      "description": "完整测试新界面功能",
+      "checklist": [
+        "界面能正常打开和关闭",
+        "数据绑定正常工作（输入、显示）",
+        "按钮点击响应正常",
+        "网络请求成功",
+        "动画播放正常",
+        "与其他界面交互正常",
+        "没有报错和异常"
+      ]
+    },
+    {
+      "id": "step-8",
+      "name": "清理旧代码",
+      "description": "确认新界面稳定后清理旧代码",
+      "conditions": [
+        "新界面运行稳定至少1周",
+        "所有功能测试通过",
+        "没有用户反馈问题"
+      ],
+      "actions": [
+        "从预制体上移除原Panel组件",
+        "删除原Panel的.cs文件（备份）",
+        "更新文档说明"
+      ]
+    }
+  ],
+  "templates": {
+    "viewmodel": "using UIFramework;\nusing UnityEngine;\nusing System.Collections.Generic;\n\nnamespace Game.{Module}\n{\n    public class {PanelName}ViewModel : ViewModel\n    {\n        #region 属性\n        public BindableProperty<string> Property1 { get; } = new BindableProperty<string>(\"\");\n        public BindableProperty<bool> Property2 { get; } = new BindableProperty<bool>(false);\n        #endregion\n\n        #region 命令\n        public Command OnCommand1 { get; private set; }\n        #endregion\n\n        private {Feature}Service mService;\n\n        public override void OnCreate()\n        {\n            mService = GameServiceManager.Get<{Feature}Service>();\n            \n            // 初始化命令\n            OnCommand1 = new Command(OnMethod1);\n            \n            // 加载数据\n            LoadData();\n        }\n\n        private void LoadData()\n        {\n            // 从Service或PlayerPrefs加载数据\n        }\n\n        private void OnMethod1()\n        {\n            // 命令实现\n        }\n    }\n}",
+    "panel": "using Game.{Module};\nusing UIFramework;\nusing UnityEngine;\n\nnamespace FusionContinent\n{\n    [PrefabPath(\"{PrefabPath}\")]\n    public class {PanelName}New : UIPanel<{PanelName}ViewModel>\n    {\n        private {PanelName} mOldPanel;\n\n        void Awake()\n        {\n            mOldPanel = GetComponent<{PanelName}>();\n            if (mOldPanel == null)\n            {\n                Debug.LogError(\"[{PanelName}New] 找不到 {PanelName} 组件\");\n            }\n        }\n\n        protected override void OnBindViewModel({PanelName}ViewModel vm)\n        {\n            // 属性绑定\n            vm.Property1.OnValueChanged += (o, n) => mOldPanel.TextComponent.text = n;\n            \n            // 按钮绑定\n            mOldPanel.ButtonComponent.onClick.AddListener(() => vm.OnCommand1.Execute());\n        }\n\n        protected override void OnUnbindViewModel({PanelName}ViewModel vm)\n        {\n            mOldPanel.ButtonComponent.onClick.RemoveAllListeners();\n        }\n\n        protected override void OnOpen(IUIData uiData = null) { }\n        protected override void OnShow() { }\n        protected override void OnHide() { }\n    }\n}",
+    "service": "using UIFramework.Services;\nusing Cysharp.Threading.Tasks;\nusing UnityEngine;\n\nnamespace Game.{Module}\n{\n    public class {Feature}Service : GameServiceBase\n    {\n        public override async UniTask InitializeAsync()\n        {\n            await base.InitializeAsync();\n        }\n\n        // 业务逻辑方法\n    }\n}"
+  },
+  "naming-conventions": {
+    "viewmodel": "{PanelName}ViewModel",
+    "panel-new": "{PanelName}New",
+    "service": "{Feature}Service",
+    "folder-viewmodels": "Assets/Scripts/Game/{Module}/ViewModels",
+    "folder-services": "Assets/Scripts/Game/{Module}/Services",
+    "folder-panels": "Assets/Scripts/UI/{Path}"
+  },
+  "best-practices": [
+    "一个Panel对应一个ViewModel",
+    "Service按功能模块划分（LoginService、ShopService等）",
+    "ViewModel只处理UI逻辑，业务逻辑交给Service",
+    "使用BindableProperty自动绑定，减少手动更新",
+    "Command用于按钮点击，可以设置CanExecute条件",
+    "全局事件放在Service中，供多个ViewModel订阅",
+    "保持原Panel的UI组件命名不变，方便复用",
+    "新旧界面可以共存，逐步替换"
+  ]
+}

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 保存模块状态
+// ============================================================
+
+message SaveModuleStatusRequest {
+  int32 module_id = 1;
+  int32 status = 2;
+}
+
+message SaveModuleStatusResponse {
+  PlayerModule module = 1;
+}

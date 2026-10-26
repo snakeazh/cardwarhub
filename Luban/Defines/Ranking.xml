@@ -1,0 +1,30 @@
+<module name="">
+
+    <!-- 排行榜类型 -->
+    <enum name="RankingType">
+        <var name="MainStoryline" alias="主线" />
+        <var name="FightNum" alias="战力" />
+        <var name="FantasyRealm" alias="奇幻秘境" />
+        <var name="PvPFighting" alias="竞技场" />
+    </enum>
+
+    <!-- 任务配置 -->
+    <bean name="RankingConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="RankingType" />
+        <var name="Name" type="string" />
+        <var name="Dimension" type="string" />
+        <var name="ShowRankingNum" type="int" />
+        <var name="RankingList" type="list,RankingListStruct" />
+	</bean>
+	<table name="TbRankingConfig" value="RankingConfig" input="GamePlay/RankingConfig.xlsx"/>
+
+    <!-- 排行榜列表结构 -->
+    <bean name="RankingListStruct">
+        <var name="RankingNum" type="int" />
+        <var name="ChapterId" type="int" />
+        <var name="RewardsParam1" type="(list#sep=|),RewardAndNum" />
+        <var name="RewardsParam2" type="(list#sep=|),RewardAndNum" />
+    </bean>
+
+</module>

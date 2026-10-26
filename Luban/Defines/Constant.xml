@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <bean name="GPConst">
+    <var name="LandSize" type="int2" />
+    <var name="CardSize" type="int2" />
+    <var name="MonsterGenPos" type="float3" />
+    <var name="Initgifts" type="(list#sep=|),CardIdLv" />
+    <var name="MainCityId" type="int#ref=TbCardBaseConfig" />
+    <var name="MainCityPos" type="int2" />
+    <var name="BuildingPosList" type="(list#sep=|),int2" />
+  </bean>
+  <table name="TbGPConst" value="GPConst" input="GamePlay/GPConst.xlsx" mode="one" />
+  <bean name="GameConst">
+    <var name="GameFps" type="int" />
+    <var name="GameLifeBackgroundTime" type="int" />
+    <var name="GameResetHour" type="int" />
+    <var name="GemFuinGameWinNum" type="int" />
+    <var name="GemFuinGameDailyNum" type="int" />
+    <var name="GemFuinGameRewardProgress" type="(list#sep=|),int" />
+    <var name="GemFuinGameGridIconList" type="(list#sep=|),GemFuinGameGridIconStruct" />
+    <var name="GemFuinGameRewardQualityTypeList" type="(list#sep=|),QualityType" />
+    <var name="GameMainButtonList" type="(list#sep=|),GameMainButtonStruct" />
+    <var name="PlayerMainButtonList" type="(list#sep=|),PlayerMainButtonStruct" />
+    <var name="ChooseQualityTypeColors" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="DailyShopDiscountList" type="(list#sep=|),DailyShopDiscountStruct" />
+    <var name="LongLinkHeartbeatInterval" type="int" />
+    <var name="TalkRefreshTime" type="int" />
+    <var name="FriendsNumMax" type="int" />
+    <var name="DailyServerRefreshTime" type="int" />
+    <var name="DailyRefreshNumOfTicket" type="int" />
+    <var name="PostStationDailyTakeTime" type="(list#sep=|),int" />
+    <var name="PostStationPhysicalStrengthNum" type="RewardAndNum" />
+    <var name="PostStationMaxPhysicalStrengthNum" type="int" />
+    <var name="PvPTicketId" type="int#ref=TbItemConfig" />
+    <var name="PvPInitialScore" type="int" />
+    <var name="PvPAfkTimeLimitMax" type="int" />
+    <var name="PvPAfkTimeProduce" type="int" />
+    <var name="PvPMatchScoreRange" type="int" />    
+
+
+
+
+  </bean>
+  <bean name="DailyShopDiscountStruct" sep=":">
+    <var name="Discount" type="int" />
+    <var name="Percent" type="int" />
+  </bean>
+  <table name="TbGameConst" value="GameConst" input="GamePlay/GameConst.xlsx" mode="one" />
+  <bean name="GameMainButtonStruct" sep=":">
+    <var name="Type" type="GameMainButtonType" />
+    <var name="Name" type="string" />
+    <var name="UnLockType" type="ModuleFunctionType" />
+  </bean>
+  <bean name="PlayerMainButtonStruct" sep=":">
+    <var name="Type" type="ModuleFunctionType" />
+    <var name="Icon" type="string" />
+    <var name="Name" type="string" />
+  </bean>
+  <bean name="GemFuinGameGridIconStruct" sep=":">
+    <var name="Num" type="int" />
+    <var name="Icon" type="string" />
+  </bean>
+  <bean name="GameBattleConst">
+    <var name="GameFps" type="int" />
+    <var name="GameReviveCount" type="int" />
+    <var name="GameReviveCountMonthly" type="int" />
+    <var name="InitMaxCityPopulation" type="int" />
+    <var name="SalvosNumMax" type="int" />
+    <var name="ContinuousAtkNumMax" type="int" />
+    <var name="GoldBuyMaxLevelUp" type="int" />
+    <var name="InitGameMana" type="int" />
+    <var name="GameManaFragmentToEntire" type="int" />
+    <var name="RecoverGameManaFragmentNum" type="int" />
+    <var name="RecoverGameManaFragmentTimeLimit" type="int" />
+    <var name="TeamIdRange" type="(list#sep=,),int" />
+    <var name="QualityTypeList" type="(list#sep=|),string" />
+    <var name="QualityTypeListKey" type="(list#sep=|),string" />
+    <var name="QualityTypeColors" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="QualityTypeDrawCardTimes" type="(list#sep=|),QualityTypeDrawCardTimesStruct" />
+    <var name="QualityTypeEffects" type="(list#sep=|),QualityTypeEffectstruct" />
+    <var name="ChestPoolQualityType" type="(list#sep=|),QualityTypeShopBgstruct" />
+    <var name="ShopQualityType" type="(list#sep=|),QualityTypeShopBgstruct" />
+    <var name="QualityTypeFrameColors" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="QualityTypeFrameOutColors" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="ChooseCardQualityTypeColors" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="SchoolQualityTypeColors" type="(list#sep=|),SchoolQualityTypeColorStruct" />
+    <var name="BattleNumberUp" type="string" />
+    <var name="BattleNumberDown" type="string" />
+    <var name="MainAttributeTypeColors" type="(list#sep=|),MainAttributeTypeColorStruct" />
+    <var name="EquipPartTypeList" type="(list#sep=|),string" />
+    <var name="EquipMaterialTypeList" type="(list#sep=|),string" />
+    <var name="EquipQualityTypeEntryCountList" type="(list#sep=|),EquipQualityTypeEntryCountStruct" />
+    <var name="SchoolCategoryTypeNameList" type="(list#sep=|),string" />
+    <var name="RandomMaxNum" type="int" />
+    <var name="DailyDoubleRewardNum" type="int" />
+    <var name="DailyStageSweepingNum" type="int" />
+    <var name="AfkTimeProduce" type="int" />
+    <var name="AfkTimeLimitMax" type="int" />
+    <var name="ForgingRulesExplanation" type="string" />
+    <var name="RefiningRulesExplanation" type="string" />
+    <var name="SkillCombinationEffectErrMsg" type="string" />
+    <var name="SchoolCardMaxStar" type="int" />
+    <var name="MaxNumberOfLevelCanBeViewed" type="int" />
+    <var name="MissRateSumBase" type="int" />
+    <var name="DorpGoldBaseNumber" type="int" />
+    <var name="SchoolInitBuyChooseCardGoldNum" type="int" />
+    <var name="SkillInitBuyChooseCardGoldNum" type="int" />
+    <var name="BattleSceneBodyEffects" type="(list#sep=|),BattleSceneBodyEffectStruct" />
+    <var name="SoliderHpGauge" type="(list#sep=|),int" />
+    <var name="SkillSwiftAssaultOffset" type="(list#sep=|),SkillSwiftAssaultOffsetStruct" />
+    <var name="ShadowTriggerTime" type="int" />
+    <var name="ShadowTriggerCDTime" type="int" />
+    <var name="SchoolCardLockedDescColor" type="(list#sep=|),QualityTypeColorStruct" />
+    <var name="SchoolCardLockedDescTransparency" type="int" />
+    <var name="MainPageStageNameColor" type="(list#sep=|),int" />
+    <var name="ComboDuration" type="int" />
+    <var name="TheNumOfBuyExp" type="int" />
+    <var name="EveryTimeBuyExpNum" type="int" />
+    <var name="CriticalNumBase" type="int" />
+    <var name="AttackSpeedGapOfCarType" type="(list#sep=|),AttackSpeedGapOfCarTypeStruct" />
+    <var name="AttackSpeedBase" type="int" />
+    <var name="ComboResilienceRatio" type="float" />
+    <var name="ComboDamageRatio" type="float" />
+    <var name="InitialCapitalReserves" type="int" />
+    <var name="ArcCardSynthetic" type="(list#sep=|),RewardAndNum" />
+    <var name="SpecialArcCardGoldNumOne" type="int" />
+    <var name="SpecialArcCardGoldNumTwo" type="int" />
+    <var name="NewGuideBuilding" type="(list#sep=|),int" />
+    <var name="KaLinBuffId" type="int" />
+  </bean>
+  <table name="TbGameBattleConst" value="GameBattleConst" input="GamePlay/GameBattleConst.xlsx" mode="one" />
+  <bean name="QualityTypeColorStruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="Color" type="float3" />
+  </bean>
+  <bean name="SchoolQualityTypeColorStruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="Color" type="float3" />
+  </bean>
+  <bean name="MainAttributeTypeColorStruct" sep=":">
+    <var name="Type" type="MainAttributeType" />
+    <var name="Color" type="float3" />
+  </bean>
+  <bean name="QualityTypeDrawCardTimesStruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="Time" type="float" />
+  </bean>
+  <bean name="QualityTypeEffectstruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="EffectName" type="string" />
+    <var name="EffectName2" type="string" />
+  </bean>
+  <bean name="QualityTypeShopBgstruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="ShopBg" type="string" />
+  </bean>
+  <bean name="EquipQualityTypeEntryCountStruct" sep=":">
+    <var name="Type" type="QualityType" />
+    <var name="Count" type="int" />
+  </bean>
+  <bean name="AttackSpeedGapOfCarTypeStruct" sep=":">
+    <var name="Type" type="CareerType" />
+    <var name="Count" type="float" />
+  </bean>
+  <bean name="BattleSceneBodyEffectStruct" sep=":">
+    <var name="Type" type="BattleSceneBodyType" />
+    <var name="EffectName" type="string" />
+  </bean>
+  <bean name="SkillSwiftAssaultOffsetStruct" sep=",">
+    <var name="X" type="float" />
+    <var name="Y" type="float" />
+    <var name="Angle" type="float" />
+    <var name="Reverse" type="float" />
+  </bean>
+  <bean name="PlayerConst">
+    <var name="MaxStamina" type="int" />
+    <var name="GuidesStageId" type="int#ref=TbStageBattleConfig" />
+    <var name="StaminaRecoveryTime" type="float" />
+    <var name="DefaultPopulation" type="int" />
+    <var name="DefaultSkillCount" type="int" />
+    <var name="DefaultArcaneCount" type="int" />
+    <var name="GlobalUserWearId" type="int" />
+    <var name="DefaultPlayerHead" type="string" />
+    <var name="InitCards" type="(list#sep=|),InitCardStruct" />
+    <var name="InitItems" type="(list#sep=|),RewardAndNum" />
+    <var name="InitChapterIds" type="(list#sep=|),int#ref=TbChapterStageConfig" />
+    <var name="InitManFigures" type="(list#sep=|),int#ref=TbPlayerFigureConfig" />
+    <var name="InitGirlFigures" type="(list#sep=|),int#ref=TbPlayerFigureConfig" />
+    <var name="InitSoldierEquips" type="(list#sep=|),int#ref=TbEquipConfig" />
+    <var name="GuidesTeams" type="(list#sep=|),InitCardStruct" />
+    <var name="ModuleFunctionUnlockTip" type="string" />
+    <var name="FirstTenArcaneCardId" type="int" />
+    <var name="TheProbabilityOfImprovementNextUpgrade" type="float" />
+    <var name="GetNewHeroGetAttributes" type="(list#sep=|), AttributeStruct" />
+    <var name="LevelUpHeroGetAttributes" type="(list#sep=|), AttributeStruct" />
+    <var name="ArcIconSequence" type="(list#sep=|), int" />
+    <var name="ArcCardUnlockLevel" type="(list#sep=|), int" />
+    <var name="HeroAwakingLevel" type="int" />
+    <var name="ProbabilityOfEquipOccurrence" type="float" />
+    <var name="InitDefaultAvatar" type="int#ref=TbHeadConfig" />
+    <var name="InitDefaultAvatarFrame" type="int#ref=TbHeadConfig" />
+  </bean>
+  <table name="TbPlayerConst" value="PlayerConst" input="GamePlay/PlayerConst.xlsx" mode="one" />
+  <bean name="InitCardStruct" sep=":">
+    <var name="CardId" type="int#ref=TbCardBaseConfig" />
+    <var name="Level" type="int" />
+  </bean>
+  <enum name="GameMainButtonType">
+    <var name="Shop" alias="商店" />
+    <var name="GeneralSkill" alias="奥术" />
+    <var name="Player" alias="论语者" />
+    <var name="Hero" alias="英灵" />
+    <var name="World" alias="世界" />
+    <var name="Battle" alias="战斗" />
+  </enum>
+</module>

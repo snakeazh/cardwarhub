@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 领取任务奖励
+// ============================================================
+
+message ReceiveTaskRewardRequest {
+  repeated int32 task_ids = 1;
+}
+
+message ReceiveTaskRewardResponse {
+  map<int32, TaskDetail> tasks = 1;
+  ResultItems items = 2;
+  map<int32, int64> rewards = 3;
+}
+
+// ============================================================
+// 领取活跃奖励
+// ============================================================
+
+message ReceiveTaskActiveRewardRequest {
+  int32 task_type = 1;
+  int32 active_num = 2;
+}
+
+message ReceiveTaskActiveRewardResponse {
+  map<int32, ActiveDetail> tasks = 1;
+  ResultItems items = 2;
+  map<int32, int64> rewards = 3;
+}

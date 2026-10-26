@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 购买商品
+// ============================================================
+
+message BuyGoodsRequest {
+  int32 goods_id = 1;
+  int32 count = 2;
+}
+
+message BuyGoodsResponse {
+  PlayerShopGoods goods = 1;
+  ResultItems items = 2;
+  map<int32, int64> rewards = 3;
+  PlayerActivity activity = 4;
+}

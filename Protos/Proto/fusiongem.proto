@@ -1,0 +1,82 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 穿戴融合石
+// ============================================================
+
+message WearFusionGemRequest {
+  int32 id = 1;
+  int32 wearer_id = 2;
+}
+
+message WearFusionGemResponse {
+  repeated PlayerFusionGem gems = 1;
+}
+
+// ============================================================
+// 分解融合石
+// ============================================================
+
+message FragmentFusionGemRequest {
+  repeated int32 ids = 1;
+}
+
+message FragmentFusionGemResponse {
+  ResultItems items = 1;
+  repeated RewardAndNum rewards = 2;
+}
+
+// ============================================================
+// 合成融合石
+// ============================================================
+
+message SynthesisPair {
+  int32 upgrade_id = 1;
+  int32 consume_id = 2;
+}
+
+message SynthesisFusionGemRequest {
+  repeated SynthesisPair list = 1;
+}
+
+message SynthesisFusionGemResponse {
+  repeated PlayerFusionGem fusion_gems = 1;
+  repeated int32 del_ids = 2;
+  ResultItems items = 3;
+}
+
+// ============================================================
+// 融合石洗练（吞噬）
+// ============================================================
+
+message FusionGemCompoundRequest {
+  int32 primary_id = 1;
+  int32 secondary_id = 2;
+}
+
+message FusionGemCompoundResponse {
+  bool success = 1;
+  PlayerFusionGem primary_gem = 2;
+  int32 secondary_id = 3;
+  ResultItems items = 4;
+}
+
+// ============================================================
+// 融合石穿戴（V2）
+// ============================================================
+
+message WearFusionGemV2Request {
+  int32 id = 1;
+  int32 wearer_id = 2;
+}
+
+message WearFusionGemV2Response {
+  repeated PlayerFusionGemToC gems = 1;
+  ResultItems items = 2;
+}

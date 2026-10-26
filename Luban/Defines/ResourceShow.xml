@@ -1,0 +1,33 @@
+<module name="">
+
+    <!-- 页面类型 -->
+    <enum name="PageType">
+        <var name="MainPage" alias="主页面" />
+        <var name="ShopPage" alias="商店页面" />
+        <var name="ArcCardPage" alias="奥术卡页面" />
+        <var name="PlayerPage" alias="论语者页面" />
+        <var name="HeroPage" alias="英灵页面" />
+        <var name="WorldPage" alias="世界页面" />
+        <var name="HiddenRealmPage" alias="奇幻秘境页面" />
+    </enum>
+    
+
+    <!-- 位置类型 -->
+    <enum name="PositionType">
+        <var name="Left" alias="左" />
+        <var name="Right" alias="右" />
+    </enum>
+
+
+    <!-- 任务配置 -->
+    <bean name="ResourceShowConfig" >
+        <var name="Id" type="int" />
+        <var name="PageType" type="PageType" />
+        <var name="Resource" type="(list#sep=|),int" />
+        <var name="IsNeedAvatar" type="int" />
+        <var name="PositionType" type="PositionType" />
+	</bean>
+	<table name="TbResourceShowConfig" value="ResourceShowConfig" input="GamePlay/ResourceShowConfig.xlsx"/>
+
+
+</module>

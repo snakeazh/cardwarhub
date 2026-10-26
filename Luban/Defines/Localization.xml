@@ -1,0 +1,60 @@
+<module name="">
+
+    <!-- 多语言模块 -->
+    <enum name="LocalizationModule">
+        <var name="UITexts" alias="UI文本" />
+        <var name="UIAssets" alias="UI资源" />
+        <var name="SystemTexts" alias="系统文本" />
+    </enum>
+
+    <!-- 多语言 -->
+    <enum name="LanguageType">
+        <var name="ZH" alias="简体中文" />
+        <var name="ZHHant" alias="繁体中文" />
+        <var name="EN" alias="英文" />
+        <var name="JA" alias="日文" />
+        
+        <var name="Default" alias="默认共用" />
+    </enum>
+
+    
+    <!-- 语言类型配置 -->
+    <bean name="LanguageConfig" >
+        <var name="LanguageType" type="LanguageType" />
+        <var name="Name" type="string" />
+        <var name="FontLibrary" type="string" />
+        <var name="State" type="StateType" />
+	</bean>
+	<table name="TbLanguageConfig" value="LanguageConfig" input="Localization/LanguageConfig.xlsx"/>
+
+    <!-- UI文本本地化 -->
+    <bean name="UITextsLocalization" >
+        <var name="Key" type="string" />
+        <var name="ZH" type="string" />
+        <var name="ZHHant" type="string" />
+        <var name="EN" type="string" />
+        <var name="JA" type="string" />
+	</bean>
+	<table name="TbUITextsLocalization" value="UITextsLocalization" input="Localization/UITextsLocalization.xlsx"/>
+
+    <!-- UI资源本地化 -->
+    <bean name="UIAssetsLocalization" >
+        <var name="Key" type="string" />
+        <var name="ZH" type="string" />
+        <var name="ZHHant" type="string" />
+        <var name="EN" type="string" />
+        <var name="JA" type="string" />
+	</bean>
+	<table name="TbUIAssetsLocalization" value="UIAssetsLocalization" input="Localization/UIAssetsLocalization.xlsx"/>
+
+    <!-- 系统文本本地化 -->
+    <bean name="SystemTextsLocalization" >
+        <var name="Key" type="string" />
+        <var name="ZH" type="string" />
+        <var name="ZHHant" type="string" />
+        <var name="EN" type="string" />
+        <var name="JA" type="string" />
+	</bean>
+	<table name="TbSystemTextsLocalization" value="SystemTextsLocalization" input="Localization/SystemTextsLocalization.xlsx"/>
+
+</module>

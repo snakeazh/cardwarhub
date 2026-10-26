@@ -1,0 +1,19 @@
+<module name="">
+
+    
+    <!-- 装备词条配置 -->
+
+    <bean name="EquipEffectsConfig">
+
+        <var name="Id" type="int" />
+        <var name="Type" type="EquipPartType" />
+        <var name="EffectsGroup" type="int" />
+        <var name="Name" type="string" />
+        <var name="Desc" type="string" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+
+    </bean>
+    
+	<table name="TbEquipEffectsConfig" value="EquipEffectsConfig" input="GamePlay/EquipEffectsConfig.xlsx"/>
+
+</module>

@@ -1,0 +1,17 @@
+<module name="">
+
+    
+    <!-- 装备词条配置 -->
+
+    <bean name="EquipEntryConfig">
+
+        <var name="Id" type="int" />
+        <var name="EntryGroup" type="int" />
+        <var name="Desc" type="string" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+
+    </bean>
+    
+	<table name="TbEquipEntryConfig" value="EquipEntryConfig" input="GamePlay/EquipEntryConfig.xlsx"/>
+
+</module>

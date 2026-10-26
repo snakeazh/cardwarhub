@@ -1,0 +1,39 @@
+<module name="">
+
+    <!-- 任务配置 -->
+    <bean name="PvPLevelConfig" >
+        <var name="Id" type="int" />
+        <var name="RankType" type="RankType" />
+        <var name="RankName" type="string" />
+        <var name="Icon" type="string" />
+        <var name="RankScore" type="int" />        
+        <var name="RankPromotionRewards" type="(list#sep=|),RewardAndNum" />
+        <var name="PvPAfkRewards" type="(list#sep=|),RewardAndNum" />        
+	</bean>
+
+   <!-- 段位类型 -->
+    <enum name="RankType">
+        <var name="Bronze3" alias="青铜3" />
+        <var name="Bronze2" alias="青铜2" />
+        <var name="Bronze1" alias="青铜1" />
+        <var name="Silver3" alias="白银3" />
+        <var name="Silver2" alias="白银2" />
+        <var name="Silver1" alias="白银1" />
+        <var name="Gold3" alias="黄金3" />
+        <var name="Gold2" alias="黄金2" />
+        <var name="Gold1" alias="黄金1" />
+        <var name="Platinum3" alias="铂金3" />
+        <var name="Platinum2" alias="铂金2" />
+        <var name="Platinum1" alias="铂金1" />
+        <var name="Diamond3" alias="钻石3" />
+        <var name="Diamond2" alias="钻石2" />
+        <var name="Diamond1" alias="钻石1" />
+        <var name="Master3" alias="大师3" />
+        <var name="Master2" alias="大师2" />
+        <var name="Master1" alias="大师1" />
+        <var name="King" alias="王者" />
+    </enum>    
+
+	<table name="TbPvPLevelConfig" value="PvPLevelConfig" input="GamePlay/PvPLevelConfig.xlsx"/>
+
+</module>

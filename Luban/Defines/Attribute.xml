@@ -1,0 +1,384 @@
+<module name="">
+
+    <!-- 主属性类型 -->
+    <enum name="MainAttributeType">
+        <var name="Strength" alias="力量" />
+        <var name="Dexterity" alias="敏捷" />
+        <var name="Intelligence" alias="智力" />
+    </enum>
+
+    <!-- 属性类型 -->
+    <enum name="AttributeType">
+        <!-- 英灵基础属性 -->
+        <var name="SoldierMaxHealth" alias="英灵最大生命值" />
+        <var name="SoldierHealth" alias="英灵当前生命值" />
+        <var name="SoldierAttackPower" alias="英灵攻击力" />
+        <var name="SoldierSpellPower" alias="英灵魔法强度" />
+        <var name="SoldierAttackSpeed" alias="英灵攻击速度" />
+        <var name="SoldierPhysicalResistance" alias="英灵物理抗性" />
+        <var name="SoldierMagicResistance" alias="英灵魔法抗性" />
+        <var name="SoldierCriticalRate" alias="英灵暴击率" />
+        <var name="SoldierMaxCriticalRate" alias="英灵最大暴击率" />
+        <var name="SoldierCriticalDamage" alias="英灵暴击伤害" />
+        <var name="SoldierArmorPenetration" alias="英灵护甲穿透" />
+        <var name="SoldierMagicPenetration" alias="英灵魔法穿透" />
+        <var name="SoldierArmorPenetrationPer" alias="英灵百分比护甲穿透" />
+        <var name="SoldierMagicPenetrationPer" alias="英灵百分比魔法穿透" />
+        <var name="SoldierTempArmorPenetration" alias="英灵临时护甲穿透" />
+        <var name="SoldierTempMagicPenetration" alias="英灵临时魔法穿透" />
+        <var name="SoldierMissNum" alias="英灵闪避值" />
+        <var name="SoldierAttackRange" alias="英灵攻击范围" />
+        <var name="SoldierBulletSizeCorrection" alias="英灵弹道大小" />
+        <var name="SoldierBulletFiringRate" alias="英灵弹道射速" />
+        <var name="SoldierAttackInterval" alias="英灵攻击间隔" />
+
+        <var name="SoldierNumOfCritical" alias="英灵暴击值" />
+        <var name="SoldierNumOfAttackSpeed" alias="英灵攻速值" />
+        <var name="SoldierPower" alias="英灵力量" />
+        <var name="SoldierIntelligence" alias="英灵智力" />
+        <var name="SoldierAgile" alias="英灵敏捷" />
+        <var name="NormalAttackNum" alias="普通攻击齐射数量" />    
+        <var name="NormalAttackDamage" alias="普通攻击伤害修正" />  
+        <var name="AttackRealDamage" alias="普通攻击附加真实伤害" />  
+        <var name="LockNormalAttack" alias="锁定普通攻击" />  
+        <var name="WeakenedEnemyCritical" alias="对虚弱敌人必定暴击" />  
+        <var name="CriticalNoTakeEffect" alias="暴击率不再生效" />  
+        <var name="HeroShieldValue" alias="英灵护盾值" />
+
+
+        <!-- 英灵属性 -->
+		<var name="SoldierFragileDamage" alias="英灵易损伤害" />
+		<var name="RestoreCurrentHealth" alias="英灵恢复当前生命值" />
+        <var name="SoldierExtraSpellPower" alias="英灵额外魔法强度" />
+		<var name="SoldierCannotRestoreHealth" alias="英灵无法回复血量" />
+        <var name="SingleSoldierCriticalRateMax" alias="单个英灵满暴击率" />
+		<var name="NumberOfBulletPenetrations" alias="英灵普通攻击穿透数量" />
+        <var name="GainAttackPowerEffectRedouble" alias="获得攻击力效果加倍" />
+        <var name="SoldierUnableToReleaseSkills" alias="英灵无法释放主动技能" />
+        <var name="AttackPowerConvertExtraSpellPower" alias="攻击力转化额外魔法强度" />
+
+        <var name="SoldierHealthRegenPerSecond" alias="英灵每秒恢复生命值" />
+        <var name="SoldierTriggerCriticalStrikeRecoverHealth" alias="英灵触发暴击概率恢复生命值" />
+        <var name="SoldierReleaseSkillRecoverMaxHealth" alias="英灵释放技能恢复最大生命值" />
+        <var name="SoldierSoulFlaws" alias="英灵灵魂破绽" />
+        <var name="SoldierTakeDamage" alias="英灵受击伤害" />
+        <var name="SoldierFuriousState" alias="英灵暴怒状态" />
+        <var name="SoldierTenaciousWill" alias="英灵顽强意志" />
+        <var name="SoldierDamageToHealth" alias="英灵造成伤害转化为生命值" />
+        <var name="SoldierPMDamageToTureDamage" alias="英灵造成物理或魔法伤害转化为真实伤害比例" />
+        <var name="SoldierMirror" alias="英灵镜像" />
+        
+        <var name="SoldierConsecutiveCritBonusDmg" alias="英灵连续触发暴击次数附加伤害" />
+        <var name="SoldierCanDrag" alias="英灵能否被拖动" />
+        <var name="SoldierEveryScePerMaxHp" alias="英灵每秒恢复百分比自身最大生命值" />
+        <var name="SoldierPerRestoreCurrentHealth" alias="英灵立即恢复自身百分比最大生命值" />
+        <var name="SoldierDamageChange" alias="战士系英灵伤害修正" />
+        <var name="ArcherDamageChange" alias="射手系英灵伤害修正" />
+        <var name="MageDamageChange" alias="法师系英灵伤害修正" />
+        <var name="AssassinDamageChange" alias="刺客系英灵伤害修正" />
+        <var name="AssistantDamageChange" alias="辅助系英灵伤害修正" />
+        <var name="ObtainDamageForLossHP" alias="每损失血量获得伤害修正" />
+
+
+
+        <!-- 怪物基础属性 -->
+        <var name="MonsterMaxHealth" alias="怪物最大生命值" />
+        <var name="MonsterHealth" alias="怪物当前生命值" />
+        <var name="MonsterAttackPower" alias="怪物攻击力" />
+        <var name="MonsterSpellPower" alias="怪物魔法强度" />
+        <var name="MonsterAttackSpeed" alias="怪物攻击速度" />
+        <var name="MonsterPhysicalResistance" alias="怪物物理抗性" />
+        <var name="MonsterMagicResistance" alias="怪物魔法抗性" />
+        <var name="MonsterTempPhysicalResistance" alias="怪物临时物理抗性" />
+        <var name="MonsterTempMagicResistance" alias="怪物临时魔法抗性" />
+        <var name="MonsterMissNum" alias="怪物闪避值" />
+        <var name="MonsterAttackRange" alias="怪物攻击范围" />
+        <var name="MonsterMoveSpeed" alias="怪物移动速度" />
+        <var name="MonsterImmunologicalAbnormalEffect" alias="怪物免疫异常效果" />
+        <var name="MonsterImmunologicalControlEffect" alias="怪物免疫控制效果" />
+        
+        <var name="MonsterFirstHitMoveSpeedCorrection" alias="怪物首次受击移速修正" />
+        <var name="MonsterHitProbabilityImpenetrable" alias="怪物受击概率无法穿透" />
+        <var name="MonsterHealthBelowTriggerInvincibleMoveSpeed" alias="怪物血量低于多少触发无敌时间并移速加成" />
+        <var name="MonsterDieSplitsNum" alias="怪物死亡分裂数量" />
+        <var name="MonsterPowerDamage" alias="怪物受到力量型英灵伤害修正" />
+        <var name="MonsterAgileDamage" alias="怪物受到敏捷型英灵伤害修正" />
+        <var name="MonsterIntelligenceDamage" alias="怪物受到智力型英灵伤害修正" />
+        <var name="MonsterResilienceValue" alias="怪物韧性值" />
+        <var name="MonsterToughnessBreakDamageBonus" alias="怪物破韧后受到伤害加成" />
+        <var name="MonsterWeaknessDuration" alias="怪物虚弱时间" />
+        <var name="MonsterResilienceRecovery" alias="怪物每秒韧性恢复" />
+        <var name="MonsterParamOne" alias="怪物参数" />
+        <var name="MonsterMiss" alias="怪物闪避率" />
+
+        <!-- 功能属性 -->
+		<var name="ManaFragmentRecoveryPerSecond" alias="每秒卡能碎片恢复量" />
+		<var name="InitManaIncrease" alias="初始卡能值增加" />
+		<var name="MaxManaIncrease" alias="卡能值上限增加" />
+		<var name="MaxCdForActiveSkills" alias="主动技能冷却时间上限" />
+        <var name="MonsterDropManaFragmentIncrease" alias="怪物掉落卡能碎片增加" />
+		<var name="NumberOfHeroCardSlots" alias="英灵卡槽数量" />
+		<var name="NumberOfPassiveCardSlots" alias="被动卡槽数量" />
+        <var name="NumberOfSkillCardSlots" alias="技能卡槽数量" />
+		<var name="InitialLevelOfGenre" alias="流派初始层数修正" />
+		<var name="ExtraNormalAttackAttempts" alias="普通攻击额外攻击次数" />
+		<var name="SkillTriggersCriticalStrike" alias="技能允许暴击" />
+		<var name="UnlockSchoolSoldierAddition" alias="解锁流派英灵加成" />
+        <var name="FollowUpMonsterNum" alias="后续每波怪物数量修正" />
+        <var name="CurrentSkillCdTimeCorrection" alias="当前技能冷却时间修正" />
+
+        <var name="LearnSkillWindDanceAttack" alias="学习技能风舞疾袭" />
+        <var name="LearnSkillThunderFieldFullScreen" alias="学习技能雷霆领域" />
+        <var name="SoldierNormalAttackHeavyBlowSkill" alias="英灵普攻重击技能" />
+        <var name="SoldierNormalAttackBrokenArmySlashSkill" alias="英灵普攻破军一击技能" />
+        <var name="SoldierStartReleaseCometSkill" alias="英灵释放技能秘法彗星" />
+        <var name="TestFullScreenHarm" alias="测试全屏伤害" />
+        <var name="LearnCitySkillEnergyBurst" alias="学习主城技能能量迸发" />
+        <var name="MonsterContinuousDamage3CauseTrueDamage" alias="怪物连续受击3次造成最大生命值伤害" />
+        <var name="MonsterExecutionThreshold" alias="怪物斩杀线" />
+        <var name="OneManArmy" alias="一人成军" />
+        <var name="SchoolAwakening" alias="流派唤醒" />
+        <var name="PrayRandomSoldierFortify" alias="祈祷随机强化场上英灵" />
+        <var name="AdjacentMainStatBonus" alias="站位相邻主属性加成" />
+        <var name="AdjacentDamageReduction" alias="站位相邻伤害减免" />
+        <var name="SoloStatBonus" alias="周围一格内无英灵属性加成" />
+        <var name="LearnBuffEffect" alias="学习buff效果" />
+        <var name="LearnSkillEffect" alias="学习技能效果" />    
+        <var name="DoubleAttack" alias="普通攻击连击" />       
+        <var name="LearnConditionBuff" alias="学习条件buff" />
+        <var name="TherapeuticEffect" alias="受到的治疗效果修正" />    
+        <var name="ShieldEffect" alias="受到的护盾效果修正" />    
+        <var name="LearnSkillBrokenBlade" alias="学习技能碎骨斩" />
+        <var name="ExclusiveLearningEffects" alias="学习专属效果" />
+        <var name="LearnSkillRule" alias="学习规则" />
+        <var name="RemoveBuff" alias="移除buff效果" />
+        <var name="BattleGoldInitialQuantity" alias="战斗货币初始数量修正" />
+        <var name="EquipEntryEffectCorrection" alias="装备词条属性效果修正" />
+        <var name="KillAnBossGoldCoin" alias="击杀精英或首领额外货币" />
+        <var name="KillAnBossHpRecovery" alias="击杀精英或首领血量回复" />
+
+      <!-- 伤害属性 -->
+		<var name="PhysicalDamage" alias="物理伤害" />
+		<var name="MagicDamage" alias="魔法伤害" />
+		<var name="RealDamage" alias="真实伤害" />
+        <var name="EveryDamage" alias="所有伤害" />
+		<var name="AddPhysicalDamage" alias="物理伤害修正" />
+		<var name="AddMagicDamage" alias="魔法伤害修正" />
+		<var name="AddRealDamage" alias="真实伤害修正" />
+		<var name="RedoubleDamage" alias="加倍伤害" />
+		<var name="AllDamageBonuses" alias="伤害修正" />
+        <var name="PowerHeroDamage" alias="力量系英灵伤害修正" />   
+        <var name="IntelligenceHeroDamage" alias="智力系英灵伤害修正" />   
+        <var name="AgileHeroDamage" alias="敏捷系英灵伤害修正" />   
+
+        <!-- 临时伤害属性 -->
+        <var name="TempRealDamage" alias="临时真实伤害" />
+        <var name="TempRedoubleDamage" alias="临时加倍伤害" />
+        <var name="PerMaxHpRealDamage" alias="附加自身最大生命值百分比的真实伤害" />
+
+
+
+
+        <!-- 技能通用属性 -->
+		<var name="SkillBasicAttackPower" alias="技能基础攻击力" />
+        <var name="SkillCdTime" alias="技能冷却时间" />
+        <var name="SkillRemainingCdTime" alias="技能剩余冷却时间" />
+        <var name="SkillNeedGameMana" alias="技能所需卡能值" />
+		<var name="SkillMissileSpeed" alias="技能射速" />
+        <var name="SkillDuration" alias="技能持续时间" />
+        <var name="SkillChargingNum" alias="技能充能次数" />
+        <var name="SkillPenetrateNum" alias="技能穿透数量" />
+        <var name="SkillAttackInheritance" alias="技能继承攻击力" />
+        <var name="SkillSpellInheritance" alias="技能继承魔法强度" />
+        <var name="SkillRange" alias="技能范围" />
+        <var name="SkillDamage" alias="技能伤害修正" />
+        <var name="SkillSalvosNum" alias="技能齐射数量" />
+        <var name="SkillSalvoAngle" alias="技能齐射角度" />
+        <var name="SkillContinuousAtkNum" alias="技能连射次数" />
+        <var name="SkillContinuousAtkSpeed" alias="技能连射速度" />
+        <var name="SkillContinuousAtkDamageInherit" alias="技能连射伤害继承" />
+		<var name="SkillSplitsNum" alias="技能分裂个数" />
+        <var name="SkillSplitsDamage" alias="技能分裂伤害继承" />
+		<var name="SkillSplitsNumAgain" alias="技能再分裂个数" />
+        <var name="SkillSplitsDamageAgain" alias="技能再分裂伤害继承" />
+		<var name="SkillTrajectoryNum" alias="技能每波弹道数量" />
+        <var name="SkillExplosionRange" alias="技能爆炸范围" />
+        <var name="SkillArrowNum" alias="技能箭矢数量" />
+        <var name="SkillReboundNum" alias="技能反弹次数" />
+        <var name="SkillContinuousDamageNum" alias="技能连续伤害次数" />
+        
+        <var name="SkillMagicExplosion" alias="技能魔法爆炸" />
+        <var name="SkillThunderboltRealDamage" alias="技能落雷真实伤害" />
+        <var name="SkillPenetrateInheritance" alias="技能穿透伤害继承" />
+        <var name="SkillWallRebound" alias="技能墙体回弹" />
+        <var name="SkillKnockUpMonster" alias="技能击飞怪物" />
+        <var name="SkillRepelMonster" alias="技能击退怪物" />
+        <var name="SkillCriticalThunderbolt" alias="技能暴击落雷" />
+        <var name="SkillCriticalThunderboltScale" alias="技能暴击落雷大小" />
+        <var name="SkillCriticalDamage" alias="技能暴击伤害" />
+        <var name="SkillToughnessDamage" alias="技能韧性伤害" />
+        <var name="SkillDamageBonusBurnUnits" alias="技能对灼烧单位额外伤害" />
+        <var name="SkillPerParamOne" alias="技能继承怪物参数百分比" />
+
+        <!-- 新通用技能 -->
+        <var name="AllSchoolInitialLayers" alias="所有流派初始层数" />
+        <var name="SoldierMaxHealthAddMainAttributes" alias="英灵满血三维数值提高" />
+        <var name="ReleaseSkillProbabilityAddHealth" alias="释放技能概率恢复自身生命值" />
+        <var name="SoldierAttackSpeedToNormalAttackDamage" alias="英灵攻击速度转普攻伤害" />
+        <var name="BuffModerateAccumulate" alias="减速效果叠加" />
+        <var name="SoldierNormalAttackNumExtraSpellPower" alias="英灵普攻次数额外魔法加成" />
+        <var name="SoldierNormalAttackNumExtraRealDmg" alias="英灵普攻额外真伤" />
+        <var name="KillAnEnemyExtraBattleGoldCoin" alias="击杀敌人额外战斗货币" />
+        <var name="SoldierHealthBelowPerExtraAttribute" alias="英灵生命值低于百分之多少额外加成" />
+        <var name="SoldierRoundBeHitAddMainAttributes" alias="英灵回合未受击加成主属性" />
+        <var name="EnemyHealthAbovePerExtraAddDamage" alias="生命值高于百分多少敌人额外伤害加成" />
+        <var name="EnemyHealthBelowPerExtraAddDamage" alias="生命值低于百分多少敌人额外伤害加成" />
+        <var name="SoldierSkillCriticalCdTimeRestart" alias="英灵技能暴击当前冷却时间重置" />
+        <var name="DamageAdjustmentForRegularEnemies" alias="对普通敌人造成的伤害修正" />
+        <var name="CorrectionOfDamageSufferedByEliteEnemies" alias="对精英敌人造成的伤害修正" />
+        <var name="CorrectionOfDamageSufferedByTheLeaderEnemies" alias="对首领敌人造成的伤害修正" />
+        <var name="PhysicalBloodSucking" alias="物理攻击吸血" />
+        <var name="MagicBloodSucking" alias="魔法攻击吸血" />
+        <var name="BrokenStateDamageCorrection" alias="破韧状态下伤害修正" />
+        <var name="BrokenStateNAtkReduceCooling" alias="破韧状态下普攻减冷却" />
+        <var name="OrdinaryAtkOverlayAtkSpeed" alias="普通攻击叠攻速" />
+        <var name="RandomlyObtainRareEnhancements" alias="随机获得稀有强化" />
+        <var name="LockAtkInterval" alias="锁定攻击间隔" />
+        <var name="DidItExplode" alias="是否爆炸" />
+        <var name="IsAddSkillNum" alias="技能重复释放" />
+        <var name="SkillFireDamage" alias="灼烧增伤" />
+        <var name="KaLinCd" alias="暗杀者冷却修正" />
+        <var name="KaLinDamage" alias="暗杀者额外增伤" />
+        <var name="IsFireTurnRealDamage" alias="灼烧变为真伤" />
+        <var name="AtkAddMagicDamage" alias="附加法强的魔法伤害" />
+        <var name="AtkTurnMagicBall" alias="普攻变为法球" />
+        <var name="QualitativeChangeEffect" alias="火焰之灵质变效果" />
+        <var name="YiLaiYaGroupBlessings" alias="伊莱娅群体祝福" />
+        <var name="YiLaiYaHolyLightMark" alias="圣光印记效果" />
+        <var name="KillMonsterGetMagicPower" alias="击杀增加魔法强度" />
+        <var name="YiLaiYaPassiveSkill" alias="祈祷效果属性修正" />
+        <var name="ThisAtkMustCritical" alias="本次普通攻击必定暴击" />
+        <var name="ThisSkillMustCritical" alias="本次技能必定暴击" />
+        <var name="LockAtkSpeed" alias="锁定攻击速度" />
+        
+
+        <!-- BUFF效果相关属性 -->
+        <var name="BuffBasicDamage" alias="效果基础伤害" />
+        <var name="BuffPctDamage" alias="效果百分比伤害" />
+        <var name="BuffDurationTime" alias="效果持续时间" />
+        <var name="BuffTriggerInterval" alias="效果触发间隔" />
+        <var name="BuffNumLayers" alias="效果叠加层数" />
+        <var name="BuffTriggerProbability" alias="效果触发概率" />
+        <var name="Null" alias="无" />
+
+        <!-- 加成相关属性 -->
+        <var name="AddAttackPower" alias="增加攻击力" />
+        <var name="AddSpellPower" alias="增加魔法强度" />
+        <var name="AddSkillBasicDamage" alias="增加技能基础伤害" />
+        <var name="AddDamageValue" alias="增加伤害量" />
+        <var name="AddDamageValueTake" alias="增加伤害修正" />
+        <var name="AddMaxHp" alias="增加最大生命值" />
+        <var name="AddAttackTime" alias="增加攻击间隔" />
+        <var name="AddCriticalDamage" alias="增加暴击伤害" />
+        <var name="AddSkillCdTime" alias="增加冷却时间" />
+        <var name="AddDurationTime" alias="增加持续时间" />
+        <var name="AddValue" alias="增加效果值" />
+        <var name="DeepRootedEffect" alias="根深蒂固效果" />
+        <var name="LifeRecoveryEffect" alias="生命复苏效果" />
+
+	</enum>
+
+    <!-- 属性来源类型 -->
+    <enum name="AttributeSourceType">
+        <var name="Base" alias="基础" />
+        <var name="Skill" alias="技能" />
+        <var name="SchoolCard" alias="流派卡" />
+        <var name="SurpriseCard" alias="惊喜卡" />
+        <var name="Talent" alias="天赋" />
+        <var name="Equip" alias="装备" />
+        <var name="Stage" alias="关卡" />
+        <var name="GeneralSkill" alias="通用技能" />
+        <var name="Skin" alias="皮肤" />
+        <var name="ToolPanel" alias="工具面板" />
+        <var name="MainAttribute" alias="主属性" />
+        <var name="RealmRoom" alias="大秘境" />
+        <var name="SpeakerSkin" alias="轮语者皮肤" />
+        <var name="FusionGem" alias="融合石" />
+    </enum>
+
+    <!-- 属性类别类型 -->
+    <enum name="AttributeCategoryType">
+        <var name="Primary" alias="主属性" />
+        <var name="Base" alias="基础属性" />
+        <var name="Skill" alias="技能属性" />
+        <var name="Module" alias="功能属性" />
+        <var name="Soldier" alias="英灵属性" />
+        <var name="Damage" alias="伤害属性" />
+        <var name="Monster" alias="怪物属性" />
+        <var name="Buff" alias="效果属性" />
+        <var name="Add" alias="加成属性" />
+	</enum>
+
+     <!-- 数值显示类型 -->
+    <enum name="ValueDisplayType">
+        <var name="OriginalValue" alias="原始值显示" />
+        <var name="RoundUp" alias="向上取整" />
+        <var name="RoundOff" alias="四舍五入" />
+        <var name="RoundDown" alias="向下取整" />
+        <var name="KeepDecimal2" alias="保留2位小数" />
+	</enum>
+    
+    <!-- 属性配置 -->
+    <bean name="AttributeConfig" >
+        <var name="AttributeType" type="AttributeType" />
+        <var name="Name" type="string" />
+         <var name="Icon" type="string" />
+        <var name="ValueLimit" type="ValueLimitStruct" />
+        <var name="Algorithm" type="string" />
+        <var name="Category" type="AttributeCategoryType" />
+        <var name="DisplayType" type="ValueDisplayType" />
+        <var name="AdditionAttributes" type="(list#sep=|),AttributeStruct" />
+	</bean>
+	<table name="TbAttributeConfig" value="AttributeConfig" input="GamePlay/AttributeConfig.xlsx"/>
+
+    <!-- 主属性配置 -->
+    <bean name="MainAttributeConfig" >
+        <var name="MainAttributeType" type="MainAttributeType" />
+        <var name="Icon" type="string" />
+        <var name="Name" type="string" />
+        <var name="ValueLimit" type="ValueLimitStruct" />
+        <var name="Algorithm" type="string" />
+        <var name="Category" type="AttributeCategoryType" />
+        <var name="DisplayType" type="ValueDisplayType" />
+        <var name="ConvertToBaseAttributes" type="(list#sep=|),AttributeStruct" />
+	</bean>
+	<table name="TbMainAttributeConfig" value="MainAttributeConfig" input="GamePlay/MainAttributeConfig.xlsx"/>
+
+    <!-- 属性结构 -->
+    <bean name="AttributeStruct" sep=":" >
+        <var name="Type" type="AttributeType" /> 
+        <var name="Value" type="float" />
+        <var name="ValueType" type="ValueType" />
+        <var name="EffectParam" type="float" /> <!-- 生效参数 -->
+        <var name="ProbabilityTrigger" type="float" /> <!-- 概率触发：0，必触发 -->
+    </bean>
+
+
+    <!-- 主属性结构 -->
+    <bean name="MainAttributeStruct" sep=":" >
+        <var name="Type" type="MainAttributeType" />
+        <var name="Value" type="float" />
+        <var name="ValueType" type="ValueType" />
+        <var name="EffectParam" type="float" /> <!-- 生效参数 -->
+    </bean>
+
+
+    <!-- 数值上限结构 -->
+    <bean name="ValueLimitStruct" sep="|" >
+        <var name="Minimum" type="float" />
+        <var name="Maximum" type="float" />
+    </bean>
+
+
+
+</module>

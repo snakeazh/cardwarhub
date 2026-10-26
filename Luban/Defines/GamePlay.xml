@@ -1,0 +1,1286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <enum name="CardType">
+    <var name="Skill" alias="技能" />
+    <var name="SkillPassive" alias="被动技能" />
+    <var name="GeneralSkill" alias="奥术卡" />
+    <var name="HiddenSkill" alias="隐藏技能" />
+    <var name="CitySkill" alias="主城技能" />
+    <var name="Soldier" alias="英灵" />
+    <var name="Monster" alias="怪物" />
+    <var name="Building" alias="建筑" />
+    <var name="Property" alias="属性" />
+    <var name="SoldierNormalAtk" alias="英灵普攻" />
+  </enum>
+  <enum name="CardState">
+    <var name="Default" />
+    <var name="Develop" alias="开发中" />
+  </enum>
+  <enum name="SoldierRoleType">
+    <var name="Self" alias="自身" />
+    <var name="Mirror" alias="镜像" />
+    <var name="CopyBody" alias="复制体" />
+  </enum>
+  <enum name="SoldierFactionType">
+    <var name="Power" alias="力量" />
+    <var name="Intelligence" alias="智力" />
+    <var name="Agile" alias="敏捷" />
+  </enum>
+  <enum name="SoldierType">
+    <var name="Archer" alias="翎" />
+    <var name="Yan" alias="琰" />
+    <var name="Spearmen" alias="西岚" />
+    <var name="Magician" alias="露嘉" />
+    <var name="KaLin" alias="卡琳" />
+    <var name="YiLaiYa" alias="伊莱娅" />
+  </enum>
+  <enum name="CareerType">
+    <var name="Archer" alias="射手" />
+    <var name="Warrior" alias="战士" />
+    <var name="Wizard" alias="法师" />
+    <var name="Assassin" alias="刺客" />
+    <var name="Assistant" alias="辅助" />
+  </enum>
+  <enum name="BuildingType">
+    <var name="Production" alias="生产" />
+    <var name="Special" alias="特殊" />
+    <var name="Function" alias="功能" />
+    <var name="Population" alias="人口" />
+  </enum>
+  <enum name="TakeDamageType">
+    <var name="General" alias="普通" />
+    <var name="CriticalDamage" alias="暴击" />
+    <var name="PhysicalDamage" alias="物理伤害" />
+    <var name="MagicDamage" alias="魔法伤害" />
+    <var name="MagicDamageThunder" alias="魔法伤害落雷" />
+    <var name="RealDamage" alias="真实伤害" />
+    <var name="Treatment" alias="治疗护盾" />
+    <var name="Miss" alias="闪避" />
+    <var name="SchoolDamage" alias="流派效果伤害" />
+  </enum>
+  <enum name="ChooseCardType">
+    <var name="GetBuilding" alias="获得建筑" />
+    <var name="UpgradeBuilding" alias="升级建筑" />
+    <var name="GetSpecial" alias="获得特殊卡" />
+    <var name="GetSkill" alias="学习技能" />
+    <var name="UpgradeSkill" alias="技能提升" />
+    <var name="UpgradeSpecial" alias="升级特殊效果" />
+    <var name="SoldierProperties" alias="士兵属性" />
+    <var name="BuildingProperties" alias="建筑属性" />
+    <var name="PopulationProperties" alias="人口属性" />
+    <var name="GetSoldier" alias="士兵" />
+    <var name="GetSchool" alias="流派" />
+    <var name="GetMonsterDrop" alias="怪物掉落" />
+  </enum>
+  <enum name="GemType">
+    <var name="GemSpecial" alias="特殊" />
+    <var name="GemProperty" alias="属性" />
+  </enum>
+  <enum name="GemSpecialType">
+    <var name="EveryDayRestoration" alias="每天主城恢复" />
+    <var name="ImmuneCounter" alias="免疫反伤" />
+    <var name="EveryDayDamageUp" alias="每天伤害提高" />
+    <var name="LowHpDamageUp" alias="低血量提升伤害" />
+    <var name="CloseRangeDamageUp" alias="近距离提升伤害" />
+    <var name="MonstersHighHpDamageUp" alias="怪物高血量提升伤害" />
+    <var name="KillEliteRegen" alias="击杀精英回血" />
+  </enum>
+  <enum name="GemPropertyType">
+    <var name="AllAtk" alias="攻击力" />
+    <var name="AllDamage" alias="伤害" />
+    <var name="Interval" alias="攻击间隔" />
+    <var name="Ballistic" alias="弹道速度" />
+    <var name="MainCityDefense" alias="主城防御" />
+    <var name="SoldierDamage" alias="士兵伤害" />
+    <var name="ArcherDamage" alias="弓箭手伤害" />
+    <var name="MagicianDamage" alias="魔法师伤害" />
+    <var name="QuickSlashDamage" alias="快速挥砍伤害" />
+    <var name="SplitChopDamage" alias="分裂斩次斩伤害" />
+    <var name="WhirlwindDamage" alias="旋风斩伤害" />
+    <var name="CrossbowDamage" alias="连弩伤害" />
+    <var name="ArrowsDamage" alias="万箭齐发伤害" />
+    <var name="ShooterFocusDamage" alias="射手专注伤害" />
+  </enum>
+  <enum name="StrengthenType">
+    <var name="HpStrengthen" alias="生命值强化" />
+    <var name="DefenseStrengthen" alias="防御值强化" />
+    <var name="ShieldStrengthen" alias="护盾值强化" />
+    <var name="AtkStrengthen" alias="攻击力强化" />
+    <var name="CounterStrengthen" alias="反击伤害强化" />
+  </enum>
+  <enum name="ModuleType">
+    <var name="Resource" alias="资源" />
+    <var name="Currency" alias="货币" />
+    <var name="Prop" alias="道具" />
+    <var name="CardFragment" alias="卡牌碎片" />
+    <var name="CityLoad" alias="城主" />
+    <var name="Gem" alias="宝石" />
+    <var name="Card" alias="卡牌" />
+    <var name="Mana" alias="法力" />
+    <var name="ChooseCard" alias="三选一" />
+    <var name="Equip" alias="装备" />
+    <var name="Exp" alias="经验" />
+    <var name="GiftPack" alias="礼包" />
+    <var name="Decoration" alias="装饰" />
+    <var name="HeroSkin" alias="皮肤" />
+    <var name="Task" alias="任务" />
+    <var name="LootBox" alias="宝箱" />
+    <var name="FusionStone" alias="融合石" />
+    <var name="PlayerSkin" alias="论语者皮肤" />
+  </enum>
+  <enum name="ItemType">
+    <var name="Gold" alias="金币" />
+    <var name="Diamond" alias="钻石" />
+    <var name="Coupon" alias="点券" />
+    <var name="SoldierExp" alias="英灵经验丸" />
+    <var name="DailyActiveNum" alias="每日活跃度" />
+    <var name="WeekActiveNum" alias="每周活跃度" />
+    <var name="AchievementNum" alias="章节成就" />
+    <var name="Stamina" alias="体力" />
+    <var name="Prop" alias="道具" />
+    <var name="SkillCard" alias="技能卡牌" />
+    <var name="UniversalCard" alias="通用卡牌" />
+    <var name="AttributeCard" alias="奥术卡牌" />
+    <var name="HeroCard" alias="英灵卡牌" />
+    <var name="SkillCardFragment" alias="技能卡牌碎片" />
+    <var name="UniversalCardFragment" alias="通用卡牌碎片" />
+    <var name="AttributeCardFragment" alias="奥术卡牌碎片" />
+    <var name="HeroCardFragment" alias="英灵卡牌碎片" />
+    <var name="Mana" alias="法力" />
+    <var name="ManaFragment" alias="法力碎片" />
+    <var name="MonsterChooseCard" alias="怪物三选一" />
+    <var name="SoldierEquip" alias="战士装备" />
+    <var name="SoldierChest" alias="英雄抽卡" />
+    <var name="PlayerExp" alias="玩家经验" />
+    <var name="GiftPack" alias="礼包" />
+    <var name="Decoration" alias="装饰" />
+    <var name="Skin" alias="皮肤" />
+    <var name="SurpriseLootBox" alias="奇遇宝箱" />
+    <var name="FusionStone" alias="融合石" />
+    <var name="CombatCurrency" alias="战斗货币" />
+    <var name="PlayerSkin" alias="论语者皮肤" />
+    <var name="ItemGroup" alias="道具组" />
+    <var name="ClassFragment" alias="职业碎片" />
+    <var name="EquipForgingBook" alias="装备锻造书" />
+    <var name="TalentStone" alias="天赋石" />
+    <var name="PlayerWeapon" alias="轮语者武器" />
+    <var name="PlayerImage" alias="轮语者形象" />
+    <var name="PlayerAvatar" alias="头像" />
+    <var name="PlayerAvatarFrame" alias="头像框" />
+    <var name="HeroSeat" alias="备战席碎片" />
+    <var name="Title" alias="称号" />
+
+
+  </enum>
+  <enum name="RandomType">
+    <var name="Weight" alias="必掉" />
+    <var name="Chance" alias="概率" />
+    <var name="Random" alias="随机" />
+  </enum>
+  <enum name="StageType">
+    <var name="Guide" alias="引导" />
+    <var name="Main" alias="主线" />
+    <var name="ChallengeBoss" alias="挑战BOSS" />
+    <var name="EndlessTower" alias="无尽塔" />
+    <var name="GreaterRift" alias="大秘境" />
+    <var name="GoldRift" alias="金币秘境" />
+    <var name="PvP" alias="玩家对战" />
+  </enum>
+  <enum name="DisplayStatustype">
+    <var name="Maininterface" alias="主界面" />
+    <var name="BeginnersGuide" alias="新手引导" />
+    <var name="EndlessTower" alias="无尽塔" />
+    <var name="WorldLeader" alias="世界领主" />
+    <var name="SecretRealm" alias="大秘境" />
+  </enum>
+  <enum name="SchoolType">
+    <var name="Power" alias="力量流" />
+    <var name="AttckSpeed" alias="攻速流" />
+    <var name="Critical" alias="暴击流" />
+    <var name="SecretArts" alias="秘术流" />
+    <var name="Life" alias="生命流" />
+    <var name="Abnormal" alias="异常流" />
+    <var name="DirectDamage" alias="直伤流" />
+    <var name="Skill" alias="技能" />
+    <var name="OneMan" alias="一人成军" />
+  </enum>
+  <enum name="SchoolCardTakeType">
+    <var name="EffectiveSingle" alias="单次生效" />
+    <var name="EffectiveWeight" alias="概率生效" />
+    <var name="EffectiveWeightAccrual" alias="概率累加生效" />
+    <var name="EffectiveWeightInstantly" alias="概率立即生效" />
+    <var name="EffectiveSustain" alias="持续生效" />
+    <var name="Immediately" alias="立即触发" />
+    <var name="NormalAttackHit" alias="普通攻击命中触发" />
+    <var name="HeroesInjured" alias="英灵受到伤害触发" />
+    <var name="ActiveSkillsHit" alias="主动技能命中触发" />
+    <var name="CriticalStrike" alias="暴击触发" />
+    <var name="HeroesApplyAbnormalEffects" alias="英灵施加异常效果后触发" />
+    <var name="HeroesReleaseActiveSkills" alias="英灵释放主动技能触发" />
+    <var name="HeroesFullHealthValue" alias="英灵满生命值触发" />
+  </enum>
+  <enum name="SchoolCategoryType">
+    <var name="SchoolCard" alias="流派" />
+    <var name="Skill" alias="技能" />
+  </enum>
+  <enum name="ConditionType">
+    <var name="KillEnemyCount" alias="击杀敌人数量" />
+    <var name="SkillReleasesCount" alias="释放主动技能次数" />
+    <var name="EveryLossOfHealth" alias="每损失百分比最大生命值" />
+    <var name="EveryHaveOfHealth" alias="每拥有主城百分比最大生命值" />
+    <var name="SurvivalDays" alias="每生存天数" />
+    <var name="EveryOwnOfCityHealth" alias="主城生命值满血" />
+    <var name="ManaNumMax" alias="拥有卡能值数量上限" />
+    <var name="CausingCriticaCount" alias="造成暴击次数" />
+    <var name="AtkOfNumReleasesAttack" alias="每进行多少次普通攻击下次攻击造成额外伤害" />
+    <var name="EveryAtk" alias="英雄每次普通攻击" />
+    <var name="TakeManaNum" alias="获得卡能值的数量" />
+    <var name="CityHpToMax" alias="主城满生命值" />
+    <var name="SoldierGainProperty" alias="英雄每获得多少点属性" />
+    <var name="UnlockSchoolNum" alias="解锁流派数量" />
+    <var name="HeroNum" alias="携带英灵数量" />
+    <var name="HeroFullHealth" alias="英雄满血" />
+    <var name="HeroAttackPower" alias="英雄攻击力" />
+    <var name="MaximumManaPerPossession" alias="轮语者每额外拥有的卡能值上限" />
+    <var name="MaximumHealthPerPercentageOwned" alias="英灵每拥有百分比的最大生命值" />
+    <var name="ManaFragmentPerPossession" alias="轮语者每拥有的卡能碎片恢复量" />
+  </enum>
+  <enum name="LevelConditionType">
+    <var name="NormalClearance" alias="通关" />
+    <var name="NoHeroDie" alias="无英灵死亡通关" />
+    <var name="NoHeroWasInjured" alias="无英灵受伤通关" />
+  </enum>
+  <enum name="RevolvingType">
+    <var name="Nothing" alias="无" />
+    <var name="Rotate360" alias="旋转360" />
+  </enum>
+  <enum name="ChannelType">
+    <var name="Mainland" alias="大陆" />
+    <var name="Intranet" alias="内网" />
+    <var name="Malaysia" alias="马来西亚" />
+    <var name="All" alias="全部" />
+  </enum>
+  <enum name="TalentType">
+    <var name="Killing" alias="杀戮" />
+    <var name="SpeedShadow" alias="疾影" />
+    <var name="Annihilate" alias="湮灭" />
+    <var name="Hippocrene" alias="灵泉" />
+    <var name="Decision" alias="裁决" />
+  </enum>
+  <enum name="EquipMaterialType">
+    <var name="ClothArmor" alias="布甲" />
+    <var name="SkinArmor" alias="皮甲" />
+    <var name="PlateArmor" alias="板甲" />
+    <var name="LongBow" alias="长弓" />
+    <var name="CrossBow" alias="弩" />
+    <var name="BroadSword" alias="长剑" />
+    <var name="BigSword" alias="巨剑" />
+    <var name="Staff" alias="法杖" />
+    <var name="MagicBook" alias="魔杖" />
+    <var name="Dagger" alias="匕首" />
+    <var name="Blade" alias="袖刃" />
+  </enum>
+  <enum name="EquipPartType">
+    <var name="Tops" alias="上衣" />
+    <var name="Bottoms" alias="下装" />
+    <var name="Foot" alias="足具" />
+    <var name="Bracelet" alias="手镯" />
+    <var name="Necklace" alias="项链" />
+    <var name="Earring" alias="耳环" />
+    <var name="Weapon" alias="武器" />
+  </enum>
+  <enum name="ShopType">
+    <var name="Cardgroups" alias="卡组商铺" />
+    <var name="Gem" alias="钻石商铺" />
+    <var name="Gold" alias="金币商铺" />
+    <var name="Stamina" alias="体力商铺" />
+    <var name="Daily" alias="丰饶馈赠" />
+    <var name="ItemMaterial" alias="材料商铺" />
+    <var name="EquipMaterial" alias="装备材料商铺" />
+    <var name="SecreRealm" alias="神话之力" />
+    <var name="Soldier" alias="英灵商铺" />
+    <var name="Skill" alias="技能商铺" />
+    <var name="Challenge" alias="挑战商铺" />
+    <var name="HiddenRealmShop" alias="秘境商铺" />
+    <var name="DailyShop" alias="每日商铺" />
+    <var name="PvPShop" alias="竞技场商铺" />
+  </enum>
+  <enum name="ShopRefreshType">
+    <var name="Never" alias="不刷新" />
+    <var name="Daily" alias="每日刷新" />
+    <var name="Countdown" alias="倒计时刷新" />
+  </enum>
+  <enum name="GoodsLimitType">
+    <var name="Daily" alias="每日限购" />
+    <var name="Weekly" alias="每周限购" />
+  </enum>
+  <enum name="ResetType">
+    <var name="Default" alias="默认" />
+    <var name="Daily" alias="每日" />
+    <var name="Week" alias="每周" />
+  </enum>
+  <enum name="ActivityType">
+    <var name="FirstCharge" alias="首充" />
+    <var name="AccumulateCharge" alias="累计充值" />
+    <var name="CreateSign" alias="创角签到" />
+    <var name="GiftPack" alias="礼包" />
+    <var name="CreateDayCharge" alias="创角天数充值" />
+    <var name="FundCashback" alias="基金返现" />
+    <var name="PassCheck" alias="通行证" />
+    <var name="MonthlySubscription" alias="月卡" />
+  </enum>
+  <enum name="ActivityStatusType">
+    <var name="Close" alias="关闭" />
+    <var name="Open" alias="开启" />
+  </enum>
+  <enum name="ActivityShowLayerType">
+    <var name="Home" alias="主界面" />
+    <var name="Activity" alias="活动界面" />
+  </enum>
+  <enum name="ModuleFunctionType">
+    <var name="SetCardGroup" alias="战斗模块" />
+    <var name="Shop" alias="商店模块" />
+    <var name="SingIn" alias="七日签到" />
+    <var name="SoldierAtlas" alias="英灵模块" />
+    <var name="SoldierSkillAtlas" alias="英灵技能模块" />
+    <var name="SkillBooks" alias="卡牌模块" />
+    <var name="SoldierSkin" alias="英灵皮肤" />
+    <var name="WorldBig" alias="世界模块" />
+    <var name="Talent" alias="天赋功能" />
+    <var name="Equip" alias="装备功能" />
+    <var name="EquipPhase" alias="锻造功能" />
+    <var name="FusionStoneGamePlay" alias="宝石迷阵" />
+    <var name="FusionGemSlot" alias="融合石功能" />
+    <var name="Task" alias="任务模块" />
+    <var name="ActivityImport" alias="活动模块" />
+    <var name="MouthyCard" alias="月卡" />
+    <var name="PassCheck" alias="通行证" />
+    <var name="FundCashback" alias="基金" />
+    <var name="GiftPack" alias="礼包" />
+    <var name="FirstReCharge" alias="首充" />
+    <var name="EquipEntry" alias="洗炼功能" />
+    <var name="SoldierAwakening" alias="英灵觉醒" />
+    <var name="PlayerAvatar" alias="轮语者形象功能" />
+    <var name="AchievementCollection" alias="成就功能" />
+    <var name="EndlessTower" alias="奇幻秘境" />
+    <var name="WorldBoss" alias="世界领主" />
+    <var name="PlayerFigure" alias="轮语者" />
+    <var name="SetTalent" alias="配置天赋" />
+    <var name="AutomaticBattle" alias="自动战斗" />
+    <var name="MaterialStore" alias="材料商店" />
+    <var name="SoldierShop" alias="英灵商店" />
+    <var name="SoldierDevelop" alias="英雄养成" />
+    <var name="CardUpgrade" alias="卡牌升级" />
+    <var name="LotteryShop" alias="卡包商店" />
+    <var name="BattleChallenge" alias="挑战" />
+    <var name="DoubleSpeedBattle" alias="战斗倍速" />
+    <var name="PVP" alias="对战玩法" />
+    <var name="MonsterAtlas" alias="怪物图鉴" />
+    <var name="None" alias="无" />
+    <var name="GeneralSkill" alias="奥术卡模块" />
+    <var name="Speaker" alias="轮语者功能" />
+    <var name="Friends" alias="好友功能" />
+    <var name="Chat" alias="聊天功能" />
+    <var name="Rest" alias="驿站功能" />
+    <var name="WayOfPlay" alias="玩法大厅功能" />
+    <var name="Ranking" alias="排行榜功能" />
+    <var name="MonsterNote" alias="怪物笔记功能" />
+    <var name="GoldEndlessTower" alias="金币秘境" />    
+    <var name="PlayerWeapon" alias="轮语者武器功能" />
+    <var name="HeroBattleSeat" alias="战位" />
+    <var name="ArcCardResonance" alias="奥术卡共鸣" />
+    <var name="ArcCardDecompose" alias="奥术卡分解" />
+    <var name="GemLottery" alias="融合石抽奖" />
+    <var name="GemInlay" alias="融合石镶嵌" />
+
+  </enum>
+  <enum name="ModuleTipType">
+    <var name="StrongGuide" alias="强引导" />
+    <var name="NoGuide" alias="无" />
+  </enum>
+  <enum name="ModuleDialogType">
+    <var name="Finger" alias="手指" />
+  </enum>
+  <enum name="MapNodeType">
+    <var name="Chest" alias="宝箱" />
+    <var name="Event" alias="事件" />
+    <var name="Monster" alias="怪物" />
+    <var name="NextFloor" alias="下一层" />
+  </enum>
+  <enum name="MapNodeState">
+    <var name="Init" alias="初始" />
+    <var name="Clear" alias="通过" />
+    <var name="Receive" alias="已领取" />
+  </enum>
+  <enum name="ChestPoolType">
+    <var name="ArcaneCard" alias="奥术卡" />
+    <var name="FusionStone" alias="融合石" />
+    <var name="AwakeningStorybook" alias="觉醒故事书" />
+  </enum>
+  <enum name="GuideShowType">
+    <var name="Hide" alias="不显示" />
+    <var name="Show" alias="显示" />
+  </enum>
+  <enum name="GuideNextEvent">
+    <var name="ClickTarget" alias="点击目标节点" />
+    <var name="ClickMask" alias="点击Mask" />
+  </enum>
+  <bean name="CardIdLv" sep="_">
+    <var name="Id" type="int#ref=TbCardBaseConfig" />
+    <var name="Lv" type="int" />
+  </bean>
+  <bean name="CardTypeConfig">
+    <var name="Type" type="CardType" />
+    <var name="Name" type="string" />
+  </bean>
+  <bean name="CardBaseConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="CardType" />
+    <var name="BringCount" type="int" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+    <var name="State" type="CardState" />
+    <var name="ConvertFragment" type="(list#sep=|),RewardAndNum" />
+    <var name="UnLockLevel" type="int" />
+  </bean>
+  <bean name="CardDevelopConfig">
+    <var name="Id" type="int" />
+    <var name="UnLockDesc" type="string" />
+    <var name="LevelPropertyList" type="list,DevelopLevelPropertyList" />
+  </bean>
+  <bean name="DevelopLevelPropertyList">
+    <var name="Level" type="int" />
+    <var name="Exp" type="int" />
+    <var name="Name" type="string" />
+    <var name="ConsumeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="AwakeningConsume" type="(list#sep=|),RewardAndNum" />
+    <var name="AwakeningRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="TakeRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Special_Description_Level" type="int" />
+    <var name="UpGradeEffectsDesc" type="(list#sep=|),string" />
+    <var name="UpQualityDesc" type="(list#sep=|),string" />
+    <var name="UpGradeRewardDes" type="(list#sep=|),string" />
+  </bean>
+  <bean name="LevelUnLock" sep="_">
+    <var name="Level" type="int" />
+    <var name="Id" type="int" />
+  </bean>
+  <bean name="CityLevelConfig">
+    <var name="Id" type="int" />
+    <var name="LevelList" type="list,CityLevelList" />
+  </bean>
+  <bean name="CityLevelList">
+    <var name="Level" type="int" />
+    <var name="MaxMana" type="int" />
+    <var name="CityExp" type="int" />
+    <var name="NeedGold" type="int" />
+    <var name="IsAddHero" type="int" />
+    <var name="PlayerExp" type="int" />
+    <var name="RewardGroup" type="string" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="HaloRandomRange" type="(list#sep=|),int" />
+    <var name="RotaryTableOpenNum" type="int" />
+    <var name="RotaryTableRewardData" type="(list#sep=|),RotaryTableRewardStruct" />
+    <var name="QualityWeight" type="(list#sep=|),QualityWeightStruct" />
+  </bean>
+  <bean name="CardBattleConfig">
+    <var name="Id" type="int" />
+    <var name="Hp" type="(array#sep=|),int" />
+    <var name="Atk" type="(array#sep=|),int" />
+    <var name="AttackSwing" type="float" />
+    <var name="AttackTime" type="float" />
+    <var name="AttackRange" type="float" />
+    <var name="AtkMethod" type="int" />
+    <var name="MissileSpeed" type="float" />
+    <var name="MoveSpeed" type="float" />
+    <var name="ProvideExp" type="(array#sep=|),int" />
+    <var name="LevelUpNeedExp" type="(array#sep=|),int" />
+  </bean>
+  <bean name="SoldierFactionStruct">
+    <var name="Type" type="SoldierFactionType" />
+    <var name="Value" type="int" />
+  </bean>
+  <bean name="SoldierLevelPropertyList">
+    <var name="Level" type="int" />
+    <var name="MainAttributes" type="(list#sep=|),MainAttributeStruct" />
+    <var name="FightNum" type="int" />
+    <var name="Hp" type="int" />
+    <var name="Attack" type="int" />
+    <var name="Shield" type="int" />
+    <var name="SpellPower" type="int" />
+    <var name="AttackTime" type="float" />
+    <var name="AttackRange" type="float" />
+    <var name="MissRate" type="float" />
+    <var name="CriticalRate" type="float" />
+    <var name="CriticalDamage" type="float" />
+    <var name="Factions" type="(list#sep=|),(SoldierFactionStruct#sep=:)" />
+    <var name="Resistances" type="(list#sep=|),(ResistanceStruct#sep=:)" />
+  </bean>
+  <bean name="SoldierBattleConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="SoldierType" />
+    <var name="Name" type="string" />
+    <var name="CarType" type="CareerType" />
+    <var name="MainAttrType" type="MainAttributeType" />
+    <var name="Spine" type="string" />
+    <var name="BattleInIcon" type="string" />
+    <var name="BattleQutIcon" type="string" />
+    <var name="PaintingBg" type="string" />
+    <var name="ActivationCost" type="(list#sep=|),RewardAndNum" />
+    <var name="SpineScale" type="float" />
+    <var name="NormalAttackSkillId" type="int#ref=TbSpecialEffectsConfig" />
+    <var name="BaseAttributes" type="(list#sep=|),AttributeStruct" />
+    <var name="CanDrag" type="int" />
+    <var name="AttackSwing" type="float" />
+    <var name="AttackTime" type="float" />
+    <var name="AttackRange" type="float" />
+    <var name="InitSpecialIds" type="(array#sep=|),int#ref=TbSpecialEffectsConfig" />
+    <var name="AtkMethod" type="int" />
+    <var name="MissileSpeed" type="float" />
+    <var name="BaseProvideExp" type="int" />
+    <var name="GrowProvideExp" type="int" />
+    <var name="SellingPrice" type="int" />
+    <var name="AttackDuration" type="float" />
+    <var name="ProjectileScale" type="float" />
+    <var name="CriticalRate" type="float" />
+    <var name="CriticalDamage" type="float" />
+    <var name="ShowAttributeTypes" type="(list#sep=|),AttributeType" />
+    <var name="LevelPropertyList" type="list,SoldierLevelPropertyList" />
+    <var name="AwakingFightNum" type="int" />
+  </bean>
+  <bean name="BuildingBattleConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="BuildingType" />
+    <var name="BornTime" type="int" />
+    <var name="BornCard" type="int" />
+    <var name="RelevanceCard" type="int" />
+    <var name="GetFunctionalEffect" type="int" />
+  </bean>
+  <bean name="DifficultyConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="LvExpList" type="(list#sep=|),int" />
+    <var name="GiftQ1Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="GiftQ2Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="GiftQ3Pool" type="(list#sep=|),CardIdWeight" />
+  </bean>
+  <bean name="CardIdWeight" sep="_">
+    <var name="Id" type="int#ref=TbChooseCardConfig" />
+    <var name="Weight" type="int" />
+  </bean>
+  <bean name="ProjectileConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Describe" type="string" />
+  </bean>
+  <bean name="MainCityBattleConfig">
+    <var name="Id" type="int" />
+    <var name="LossHpRecovery" type="(list#sep=|),PercentTime" />
+    <var name="MaxHpRecovery" type="(list#sep=|),PercentTime" />
+    <var name="MaxHpShield" type="(list#sep=|),PercentTime" />
+    <var name="DamageReduction" type="(list#sep=|),PercentTime" />
+    <var name="DamageBack" type="(list#sep=|),PercentTime" />
+    <var name="Icon" type="string" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="PercentTime" sep="_">
+    <var name="Percent" type="float" />
+    <var name="Time" type="int" />
+  </bean>
+  <bean name="ChooseCardConfig">
+    <var name="Id" type="int" />
+    <var name="ChooseCardType" type="ChooseCardType" />
+    <var name="ChoseCardQuality" type="QualityType" />
+    <var name="CardEffects" type="int" />
+    <var name="PreCard" type="int" />
+    <var name="FailureCondition" type="(list#sep=|),int" />
+    <var name="Title" type="string" />
+    <var name="CardName" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+  </bean>
+  <bean name="ChooseCardPoolCityConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="GiftQ1Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="GiftQ2Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="GiftQ3Pool" type="(list#sep=|),CardIdWeight" />
+  </bean>
+  <bean name="ChooseCardPoolSoldierConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="GiftQ1Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="InitGiftPool" type="(list#sep=|),CardIdWeight" />
+  </bean>
+  <bean name="ChooseCardPoolSchoolConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="GiftQ1Pool" type="(list#sep=|),CardIdWeight" />
+    <var name="InitGiftPool" type="(list#sep=|),CardIdWeight" />
+  </bean>
+  <bean name="ChooseCardPoolMonsterConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="UniquePool" type="(list#sep=|),CardIdWeight" />
+  </bean>
+  <bean name="GemConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="GemType" />
+    <var name="Quality" type="int" />
+    <var name="ConflictGem" type="(list#sep=|),int" />
+    <var name="GemEffects" type="int" />
+    <var name="ProvideExp" type="(array#sep=|),int" />
+    <var name="LevelUpNeedExp" type="(array#sep=|),int" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+  </bean>
+  <bean name="GemSpecialConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="GemSpecialType" />
+    <var name="EveryDayRestoration" type="(array#sep=|),float" />
+    <var name="ImmuneDamage" type="(array#sep=|),int" />
+    <var name="Counterattack" type="(array#sep=|),float" />
+    <var name="EveryDayDamageUp" type="(array#sep=|),float" />
+    <var name="LowHpDamageUp" type="(array#sep=|),float" />
+    <var name="CloseRangeDamageUp" type="(array#sep=|),float" />
+    <var name="MonstersHighHpDamageUp" type="(array#sep=|),float" />
+    <var name="KillEliteRegen" type="(array#sep=|),float" />
+  </bean>
+  <bean name="GemPropertyConfig">
+    <var name="Id" type="int" />
+    <var name="GemPropertyType" type="GemPropertyType" />
+    <var name="CorrectionValue" type="(array#sep=|),float" />
+  </bean>
+  <bean name="StrengthenConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="StrengthenType" />
+    <var name="CorrectionValue" type="float" />
+    <var name="Index" type="(array#sep=|),int" />
+    <var name="Title" type="string" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="ItemConfig">
+    <var name="Id" type="int" />
+    <var name="ModuleType" type="ModuleType" />
+    <var name="Type" type="ItemType" />
+    <var name="Quality" type="QualityType" />
+    <var name="GroupId" type="int" />
+    <var name="EffectValue" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Access" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Skip" type="string" />
+  </bean>
+  <bean name="RewardGroupConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="RandomType" />
+    <var name="RewardGroupList" type="list,RewardGroupListStruct" />
+  </bean>
+  <bean name="RewardGroupListStruct">
+    <var name="ItemId" type="int#ref=TbItemConfig" />
+    <var name="Weight" type="int" />
+    <var name="ItemNum" type="int" />
+  </bean>
+  <bean name="RewardGroupAndNum" sep="_">
+    <var name="Id" type="int#ref=TbRewardGroupConfig" />
+    <var name="RandomTrigger" type="float" />
+    <var name="RandomNumRange" type="(list#sep=:),int" />
+  </bean>
+  <bean name="SignConfig">
+    <var name="Day" type="int" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="RewardConfig">
+    <var name="Id" type="int" />
+    <var name="RewardNum" type="(list#sep=|),RewardAndNum" />
+  </bean>
+  <bean name="BuyCardConfig">
+    <var name="Id" type="int" />
+    <var name="Price" type="(list#sep=|),int" />
+    <var name="BuyNumLevelUp" type="(list#sep=|),int" />
+    <var name="MaxBuyNum" type="int" />
+    <var name="Extend" type="int" />
+  </bean>
+  <bean name="ChapterStageConfig">
+    <var name="Id" type="int" />
+    <var name="DisplayStatus" type="DisplayStatustype" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="AdveBg" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Stages" type="(list#sep=|),int" />
+    <var name="InitUnlockStageId" type="int" />
+    <var name="ClearRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="AfkRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="AfkRewardGroups" type="(list#sep=|),RewardAndNum" />
+    <var name="ClearScores" type="(list#sep=|),int#ref=TbStageScoreConfig" />
+  </bean>
+  <bean name="StageBattleConfig">
+    <var name="Id" type="int" />
+    <var name="ChapterId" type="int#ref=TbChapterStageConfig" />
+    <var name="Difficulty" type="int" />
+    <var name="StageParm" type="(list#sep=|),int" />
+    <var name="StageType" type="StageType" />
+    <var name="StageName" type="string" />
+    <var name="StageDesc" type="string" />
+    <var name="StageCardBg" type="string" />
+    <var name="StageNameColor1" type="(list#sep=|),int" />
+    <var name="StageNameColor2" type="(list#sep=|),int" />
+    <var name="MapBg" type="string" />
+    <var name="MapForeground" type="string" />
+    <var name="SkyBg" type="string" />
+    <var name="DoorBg" type="string" />
+    <var name="GroundBg" type="string" />
+    <var name="ShowBoss" type="int" />
+    <var name="SceneEffect" type="string" />
+    <var name="InWarEffect" type="string" />
+    <var name="PreparationBg" type="string" />
+    <var name="Exp" type="int" />
+    <var name="ConsumeStamina" type="int" />
+    <var name="ConsumeItem" type="(list#sep=|),RewardAndNum" />
+    <var name="MonsterCorrect" type="(list#sep=|),MonsterCorrectStruct" />
+    <var name="MonsterRandomEntry" type="(list#sep=|),MonsterEntryStruct" />
+    <var name="TreasureRewardsOne" type="(list#sep=|),RewardAndNum" />
+    <var name="TreasureRewardsTwo" type="(list#sep=|),RewardAndNum" />
+    <var name="TreasureRewardsThree" type="(list#sep=|),RewardAndNum" />
+    <var name="FirstRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="RewardGroups" type="(list#sep=|),RewardAndNum" />
+    <var name="Condition1" type="int" />
+    <var name="Condition2" type="int" />
+    <var name="Condition3" type="int" />
+    <var name="ExtraScores" type="(list#sep=|),int#ref=TbStageScoreConfig" />
+    <var name="MonsterAttributes" type="(list#sep=|),AttributeStruct" />
+    <var name="StrokeColor" type="(list#sep=|),int" />
+  </bean>
+
+  <bean name="StageScoreConfig">
+    <var name="Id" type="int" />
+    <var name="TimeRange" type="(list#sep=|),int" />
+    <var name="Score" type="int" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="MonsterCorrectStruct">
+    <var name="HpVal" type="float" />
+    <var name="AtkVal" type="float" />
+  </bean>
+  <bean name="MonsterEntryStruct" sep="_">
+    <var name="EntryType" type="MonsterEntryType" />
+    <var name="RandomLevelRange" type="(list#sep=:),int" />
+  </bean>
+  <bean name="SchoolConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="SchoolType" type="SchoolType" />
+    <var name="ShowJudgment" type="int" />
+    <var name="Icon" type="string" />
+    <var name="Icon2" type="string" />
+    <var name="TotalCardCount" type="int" />
+    <var name="Desc" type="string" />
+    <var name="CardCountList" type="list,SchoolCardCountListStruct" />
+  </bean>
+  <bean name="SchoolCardCountListStruct">
+    <var name="CardCount" type="int" />
+    <var name="Title" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Quality" type="QualityType" />
+    <var name="EffectName" type="string" />
+    <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+    <var name="Buffs" type="(list#sep=|),BuffStruct" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="SchoolCardConfig">
+    <var name="Id" type="int" />
+    <var name="TakeType" type="SchoolCardTakeType" />
+    <var name="Quality" type="QualityType" />
+    <var name="Category" type="SchoolCategoryType" />
+    <var name="Param" type="int" />
+    <var name="UnlockLv" type="int" />
+    <var name="IsAdditiveAttr" type="int" />
+    <var name="Schools" type="(list#sep=|),int#ref=TbSchoolConfig" />
+    <var name="IsAddHero" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Desc" type="string" />
+    <var name="StarList" type="list,SchoolCardStarListStruct" />
+    <var name="ExtraParam" type="int" />
+    <var name="RepetitiveSelection" type="int" />
+  </bean>
+  <bean name="SchoolCardStarListStruct">
+    <var name="Star" type="int" />
+    <var name="Name" type="string" />
+    <var name="Quality" type="QualityType" />
+    <var name="Icon" type="string" />
+    <var name="AddStar" type="int" />
+    <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+    <var name="ConditionType" type="ConditionsType" />
+    <var name="Desc1" type="string" />
+    <var name="Desc2" type="string" />
+    <var name="Param1" type="int" />
+    <var name="Param2" type="int" />
+    <var name="Condition" type="(list#sep=|),int#ref=TbConditionConfig" />
+    <var name="MaxTakeNum" type="int" />
+  </bean>
+  <bean name="SchoolChooseCardConfig">
+    <var name="Lv" type="int" />
+    <var name="QualityWeight1" type="(list#sep=|),QualityWeightStruct" />
+    <var name="QualityWeight2" type="(list#sep=|),QualityWeightStruct" />
+    <var name="QualityWeight3" type="(list#sep=|),QualityWeightStruct" />
+    <var name="MaxOpenCount" type="int" />
+    <var name="ChestIcon" type="string" />
+    <var name="QualityWeightList" type="list, ChooseQualityWeightListStruct" />
+  </bean>
+  <bean name="ChooseQualityWeightListStruct">
+    <var name="OpenCount" type="int" />
+    <var name="QualityWeight" type="(list#sep=|),QualityWeightStruct" />
+  </bean>
+  <bean name="QualityWeightStruct" sep=":">
+    <var name="Category" type="SchoolCategoryType" />
+    <var name="Quality" type="QualityType" />
+    <var name="Weight" type="int" />
+  </bean>
+  <bean name="RotaryTableRewardStruct" sep=":">
+    <var name="ImageBg" type="string" />
+    <var name="Num" type="int" />
+  </bean>
+  <bean name="ConditionConfig">
+    <var name="Id" type="int" />
+    <var name="ConditionType" type="ConditionType" />
+    <var name="ConditionParam" type="string" />
+    <var name="ConditionValue" type="float" />
+    <var name="ProbabilityTrigger" type="float" />
+    <var name="IsRecord" type="int" />
+    <var name="IsNotAchievedCall" type="int" />
+  </bean>
+  <bean name="LevelConditionConfig">
+    <var name="ConditionType" type="LevelConditionType" />
+  </bean>
+  <bean name="Rewards">
+    <var name="ItemId" type="int" />
+    <var name="Count" type="int" />
+  </bean>
+  <bean name="PropertyNameDesc">
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Type" type="string" />
+  </bean>
+  <bean name="UnusualStatusStruct">
+    <var name="Type" type="UnusualStatusType" />
+    <var name="Duration" type="float" />
+    <var name="EffectVal" type="float" />
+    <var name="ValueType" type="ValueType" />
+  </bean>
+  <bean name="ChargingStatusStruct">
+    <var name="Type" type="ChargingStatusType" />
+    <var name="MaxNum" type="int" />
+  </bean>
+  <bean name="ExecuteEffectStruct">
+    <var name="Rate" type="int" />
+    <var name="HpLow" type="int" />
+  </bean>
+  <bean name="DamageParamStruct">
+    <var name="EffectVal" type="float" />
+    <var name="ValueType" type="ValueType" />
+  </bean>
+  <bean name="RevolvingStatusStruct">
+    <var name="Type" type="RevolvingType" />
+    <var name="ReturnRange" type="float" />
+  </bean>
+  <bean name="HeadConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="HeadType" />
+    <var name="Icon" type="string" />
+    <var name="Name" type="string" />
+    <var name="NeedItems" type="(list#sep=|),RewardAndNum" />
+  </bean>
+
+  <enum name="HeadType">
+    <var name="Avatar" alias="头像" />
+    <var name="AvatarFrame" alias="头像框" />
+    <var name="AvatarTitle" alias="称号" />
+
+	</enum>
+
+
+  <bean name="ServerListConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Channel" type="ChannelType" />
+    <var name="Url" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Status" type="int" />
+  </bean>
+  <bean name="ChestPoolConfig">
+    <var name="Id" type="int" />
+    <var name="UnLockLevel" type="int" />
+    <var name="Effect" type="string" />
+    <var name="Name" type="string" />
+    <var name="Quality" type="QualityType" />
+    <var name="LevelUpNeedNum" type="(list#sep=|),int" />
+    <var name="ChestBg" type="string" />
+    <var name="Icon" type="string" />
+    <var name="BaseResource" type="string" />
+    <var name="CardGroup" type="(list#sep=|),int" />
+    <var name="SingleCardCount" type="int" />
+    <var name="TenDrawCardCount" type="int" />
+    <var name="ConsumeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="ConsumeItems2" type="(list#sep=|),RewardAndNum" />
+    <var name="DailyFreeNum" type="int" />
+    <var name="DailyLimitNum" type="int" />
+    <var name="PromiseQuality" type="(list#sep=|),QualityType" />
+    <var name="PromiseNum" type="int" />
+    <var name="IntroDesc" type="string" />
+    <var name="IntroDesc2" type="string" />
+    <var name="ProbabilityDesc" type="(list#sep=|),ProbabilityDescStruct" />
+    <var name="PromiseCardGroup" type="(list#sep=|),int" />
+    <var name="OnceTakeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="TenthTakeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="ChestPoolType" type="ChestPoolType" />
+    <var name="DescIcon" type="string" />   
+
+  </bean>
+  <bean name="ProbabilityDescStruct" sep=":">
+    <var name="Quality" type="QualityType" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="ChestCardConfig">
+    <var name="Id" type="int" />
+    <var name="CardGroup" type="int" />
+    <var name="Quality" type="QualityType" />
+    <var name="ItemId" type="int#ref=TbItemConfig" />
+    <var name="ItemNum" type="int" />
+    <var name="Weight" type="float" />
+  </bean>
+  <bean name="SensitiveWordsConfig">
+    <var name="Character" type="string" />
+    <var name="Status" type="int" />
+  </bean>
+  <bean name="TalentConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="TalentType" />
+    <var name="Name" type="string" />
+    <var name="UnlockPlayerLv" type="int" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+    <var name="TalentList" type="list,TalentListStruct" />
+  </bean>
+  <bean name="TalentListStruct">
+    <var name="Level" type="int" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+    <var name="PreLevel" type="int" />
+    <var name="UnlockLv" type="int" />
+    <var name="ConsumeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+    <var name="MainAttributes" type="(list#sep=|),MainAttributeStruct" />
+    <var name="Param1" type="int" />
+    <var name="FightNum" type="int" />
+    <var name="ExtraConsumeItems" type="(list#sep=|),RewardAndNum" />
+    <var name="ExtraName" type="string" />
+    <var name="ExtraIcon" type="string" />
+    <var name="ExtraAttributes" type="(list#sep=|),AttributeStruct" />
+    <var name="ExtraMainAttributes" type="(list#sep=|),MainAttributeStruct" />
+    <var name="ExtraFightNum" type="int" />
+    <var name="ExtraDesc" type="string" />
+  </bean>
+  <bean name="HttpCodeConst">
+    <var name="Success" type="int" />
+    <var name="Error" type="int" />
+    <var name="StatusUnauthorized" type="int" />
+  </bean>
+  <bean name="EquipSuitConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Type" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Desc" type="string" />
+    <var name="TotalCardCount" type="int" />
+    <var name="CardList" type="list,EquipSuitListStruct" />
+  </bean>
+  <bean name="EquipSuitListStruct">
+    <var name="CardCount" type="int" />
+    <var name="Propertys" type="(list#sep=|),int#ref=TbPropertyConfig" />
+    <var name="Desc" type="string" />
+  </bean>
+
+
+  <bean name="ShopConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="ShopType" />
+    <var name="RefreshType" type="ShopRefreshType" />
+    <var name="RefreshCount" type="int" />
+    <var name="RefreshValue" type="int" />
+    <var name="RefreshConsume" type="(list#sep=|),RewardAndNum" />
+    <var name="Name" type="string" />
+    <var name="BannerBg" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+  </bean>
+  <bean name="ShopGoodsConfig">
+    <var name="Id" type="int" />
+    <var name="ShopId" type="int#ref=TbShopConfig" />
+    <var name="Quality" type="QualityType" />
+    <var name="LimitType" type="GoodsLimitType" />
+    <var name="LimitNum" type="int" />
+    <var name="BuyConsumes" type="(list#sep=|),RewardAndNum" />
+    <var name="BuyItemId" type="int" />
+    <var name="BuyItemNum" type="int" />
+    <var name="LockRefreshConsume" type="(list#sep=|),RewardAndNum" />
+    <var name="LockRefreshTime" type="int" />
+    <var name="RefreshWeight" type="int" />
+    <var name="Name" type="string" />
+    <var name="Shopgoodsicon" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Category" type="string" />
+    <var name="State" type="CardState" />
+    <var name="UnlockParam1" type="RankType" />
+    <var name="UnlockParam2" type="int" />
+  </bean>
+
+  <bean name="PlayerFigureConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Quality" type="QualityType" />
+    <var name="Icon" type="string" />
+    <var name="ShowSpine" type="string" />
+    <var name="NeedItems" type="(list#sep=|),RewardAndNum" />
+    <var name="ImageStarList" type="list,ImageStarListStruct" />
+  </bean>
+  <bean name="ImageStarListStruct">
+    <var name="Level" type="int" />
+    <var name="FightNum" type="int" />
+    <var name="BaseAttributes" type="(list#sep=|), AttributeStruct" />
+    <var name="Desc1" type="string" />
+    <var name="ExtraAttributes" type="(list#sep=|), AttributeStruct" />
+    <var name="Desc2" type="string" />
+  </bean>
+  <bean name="RandomUserNameConfig">
+    <var name="Id" type="int" />
+    <var name="Surname" type="string" />
+    <var name="ManName" type="string" />
+    <var name="GirlName" type="string" />
+  </bean>
+  <bean name="PlayerLevelConfig">
+    <var name="Lv" type="int" />
+    <var name="Exp" type="int" />
+    <var name="HeroSlotNum" type="int" />
+    <var name="SkillSlotNum" type="int" />
+    <var name="ArcaneSlotNum" type="int" />
+    <var name="GetEquipLevel" type="int" />
+  </bean>
+  <bean name="CreatePlayerActivityConfig">
+    <var name="Id" type="int" />
+    <var name="Type" type="ActivityType" />
+    <var name="Name" type="string" />
+    <var name="Title" type="string" />
+    <var name="ResetType" type="ResetType" />
+    <var name="Desc" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Banner" type="string" />
+    <var name="BannerBg" type="string" />
+    <var name="BannerMain" type="string" />
+    <var name="ColorScheme" type="string" />
+    <var name="BeginDay" type="int" />
+    <var name="EndDay" type="int" />
+    <var name="IsBuyUnlock" type="int" />
+    <var name="Status" type="ActivityStatusType" />
+    <var name="ShowLayer" type="ActivityShowLayerType" />
+    <var name="ActivityList" type="list, CreatePlayerActivityListStruct" />
+  </bean>
+  <bean name="CreatePlayerActivityListStruct">
+    <var name="PartId" type="int" />
+    <var name="Title" type="string" />
+    <var name="BeginDay" type="int" />
+    <var name="BuyLimitNum" type="int" />
+    <var name="BuyConsumes" type="(list#sep=|),RewardAndNum" />
+    <var name="Param1" type="int" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="FreeRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="EffectValue" type="int" />
+  </bean>
+  <bean name="ModuleFunctionConfig">
+    <var name="Id" type="int" />
+    <var name="ModuleType" type="ModuleFunctionType" />
+    <var name="Name" type="string" />
+    <var name="WorldIcon" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Status" type="int" />
+    <var name="UnlockUserLv" type="int#ref=TbPlayerLevelConfig" />
+    <var name="UnlockRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="TipType" type="ModuleTipType" />
+    <var name="StepList" type="list,ModuleStepListStruct" />
+    <var name="FlyIcon" type="bool" />
+    <var name="GuidePriority" type="int" />
+    <var name="NextGuideModule" type="ModuleFunctionType" />
+    <var name="NextGuideStartStep" type="int" />
+  </bean>
+  <bean name="ModuleStepListStruct">
+    <var name="StepId" type="int" />
+    <var name="CommitServer" type="int" />
+    <var name="DialogType" type="ModuleDialogType" />
+    <var name="DialogText" type="string" />
+    <var name="DialogOffset" type="float3" />
+    <var name="ShowDialoge" type="GuideShowType" />
+    <var name="ClickMaskNext" type="GuideNextEvent" />
+  </bean>
+  <bean name="CardGroupRecomConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Cards" type="(list#sep=|),int#ref=TbCardBaseConfig" />
+    <var name="Schools" type="(list#sep=|),int#ref=TbSchoolConfig" />
+  </bean>
+  <bean name="SkinConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="Spine" type="string" />
+    <var name="FightNum" type="int" />
+    <var name="SpineScale" type="float" />
+    <var name="IllustrationSpine" type="string" />
+    <var name="IllustrationScale" type="float" />
+    <var name="IllustrationSpineScale" type="float" />
+    <var name="Desc" type="string" />
+    <var name="ActsOnCard" type="int?#ref=TbCardBaseConfig" />
+    <var name="UnlockItemId" type="int?#ref=TbItemConfig" />
+    <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+  </bean>
+  <bean name="ChallengeBossConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="RulesDesc" type="string" />
+    <var name="StageId" type="int#ref=TbStageBattleConfig" />
+    <var name="DailyChallengeNum" type="int" />
+    <var name="DailyChallengeRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Status" type="ActivityStatusType" />
+    <var name="RankRewardList" type="list, RankRewardListStruct" />
+    <var name="ScoreRewardList" type="list, ScoreRewardListStruct" />
+    <var name="DamageToScoreList" type="list, DamageToScoreListStruct" />
+  </bean>
+  <bean name="ScoreRewardListStruct">
+    <var name="Score" type="int" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+  </bean>
+  <bean name="DamageToScoreListStruct">
+    <var name="Damage" type="int" />
+    <var name="Score" type="int" />
+  </bean>
+  <bean name="RankRewardListStruct">
+    <var name="Rank" type="int" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+  </bean>
+  <bean name="EndlessTowerConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="RulesDesc" type="string" />
+    <var name="DailyChallengeRewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Status" type="ActivityStatusType" />
+    <var name="FloorRewardList" type="list, FloorRewardListStruct" />
+    <var name="RankRewardList" type="list, RankRewardListStruct" />
+  </bean>
+  <bean name="FloorRewardListStruct">
+    <var name="Floor" type="int" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+  </bean>
+  <bean name="EndlessTowerMapConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="MapRes" type="string" />
+    <var name="NodeList" type="list, MapNodeListStruct" />
+  </bean>
+  <bean name="MapNodeListStruct">
+    <var name="NodeId" type="int" />
+    <var name="PreNone" type="(list#sep=|),int" />
+    <var name="NodeType" type="MapNodeType" />
+    <var name="NodePos" type="float3" />
+    <var name="StageId" type="int#ref=TbStageBattleConfig" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="Desc" type="string" />
+  </bean>
+  <bean name="GameSoundConfig">
+    <var name="Id" type="int" />
+    <var name="SoundName" type="string" />
+    <var name="SoundEffects" type="string" />
+    <var name="SoundVolume" type="float" />
+    <var name="SoundDelayTime" type="float" />
+  </bean>
+  <bean name="LoadingConfig">
+    <var name="Id" type="int" />
+    <var name="Name" type="string" />
+    <var name="Icon" type="string" />
+    <var name="TipText1" type="string" />
+    <var name="TipText2" type="string" />
+  </bean>
+ 
+
+  <bean name="CodeExchangeGiftsConfig">
+    <var name="Code" type="string" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+  </bean>
+  <table name="TbCardTypeConfig" value="CardTypeConfig" input="GamePlay/CardTypeConfig.xlsx" />
+  <table name="TbCardBaseConfig" value="CardBaseConfig" input="GamePlay/CardBaseConfig.xlsx" />
+  <table name="TbCardDevelopConfig" value="CardDevelopConfig" input="GamePlay/CardDevelopConfig.xlsx" />
+  <table name="TbCityLevelConfig" value="CityLevelConfig" input="GamePlay/CityLevelConfig.xlsx" />
+  <table name="TbCardBattleConfig" value="CardBattleConfig" input="GamePlay/CardBattleConfig.xlsx" />
+  <table name="TbSoldierBattleConfig" value="SoldierBattleConfig" input="GamePlay/SoldierBattleConfig.xlsx" />
+  <table name="TbBuildingBattleConfig" value="BuildingBattleConfig" input="GamePlay/BuildingBattleConfig.xlsx" />
+  <table name="TbDifficultyConfig" value="DifficultyConfig" input="GamePlay/DifficultyConfig.xlsx" />
+  <table name="TbProjectileConfig" value="ProjectileConfig" input="GamePlay/ProjectileConfig.xlsx" />
+  <table name="TbMainCityBattleConfig" value="MainCityBattleConfig" input="GamePlay/MainCityBattleConfig.xlsx" />
+  <table name="TbChooseCardConfig" value="ChooseCardConfig" input="GamePlay/ChooseCardConfig.xlsx" />
+  <table name="TbChooseCardPoolCityConfig" value="ChooseCardPoolCityConfig" input="GamePlay/ChooseCardPoolCityConfig.xlsx" />
+  <table name="TbChooseCardPoolSoldierConfig" value="ChooseCardPoolSoldierConfig" input="GamePlay/ChooseCardPoolSoldierConfig.xlsx" />
+  <table name="TbChooseCardPoolSchoolConfig" value="ChooseCardPoolSchoolConfig" input="GamePlay/ChooseCardPoolSchoolConfig.xlsx" />
+  <table name="TbChooseCardPoolMonsterConfig" value="ChooseCardPoolMonsterConfig" input="GamePlay/ChooseCardPoolMonsterConfig.xlsx" />
+  <table name="TbGemConfig" value="GemConfig" input="GamePlay/GemConfig.xlsx" />
+  <table name="TbGemSpecialConfig" value="GemSpecialConfig" input="GamePlay/GemSpecialConfig.xlsx" />
+  <table name="TbGemPropertyConfig" value="GemPropertyConfig" input="GamePlay/GemPropertyConfig.xlsx" />
+  <table name="TbStrengthenConfig" value="StrengthenConfig" input="GamePlay/StrengthenConfig.xlsx" />
+  <table name="TbItemConfig" value="ItemConfig" input="GamePlay/ItemConfig.xlsx" />
+  <table name="TbRewardGroupConfig" value="RewardGroupConfig" input="GamePlay/RewardGroupConfig.xlsx" />
+  <table name="TbSignConfig" value="SignConfig" input="GamePlay/SignConfig.xlsx" />
+  <table name="TbRewardConfig" value="RewardConfig" input="GamePlay/RewardConfig.xlsx" />
+  <table name="TbBuyCardConfig" value="BuyCardConfig" input="GamePlay/BuyCardConfig.xlsx" />
+  <table name="TbChapterStageConfig" value="ChapterStageConfig" input="GamePlay/ChapterStageConfig.xlsx" />
+  <table name="TbStageBattleConfig" value="StageBattleConfig" input="GamePlay/StageBattleConfig.xlsx" />
+  <table name="TbStageScoreConfig" value="StageScoreConfig" input="GamePlay/StageScoreConfig.xlsx" />
+  <table name="TbSchoolConfig" value="SchoolConfig" input="GamePlay/SchoolConfig.xlsx" />
+  <table name="TbSchoolCardConfig" value="SchoolCardConfig" input="GamePlay/SchoolCardConfig.xlsx" />
+  <table name="TbSchoolChooseCardConfig" value="SchoolChooseCardConfig" input="GamePlay/SchoolChooseCardConfig.xlsx" />
+  <table name="TbConditionConfig" value="ConditionConfig" input="GamePlay/ConditionConfig.xlsx" />
+  <table name="TbLevelConditionConfig" value="LevelConditionConfig" input="GamePlay/LevelConditionConfig.xlsx" />
+  <table name="TbHeadConfig" value="HeadConfig" input="GamePlay/HeadConfig.xlsx" />
+  <table name="TbServerListConfig" value="ServerListConfig" input="GamePlay/ServerListConfig.xlsx" />
+  <table name="TbChestPoolConfig" value="ChestPoolConfig" input="GamePlay/ChestPoolConfig.xlsx" />
+  <table name="TbChestCardConfig" value="ChestCardConfig" input="GamePlay/ChestCardConfig.xlsx" />
+  <table name="TbSensitiveWordsConfig" value="SensitiveWordsConfig" input="GamePlay/SensitiveWordsConfig.xlsx" mode="map" />
+  <table name="TbTalentConfig" value="TalentConfig" input="GamePlay/TalentConfig.xlsx" />
+  <table name="TbHttpCodeConst" value="HttpCodeConst" input="GamePlay/HttpCodeConst.xlsx" mode="one" />
+  <table name="TbEquipSuitConfig" value="EquipSuitConfig" input="GamePlay/EquipSuitConfig.xlsx" />
+  <table name="TbShopConfig" value="ShopConfig" input="GamePlay/ShopConfig.xlsx" />
+  <table name="TbShopGoodsConfig" value="ShopGoodsConfig" input="GamePlay/ShopGoodsConfig.xlsx" />
+  <table name="TbPlayerFigureConfig" value="PlayerFigureConfig" input="GamePlay/PlayerFigureConfig.xlsx" />
+  <table name="TbRandomUserNameConfig" value="RandomUserNameConfig" input="GamePlay/RandomUserNameConfig.xlsx" />
+  <table name="TbPlayerLevelConfig" value="PlayerLevelConfig" input="GamePlay/PlayerLevelConfig.xlsx" />
+  <table name="TbCreatePlayerActivityConfig" value="CreatePlayerActivityConfig" input="GamePlay/CreatePlayerActivityConfig.xlsx" />
+  <table name="TbModuleFunctionConfig" value="ModuleFunctionConfig" input="GamePlay/ModuleFunctionConfig.xlsx" />
+  <table name="TbCardGroupRecomConfig" value="CardGroupRecomConfig" input="GamePlay/CardGroupRecomConfig.xlsx" />
+  <table name="TbSkinConfig" value="SkinConfig" input="GamePlay/SkinConfig.xlsx" />
+  <table name="TbChallengeBossConfig" value="ChallengeBossConfig" input="GamePlay/ChallengeBossConfig.xlsx" />
+  <table name="TbEndlessTowerConfig" value="EndlessTowerConfig" input="GamePlay/EndlessTowerConfig.xlsx" />
+  <table name="TbEndlessTowerMapConfig" value="EndlessTowerMapConfig" input="GamePlay/EndlessTowerMapConfig.xlsx" />
+  <table name="TbGameSoundConfig" value="GameSoundConfig" input="GamePlay/GameSoundConfig.xlsx" />
+  <table name="TbLoadingConfig" value="LoadingConfig" input="GamePlay/LoadingConfig.xlsx" />
+  <table name="TbCodeExchangeGiftsConfig" value="CodeExchangeGiftsConfig" input="GamePlay/CodeExchangeGiftsConfig.xlsx" />
+</module>

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 保存玩家信息
+// ============================================================
+
+message SavePlayerRequest {
+  string user_name = 1;
+  int32 sex = 2;
+  string figures = 3;
+  bool is_create = 4;
+}
+
+message SavePlayerResponse {
+  User user = 1;
+  UserPlayer player = 2;
+}
+
+// ============================================================
+// 新手引导
+// ============================================================
+
+message SaveGuidesRequest {
+  int32 id = 1;
+}
+
+message SaveGuidesResponse {
+  repeated RewardAndNum rewards = 1;
+  ResultItems items = 2;
+  UserPlayer player = 3;
+}
+
+// ============================================================
+// 模块解锁等级
+// ============================================================
+
+message SaveModuleUnlockLvRequest {
+  int32 module_unlock_lv = 1;
+}
+
+message SaveModuleUnlockLvResponse {
+  UserPlayer player = 1;
+}

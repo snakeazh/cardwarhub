@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+import "chat.proto";
+
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ping-pong协议
+message PingRequest {
+  string message = 2;
+}
+
+message PingResponse {
+  string message = 2;
+}
+
+
+// 聊天统一推送消息（服务端 -> 客户端）
+message ChatPush {
+  int64 msg_id = 1;             // 消息唯一ID（服务端生成，用于去重/排序）
+  int64 timestamp = 2;          // 服务端时间戳（毫秒）
+  PlayerBaseInfo sender = 3;    // 发送者信息
+  string content = 4;           // 消息内容（已过滤/格式化）
+
+  // 使用 oneof 区分私聊和频道，目标明确，无需 chat_type 枚举
+  oneof target {
+    int32 to_player_id = 5;     // 私聊目标玩家ID（仅私聊时存在）
+    ChatChannelType channel = 6; // 频道类型（仅频道聊天时存在）
+  }
+}
+
+// 红点统一推送消息
+message RedDotNotify {
+  // 红点数组
+  repeated RedDotInfo red_dots = 1;
+  // 服务端时间戳（毫秒）
+  int64 timestamp = 2;
+}

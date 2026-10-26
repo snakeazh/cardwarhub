@@ -1,0 +1,12 @@
+<module name="">
+
+    <!-- 奥术卡相关配置 -->
+    <bean name="ArcCardProConfig" >
+        <var name="ArcQualityType" type="QualityType" />
+        <var name="BringCount" type="int" />
+        <var name="ComposeRewards" type="(list#sep=|),RewardAndNum" />
+        <var name="DecomposeRewards" type="(list#sep=|),RewardAndNum" />
+	</bean>
+	<table name="TbArcCardProConfig" value="ArcCardProConfig" input="GamePlay/ArcCardProConfig.xlsx"/>
+
+</module>

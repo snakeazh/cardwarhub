@@ -1,0 +1,2457 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4afcefda58366c44e9fc03720fc42590, type: 3}
+  m_Name: SkillBuffTemplateLibrary
+  m_EditorClassIdentifier: 
+  _templates:
+  - BuffId: 10001
+    Name: "\u52A0\u653B\u51FB"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 10001
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 3
+      StackAttrName: 
+      Duration: 5
+      DurationAttrName: 
+      EffectValue: 10
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10002
+    Name: "\u4E07\u7BAD\u9F50\u53D1\u707C\u70E7\u6548\u679C"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 10002
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 3
+      StackAttrName: 
+      Duration: 2
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.6
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 1
+      TickIntervalAttrName: 
+      BuffVfx: buff_zhuoshao_01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 200002
+    Name: "\u7FCE\u5206\u88C2\u98CE\u66B4"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 200002
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SkillSplitsNum
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: SkillDuration
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SkillSplitsNum
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 14
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SkillSplitsNumAgain
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: SkillDuration
+      EffectValue: 2
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 14
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SkillSplitsDamageAgain
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: SkillDuration
+      EffectValue: 2
+      EffectValueAttrName: SkillSplitsDamageAgain
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10003
+    Name: "\u4E07\u7BAD\u9F50\u53D1\u65A9\u6740\u6548\u679C"
+    Effects:
+    - BuffTypeId: 15
+      BuffId: 10003
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierArmorPenetration
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 0
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.05
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 0.5
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10004
+    Name: "\u897F\u5C9A\u950B\u5203\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 10004
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierArmorPenetrationPer
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 0
+      StackAttrName: BuffNumLayers
+      Duration: 0
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: BuffBasicDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10005
+    Name: "\u5929\u6D41\u65A9\u7729\u6655\u6548\u679C"
+    Effects:
+    - BuffTypeId: 1
+      BuffId: 1
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: buff_xuanyun_01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10006
+    Name: "\u5929\u6D41\u65A9\u771F\u5B9E\u4F24\u5BB3"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.005
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10007
+    Name: "\u7430\u88AB\u52A8\u70C8\u7130\u7BAD"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: BuffNumLayers
+      Duration: -1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: BuffBasicDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: BuffPctDamage
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: BuffTriggerInterval
+      BuffVfx: buff_zhuoshao_01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10008
+    Name: "\u7430\u70C8\u7130\u98CE\u66B4"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 10008
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 3
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: BuffPctDamage
+      PercentValueSourceAttrName: SoldierAttackSpeed
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: HeSkillFlameStorm01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 10008
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SkillSplitsNum
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 3
+      DurationAttrName: BuffDurationTime
+      EffectValue: 2
+      EffectValueAttrName: SkillSplitsNum
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 0.4
+      ProbabilityAttrName: BuffTriggerProbability
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: HeSkillFlameStorm01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 10008
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 3
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: SoldierSpellPower
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: HeSkillFlameStorm01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10009
+    Name: "\u4F0A\u83B1\u5A05\u629A\u75D5\u7075\u6108"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 10009
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 0
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: SkillBasicAttackPower
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: SkillSpellInheritance
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 20011
+    Name: "\u8E22\u8E0F\u821E\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 14
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 10
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.2
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierNumOfAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 10010
+    Name: "\u4F0A\u83B1\u5A05\u6708\u5F71\u5E87\u62A4"
+    Effects:
+    - BuffTypeId: 11
+      BuffId: 10010
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 10010
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 5
+      EffectValueAttrName: 
+      PercentEffectValue: 0.05
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 2110002
+    Name: "\u5492\u7F1A\u96F7\u7535"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 2110002
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 20012
+    Name: "\u5168\u76DB\u51FA\u51FB"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 14
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1.5
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierNumOfAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 2110003
+    Name: "\u79D8\u6CD5\u5F57\u661F"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 2110003
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 20013
+    Name: "\u751F\u673A\u8FC5\u6377"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 20013
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierMaxHealth
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 20014
+    Name: "\u5168\u529B\u51FA\u51FB"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 20014
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.5
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierNumOfAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 20014
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfCritical
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.5
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierNumOfCritical
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 20015
+    Name: "\u66B4\u51FB\u5F8B\u52A8"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 10
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierNumOfAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 21004
+    Name: "\u9ECE\u660E\u5B88\u62A4"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 0
+      StackAttrName: 
+      Duration: 5
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.03
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierMaxHealth
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 21105
+    Name: "\u751F\u547D\u88C1\u51B3"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: AttackRealDagame
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.05
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30001
+    Name: "\u4E09\u9009\u4E00\u51FB\u9000\u6548\u679C"
+    Effects:
+    - BuffTypeId: 4
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: BuffBasicDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30002
+    Name: "\u8FDE\u5F29\u51FB\u9000\u6548\u679C"
+    Effects:
+    - BuffTypeId: 4
+      BuffId: 30002
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 20
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30003
+    Name: "\u98CE\u4E4B\u7BAD\u96E8\u524A\u62A4\u7532\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30003
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: MonsterPhysicalResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: -0.2
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterPhysicalResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30004
+    Name: "\u950B\u5203\u6EE1\u7EA7\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30005
+    Name: "\u62D4\u5200\u65A9\u51FB\u9000\u6548\u679C"
+    Effects:
+    - BuffTypeId: 4
+      BuffId: 30005
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 100
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30006
+    Name: "\u62D4\u5200\u65A9\u65A9\u6740\u6548\u679C"
+    Effects:
+    - BuffTypeId: 15
+      BuffId: 30006
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.05
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 0.1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30007
+    Name: "\u98CE\u4E4B\u7BAD\u96E8\u96F7\u51FB\u6548\u679C"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 30007
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30008
+    Name: "\u6697\u5F71\u6CD5\u7403\u7729\u6655\u6548\u679C"
+    Effects:
+    - BuffTypeId: 1
+      BuffId: 30008
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.5
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.5
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30009
+    Name: "\u6697\u5F71\u6CD5\u7403\u771F\u5B9E\u4F24\u5BB3"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.03
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30010
+    Name: "\u5E7D\u9083\u4E4B\u5899\u51CF\u901F\u6548\u679C"
+    Effects:
+    - BuffTypeId: 3
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0.4
+      EffectValueAttrName: BuffPctDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30011
+    Name: "\u5E7D\u9083\u4E4B\u5899\u771F\u5B9E\u4F24\u5BB3"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 30011
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.03
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30012
+    Name: "\u4F0A\u83B1\u5A05\u666E\u901A\u653B\u51FB"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30012
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 5
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.2
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: EliaSkillSoulComfort03
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 2140104
+    Name: "\u6697\u5F71\u5200\u950Bbuff"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: MonsterAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: KarenSkillAssassin02
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30013
+    Name: "\u6697\u5F71\u5200\u950B\u65A9\u6740\u6548\u679C"
+    Effects:
+    - BuffTypeId: 15
+      BuffId: 30013
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 0.05
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30014
+    Name: "\u6697\u5F71\u65CB\u5203\u65A9\u6740\u6548\u679C"
+    Effects:
+    - BuffTypeId: 15
+      BuffId: 30014
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 0.01
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 100070
+    Name: "\u707C\u70E7\u53D8\u4E3A\u771F\u4F24"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: BuffNumLavers
+      Duration: 1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 999
+      EffectValueAttrName: BuffBasicDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: BuffPctDamage
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.5
+      TickIntervalAttrName: BuffTriaqerlnterval
+      BuffVfx: buff_zhuoshao_01
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30015
+    Name: "\u79D8\u6CD5\u653B\u51FB"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: AtkAddMagicDamage
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 100090
+    Name: "\u5723\u5149\u5370\u8BB0\u6548\u679C"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 100090
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: SkillBasicAttackPower
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: SkillSpellInheritance
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Caster
+      DamageType: 3
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30016
+    Name: "\u6697\u5F71\u5F3A\u88AD\u65A9\u6740\u6548\u679C"
+    Effects:
+    - BuffTypeId: 15
+      BuffId: 30016
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: MonsterMaxHealth
+      BuffValueSource: Target
+      DamageType: 5
+      DamageTypeAttrName: 
+      Probability: 0.01
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30017
+    Name: "\u5723\u5149\u5760\u843D\u7F34\u68B0\u6548\u679C"
+    Effects:
+    - BuffTypeId: 8
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30018
+    Name: "\u5723\u5149\u5760\u843D\u51CF\u901F\u6548\u679C"
+    Effects:
+    - BuffTypeId: 3
+      BuffId: 30018
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: BuffPctDamage
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30019
+    Name: "\u5723\u5149\u5760\u843D\u7729\u6655\u6548\u679C"
+    Effects:
+    - BuffTypeId: 1
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: BuffDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 100091
+    Name: "\u4F0A\u83B1\u5A05\u629A\u75D5\u7075\u6108\u7279\u6548"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 100091
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 9
+      StackAttrName: 
+      Duration: 1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 1
+      TickIntervalAttrName: 
+      BuffVfx: EliaSkillSoothmark02
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30020
+    Name: "\u4F0A\u83B1\u5A05\u7948\u79771"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30020
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30020
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30021
+    Name: "\u4F0A\u83B1\u5A05\u7948\u797710"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30021
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30021
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30021
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30022
+    Name: "\u4F0A\u83B1\u5A05\u7948\u797720"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30022
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30022
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30022
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30022
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierPhysicalResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierPhysicalResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30023
+    Name: "\u4F0A\u83B1\u5A05\u7948\u797730"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30023
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30023
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30023
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30023
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierPhysicalResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierPhysicalResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30023
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierMagicResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 99
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierMagicResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30024
+    Name: "\u4F0A\u83B1\u5A05\u7948\u797740"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierPhysicalResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierPhysicalResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierMagicResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: YiLaiYaPassiveSkill
+      PercentValueSourceAttrName: SoldierMagicResistance
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30024
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierCriticalDamage
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: YiLaiYaPassiveSkill
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierCriticalDamage
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30025
+    Name: "\u4F0A\u83B1\u5A05\u80FD\u91CF\u503E\u6CE8"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30025
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 5
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 5
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30025
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 5
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 1
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 5
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30026
+    Name: "\u897F\u5C9A\u666E\u653B\u51FB\u9000\u6548\u679C"
+    Effects:
+    - BuffTypeId: 4
+      BuffId: 30026
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 50
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30027
+    Name: "\u9F99\u9CDE\u5927\u5251\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30027
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 15
+      DurationAttrName: AddDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.25
+      PercentEffectValueAttrName: AddValue
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30027
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 15
+      DurationAttrName: AddDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.25
+      PercentEffectValueAttrName: AddValue
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30027
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierNumOfAttackSpeed
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 15
+      DurationAttrName: AddDurationTime
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.25
+      PercentEffectValueAttrName: AddValue
+      PercentValueSourceAttrName: SoldierNumOfAttackSpeed
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30028
+    Name: "\u5BD2\u971C\u5927\u5251\u6548\u679C"
+    Effects:
+    - BuffTypeId: 1
+      BuffId: 30028
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 2
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 2
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30029
+    Name: "\u6708\u795E\u8A93\u7EA6\u4E4B\u62A4\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30029
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierPhysicalResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 100
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 10
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30029
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierMagicResistance
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 100
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 10
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30030
+    Name: "\u6708\u795E\u8A93\u7EA6\u4E4B\u51FB\u6548\u679C"
+    Effects:
+    - BuffTypeId: 14
+      BuffId: 30030
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierAttackPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.4
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierAttackPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 10
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+    - BuffTypeId: 14
+      BuffId: 30030
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: SoldierSpellPower
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0.4
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: SoldierSpellPower
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 10
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30031
+    Name: "\u6839\u6DF1\u8482\u56FA\u5B9D\u77F3\u6548\u679C"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 30031
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 0.1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: DeepRootedEffect
+      PercentValueSourceAttrName: SoldierMaxHealth
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0.1
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30032
+    Name: "\u751F\u547D\u590D\u82CF\u6548\u679C"
+    Effects:
+    - BuffTypeId: 9
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: LifeRecoveryEffect
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Target
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 2140105
+    Name: "\u65E0\u654C"
+    Effects:
+    - BuffTypeId: 5
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: 10
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0
+  - BuffId: 30033
+    Name: "\u5723\u5149\u7948\u798F\u673A\u5173\u6548\u679C"
+    Effects:
+    - BuffTypeId: 0
+      BuffId: 0
+      Effects: []
+      MultiEffectMode: 0
+      AttrTypeName: 
+      AttrValueType: 1
+      PercentBaseAttrName: 
+      Stack: 1
+      StackAttrName: 
+      Duration: -1
+      DurationAttrName: 
+      EffectValue: 0
+      EffectValueAttrName: 
+      PercentEffectValue: 0
+      PercentEffectValueAttrName: 
+      PercentValueSourceAttrName: 
+      BuffValueSource: Caster
+      DamageType: 0
+      DamageTypeAttrName: 
+      Probability: 1
+      ProbabilityAttrName: 
+      TickInterval: 0
+      TickIntervalAttrName: 
+      BuffVfx: 
+      ShieldVfx: EliaSkillMoonshadowWard01
+      BreakVfx: EliaSkillMoonshadowWard02
+      UseTargetAsValueSource: 0

@@ -1,0 +1,34 @@
+<module name="">
+
+    <!-- 战斗惊喜类型 -->
+    <enum name="BattleSurpriseType">
+        <var name="CoronationGift" alias="加冕礼" />
+        <var name="DualWielding" alias="双刀流" />
+        <var name="SecretFistStrike" alias="秘术冲拳" />
+        <var name="Genius" alias="旷世奇才" />
+        <var name="BreakthroughInRealm" alias="境界突破" />
+        <var name="MakingChoices" alias="取舍有道" />
+        <var name="ExquisiteWeapons" alias="精致武器" />
+        <var name="PowerLockDown" alias="异能封锁" />
+        <var name="CriticalCharge" alias="暴击充能" />
+        <var name="BladeStrike" alias="利刃打击" />
+        <var name="BoostMorale" alias="鼓舞士气" />
+        <var name="FlexiblySwing" alias="灵活摇摆" />
+    </enum>
+
+    
+    <!-- 战斗惊喜配置 -->
+    <bean name="BattleSurpriseConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="BattleSurpriseType" />
+        <var name="Quality" type="QualityType" />
+        <var name="Name" type="string" />
+        <var name="Icon" type="string" />
+        <var name="Tip" type="string" />
+        <var name="Desc" type="string" />
+        <var name="Weight" type="int" />
+        <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+	</bean>
+	<table name="TbBattleSurpriseConfig" value="BattleSurpriseConfig" input="GamePlay/BattleSurpriseConfig.xlsx"/>
+
+</module>

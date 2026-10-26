@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<module>
+  <enum name="GuideType">
+    <var name="GuideStage" alias="引导关卡" />
+    <var name="KillTheFirstMonster" alias="击杀第一支怪物后" />
+    <var name="LongPressSkillShowDetails" alias="长按技能卡展示详情" />
+    <var name="PressArcaneShowDetails" alias="点击奥数卡展示详情" />
+    <var name="CanBeUpgraded" alias="可以购买技能时" />
+    <var name="CanBeUpSchool" alias="可以购买流派时" />
+    <var name="FirstSpinPopUp" alias="首次命运转盘弹出后" />
+    <var name="FirstSpinPopUpStageTwo" alias="首次命运转盘弹出后步骤二" />
+    <var name="PressSchoolShowDetails" alias="点击流派展示详情" />
+    <var name="NewSoldierDebut" alias="新英灵登场" />
+    <var name="NewSoldierDebutSkill" alias="新英灵技能" />
+    <var name="KillLittleBoss" alias="击杀精英怪掉落奇遇" />
+    <var name="FirstComboGuide" alias="连击次数大于2" />
+    <var name="FirstStory" alias="首次加载故事背景" />
+    <var name="FirstChooseCard" alias="首次三选一" />
+    <var name="FirstAddSchoolCard" alias="首次获得流派卡" />
+    <var name="FirstReleaseSkill" alias="首次释放技能" />
+    <var name="FirstRecoverManaFragment" alias="首次恢复卡能碎片" />
+    <var name="FirstBoss" alias="首次出现Boss" />
+    <var name="GuideStageStory" alias="引导关卡故事" />
+    <var name="SkillGuide" alias="指引释放技能" />
+    <var name="LongPressArcaneShowDetails" alias="长按奥数卡展示详情" />
+    <var name="FingerTipBuyExp" alias="手指提醒花费金币购买经验" />
+    <var name="EffectWordTips" alias="三选一文字提示" />
+    <var name="FingerTipBuySchoolCard" alias="手指提醒花费金币购买流派卡" />
+    <var name="KillMonsterGetGoldTip" alias="杀怪掉金币文字提示" />
+    <var name="SkillUseWordTip" alias="技能释放文字提示" />
+    <var name="BreakingToughnessWordTip" alias="破韧机制文字提示" />
+    <var name="ComboWordTip" alias="连击文字提示" />
+    <var name="AutoBattleWordTip" alias="自动战斗提示" />
+    <var name="RefreshTip" alias="刷新提示" />
+    <var name="WeaknessWordTip" alias="虚弱状态提示" />
+    <var name="SetFigure" alias="设置形象" />
+    <var name="CardSoldierUpgrade" alias="英雄升级" />
+    <var name="ArcaneCardDraw" alias="五连抽奥术卡" />
+    <var name="ConfigureTheDeck" alias="配置战斗卡组" />
+    <var name="StartBattleStageOne" alias="挑战关卡一" />
+    <var name="SetNormalTalent" alias="激活普通天赋" />
+    <var name="CardSkillUpgrade" alias="技能升级" />
+    <var name="HeroDevelop" alias="养成" />
+    <var name="StartBattleStageTwo" alias="挑战关卡二" />
+    <var name="EquipUpgradePhase" alias="装备锻造" />
+    <var name="StartBattleStageThree" alias="挑战关卡三" />
+    <var name="SetSpecialTalent" alias="激活特殊天赋" />
+    <var name="BuyHero" alias="购买英灵" />
+    <var name="ConfigureManyHero" alias="配置多英灵" />
+    <var name="StartBattleStageFour" alias="挑战关卡四" />
+    <var name="PlayerLevel6" alias="玩家升级六" />
+    <var name="PlayerLevel7" alias="玩家升级七" />
+    <var name="PlayerLevel8" alias="玩家升级八" />
+    <var name="PlayerLevel9" alias="玩家升级九" />
+    <var name="PlayerLevel10" alias="玩家升级十" />
+    <var name="DecorativeWear" alias="装饰佩戴" />
+    <var name="EquipRefreshEntry" alias="装备洗炼" />
+    <var name="PlayerLevel11" alias="玩家升级十一" />
+    <var name="PlayerLevel12" alias="玩家升级十二" />
+    <var name="PlayerLevel13" alias="玩家升级十三" />
+    <var name="PlayerLevel14" alias="玩家升级十四" />
+    <var name="PlayerLevel15" alias="玩家升级十五" />
+    <var name="FusionGemChallenge" alias="融合挑战" />
+    <var name="FusionGemSynthesis" alias="融合石合成" />
+    <var name="PlayerLevel16" alias="玩家升级十六" />
+    <var name="PlayerLevel17" alias="玩家升级十七" />
+    <var name="PlayerLevel18" alias="玩家升级十八" />
+    <var name="ChallengeWorldBoss" alias="挑战世界领主" />
+    <var name="EquipUpgrade" alias="装备升阶" />
+    <var name="PlayerLevel19" alias="玩家升级十九" />
+    <var name="PlayerLevel20" alias="玩家升级二十" />
+    <var name="HeroAwakening" alias="英灵觉醒" />
+    <var name="PlayerLevel21" alias="玩家升级二十一" />
+    <var name="PlayerLevel22" alias="玩家升级二十二" />
+    <var name="ChallengeEndlessTower" alias="无尽塔挑战" />
+    <var name="SoldierChest" alias="英雄抽卡" />
+    <var name="SkillChest" alias="技能抽卡" />
+    <var name="SetCardGroup" alias="配置卡组" />
+    <var name="SetCommonCardGroup" alias="配置通用卡组" />
+    <var name="SetRecommendCardGroup" alias="配置推荐卡组" />
+    <var name="WearerEquip" alias="佩戴装备" />
+    <var name="WearerFusionGem" alias="融合石佩戴" />
+  </enum>
+  <enum name="GuideDialogType">
+    <var name="None" alias="无" />
+    <var name="Finger" alias="手指" />
+    <var name="Text" alias="纯文本" />
+    <var name="TipText" alias="文本框" />
+    <var name="StoryImage" alias="故事图" />
+  </enum>
+  <enum name="SkipPathType">
+    <var name="Talent" alias="天赋" />
+    <var name="CardGroup" alias="卡组" />
+    <var name="PlayerFigure" alias="轮语者" />
+    <var name="Chest" alias="抽卡" />
+    <var name="AtlasSkill" alias="英雄技能" />
+    <var name="AtlasSoldier" alias="图鉴英灵" />
+    <var name="Home" alias="主页" />
+    <var name="Equip" alias="装备" />
+    <var name="BuyHero" alias="购买英雄" />
+    <var name="FusionGemChallenge" alias="融合挑战" />
+    <var name="NavWorld" alias="世界" />
+    <var name="UserLevel" alias="用户等级" />
+    <var name="Appearance" alias="外观" />
+    <var name="GameGem" alias="宝石迷阵" />
+    <var name="HeroDev" alias="英雄养成" />
+  </enum>
+  <enum name="GuideTipType">
+    <var name="WeakGuidanceCard" alias="弱引导卡牌" />
+    <var name="WeakGuidance" alias="弱引导" />
+    <var name="SpecifyFinger" alias="指定手指" />
+    <var name="Text" alias="纯文本" />
+    <var name="WeakGuidanceTalk" alias="弱引导对话" />
+    <var name="Finger" alias="手指" />
+    <var name="TipText" alias="文本框" />
+    <var name="StoryImage" alias="故事图" />
+    <var name="StrongGuidance" alias="强引导" />
+    <var name="StrongGuidanceLongPress" alias="强引导长按" />
+    <var name="StrongGuidanceNoInter" alias="强引导无交互" />
+    <var name="StrongGuidanceBoss" alias="精英强引导" />
+  </enum>
+  <enum name="GuideSceneType">
+    <var name="InWar" alias="战斗内" />
+    <var name="UIScene" alias="界面层" />
+  </enum>
+  <enum name="GuideArrowType">
+    <var name="Up" alias="上" />
+    <var name="Down" alias="下" />
+    <var name="Left" alias="左" />
+    <var name="Right" alias="右" />
+    <var name="NoArrow" alias="无" />
+  </enum>
+  <enum name="GuideConditionType">
+    <var name="None" alias="无" />
+    <var name="Stage" alias="关卡" />
+    <var name="PlyerLevel" alias="玩家等级" />
+    <var name="BuyTheHero" alias="购买新英灵" />
+    <var name="NumOfSkillUsed" alias="可使用技能个数" />
+  </enum>
+  <bean name="GuideFlowConfig">
+    <var name="Id" type="int" />
+    <var name="PreId" type="int" />
+    <var name="Type" type="GuideType" />
+    <var name="ConditionType" type="GuideConditionType" />
+    <var name="Name" type="string" />
+    <var name="Desc" type="string" />
+    <var name="AppearLv" type="int#ref=TbPlayerLevelConfig" />
+    <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+    <var name="StepList" type="list,GuideFlowStepListStruct" />
+  </bean>
+  <bean name="GuideFlowStepListStruct">
+    <var name="StepId" type="int" />
+    <var name="UnLockLevel" type="int" />
+    <var name="DialogType" type="GuideDialogType" />
+    <var name="DialogText" type="string" />
+    <var name="Duration" type="float" />
+    <var name="SkipPath" type="(list#sep=|),SkipPathStruct" />
+    <var name="DialogOffset" type="float3" />
+    <var name="TypingSpeed" type="float" />
+    <var name="DialogScale" type="float" />
+  </bean>
+  <bean name="SkipPathStruct" sep=":">
+    <var name="Type" type="SkipPathType" />
+    <var name="Param" type="string" />
+  </bean>
+  <bean name="GuideConfig">
+    <var name="Id" type="int" />
+    <var name="PreId" type="int" />
+    <var name="Type" type="GuideType" />
+    <var name="Name" type="string" />
+    <var name="StepList" type="list,GuidesStepListStruct" />
+  </bean>
+  <bean name="GuidesStepListStruct">
+    <var name="Step" type="int" />
+    <var name="Type" type="GuideType" />
+    <var name="TipType" type="GuideTipType" />
+    <var name="ArrowOneType" type="GuideArrowType" />
+    <var name="ArrowTwoType" type="GuideArrowType" />
+    <var name="CompleteNextStep" type="GuideType" />
+    <var name="CompleteSetIdList" type="(array#sep=|),GuideType" />
+    <var name="ConditionStepDone" type="GuideType" />
+    <var name="AddMask" type="int" />
+    <var name="TipText" type="string" />
+    <var name="Duration" type="float" />
+    <var name="Icon" type="string" />
+    <var name="Position" type="float3" />
+    <var name="DialogePosition" type="float3" />
+    <var name="HighLightSize" type="float3" />
+    <var name="TypingSpeed" type="float" />
+    <var name="LoadScale" type="float" />
+    <var name="GuideUI" type="string" />
+    <var name="GuideUITwo" type="string" />
+    <var name="SceneType" type="GuideSceneType" />
+  </bean>
+  <table name="TbGuideFlowConfig" value="GuideFlowConfig" input="GamePlay/GuideFlowConfig.xlsx" />
+  <table name="TbGuideConfig" value="GuideConfig" input="GamePlay/GuideConfig.xlsx" />
+</module>

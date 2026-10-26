@@ -1,0 +1,435 @@
+<module name="">
+
+    <!-- 穿透类型 -->
+    <enum name="PierceType">
+        <var name="PhysicsNum" alias="物理穿透值" />
+        <var name="PhysicsPercentage" alias="物理穿透百分比" />
+        <var name="MagicNum" alias="魔法穿透值" />
+        <var name="MagicPercentage" alias="魔法穿透百分比" />
+	</enum>
+	
+    
+    <!-- 充能状态类型 -->
+    <enum name="ChargingStatusType">
+        <var name="CdTime" alias="冷却时间" />
+        <var name="EffectiveInstantly" alias="立即生效" />
+        
+	</enum>
+
+    <!-- 技能冷却开始时机类型 -->
+    <enum name="SkillCooldownTimingType">
+        <var name="OnCast" alias="" />
+        <var name="AfterBuffEnd" alias="Buff结束后冷却" />
+        
+	</enum>
+
+    <!-- 特殊效果类型 -->
+    <enum name="SpecialEffectType">
+
+    <!-- 翎技能 -->
+        <var name="LingNormalAtk" alias="翎普通攻击" />
+        <var name="FenLie" alias="分裂箭" />
+        <var name="Liannu" alias="连弩" />
+        <var name="Wanjian" alias="万箭齐发" />
+        <var name="LuanShe" alias="风之箭雨" />
+        <var name="SplittingStorm" alias="分裂风暴" />
+
+    <!-- 琰技能 -->
+        <var name="YanNormalAtk" alias="琰普通攻击" />
+        <var name="FlamingArrows" alias="烈焰箭" />
+        <var name="SpiritOfStorm" alias="火焰之灵" />
+        <var name="StormPuncture" alias="烈焰穿刺" />
+        <var name="FlameStorm" alias="烈焰风暴" />
+        <var name="SquallyShowers" alias="火焰卷席" />
+
+    <!-- 西岚技能 -->
+        <var name="XiLanNormalAtk" alias="西岚普通攻击" />
+        <var name="Blade" alias="锋刃" />
+        <var name="Tianliu" alias="天流斩" />
+        <var name="DrawAndSlash" alias="拔刀斩" />
+        <var name="DimensionalSlash" alias="次元斩" />
+        <var name="ReaperSlash" alias="死神挥砍" />
+
+    <!-- 露嘉技能 -->
+        <var name="LuJiaNormalAtk" alias="露嘉普通攻击" />
+        <var name="ExtraordinaryMagic" alias="超凡魔力" />
+        <var name="MagicShadowFormation" alias="暗影法阵" />     
+        <var name="DarkLawBall" alias="暗黑法球" />
+        <var name="TheVeilOfShadows" alias="幽邃之墙" />
+        <var name="MagicalOscillation" alias="魔法震荡" />
+
+    <!-- 卡琳技能 -->
+        <var name="KaLinNormalAtk" alias="卡琳普通攻击" />
+        <var name="Assassin" alias="暗杀者" />
+        <var name="RevolvingDagger" alias="暗影刀锋" />
+        <var name="StrangeFruit" alias="暗影旋刃" />
+        <var name="ShadowDagger" alias="暗影强袭" />
+        <var name="AssassinDance" alias="暗影之舞" />
+
+    <!-- 伊莱娅技能 -->
+        <var name="YiLaiYaNormalAtk" alias="伊莱娅普通攻击" />
+        <var name="Pray" alias="祈祷" />
+        <var name="HealingTheScars" alias="抚痕灵愈" />
+        <var name="MoonShadowProtection" alias="月影庇护" />
+        <var name="TheHolyLightFalls" alias="圣光坠落" />
+        <var name="EnergyPouring" alias="能量倾注" />
+
+
+        <var name="Chaoji" alias="超级斩" />
+        <var name="Xuanfeng" alias="旋风斩" />
+        <var name="HeavySplittingChop" alias="重劈斩" />
+        <var name="SacredSword" alias="神圣之剑" />
+        <var name="KillingMachine" alias="杀戮机器" />
+        <var name="DoubleBlade" alias="双重利刃" />
+        <var name="SwordQiOverflow" alias="剑气溢流" />
+        <var name="BlazingSlash" alias="爆炎斩" />
+        <var name="InstantStrike" alias="瞬袭斩" />
+        <var name="WaltzSlash" alias="圆舞斩" />
+        <var name="SoulFireSword" alias="冥炎剑" />
+        <var name="FenLieAgain" alias="再分裂箭" />
+        <var name="DuoChong" alias="多重箭矢" />
+        <var name="ExplosionShooting" alias="爆炸射击" />
+        <var name="StormAvatar" alias="风暴化身" />
+        <var name="CrackedAirBlade" alias="裂空风刃" />
+        <var name="WindLanguageRhythm" alias="风语律动" />
+        <var name="MagicRay" alias="魔法射线" />       
+        <var name="NightfallComet" alias="暗夜彗星" />
+        <var name="MagicMissile" alias="魔法飞弹" />
+        <var name="DemonShadowAssassination" alias="魔影轰杀" />
+        <var name="AnnihilationMemories" alias="湮灭回想" />
+        <var name="AshesBloom" alias="余烬绽放" />
+        <var name="WitchcraftAttack" alias="巫术攻击" />
+        <var name="MagicExplosion" alias="魔法爆炸" />
+        <var name="SpellStirring" alias="法术激荡" />
+        <var name="MagicElectricBall" alias="电幻法球" />
+        <var name="MagicIllusion" alias="魔法幻象" />
+        <var name="MagicSpecialization" alias="魔法专精" />
+        <var name="CloneWitchcraft" alias="分身巫术" />
+        <var name="Fireball" alias="火球术" />
+        <var name="CardConversion" alias="卡能转换" />
+        <var name="ManaIncrease" alias="卡能增幅" />
+        <var name="ManaBreakthrough" alias="卡能突破" />
+
+		<var name="Zhuanzhu" alias="射手专注" />
+        <var name="Fenlie" alias="魔法分裂" />
+        <var name="Huansu" alias="魔法缓速" />
+        <var name="SpearmenAttack" alias="西岚普攻" />
+        <var name="MagicianAttack" alias="露嘉普攻" />
+        <var name="DeathFlame" alias="死亡烈焰" />
+        <var name="CatapultDagger" alias="弹射匕首" />
+        <var name="SoothingHymns" alias="慰灵圣咏" />
+        <var name="CurseOfTheMoonGod" alias="月神诅咒" />
+
+
+        <var name="ArcaneCard" alias="奥术卡" />
+        <var name="GreedyAdvancePayment" alias="贪婪预支" />
+    <!-- 普通奥术卡 -->
+        <var name="AttackSpeedIncrease" alias="攻速增益" />
+        <var name="LifeGrowthRate" alias="生命增益" />
+        <var name="AttackBoost" alias="攻击增益" />
+        <var name="MagicBoost" alias="法术增益" />
+        <var name="PhysicalPenetration" alias="护甲穿透" />      
+        <var name="MagicPenetration" alias="魔法穿透" />
+        <var name="CriticalStrikeAmplification" alias="暴击强化" />
+        <var name="CriticalStrikeDamageIncrease" alias="暴伤增益" />
+        <var name="AttackRangeBoost" alias="奥术瞄准镜" />
+        <var name="SkillBaseDamageBoost" alias="技能强化" />
+        <var name="CDTimeFirst" alias="冷却增益" />
+
+    <!-- 稀有奥术卡 -->
+        <var name="HealingAttack" alias="疗愈攻击" />
+        <var name="MysteriousEnergy" alias="秘法能量" />
+        <var name="ConfidentAttack" alias="自信出击" />
+        <var name="FrostPath" alias="冰寒路径" />
+        <var name="CongBlade" alias="从刃" />
+        <var name="HeraldOfDawn" alias="黎明守护" />
+        <var name="ArmorPiercingAttack" alias="破甲攻击" />
+        <var name="CrackDemonImpact" alias="裂魔冲击" />
+        <var name="AwakeningCritical" alias="暴击精通" />
+        <var name="WeaknessStrike" alias="弱点打击" />
+        <var name="JudgmentStrike" alias="裁决打击" />
+        <var name="RealDamage" alias="真实伤害" />
+        <var name="RapidVitality" alias="生机迅捷" />
+        <var name="PowerAmplification" alias="力量支配" />
+        <var name="IntelligenceAmplification" alias="智力支配" />
+        <var name="AgileAmplification" alias="敏捷支配" />
+        <var name="GiantKiller" alias="巨人杀手" />
+
+        
+
+
+        <var name="EvasionBoost" alias="闪避强化" />
+
+
+
+        <var name="PhysicalResistanceBoost" alias="护甲强化" />
+        <var name="MagicResistanceBoost" alias="魔抗强化" />
+
+
+
+        <var name="CDTimeSecond" alias="冷却强化" />
+
+        <var name="AttackSpeedBoost" alias="射速强化" />
+
+
+
+
+        <!-- 新通用技能 -->
+
+        <var name="AttackSpeedOverload" alias="攻速超载" />
+        <var name="GoAllOut" alias="全力出击" />
+
+
+
+
+        <var name="FrostPhantom" alias="冰霜幽灵" />
+        <var name="BraveCloak" alias="勇者披风" />
+
+        <var name="CruelBlessings" alias="残暴祝福" />
+        <var name="FortuneTreasure" alias="命运财宝" />
+        <var name="PrecisionAim" alias="精确瞄准" />
+        <var name="LifeDanger" alias="命悬一线" />
+        <var name="RiskTakingBehavior" alias="冒险举动" />
+        <var name="Thrive" alias="茁壮成长" />
+        <var name="ProKiller" alias="专业杀手" />
+        <var name="DisablingBlow" alias="致残打击" />
+        <var name="CriticalHitRhythm" alias="暴击律动" />
+        <var name="SpiritSilkCloak" alias="灵丝披风" />
+        <var name="ShadowCloak" alias="月影披风" />
+        <var name="MagicLife" alias="魔法生命" />
+        <var name="PrecisionTreatment" alias="精准治疗" />
+        <var name="HeroicSacrifice" alias="英勇牺牲" />
+        <var name="SoulFire" alias="灵魂火焰" />
+        <var name="CriticalStrikeAwakening" alias="暴击觉醒" />
+
+        <var name="CrazyBlessings" alias="狂乱祝福" />
+        <var name="CheatingBehavior" alias="作弊行为" />
+        <var name="Misconduct" alias="犯规行为" />
+        <var name="GlassCannon" alias="玻璃大炮" />
+        <var name="HolyLightErosion" alias="圣光侵蚀" />    
+        <var name="FightingAlone" alias="孤身奋战" />
+        <var name="NoSelfRealm" alias="无我之境" />
+        <var name="PhysicsMaster" alias="物理法师" />
+        <var name="MagicalWarrior" alias="魔法战士" />
+        <var name="CriticalStrikeTraining" alias="暴击训练" />
+        <var name="BlessingsMoonGod" alias="月神祝福" />
+        <var name="BloodyContract" alias="血色契约" />
+        <var name="AdjudicationEnvoy" alias="裁决使者" />
+        <var name="PlanetaryDevastation" alias="地爆天星" />
+        <var name="BlessingsOfFlames" alias="火焰祝福" />
+        <var name="FrostBlessings" alias="冰霜祝福" />
+        <var name="HighWeapons" alias="烈性武器" />
+        <var name="SwiftBlade" alias="疾风刀刃" />
+        <var name="KillingTime" alias="杀戮时间" />
+        <var name="LightningWeapon" alias="闪电武器" />
+        <var name="BreakThroughTheSky" alias="突破天际" />
+        <var name="Tyranny" alias="暴虐" />
+        <var name="AwakeningPower" alias="力量唤醒" />
+        <var name="AwakeningSpeed" alias="攻速唤醒" />
+
+        <var name="AwakeningSkill" alias="秘术唤醒" />
+        <var name="AwakeningDamage" alias="直伤唤醒" />
+        <var name="AwakeningMaxHp" alias="生命唤醒" />
+        <var name="OneManArmy" alias="一人成军" />
+
+        <!-- 主城技能 -->
+        <var name="CdTimeEnergyBurst" alias="能量迸发" />
+
+        <!-- 隐藏技能 -->
+        <var name="ThunderFieldFullScreen" alias="雷霆领域" />
+        <var name="HeavyBlow" alias="碎骨斩" />
+        <var name="BrokenArmySlash" alias="破军一击" />
+        <var name="WindDanceAttack" alias="风舞疾袭" />
+        <var name="SecretCometTechnique" alias="秘法彗星" />
+        <var name="TestFullScreenHarm" alias="测试全屏伤害" />
+        <var name="ThunderLightning" alias="咒缚雷电" />
+
+        <var name="ExclusiveEnhancement" alias="专属强化" />   
+    </enum>
+
+    <!-- 特殊技能等级属性 -->
+    <bean name="SpecialLevelPropertyList">
+        <var name="Level" type="int" />
+        <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Buffs" type="(list#sep=|), BuffStruct" />
+        <var name="MainAttributes" type="(list#sep=|), MainAttributeStruct" />
+        
+        
+        <var name="Desc" type="string" />
+        <var name="Quality" type="QualityType" />
+        <var name="FightNum" type="int" />
+        <var name="ChargingStatus" type="(list#sep=|),(ChargingStatusStruct#sep=:)" />
+		
+        <!-- <var name="Attack" type="int" />
+		<var name="CdTime" type="float" />
+		<var name="MissileSpeed" type="float" />
+		<var name="UnusualStatus" type="(list#sep=|),(UnusualStatusStruct#sep=:)" />
+		<var name="ExecuteEffect" type="(list#sep=|),ExecuteEffectStruct" />
+        <var name="DamInheritance" type="float" />
+        <var name="TrajectoryNum" type="float" />
+        <var name="CriticalRate" type="float" />
+        <var name="CriticalDamage" type="float" />
+        <var name="SplitsNum" type="int" />
+        <var name="SplitsDamage" type="float" />
+        <var name="SplitsNumAgain" type="int" />
+        <var name="SplitsDamageAgain" type="float" />
+        <var name="ContinuousDamageNum" type="int" />
+        <var name="ContinuousAtkNum" type="int" />
+        <var name="PenetrateNum" type="int" />
+        <var name="SalvosNum" type="int" />
+        <var name="SalvoAngle" type="int" />
+        <var name="ShootingRange" type="float" />
+        <var name="SkillRange" type="float" />
+        <var name="AttackInterval" type="float" />
+        <var name="MonsterMoveSpeed" type="float" />
+        <var name="SkillDuration" type="float" />
+        <var name="MaxManaCorrect" type="int" /> -->
+        <var name="RevolvingStatus" type="(list#sep=|),RevolvingStatusStruct" />
+        <var name="ExtendedFields" type="(list#sep=|),float" />
+    </bean>
+
+	<!-- 特殊效果表 -->
+    <bean name="SpecialEffectsConfig" >
+		<var name="Id" type="int" />
+		<var name="SpecialEffectType" type="SpecialEffectType" />
+        <var name="Quality" type="QualityType" />
+		<var name="ActsOnCard" type="int" />
+        <var name="AwakingSkill" type="int" />
+		<var name="LogicType" type="string" />
+        <var name="SoundId" type="int" />
+        <var name="SkillHitEffect" type="string" />
+		<var name="ProjectileName" type="string" />
+        <var name="DamageType" type="(list#sep=|),TakeDamageType" />
+        <var name="LinkEffects" type="(list#sep=|),string" />
+        <var name="DamageParam" type="(list#sep=|),(DamageParamStruct#sep=:)" />
+        <var name="DamageEffectWords" type="TakeDamageType" />
+        <var name="PassiveSkill" type="int" />
+        <var name="PassiveActsOnCard" type="(list#sep=|),int" />
+        <var name="UnlockLv" type="int" />
+        <var name="UnlockSoldierLvDesc" type="string" />
+        <var name="Indicator" type="(list#sep=|),IndicatorStruct" />
+       
+		<var name="NeedGameMana" type="int" />
+		<var name="CooldownTiming" type="SkillCooldownTimingType" />
+		<var name="OperateDuration" type="int" />
+		<var name="CombinationEffect" type="(list#sep=|),int#ref=TbSpecialEffectsConfig" />
+        <var name="ShowAttributeTypes" type="(list#sep=|),AttributeType" />
+        <var name="LevelPropertyList" type="list,SpecialLevelPropertyList" />
+	</bean>
+	<table name="TbSpecialEffectsConfig" value="SpecialEffectsConfig" input="GamePlay/SpecialEffectsConfig.xlsx"/>
+	
+    <!-- 值类型 -->
+    <enum name="ValueType">
+        <var name="Percentage" alias="百分比" />
+        <var name="Number" alias="数值" />
+    </enum>
+    
+    <!-- 抗性类型 -->
+    <enum name="ResistanceType">
+        <var name="Armor" alias="护甲" />
+        <var name="Physical" alias="物抗" />
+        <var name="Magic" alias="魔抗" />
+    </enum>
+    <!-- 抗性结构 -->
+    <bean name="ResistanceStruct">
+        <var name="Type" type="ResistanceType" />
+        <var name="Value" type="int" />
+    </bean>
+
+
+     <!-- 指示器类型 -->
+    <enum name="IndicatorType">
+        <var name="FullScreen" alias="全屏" />
+        <var name="Specify" alias="指定" />
+        <var name="CircularRange" alias="圆形范围" />
+	</enum>
+    <!-- 指示器结构 -->
+    <bean name="IndicatorStruct" sep=":" >
+        <var name="Type" type="IndicatorType" />
+        <var name="Image" type="string" />
+        <var name="ShapeScale" type="float3" />
+    </bean>
+
+
+	<!-- 属性表 -->
+    <bean name="PropertyConfig" >
+		<var name="Id" type="int" />
+		<var name="PropertyType" type="PropertyType" />
+		<var name="CorrectionValue" type="float" />
+		<var name="ValueType" type="ValueType" />
+		<var name="ActsOnCard" type="(list#sep=|),int" />
+		<var name="Desc" type="string" />
+	</bean>
+	<table name="TbPropertyConfig" value="PropertyConfig" input="GamePlay/PropertyConfig.xlsx"/>
+    <!-- 属性类型 -->
+	<enum name="PropertyType">
+        <var name="SoldierHp" alias="英灵血量" />
+        <var name="SoldierAtk" alias="英灵攻击力" />
+        <var name="SoldierShield" alias="英雄护甲" />
+        <var name="SoldierAtkSpeed" alias="英雄攻击速度" />
+        <var name="SoldierPhysicalResistance" alias="英雄物理抗性" />
+        <var name="SoldierMagicResistance" alias="英雄魔法抗性" />
+        <var name="SoldierMissRate" alias="英雄闪避率" />
+
+        <var name="Critical" alias="暴击率" />
+        <var name="CriticalDamage" alias="普攻暴击伤害" />
+        <var name="SkillAtk" alias="技能基础伤害" />
+        <var name="SkillCd" alias="技能冷却时间" />
+        <var name="CityHp" alias="主城恢复生命值" />
+        <var name="CardMpSpeed" alias="卡能碎片恢复量" />
+        <var name="AtkDamDevlop" alias="攻击伤害" />
+        <var name="SkillCriticalDamage" alias="技能暴击伤害" />
+        <var name="SkillCanCritical" alias="技能解锁暴击" />
+        <var name="CanGameMananToAtkDamage" alias="开启法力值转换伤害" />
+        <var name="SkillNeedGameManaCorrect" alias="技能所需法力值修正" />
+        <var name="ManaMaxCorrect" alias="卡能值上限修正" />
+        
+        <var name="ContinuousAttackCount" alias="连续射击的次数" />
+        <var name="SkillCdProgressTime" alias="技能冷却中时间" />
+
+        <var name="RealDamage" alias="真实伤害" />
+        <var name="PhysicalDamage" alias="物理伤害" />
+        <var name="MagicDamage" alias="魔法伤害" />
+        <var name="SkillDamage" alias="技能伤害修正" />
+        <var name="PowerCorrect" alias="力量修正" />
+        <var name="IntelligenceCorrect" alias="智力修正" />
+        <var name="AgileCorrect" alias="敏捷修正" />
+        <var name="SoldierMaxHpCorrect" alias="英灵最大生命值修正" />
+        <var name="SoldierShieldCorrect" alias="英灵护甲修正" />
+        <var name="SoldierMagicResistanceCorrect" alias="英灵魔抗修正" />
+        
+        <var name="SpellPower" alias="法术强度" />
+
+        <var name="MagicPierce" alias="魔法穿透" />
+        <var name="PhysicsPierce" alias="物理穿透" />
+        
+        <var name="VulnerableUnusualStatus" alias="易损异常状态" />
+        <var name="UnusualStatusEffectVal" alias="异常状态附加值" />
+        <var name="TakeUnusualStatus" alias="施加异常状态" />
+        <var name="FireUnusualStatus" alias="灼烧异常状态" />
+        <var name="UnusualStatusEffectTime" alias="异常状态持续时间修正" />
+        
+        <var name="GameManaNotConsuming" alias="不消耗卡能值" />
+        <var name="AttackAdditionDouble" alias="攻击力加成翻倍" />
+        <var name="ChoosingWiselyEnabled" alias="取舍有道" />
+        <var name="SoldierSkillCannotRelease" alias="英雄主动技能不能释放" />
+
+        <var name="FactionPower" alias="力量派系" />
+        <var name="FactionIntelligence" alias="智力派系" />
+        <var name="FactionAgile" alias="敏捷派系" />
+	</enum>
+
+    <!-- 伤害计算公式 -->
+    <bean name="DamageCalculationFormula" sep="_" >
+        <var name="Attack" type="int" />
+        <var name="SoldierProperty" type="int" />
+    </bean>
+    	<enum name="SoldierSkillSortType">
+        <var name="PassiveSkills" alias="英灵被动技能" />
+        <var name="AbilitySkills1" alias="英灵主动技能1" />
+        <var name="AbilitySkills2" alias="英灵主动技能2" />
+        <var name="AbilitySkills3" alias="英灵主动技能3" />
+        <var name="AwakingSkills" alias="英灵觉醒技能" />
+    </enum>
+
+</module>

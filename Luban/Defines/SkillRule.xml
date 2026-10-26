@@ -1,0 +1,52 @@
+<module name="">
+
+    <!-- 触发条件类型 -->
+    <enum name="TriggerType">
+        <var name="OnAttackBefore" alias="普通攻击命中前触发" />
+        <var name="OnAttackAfter" alias="普通攻击命中后触发" />
+        <var name="OnSkillBefore" alias="技能命中前触发" />
+        <var name="OnSkillAfter" alias="技能命中后触发" />
+        <var name="OnSkillUse" alias="技能使用后触发" />
+        <var name="OnCriticalBefore" alias="暴击命中前触发" />
+        <var name="OnCriticalAfter" alias="暴击命中后触发" />
+        <var name="OnDamageBefore" alias="伤害命中前触发" />
+        <var name="OnDamageAfter" alias="伤害命中后触发" />
+        <var name="OnAttackCriticalBefore" alias="普通攻击暴击命中前触发" />      
+        <var name="OnAttackCriticalAfter" alias="普通攻击暴击命中后触发" />      
+        <var name="NoCondition" alias="直接触发" />  
+        <var name="HeroAfterHarmed" alias="英灵受击后触发" />  
+        <var name="HpChange" alias="生命值修改" />
+		<var name="RoundStart" alias="回合开始" />
+        <var name="AfterTreatmentWasApplied" alias="施加治疗与护盾后" />
+        <var name="OnSkillCriticalAfter" alias="技能暴击命中后触发" />        
+	</enum>
+
+
+    <!-- 加成类型 -->
+    <enum name="SyncType">
+        <var name="None" alias="不同步" />
+        <var name="Once" alias="新英灵补单层当前效果" />
+        <var name="ByTriggerCount" alias="按本局已触发次数重放" />
+        <var name="Reevaluate" alias="用新英灵状态重跑触发条件" />
+	</enum>
+
+
+	<!-- 触发规则表 -->
+    <bean name="SkillRuleConfig" >
+		<var name="Id" type="int" />
+		<var name="Desc" type="string" />
+        <var name="Trigger" type="TriggerType" />
+		<var name="ConditionGroupId" type="(list#sep=|),int" />
+        <var name="ComputerGroupId" type="(list#sep=|),int" />
+        <var name="EffectGroupId" type="(list#sep=|),int" />
+        <var name="TriggerPro" type="float" />
+        <var name="NewSoldierSync" type="SyncType" />
+        <var name="CoolDown" type="float" />
+        <var name="MaxTriggerNum" type="int" />
+        <var name="GloballyEffective" type="int" />
+
+	</bean>
+	<table name="TbSkillRuleConfig" value="SkillRuleConfig" input="GamePlay/SkillRuleConfig.xlsx"/>
+	
+
+</module>

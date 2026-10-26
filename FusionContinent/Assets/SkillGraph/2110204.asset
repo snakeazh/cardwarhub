@@ -1,0 +1,756 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8866676404811678121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -283, y: 310}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &-4111592958497937939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: 349, y: 314}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 20
+    - 
+--- !u!114 &-3773036989082400643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Projectile_002
+  _nodeType: Projectile
+  _editorPosition: {x: 563, y: 407}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - speed
+    - damage
+    - max_distance
+    - max_time
+    - move_angle_offset
+    - hit_modules
+    - move_type
+    - bounce_count
+    - bounce_reset_hit
+    - bullet_length
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - fixed_start_x
+    - fixed_start_y
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_distance_interval
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_buff_duration
+    - burn_area_buff_tick_interval
+    - burn_area_time_interval
+    - burn_area_effect
+    - hit_effect
+    - spawn_offset_x
+    - spawn_offset_y
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - HeSkillFlamePierce01
+    - 15
+    - 100
+    - 999
+    - 5
+    - 0
+    - 'Rect|0:0.5:1:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|10007:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10007:'
+    - Straight
+    - 99
+    - True
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - -999.0
+    - -999.0
+    - 1
+    - 
+    - False
+    - Time
+    - 1.5
+    - 5
+    - 2
+    - 0.5
+    - 10
+    - 2
+    - 0.5
+    - 0.1
+    - HeSkillFlamePierce02
+    - HeSkillCommonHit01
+    - 0.00
+    - 0.00
+    - 1
+    - 
+--- !u!114 &-786620035884152779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Projectile_001
+  _nodeType: Projectile
+  _editorPosition: {x: 784, y: 269}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - speed
+    - damage
+    - max_distance
+    - max_time
+    - move_angle_offset
+    - hit_modules
+    - move_type
+    - bounce_count
+    - bounce_reset_hit
+    - bullet_length
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - fixed_start_x
+    - fixed_start_y
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_distance_interval
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_buff_duration
+    - burn_area_buff_tick_interval
+    - burn_area_time_interval
+    - burn_area_effect
+    - hit_effect
+    - spawn_offset_x
+    - spawn_offset_y
+    - burn_area_time_interval_attr
+    - burn_area_duration_attr
+    - burn_area_radius_attr
+    - burn_area_tick_interval_attr
+    - burn_area_damage_attr
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - burn_area_buff_stay_time_attr
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - HeSkillFlamePierce01
+    - 15
+    - 100
+    - 999
+    - 5
+    - 0
+    - 'Rect|0:0.5:1:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|10007:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10007:'
+    - Straight
+    - 99
+    - True
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - -999.0
+    - -999.0
+    - 1
+    - 
+    - True
+    - Time
+    - 1.5
+    - 3
+    - 2
+    - 1
+    - 0
+    - 2
+    - 1
+    - 0.03
+    - HeSkillFlamePierce02
+    - HeSkillCommonHit01
+    - 0.00
+    - 0.00
+    - 
+    - 
+    - 
+    - 
+    - SkillBasicAttackPower
+    - False
+    - 0
+    - 0
+    - 
+    - 1
+    - 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2110204
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2030010
+  _skillId: 2110204
+  _nodes:
+  - {fileID: -8866676404811678121}
+  - {fileID: -786620035884152779}
+  - {fileID: 1328527543818713814}
+  - {fileID: 292663257996512931}
+  - {fileID: -4111592958497937939}
+  - {fileID: -3773036989082400643}
+  - {fileID: 850016330764229546}
+  - {fileID: 8182266602165723259}
+  - {fileID: 8091583379719080706}
+  - {fileID: 5834186039213005689}
+  _edges:
+  - _fromNodeId: 2030010_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_Delay_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Delay_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_001
+    _fromPortId: true
+    _toNodeId: 2030010_Branch_002
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_002
+    _fromPortId: false
+    _toNodeId: 2030010_Projectile_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_002
+    _fromPortId: true
+    _toNodeId: 2030010_Branch_003
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_003
+    _fromPortId: false
+    _toNodeId: 2030010_Projectile_003
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_001
+    _fromPortId: false
+    _toNodeId: 2030010_Projectile_002
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Branch_003
+    _fromPortId: true
+    _toNodeId: 2030010_Projectile_007
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    - Effect
+    - Delay
+    - Branch
+    _values: 0100000007000000010000000100000003000000
+--- !u!114 &292663257996512931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Delay_001
+  _nodeType: Delay
+  _editorPosition: {x: 141, y: 311}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    _values:
+    - 1.2
+--- !u!114 &850016330764229546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Branch_002
+  _nodeType: Branch
+  _editorPosition: {x: 563, y: 223}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 30
+    - 
+--- !u!114 &1328527543818713814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: -71, y: 311}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - rotation
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    _values:
+    - HeSkillFlamePierce03
+    - 
+    - Caster
+    - None
+    - 0
+    - 
+    - false
+--- !u!114 &5834186039213005689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Projectile_007
+  _nodeType: Projectile
+  _editorPosition: {x: 1018, y: 15}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - speed
+    - damage
+    - max_distance
+    - max_time
+    - move_angle_offset
+    - hit_modules
+    - move_type
+    - bounce_count
+    - bounce_reset_hit
+    - bullet_length
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - fixed_start_x
+    - fixed_start_y
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_distance_interval
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_buff_duration
+    - burn_area_buff_tick_interval
+    - burn_area_time_interval
+    - burn_area_effect
+    - hit_effect
+    - spawn_offset_x
+    - spawn_offset_y
+    - burn_area_time_interval_attr
+    - burn_area_duration_attr
+    - burn_area_radius_attr
+    - burn_area_tick_interval_attr
+    - burn_area_damage_attr
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - burn_area_buff_stay_time_attr
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - HeSkillFlamePierce01
+    - 15
+    - 100
+    - 999
+    - 5
+    - 0
+    - 'Rect|0:0.5:1:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|10007:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10007:'
+    - Straight
+    - 99
+    - True
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - -999.0
+    - -999.0
+    - 1
+    - 
+    - True
+    - Time
+    - 1.5
+    - 5
+    - 2
+    - 1
+    - 10
+    - 2
+    - 0.5
+    - 0.03
+    - HeSkillFlamePierce02
+    - HeSkillCommonHit01
+    - 0.00
+    - 0.00
+    - 
+    - 
+    - 
+    - 
+    - SkillBasicAttackPower
+    - False
+    - 10007
+    - 0
+    - 
+    - 1
+    - 
+--- !u!114 &8091583379719080706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Projectile_003
+  _nodeType: Projectile
+  _editorPosition: {x: 1007, y: 223}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - speed
+    - damage
+    - max_distance
+    - max_time
+    - move_angle_offset
+    - hit_modules
+    - move_type
+    - bounce_count
+    - bounce_reset_hit
+    - bullet_length
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - fixed_start_x
+    - fixed_start_y
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_distance_interval
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_buff_duration
+    - burn_area_buff_tick_interval
+    - burn_area_time_interval
+    - burn_area_effect
+    - hit_effect
+    - spawn_offset_x
+    - spawn_offset_y
+    - burn_area_time_interval_attr
+    - burn_area_duration_attr
+    - burn_area_radius_attr
+    - burn_area_tick_interval_attr
+    - burn_area_damage_attr
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - burn_area_buff_stay_time_attr
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - HeSkillFlamePierce01
+    - 15
+    - 100
+    - 999
+    - 5
+    - 0
+    - 'Rect|0:0.5:1:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|10007:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10007:'
+    - Straight
+    - 99
+    - True
+    - 1
+    - 
+    - 
+    - 
+    - 
+    - -999.0
+    - -999.0
+    - 1
+    - 
+    - True
+    - Time
+    - 1.5
+    - 5
+    - 2
+    - 1
+    - 0
+    - 2
+    - 0.5
+    - 0.03
+    - HeSkillFlamePierce02
+    - HeSkillCommonHit01
+    - 0.00
+    - 0.00
+    - 
+    - 
+    - 
+    - 
+    - SkillBasicAttackPower
+    - False
+    - 0
+    - 0
+    - 
+    - 1
+    - 
+--- !u!114 &8182266602165723259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Branch_003
+  _nodeType: Branch
+  _editorPosition: {x: 784, y: 118.91996}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 40
+    - 

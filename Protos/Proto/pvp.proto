@@ -1,0 +1,183 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+import "ranking.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// /api/pvp/matchList
+// ============================================================
+
+message PvpMatchListRequest {
+}
+
+message PvpMatchListResponse {
+  repeated PvpSeasonRankPlayer opponents = 1; // 赛季榜周围 100 名内随机 3 个对手（含段位）；未上榜时按战力匹配
+  PvpSeasonInfo season_info = 2; // 赛季信息（含 refresh_left/refresh_total 换批次数）
+}
+
+// ============================================================
+// /api/pvp/matchRefresh
+// ============================================================
+
+message PvpMatchRefreshRequest {}
+
+message PvpMatchRefreshResponse {
+  repeated PvpSeasonRankPlayer opponents = 1; // 新一批对手
+  PvpSeasonInfo season_info = 2; // 赛季信息（含 refresh_left/refresh_total 换批次数）
+}
+
+// ============================================================
+// /api/pvp/opponentInfo
+// ============================================================
+
+message PvpOpponentDetailRequest {
+  int32 player_id = 1;
+}
+
+// ============================================================
+// /api/pvp/seasonInfo
+// ============================================================
+
+message PvpSeasonInfoRequest {}
+
+// 赛季榜单玩家（排行榜信息 + PvP 段位）
+message PvpSeasonRankPlayer {
+  RankInfo rank_info = 1; // 排行榜信息（玩家资料 + 名次 + 分数）
+  int32 pvp_level = 2;    // PvP 段位（由分数计算）
+}
+
+message PvpSeasonInfoResponse {
+  PvpSeasonInfo season_info = 1;
+  repeated PvpSeasonRankPlayer top3 = 2;           // 当前赛季前 3 名（不足 3 个按实际）
+  repeated PvpSeasonRankPlayer around_players = 3; // 以自己为中心共 10 个（含自己）：前4+自己+后5；未上榜为空
+}
+
+// ============================================================
+// /api/pvp/start
+// ============================================================
+
+message PvpStartRequest {
+  int32 opponent_id = 1;
+}
+
+message PvpStartResponse {
+  int32 match_id = 1;
+  PlayerProfile opponent = 2;
+  ResultItems items = 3;
+  PvpMatchRecord match_record = 4;
+}
+
+// ============================================================
+// /api/pvp/settle
+// ============================================================
+
+message PvpSettleRequest {
+  int32 match_id = 1;
+  bool is_win = 2;
+}
+
+message PvpSettleResponse {
+  ResultItems items = 1;
+  repeated RewardAndNum rewards = 2;
+  PvpSeasonInfo season_info = 3;
+}
+
+// ============================================================
+// /api/pvp/ranking
+// ============================================================
+
+message PvpRankingRequest {
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+message PvpRankingResponse {
+  repeated RankInfo list = 1;
+  RankInfo self_rank = 2;
+  int32 total = 3;
+}
+
+// ============================================================
+// /api/pvp/claimLevelReward
+// ============================================================
+
+message PvpClaimLevelRewardRequest {
+  int32 level = 1;
+}
+
+message PvpClaimLevelRewardResponse {
+  repeated RewardAndNum rewards = 1;
+  ResultItems items = 2;
+  PvpSeasonInfo season_info = 3;
+}
+
+// ============================================================
+// /api/pvp/matchHistory
+// ============================================================
+
+message PvpMatchHistoryRequest {
+  int32 season_id = 1;
+  int32 page = 2;
+  int32 page_size = 3;
+}
+
+message PvpMatchHistoryResponse {
+  repeated PvpMatchRecord list = 1;
+  int32 total = 2;
+}
+
+message PvpMatchRecord {
+  int32 match_id = 1;
+  int32 opponent_id = 2;
+  string opponent_name = 3;
+  int32 opponent_level = 4;
+  int32 result = 5;
+  int32 score_change = 6;
+  int64 time = 7;
+  // 关卡id
+  int64 stageId = 8;
+}
+
+// ============================================================
+// /api/pvp/taskProgress
+// ============================================================
+
+message PvpTaskProgressRequest {}
+
+message PvpTaskProgressResponse {
+  repeated PvpTaskItem tasks = 1;
+}
+
+message PvpTaskItem {
+  int32 task_id = 1;
+  int32 target_type = 2;
+  int32 target_num = 3;
+  int32 progress = 4;
+  int32 state = 5;
+}
+
+// ============================================================
+// /api/pvp/claimFreeTicket
+// ============================================================
+
+message PvpClaimFreeTicketRequest {}
+
+message PvpClaimFreeTicketResponse {
+  ResultItems items = 1;
+}
+
+// ============================================================
+// /api/pvp/claimAfkReward
+// ============================================================
+
+message PvpClaimAfkRewardRequest {}
+
+message PvpClaimAfkRewardResponse {
+  repeated RewardAndNum rewards = 1;
+  ResultItems items = 2;
+  PvpSeasonInfo season_info = 3;
+}

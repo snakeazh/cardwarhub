@@ -1,0 +1,66 @@
+<module name="">
+
+    <!-- 效果配置 -->
+    <bean name="EffectGroupConfig" >
+
+        <var name="Id" type="int" />
+        <var name="PersistToAttributeSet" type="int" />
+        <var name="Effects" type="(list#sep=|),EffectParamStruct" />   
+        
+	</bean>
+	<table name="TbEffectGroupConfig" value="EffectGroupConfig" input="GamePlay/EffectGroupConfig.xlsx"/>
+
+
+
+    <!-- 效果结构 -->
+    <bean name="EffectParamStruct" sep=":" >
+        <!-- 效果类型 -->
+        <var name="EffectType" type="EffectGroupsType"/>
+        <!-- 属性 -->
+        <var name="AttributeType" type="AttributeType"/>
+        <!-- 来源单位 -->
+        <var name="SourceUnitType" type="UnitType"/>
+        <!-- 来源属性 -->
+        <var name="SourceAttrType" type="AttributeType"/>
+        <!-- 目标单位 -->
+        <var name="TargetUnitType" type="UnitType"/>
+        <!-- 基础值 -->
+        <var name="BaseValue" type="float"/>
+        <!-- 百分比 -->
+        <var name="PreValue" type="float"/>
+    </bean>  
+
+
+    <!-- 取值目标类型 -->
+    <enum name="UnitType">
+        <var name="Self" alias="自身" />
+        <var name="Target" alias="目标" />
+
+	</enum>
+
+
+    <!-- 特殊效果类型 -->
+    <enum name="EffectGroupsType">
+
+        <var name="AddBuff" alias="添加霸符" />
+        <var name="RemoveBuff" alias="移除霸符" />
+        <var name="CastSkill" alias="使用技能" />
+        <var name="ReduceCoolDown" alias="剩余冷却修正" />
+        <var name="ResetCoolDown" alias="冷却重置" />
+        <var name="ModifyAttr" alias="添加属性" />
+        <var name="ContinuousAttack" alias="连击" />
+        <var name="AddADDamage" alias="添加物理伤害" />
+        <var name="AddAPDamage" alias="添加魔法伤害" />
+        <var name="AddRealDamage" alias="添加真实伤害" />
+        <var name="AddSkillNoBuff" alias="重复释放非增益类技能" />
+        <var name="AddDamage" alias="添加伤害" />
+
+    </enum>
+
+
+
+
+
+
+
+</module>

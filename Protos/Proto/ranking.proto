@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+import "model.proto";
+
+message RankInfo {
+  PlayerBaseInfo user_info = 1;
+  int32 rank = 2;
+  int64 score = 3;
+}
+
+// 通用排行榜请求 — page 从 1 开始，page_size 默认 10 最大 100
+message RankingRequest {
+  int32 page = 1;
+  int32 page_size = 2;
+}
+
+// /api/ranking/chapter
+message ChapterRankingResponse {
+  repeated RankInfo list = 1;
+  RankInfo self_rank = 2;
+  int32 total = 3;
+}
+
+// /api/ranking/hiddenRealmTower
+message HiddenRealmTowerRankingResponse {
+  repeated RankInfo list = 1;
+  RankInfo self_rank = 2;
+  int32 total = 3;
+}
+
+// /api/ranking/combatPower
+message CombatPowerRankingResponse {
+  repeated RankInfo list = 1;
+  RankInfo self_rank = 2;
+  int32 total = 3;
+}

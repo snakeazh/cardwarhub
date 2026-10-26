@@ -1,0 +1,26 @@
+<module name="">
+
+    <!-- 羁绊类型 -->
+    <enum name="BindingType">
+        <var name="CarBinding" alias="职业羁绊" />
+    </enum>
+
+    
+    <!-- 羁绊配置 -->
+    <bean name="BindingConfig" >
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Type" type="BindingType" />
+        <var name="CarCountList" type="list,CarCountListStruct" /> 
+	</bean>
+	<table name="TbBindingConfig" value="BindingConfig" input="GamePlay/BindingConfig.xlsx"/>
+
+    <!-- 羁绊列表结构 -->
+    <bean name="CarCountListStruct">
+        <var name="CarCount" type="int" />
+        <var name="Desc" type="string" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+    </bean>
+
+
+</module>

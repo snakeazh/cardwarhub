@@ -1,0 +1,12 @@
+<module name="">
+    
+    <!-- 任务配置 -->
+    <bean name="TextColorConfig" >
+        <var name="Id" type="int" />
+        <var name="Desc" type="string" />
+        <var name="ColorGroup" type="(list#sep=|),int" />
+
+	</bean>
+	<table name="TbTextColorConfig" value="TextColorConfig" input="GamePlay/TextColorConfig.xlsx"/>
+
+</module>

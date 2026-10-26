@@ -1,0 +1,119 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+import "model.proto";
+
+// ========== 搜索 ==========
+// /api/relation/searchUser
+message SearchPlayerRequest {
+  // 如果是玩家id，则搜索玩家id（精确搜索）
+  // 如果是玩家名称，则搜索玩家名称（模糊搜索，限制5个）
+  oneof SearchContent {
+    int64 player_id = 3;
+    string player_name = 4;
+  }
+}
+message SearchPlayerResponse {
+  repeated SearchPlayerInfo player_infos = 1;
+
+  message SearchPlayerInfo {
+    // 玩家基本信息
+    PlayerBaseInfo player_info = 1;
+    // 是否是好友 false: 不是好友 true: 是好友
+    bool is_friend = 2;
+  }
+}
+
+// ============ 申请 ============
+// 玩家申请操作类型
+enum OperateApplyType {
+  // 同意添加好友申请
+  OperateApplyType_AGREE = 0;
+  // 拒绝添加好友申请
+  OperateApplyType_REJECT = 1;
+  // 忽略添加好友申请
+  OperateApplyType_IGNORE = 2;
+}
+
+// 申请条目状态
+enum ApplyStatusType {
+  // 待处理
+  ApplyStatusType_WAIT = 0;
+  // 同意添加好友申请
+  ApplyStatusType_AGREE = 1;
+  // 拒绝添加好友申请
+  ApplyStatusType_REJECT = 2;
+  // 忽略
+  ApplyStatusType_IGNORE = 3;
+}
+
+// 申请好友操作
+// /api/relation/apply
+message ApplyRequest {
+  repeated int64 operate_player_ids = 2;
+}
+message ApplyResponse {
+}
+
+// 申请列表
+// /api/relation/applyList
+message ApplyListRequest {
+
+}
+message ApplyListResponse {
+  repeated ApplyInfo apply_infos = 1;
+
+  message ApplyInfo {
+    // 玩家基本信息
+    PlayerBaseInfo player_info = 1;
+    // 申请时间戳
+    int64 apply_time = 2;
+    // 申请状态
+    ApplyStatusType apply_status = 3;
+    // 申请条目id
+    int64 apply_id = 4;
+  }
+}
+
+// 操作申请列表
+// /api/relation/applyOperate
+message OperateApplyRequest {
+  OperateApplyType operate_type = 1;
+  // 申请列表id
+  repeated int64 operate_ids = 2;
+}
+message OperateApplyResponse {
+}
+
+
+
+// ============ 好友 ============
+enum RelationOperateType {
+  // 删除好友
+  RelationOperateType_DEL = 0;
+}
+// 好友关系操作
+// /api/relation/friendOperate
+message RelationOperateRequest {
+  RelationOperateType operate_type = 1;
+  int64 operate_player_id = 2;
+}
+message RelationOperateResponse {
+}
+
+// 好友列表
+// /api/relation/friendList
+message FriendListRequest {
+}
+message FriendListResponse {
+  repeated FriendInfo friend_infos = 1;
+  message FriendInfo {
+    // 玩家基本信息
+    PlayerBaseInfo player_info = 1;
+    // 好友添加时间戳
+    int64 friend_time = 2;
+  }
+}

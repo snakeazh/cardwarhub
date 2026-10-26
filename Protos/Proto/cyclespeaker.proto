@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 设置轮语者皮肤
+// ============================================================
+
+message SetCycleSpeakerSkinRequest {
+  int32 skin_id = 1;
+}
+
+message SetCycleSpeakerSkinResponse {
+  PlayerSpeakerModule speaker = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 激活皮肤
+// /api/cycleSpeaker/skin/activate
+// ============================================================
+
+message SkinActivateRequest {
+  int32 skin_id = 1;
+}
+
+message SkinActivateResponse {
+  PlayerCycleSpeakerSkin skin = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 皮肤升级
+// /api/cycleSpeaker/skin/upgrade
+// ============================================================
+
+message SkinUpgradeRequest {
+  int32 skin_id = 1;
+}
+
+message SkinUpgradeResponse {
+  PlayerCycleSpeakerSkin skin = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 卸载皮肤
+// /api/cycleSpeaker/skin/unequip
+// ============================================================
+
+message SkinUnequipRequest {
+  int32 skin_id = 1;
+}
+
+message SkinUnequipResponse {
+  PlayerSpeakerModule speaker = 1;
+  ResultItems items = 2;
+}

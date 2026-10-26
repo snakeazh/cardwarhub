@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 保存怪物图鉴
+// ============================================================
+
+message SaveMonsterAtlasRequest {
+  map<int32, int32> atlas = 1;
+}
+
+message SaveMonsterAtlasResponse {
+  PlayerAtlas player_atlas = 1;
+}
+
+// ============================================================
+// 领取怪物图鉴奖励
+// ============================================================
+
+message ReceiveMonsterRewardRequest {
+  int32 monster_id = 1;
+}
+
+message ReceiveMonsterRewardResponse {
+  PlayerAtlas player_atlas = 1;
+  map<int32, int64> rewards = 2;
+  ResultItems items = 3;
+}

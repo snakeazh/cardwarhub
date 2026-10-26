@@ -1,0 +1,6 @@
+-keep class game.taptap.kpzz.cardsWar.RestartHelper { *; }
+-keep public class com.facebook.**{public *; } 
+-keep public class com.facebook.internal.**{ public *; }
+-dontwarn com.tendcloud.tenddata.**
+-keep class com.tendcloud.** {*;}               
+-keep public class com.tendcloud.** {  public protected *;}

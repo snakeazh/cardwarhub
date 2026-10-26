@@ -1,0 +1,14 @@
+<module name="">
+
+    
+    <!-- 关卡礼包配置 -->
+    <bean name="MainLevelGiftConfig" >
+        <var name="Id" type="int" />
+        <var name="ChapterId" type="int#ref=TbChapterStageConfig" />
+        <var name="Rewards" type="(list#sep=|),RewardAndNum" />
+        <var name="TakeItems" type="(list#sep=|),RewardAndNum" />
+	</bean>
+	<table name="TbMainLevelGiftConfig" value="MainLevelGiftConfig" input="GamePlay/MainLevelGiftConfig.xlsx"/>
+
+
+</module>

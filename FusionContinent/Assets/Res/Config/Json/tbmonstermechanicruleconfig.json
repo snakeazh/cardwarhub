@@ -1,0 +1,84 @@
+[
+  {
+    "Id": 11001,
+    "Desc": "物理伤害降低30%",
+    "Trigger": 1,
+    "HpThreshold": 0,
+    "DamageType": 1,
+    "TriggerOnce": 0,
+    "ActionIds": [
+      12001
+    ]
+  },
+  {
+    "Id": 11002,
+    "Desc": "魔法伤害降低50%",
+    "Trigger": 1,
+    "HpThreshold": 0,
+    "DamageType": 2,
+    "TriggerOnce": 0,
+    "ActionIds": [
+      12002
+    ]
+  },
+  {
+    "Id": 11003,
+    "Desc": "生命值降至80%",
+    "Trigger": 2,
+    "HpThreshold": 0.8,
+    "DamageType": 0,
+    "TriggerOnce": 1,
+    "ActionIds": [
+      12003,
+      12004
+    ]
+  },
+  {
+    "Id": 11004,
+    "Desc": "生命值降至40%",
+    "Trigger": 2,
+    "HpThreshold": 0.4,
+    "DamageType": 0,
+    "TriggerOnce": 1,
+    "ActionIds": [
+      12003,
+      12005,
+      12006
+    ]
+  },
+  {
+    "Id": 11005,
+    "Desc": "受到法师伤害降低30%",
+    "Trigger": 4,
+    "HpThreshold": 0,
+    "DamageType": 0,
+    "TriggerOnce": 0,
+    "ActionIds": [
+      12007,
+      12008
+    ]
+  },
+  {
+    "Id": 11006,
+    "Desc": "受到战士伤害降低30%",
+    "Trigger": 5,
+    "HpThreshold": 0,
+    "DamageType": 0,
+    "TriggerOnce": 0,
+    "ActionIds": [
+      12007,
+      12008
+    ]
+  },
+  {
+    "Id": 11007,
+    "Desc": "魔法伤害降低30%",
+    "Trigger": 1,
+    "HpThreshold": 0,
+    "DamageType": 2,
+    "TriggerOnce": 0,
+    "ActionIds": [
+      12009
+    ]
+  }
+]

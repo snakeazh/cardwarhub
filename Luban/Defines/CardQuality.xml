@@ -1,0 +1,10 @@
+<module name="">
+    <!-- 卡牌品质对照表 -->
+    <bean name="CardSlotQualityTypeConfig" >
+		<var name="Quality" type="QualityType" />
+		<var name="IsAwake" type="int" />
+        <var name="FontMatName" type="string" />
+        <var name="CardFrame" type="string" />
+	</bean>
+	<table name="TbCardSlotQualityTypeConfig" value="CardSlotQualityTypeConfig" input="GamePlay/CardSlotQualityTypeConfig.xlsx"/>
+</module>

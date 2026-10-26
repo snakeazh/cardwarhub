@@ -1,0 +1,120 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 设置皮肤
+// ============================================================
+
+message SetSkinRequest {
+  int32 card_id = 1;
+  int32 skin_id = 2;
+}
+
+message SetSkinResponse {
+  PlayerCard card = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 卡牌升级
+// ============================================================
+
+message LevelUpCardRequest {
+  int32 card_id = 1;
+  int32 card_lv = 2;
+  string consume_items = 3;
+}
+
+message LevelUpCardResponse {
+  PlayerCard card = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 领取养成奖励
+// ============================================================
+
+message ReceiveDevelopRewardRequest {
+  int32 card_id = 1;
+  int32 card_lv = 2;
+}
+
+message ReceiveDevelopRewardResponse {
+  PlayerCard card = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 卡片分解
+// ============================================================
+
+message AsCardFragmentRequest {
+  repeated int32 card_ids = 1;
+}
+
+message AsCardFragmentResponse {
+  ResultItems items = 1;
+  map<int32, int64> rewards = 2;
+}
+
+// ============================================================
+// 卡片合成
+// ============================================================
+
+message AsCardFusionRequest {
+  int32 quality = 1;
+}
+
+message AsCardFusionResponse {
+  ResultItems items = 1;
+  int32 card_id = 2;
+}
+
+
+// ============================================================
+// 英灵激活
+// api/card/soliderCardActive
+// ============================================================
+
+message SoliderCardActiveRequest {
+  int32 soldier_card_id = 1;
+}
+
+message SoliderCardActiveResponse {
+  ResultItems items = 1;
+}
+
+// ============================================================
+// 英灵解锁技能卡
+// /api/card/unlockSkill
+// ============================================================
+
+message UnlockSkillCardRequest {
+  int32 skill_card_id = 1;
+}
+
+message UnlockSkillCardResponse {
+  ResultItems items = 1;
+}
+
+// ============================================================
+// 奥术卡抽奖（单机本地接口）
+// /api/card/drawArcCard
+// 奥术卡页面内直接抽奖；重复获得即升级；满级重复转为分解产物
+// ============================================================
+
+message ArcCardDrawRequest {
+  int32 times = 1; // 抽取次数：1 或 10
+}
+
+message ArcCardDrawResponse {
+  ResultItems items = 1; // 消耗扣减回执
+  repeated PlayerCard cards = 2; // 本次变动的卡牌行（新卡/升级后的卡）
+  repeated int32 new_card_ids = 3; // 本次新获得的奥术卡
+  repeated int32 upgraded_card_ids = 4; // 本次升级的奥术卡
+}

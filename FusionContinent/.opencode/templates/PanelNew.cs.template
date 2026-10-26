@@ -1,0 +1,131 @@
+using Game.${Module};
+using UIFramework;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace FusionContinent
+{
+    /// <summary>
+    /// ${PanelName} - 新框架版本 (MVVM)
+    /// 复用原${PanelName}的UI组件
+    /// 创建时间: ${Date}
+    /// </summary>
+    [PrefabPath("${PrefabPath}")]
+    public class ${PanelName}New : UIPanel<${PanelName}ViewModel>
+    {
+        // 引用原Panel，复用其UI组件
+        private ${PanelName} mOldPanel;
+
+        void Awake()
+        {
+            mOldPanel = GetComponent<${PanelName}>();
+            if (mOldPanel == null)
+            {
+                Debug.LogError("[${PanelName}New] 找不到 ${PanelName} 组件！请确保预制体上同时挂载了两个脚本");
+                return;
+            }
+            
+            Debug.Log("[${PanelName}New] 已关联 ${PanelName}");
+        }
+
+        protected override void OnBindViewModel(${PanelName}ViewModel vm)
+        {
+            if (mOldPanel == null) return;
+            
+            // TODO: 绑定属性
+            // 示例:
+            // vm.Title.OnValueChanged += (oldVal, newVal) =>
+            // {
+            //     mOldPanel.TitleText.text = newVal;
+            // };
+            //
+            // vm.IsLoading.OnValueChanged += (oldVal, newVal) =>
+            // {
+            //     mOldPanel.LoadingObj.SetActive(newVal);
+            // };
+            ${PropertyBindings}
+            
+            // TODO: 绑定按钮
+            // 示例:
+            // mOldPanel.ConfirmBtn.onClick.AddListener(() => vm.OnConfirmCommand.Execute());
+            // mOldPanel.CloseBtn.onClick.AddListener(() => CloseSelf());
+            ${ButtonBindings}
+        }
+
+        protected override void OnUnbindViewModel(${PanelName}ViewModel vm)
+        {
+            if (mOldPanel == null) return;
+            
+            // TODO: 清理所有监听
+            // 示例:
+            // mOldPanel.ConfirmBtn.onClick.RemoveAllListeners();
+            // mOldPanel.CloseBtn.onClick.RemoveAllListeners();
+            ${UnbindListeners}
+        }
+
+        private void InitializeUI(${PanelName}ViewModel vm)
+        {
+            if (mOldPanel == null) return;
+            
+            // TODO: 初始化UI状态
+            // 示例:
+            // mOldPanel.TitleText.text = vm.Title.Value;
+            // mOldPanel.LoadingObj.SetActive(vm.IsLoading.Value);
+            ${UIInit}
+        }
+
+        protected override void OnOpen(IUIData uiData = null)
+        {
+            // TODO: 面板打开时的逻辑
+            // 示例: 播放打开动画
+            // PlayOpenAnimation();
+        }
+
+        protected override void OnShow()
+        {
+            // TODO: 面板显示时的逻辑
+        }
+
+        protected override void OnHide()
+        {
+            // TODO: 面板隐藏时的逻辑
+        }
+
+        #region 动画
+        // TODO: 添加动画方法（如需要）
+        // private void PlayOpenAnimation()
+        // {
+        //     if (mOldPanel?.OpenAnimation != null)
+        //     {
+        //         UIAnimationUtils.PlayAnimations(mOldPanel.OpenAnimation.gameObject, null);
+        //     }
+        // }
+        //
+        // private void PlayCloseAnimation(System.Action onComplete)
+        // {
+        //     if (mOldPanel?.CloseAnimation != null)
+        //     {
+        //         UIAnimationUtils.PlayAnimations(mOldPanel.CloseAnimation.gameObject, () => onComplete?.Invoke());
+        //     }
+        //     else
+        //     {
+        //         onComplete?.Invoke();
+        //     }
+        // }
+        ${AnimationMethods}
+        #endregion
+
+        #region 工具方法
+        // TODO: 添加工具方法
+        // private void ShowTip(string message)
+        // {
+        //     var tipManager = GetComponent<ShowTipManager>();
+        //     if (tipManager != null)
+        //     {
+        //         tipManager.SetTiptxt(message, 2f, false);
+        //     }
+        // }
+        ${UtilityMethods}
+        #endregion
+    }
+}

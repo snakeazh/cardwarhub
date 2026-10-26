@@ -1,0 +1,651 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 用户（登录账号，对应 model.User）
+// ============================================================
+
+message User {
+  int32 user_id = 1;
+  string account = 2;
+  string user_name = 3;
+  string password = 4;
+  int32 sex = 5;
+  int32 avatar = 6;
+  int32 title = 7;
+  int32 level = 8;
+  int32 exp = 9;
+  int32 status = 10;
+  string guides = 11;
+  int32 del_flag = 12;
+  string login_ip = 13;
+  string login_time = 14;
+  int32 avatar_frame = 15;
+  // 战斗力
+  int32 combat_power = 16;
+}
+
+// ============================================================
+// 卡池
+// ============================================================
+
+message PlayerChestPool {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 pool_id = 3;
+  int32 promise_num = 4;
+  int32 total_chest_num = 5;
+  int32 daily_chest_num = 6;
+  bool first_promise_done = 7;
+}
+
+// ============================================================
+// 统一道具结果
+// ============================================================
+
+message ResultItems {
+  map<int32, PlayerItem> items = 1;
+  map<int32, PlayerCard> cards = 2;
+  repeated PlayerEquip equips = 3;
+  PlayerResource resource = 4;
+  PlayerActivity activity = 5;
+  repeated PlayerFusionGem fusion_gems = 6;
+  UserLevelInfo user_level_info = 7;
+  map<int32, ActiveDetail> task_active_rewards = 8;
+  repeated PlayerCycleSpeakerSkin speaker_skins = 9;
+  repeated PlayerFusionGemToC fusion_gems_v2 = 10;
+  repeated PlayerArcResonance resonances = 11;
+  repeated PlayerWeapon weapons = 12;
+  repeated PlayerAvatar avatars = 13;
+  repeated PlayerAvatarFrame avatar_frames = 14;
+  // 战力变化（nil=无变化，非nil=客户端需更新）
+  optional CombatPower combat_power = 15;
+  // 变更的任务详情（增量同步）
+  map<int32, TaskDetail> task_details = 16;
+  // PvP 赛季信息（PvP 数据变更时返回）
+  PvpSeasonInfo pvp_season_info = 17;
+}
+
+message CombatPower {
+  // 最新战力
+  int64 combat_power = 1;
+}
+
+// ============================================================
+// 玩家道具
+// ============================================================
+
+message PlayerItem {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 item_id = 3;
+  int64 item_num = 4;
+}
+
+// ============================================================
+// 玩家卡牌
+// ============================================================
+
+message PlayerCard {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 card_id = 3;
+  int32 num = 4;
+  int32 lv = 5;
+  int32 exp = 6;
+  CardData data = 7;
+
+  message CardData {
+    // 皮肤
+    int32 skin = 1;
+    // 养成等级
+    repeated int32 receive_develops = 2;
+    // 是否觉醒 false:未觉醒 true：已觉醒
+    bool is_awaked = 3;
+  }
+}
+
+// ============================================================
+// 玩家装备
+// ============================================================
+
+message PlayerEquip {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 equip_id = 3;
+  int32 wearer_id = 4;
+  int32 part_type = 5;
+  int32 phase = 6;
+  repeated int32 entrys = 7;
+  repeated int32 temp_entrys = 8;
+  repeated int32 effects = 9;
+  repeated int32 temp_effects = 10;
+}
+
+// ============================================================
+// 玩家资源
+// ============================================================
+
+message PlayerResource {
+  int32 id = 1;
+  int32 stamina = 2;
+  string stamina_time = 3;
+  // 体力驿站上次领取时间（Unix 秒，0=从未领取）。服务端原存 player_stamina 表，单机版并入资源块
+  int64 station_last_claim_time = 4;
+}
+
+// ============================================================
+// 玩家活动
+// ============================================================
+
+message PlayerActivity {
+  int32 id = 1;
+  int32 daily_charge = 2;
+  int32 pass_check_num = 3;
+  int32 accumulate_charge = 4;
+  string create_singin_date = 5;
+}
+
+// ============================================================
+// 融合石（旧版）
+// ============================================================
+
+message PlayerFusionGem {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 gem_id = 3;
+  int32 wearer_id = 4;
+  int32 level = 5;
+}
+
+// ============================================================
+// 用户等级信息
+// ============================================================
+
+message UserLevelInfo {
+  int32 level = 1;
+  int32 exp = 2;
+}
+
+// ============================================================
+// 活跃任务详情
+// ============================================================
+
+message ActiveDetail {
+  int32 progress = 1;
+  repeated int32 receive_rews = 2;
+}
+
+// ============================================================
+// 轮语者皮肤
+// ============================================================
+
+message PlayerCycleSpeakerSkin {
+  int32 id = 1;
+  int32 skin_id = 2;
+  int32 level = 3;
+}
+
+message PlayerSpeakerModule {
+  int32 use_skin_id = 1;
+  int32 equipped_weapon_id = 4;
+}
+
+// ============================================================
+// 融合石（新版）
+// ============================================================
+
+message PlayerFusionGemToC {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 gem_id = 3;
+  int32 wearer_id = 4;
+  int32 level = 5;
+  double progress = 6;
+}
+
+// ============================================================
+// 玩家信息（游戏内，区别于登录 User）
+// ============================================================
+
+message UserPlayer {
+  int32 id = 1;
+  string figure = 2;
+  string guide_flows = 3;
+  int32 show_soldier = 4;
+  int32 module_unlock_lv = 5;
+}
+
+// ============================================================
+// 战斗
+// ============================================================
+
+message PlayerBattle {
+  int32 id = 1;
+  int32 score = 2;
+  int32 current_stage_id = 3;
+  int32 clear_stage_id = 4;
+  int32 clear_stage_time = 5;
+  int32 daily_double_reward_num = 6;
+  int32 daily_stage_sweeping_num = 7;
+  int32 status = 8;
+  string afk_time = 9;
+}
+
+// ============================================================
+// 挑战
+// ============================================================
+
+message PlayerChallenge {
+  int32 id = 1;
+  int32 daily_gem_fusion_num = 2;
+  string gem_fusion_rewards = 3;
+}
+
+// ============================================================
+// 关卡
+// ============================================================
+
+message PlayerStage {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 stage_id = 3;
+  int32 score = 4;
+  int32 status = 5;
+  int32 condition1 = 6;
+  int32 condition2 = 7;
+  int32 condition3 = 8;
+  int32 play_count = 9;
+  int32 clear_stage_time = 10;
+}
+
+// ============================================================
+// 章节
+// ============================================================
+
+message PlayerChapter {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 chapter_id = 3;
+  int32 unlock_stage_id = 4;
+  int32 status = 5;
+}
+
+// ============================================================
+// 签到
+// ============================================================
+
+message PlayerSignin {
+  int32 id = 1;
+  int32 signin_num = 2;
+  string last_singin_date = 3;
+}
+
+// ============================================================
+// 编队
+// ============================================================
+
+message PlayerTeam {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 team_id = 3;
+  string name = 4;
+  string cards = 5;
+  int32 current_use = 6;
+  string cards_position = 9;
+  string hero_team = 10;
+  string as_card_team = 11;
+}
+
+// ============================================================
+// 商店
+// ============================================================
+
+message PlayerShop {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 shop_id = 3;
+  int32 refresh_num = 4;
+  string refresh_time = 5;
+  int32 discount_rate = 6;
+}
+
+message PlayerShopGoods {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 shop_id = 3;
+  int32 goods_id = 4;
+  int32 buy_num = 5;
+  int32 lock_status = 6;
+}
+
+// ============================================================
+// 图鉴
+// ============================================================
+
+message PlayerAtlas {
+  int32 id = 1;
+  map<int32, int32> monster_atlas = 2;
+}
+
+// ============================================================
+// 天赋
+// ============================================================
+
+message PlayerTalent {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 talent_id = 3;
+  int32 lv = 4;
+  int32 extra_lv = 5;
+  int32 status = 6;
+}
+
+// ============================================================
+// 兑换礼包
+// ============================================================
+
+message PlayerExchangeGift {
+  int32 id = 1;
+  string code_exchanges = 2;
+}
+
+// ============================================================
+// 无尽塔
+// ============================================================
+
+message PlayerEndlessTower {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 tower_id = 3;
+  int32 floor = 4;
+  int32 map_id = 5;
+  int32 node_id = 6;
+  int32 daily_challenge_num = 7;
+  int32 total_challenge_num = 8;
+  string clear_nodes = 9;
+  string daily_rewards = 10;
+  string floor_rewards = 11;
+}
+
+// ============================================================
+// 挑战 BOSS
+// ============================================================
+
+message PlayerChallengeBoss {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 boss_id = 3;
+  int64 total_score = 4;
+  int64 total_damage = 5;
+  int32 daily_challenge_num = 6;
+  int32 total_challenge_num = 7;
+  string score_rewards = 8;
+  string daily_rewards = 9;
+}
+
+// ============================================================
+// 秘境塔
+// ============================================================
+
+message PlayerHiddenRealmTower {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 tower_id = 3;
+  int32 floor = 4;
+  int32 daily_challenge_num = 5;
+  int32 total_challenge_num = 6;
+  int32 daily_stage_sweeping_num = 7;
+  string daily_rewards = 8;
+  string floor_rewards = 9;
+  repeated HiddenRealmFloor floors = 10; // 各层怪物词条数据
+}
+
+// 单条怪物词条：entry_type=词条类型(1怒/2坚韧/3暴虐/4灵巧/5防御)，level=词条等级
+message HiddenRealmFloorEntry {
+  int32 entry_type = 1;
+  int32 level = 2;
+}
+
+// 单层怪物词条数据：floor=层号，entries=4条词条，cleared=是否已首次通关(true=词条永久冻结)
+message HiddenRealmFloor {
+  int32 floor = 1;
+  repeated HiddenRealmFloorEntry entries = 2;
+  bool cleared = 3;
+}
+
+// ============================================================
+// 创角活动
+// ============================================================
+
+message UserCreatePlayerActivity {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 activity_id = 3;
+  string part_receives = 4;
+  int32 status = 5;
+  string reset_time = 6;
+  string create_time = 7;
+}
+
+// ============================================================
+// 功能模块
+// ============================================================
+
+message PlayerModule {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 module_id = 3;
+  int32 status = 4;
+}
+
+// ============================================================
+// 任务详情（主线/每日通用，字段相同）
+// ============================================================
+
+message TaskDetail {
+  int32 state = 1;
+  int32 progress = 2;
+}
+
+// ============================================================
+// 奖励配置（对应 Config.RewardAndNum）
+// ============================================================
+
+message RewardAndNum {
+  int32 id = 1;
+  int32 num = 2;
+}
+
+// ============================================================
+// PvP 赛季信息
+// ============================================================
+
+message PvpSeasonInfo {
+  int32 season_id = 1;
+  int64 start_time = 2;
+  int64 end_time = 3;
+  int32 score = 4;
+  int32 level = 5;
+  int32 match_count = 6;
+  int32 win_count = 7;
+  int32 lose_count = 10;
+  repeated int32 claimed_levels = 8;
+  int64 last_afk_claim_time = 9;
+  int32 refresh_left = 11;  // 今日剩余换批次数
+  int32 refresh_total = 12; // 每日换批总次数
+}
+
+
+// 玩家基本信息
+message PlayerBaseInfo {
+  int32 player_id = 1;
+  string player_name = 2;
+  int32 avatar = 3;
+  int32 level = 4;
+  int32 title = 5;
+  int32 avatar_frame = 6;
+  // 战斗力
+  int64 combat_power = 7;
+}
+
+// ============================================================
+// 玩家对外展示档案（PvP对手详情 / 排行榜查看 / 好友查看等）
+// ============================================================
+
+message PlayerProfile {
+  PlayerBaseInfo base_info = 1;
+  repeated PlayerTeam teams = 2;
+  repeated PlayerCard cards = 3;
+  repeated PlayerEquip equips = 4;
+  repeated PlayerFusionGemToC fusion_gems = 5;
+  PlayerSpeakerModule speaker_module = 6;
+  repeated PlayerCycleSpeakerSkin skins = 7;
+  PlayerCityWallArchive city_wall = 8;
+  repeated PlayerTalent talents = 9;
+  repeated PlayerArcResonance arc_resonances = 10;
+  repeated PlayerWeapon weapons = 11;
+}
+
+
+
+// ============================================================
+// 奥数共鸣
+// ============================================================
+
+message PlayerArcResonance {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 resonance_id = 3;
+  int32 slot = 4;
+  int32 level = 5;
+  int32 stage = 6;
+  float progress = 7;
+}
+
+// ============================================================
+// 邮件
+// ============================================================
+message PlayerMail {
+  int32 id = 1;
+  int32 mail_type = 2;
+  string title = 3;
+  string content = 4;
+  repeated RewardAndNum rewards = 5;
+  bool is_read = 6;
+  bool is_claimed = 7;
+  int32 sender_id = 8;
+  string sender_name = 9;
+  string create_time = 10;
+}
+
+// ============================================================
+// 红点Notify
+// ============================================================
+enum RedDotType {
+  RED_DOT_MAIL          = 0; // 邮箱红点
+}
+
+message RedDotInfo {
+  RedDotType type = 1;
+  int32 count = 2;
+}
+
+// ============================================================
+// 装备槽位
+// ============================================================
+
+message PlayerEquipSlot {
+  int32 id = 1;
+  int32 user_id = 2;
+  int32 slot = 3;
+  int32 level = 4;
+}
+
+// ============================================================
+// 关卡礼包
+message ChapterGiftPack {
+  int32 charpter_id = 1;
+  bool is_purchase = 2;
+}
+
+// ============================================================
+// 武器
+// ============================================================
+
+message PlayerWeapon {
+  int32 id = 1;
+  int32 weapon_id = 2;
+  int32 level = 3;
+}
+
+// ============================================================
+// 头像
+// ============================================================
+
+message PlayerAvatar {
+  int32 id = 1;
+  int32 avatar_id = 2;
+}
+
+// ============================================================
+// 头像框
+// ============================================================
+
+message PlayerAvatarFrame {
+  int32 id = 1;
+  int32 avatar_frame_id = 2;
+}
+
+// ============================================================
+// 城墙
+// ============================================================
+
+message PlayerCityWall {
+  int32 level = 1;
+}
+
+// ============================================================
+// 城墙技能
+// ============================================================
+
+message PlayerCityWallSkill {
+  int32 skill_id = 1;
+  int32 level = 2;
+}
+
+// ============================================================
+// 城墙存档（聚合）
+// ============================================================
+
+message PlayerCityWallArchive {
+  PlayerCityWall wall = 1;
+  repeated PlayerCityWallSkill skills = 2;
+  repeated int32 slot_skills = 3;
+}
+
+// ============================================================
+// 门票
+// ============================================================
+
+message PlayerTicket {
+  int32 ticket_id = 1;
+  int64 next_claim_time = 2;  // 下次可领取时间戳(秒), 0表示立即可领取
+}
+
+// ============================================================
+// 体力驿站
+// ============================================================
+
+message StationStaminaSlot {
+  int32 item_id = 1;
+  int64 num = 2;
+}
+
+message StationStamina {
+  repeated StationStaminaSlot slots = 1;
+  int32 max_slots = 2;
+}

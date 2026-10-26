@@ -1,0 +1,69 @@
+<module name="">
+
+    <!-- 怪物机制触发时机。只添加运行时已经支持的通用触发器。 -->
+    <enum name="MonsterMechanicTriggerType">
+        <var name="Spawn" alias="出生时" />
+        <var name="TakeDamageBefore" alias="受到伤害前" />
+        <var name="HpBelow" alias="生命值低于阈值" />
+        <var name="Death" alias="死亡时" />
+        <var name="TakeMageDamageBefore" alias="受到法师伤害前" />
+        <var name="TakeWarriorDamageBefore" alias="受到战士伤害前" />
+    </enum>
+
+    <!-- 怪物机制动作。新增 Boss 优先组合动作，不再增加 Boss 专属类型。 -->
+    <enum name="MonsterMechanicActionType">
+        <var name="ModifyIncomingDamage" alias="修改受到的伤害" />
+        <var name="ModifyOutgoingDamage" alias="修改造成的伤害" />
+        <var name="AddBuff" alias="添加Buff" />
+        <var name="SilenceRandomSkills" alias="随机沉默技能" />
+    </enum>
+
+    <enum name="MonsterMechanicTargetType">
+        <var name="Self" alias="怪物自身" />
+        <var name="PlayerSkillDeck" alias="玩家技能卡组" />
+    </enum>
+
+    <!-- 伤害分类用于规则过滤，Magic 同时包含普通魔法伤害和落雷魔法伤害。 -->
+    <enum name="MonsterMechanicDamageType">
+        <var name="All" alias="全部伤害" />
+        <var name="Physical" alias="物理伤害" />
+        <var name="Magic" alias="魔法伤害" />
+        <var name="Real" alias="真实伤害" />
+        <var name="Burn" alias="灼烧伤害" />
+    </enum>
+
+    <!-- 机制组：MonsterBattleConfig.MonsterMechanismId 指向本表。 -->
+    <bean name="MonsterMechanicConfig">
+        <var name="Id" type="int" />
+        <var name="Desc" type="string" />
+        <var name="RuleIds" type="(list#sep=|),int#ref=TbMonsterMechanicRuleConfig" />
+    </bean>
+    <table name="TbMonsterMechanicConfig" value="MonsterMechanicConfig" input="GamePlay/MonsterMechanicConfig.xlsx" />
+
+    <!-- 触发规则。TriggerOnce=1 表示每只怪物实例只触发一次。 -->
+    <bean name="MonsterMechanicRuleConfig">
+        <var name="Id" type="int" />
+        <var name="Desc" type="string" />
+        <var name="Trigger" type="MonsterMechanicTriggerType" />
+        <var name="HpThreshold" type="float" />
+        <var name="DamageType" type="MonsterMechanicDamageType" />
+        <var name="TriggerOnce" type="int" />
+        <var name="ActionIds" type="(list#sep=|),int#ref=TbMonsterMechanicActionConfig" />
+    </bean>
+    <table name="TbMonsterMechanicRuleConfig" value="MonsterMechanicRuleConfig" input="GamePlay/MonsterMechanicRuleConfig.xlsx" />
+
+    <!-- 通用动作。Delay 和 Duration 的单位均为秒。Value 为倍率修正，例如 1 表示提高100%。 -->
+    <bean name="MonsterMechanicActionConfig">
+        <var name="Id" type="int" />
+        <var name="Desc" type="string" />
+        <var name="Type" type="MonsterMechanicActionType" />
+        <var name="Target" type="MonsterMechanicTargetType" />
+        <var name="Delay" type="float" />
+        <var name="Duration" type="float" />
+        <var name="Value" type="float" />
+        <var name="Count" type="int" />
+        <var name="BuffID" type="int" />
+    </bean>
+    <table name="TbMonsterMechanicActionConfig" value="MonsterMechanicActionConfig" input="GamePlay/MonsterMechanicActionConfig.xlsx" />
+
+</module>

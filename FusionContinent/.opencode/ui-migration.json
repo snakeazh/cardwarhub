@@ -1,0 +1,29 @@
+{
+  "name": "ui-framework-migration",
+  "version": "1.0.0",
+  "description": "QFramework UI迁移到UIFramework的完整规则包",
+  "author": "Your Team",
+  "rules": {
+    "migration": {
+      "enabled": true,
+      "agents_file": "AGENTS.md",
+      "templates_dir": ".opencode/templates",
+      "output_dir": "Assets/Scripts"
+    }
+  },
+  "templates": {
+    "viewmodel": ".opencode/templates/ViewModel.cs.template",
+    "panel": ".opencode/templates/PanelNew.cs.template",
+    "service": ".opencode/templates/Service.cs.template"
+  },
+  "naming": {
+    "viewmodel_suffix": "ViewModel",
+    "panel_new_suffix": "New",
+    "service_suffix": "Service"
+  },
+  "paths": {
+    "viewmodels": "Assets/Scripts/Game/{module}/ViewModels",
+    "services": "Assets/Scripts/Game/{module}/Services",
+    "panels": "Assets/Scripts/UI/{path}"
+  }
+}

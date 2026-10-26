@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 体力驿站
+// ============================================================
+
+// /api/stamina/info
+message GetStationStaminaInfoRequest {
+}
+
+message GetStationStaminaInfoResponse {
+  StationStamina stamina = 1;
+}
+
+// /api/stamina/claim
+message ClaimStaminaRequest {
+}
+
+message ClaimStaminaResponse {
+  StationStamina stamina = 1;
+  ResultItems items = 2;
+}

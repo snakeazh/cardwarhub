@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 获取关卡信息
+// ============================================================
+
+message GetStageInfoRequest {
+  int32 stage_id = 1;
+}
+
+message GetStageInfoResponse {
+  PlayerStage stage = 1;
+}
+
+// ============================================================
+// 获取关卡列表
+// ============================================================
+
+message GetStageListRequest {}
+
+message GetStageListResponse {
+  repeated PlayerStage stages = 1;
+}

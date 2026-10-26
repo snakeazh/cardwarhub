@@ -1,0 +1,58 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 保存队伍
+// ============================================================
+
+message TeamParam {
+  int32 team_id = 1;
+  string name = 2;
+  repeated int32 cards = 3;
+  repeated int32 cards_position = 4;
+  int32 current_use = 5;
+}
+
+message SaveTeamsRequest {
+  repeated TeamParam teams = 1;
+}
+
+message SaveTeamsResponse {
+  repeated PlayerTeam teams = 1;
+}
+
+// ============================================================
+// 保存英雄编队
+// ============================================================
+
+message HeroTeamParam {
+  int32 hero_card_id = 1;
+  repeated int32 skill_card_ids = 2;
+}
+
+message SaveHeroTeamRequest {
+  int32 team_id = 1;
+  repeated HeroTeamParam hero_team = 2;
+}
+
+message SaveHeroTeamResponse {
+  repeated PlayerTeam teams = 1;
+}
+
+// ============================================================
+// 保存奥数编队
+// ============================================================
+
+message SaveAsCardTeamRequest {
+  int32 team_id = 1;
+  repeated int32 as_card_ids = 2;
+}
+
+message SaveAsCardTeamResponse {
+  repeated PlayerTeam teams = 1;
+}

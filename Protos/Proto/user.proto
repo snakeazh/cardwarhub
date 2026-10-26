@@ -1,0 +1,62 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 保存用户信息
+// /api/user/update
+// ============================================================
+
+message SaveUserRequest {
+  string user_name = 1;
+  int32 sex = 2;
+  int32 avatar = 3;
+  int32 title = 4;
+  int32 status = 5;
+  int32 avatar_frame = 6;
+}
+
+message SaveUserResponse {
+  User user = 1;
+}
+
+// ============================================================
+// 更新头像
+// /api/user/updateAvatar
+// ============================================================
+
+message UpdateAvatarRequest {
+  int32 avatar = 1;
+}
+
+message UpdateAvatarResponse {
+  User user = 1;
+}
+
+// ============================================================
+// 更新头像框
+// /api/user/updateAvatarFrame
+// ============================================================
+
+message UpdateAvatarFrameRequest {
+  int32 avatar_frame = 1;
+}
+
+message UpdateAvatarFrameResponse {
+  User user = 1;
+}
+
+// ============================================================
+// 获取玩家对外展示档案
+// /api/user/playerProfile
+// ============================================================
+
+message PlayerProfileRequest {
+  int32 player_id = 1;
+}
+
+// response 为 model.proto 中的 PlayerProfile

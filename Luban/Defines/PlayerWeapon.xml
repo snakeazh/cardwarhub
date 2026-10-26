@@ -1,0 +1,30 @@
+<module name="">
+
+    
+    <!-- 轮语者武器配置 -->
+
+    <bean name="PlayerWeaponConfig">
+
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Quality" type="QualityType" />
+        <var name="Icon" type="string" />
+        <var name="NeedItems" type="(list#sep=|),RewardAndNum" />
+        <var name="WeaponStarList" type="list,WeaponStarListStruct" />
+    </bean>
+    
+   <!-- 武器等级属性 -->
+    <bean name="WeaponStarListStruct">
+        <var name="Level" type="int" />
+        <var name="FightNum" type="int" />
+        <var name="BaseAttributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc1" type="string" />
+        <var name="ExtraAttributes" type="(list#sep=|), AttributeStruct" />
+        <var name="Desc2" type="string" />
+
+    </bean>
+
+
+	<table name="TbPlayerWeaponConfig" value="PlayerWeaponConfig" input="GamePlay/PlayerWeaponConfig.xlsx"/>
+
+</module>

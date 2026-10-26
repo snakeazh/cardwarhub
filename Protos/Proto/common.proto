@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// 统一响应外层
+message GameResponse {
+  int32 code = 1;
+  string msg = 2;
+  bytes data = 3;
+  int64 time = 4;
+  bytes notices = 5;
+}

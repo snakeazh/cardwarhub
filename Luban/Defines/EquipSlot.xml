@@ -1,0 +1,23 @@
+<module name="">
+
+    
+    <!-- 装备槽位配置 -->
+    <bean name="EquipSlotConfig" >
+        <var name="Id" type="int" />
+        <var name="SlotType" type="EquipPartType" />
+        <var name="SlotLevelList" type="list,SlotLevelListStruct" />
+	</bean>
+	<table name="TbEquipSlotConfig" value="EquipSlotConfig" input="GamePlay/EquipSlotConfig.xlsx"/>
+
+    <!-- 槽位等级列表结构 -->
+    <bean name="SlotLevelListStruct">
+        <var name="Level" type="int" />
+        <var name="FightNum" type="int" />
+        <var name="UpPhaseConsumes" type="(list#sep=|),RewardAndNum" />
+        <var name="BaseAttributes" type="(list#sep=|),AttributeStruct" />
+        <var name="ExtraAttributes" type="(list#sep=|),AttributeStruct" />
+        <var name="BaseDesc" type="string" />
+        <var name="ExtraDesc" type="string" />
+    </bean>
+
+</module>

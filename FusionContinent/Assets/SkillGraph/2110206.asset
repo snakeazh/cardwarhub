@@ -1,0 +1,438 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7880781615476421062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_Effect_004
+  _nodeType: Effect
+  _editorPosition: {x: 366, y: 391}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - rotation
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    _values:
+    - HeSkillFlameWave03
+    - 
+    - Caster
+    - None
+    - 0
+    - 
+    - false
+--- !u!114 &-6261497347306774220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: -60, y: 391}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - rotation
+    - random_offset_radius
+    - vfx_scale_attr
+    - vfx_scale
+    - lock_x
+    _values:
+    - HeSkillFlameWave01
+    - 
+    - Caster
+    - None
+    - 0
+    - 
+    - 
+    - false
+--- !u!114 &-6137351333136612003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_FanProjectile_001
+  _nodeType: FanProjectile
+  _editorPosition: {x: 798, y: 493}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - hit_modules
+    - speed
+    - speed_attr
+    - max_time
+    - max_time_attr
+    - bullet_length
+    - bullet_length_attr
+    - fixed_rotation_attr
+    _values:
+    - HeSkillFlameWave02
+    - HeSkillCommonHit01
+    - 
+    - 20
+    - 5
+    - 2
+    - 1
+    - 0
+    - 100
+    - 0
+    - 0
+    - SkillSalvoAngle
+    - SkillSalvosNum
+    - 
+    - 
+    - 0
+    - 1
+    - 
+    - 'Rect|0:0.5:0.8:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|10007:0:0:0:1:0::BuffDurationTime:BuffBasicDamage:BuffNumLayers:BuffTriggerInterval:1::3::1::0:BuffPctDamage:0:buff_zhuoshao_01:SoldierSpellPower::Enemy:10007:'
+    - 15
+    - 
+    - 10
+    - 
+    - 1
+    - 
+    - 
+--- !u!114 &-4706875551356741152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_RecycleEffect_002
+  _nodeType: RecycleEffect
+  _editorPosition: {x: 799, y: 357}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target
+    - effectName
+    _values:
+    - All
+    - 
+--- !u!114 &-3985377751780188146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 75d8c374-42a0-4953-b336-ff7b659c04a5
+  _nodeType: Loop
+  _editorPosition: {x: 582, y: 388}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: body
+    Name: Body
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - count
+    - interval
+    - count_attr
+    - interval_attr
+    - duration_attr
+    - duration
+    - times_per_second
+    - duration_loop_count
+    - times_per_second_attr
+    - duration_loop_count_attr
+    _values:
+    - 1
+    - 0.3
+    - SkillContinuousAtkNum
+    - SkillContinuousAtkSpeed
+    - 
+    - 0
+    - 0
+    - 0
+    - 
+    - 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2110206
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2030008
+  _skillId: 2110206
+  _nodes:
+  - {fileID: 7380212386837482103}
+  - {fileID: -3985377751780188146}
+  - {fileID: -6261497347306774220}
+  - {fileID: 719675799589891069}
+  - {fileID: -6137351333136612003}
+  - {fileID: -7880781615476421062}
+  - {fileID: -4706875551356741152}
+  - {fileID: 4664285314101777102}
+  _edges:
+  - _fromNodeId: 23359c45-36b0-465b-9be6-70afd2ddd160
+    _fromPortId: exec_out
+    _toNodeId: 2030008_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030008_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2030008_Delay_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030008_Delay_001
+    _fromPortId: exec_out
+    _toNodeId: 2030008_Effect_004
+    _toPortId: exec_in
+  - _fromNodeId: 2030008_Effect_004
+    _fromPortId: exec_out
+    _toNodeId: 75d8c374-42a0-4953-b336-ff7b659c04a5
+    _toPortId: exec_in
+  - _fromNodeId: 75d8c374-42a0-4953-b336-ff7b659c04a5
+    _fromPortId: body
+    _toNodeId: 2030008_FanProjectile_001
+    _toPortId: exec_in
+  - _fromNodeId: 75d8c374-42a0-4953-b336-ff7b659c04a5
+    _fromPortId: exec_out
+    _toNodeId: 2030008_RecycleEffect_002
+    _toPortId: exec_in
+  - _fromNodeId: 2030008_RecycleEffect_002
+    _fromPortId: exec_out
+    _toNodeId: 2030008_Effect_007
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    - Loop
+    - Effect
+    - AnimatedEffect
+    - Delay
+    - MultiProjectile
+    - FanProjectile
+    - RecycleEffect
+    _values: 010000000200000001000000080000000100000001000000010000000100000002000000
+--- !u!114 &719675799589891069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_Delay_001
+  _nodeType: Delay
+  _editorPosition: {x: 151, y: 391}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    _values:
+    - 1
+--- !u!114 &4664285314101777102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030008_Effect_007
+  _nodeType: Effect
+  _editorPosition: {x: 1030, y: 342}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - rotation
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    _values:
+    - HeSkillFlameWave03End
+    - 
+    - Caster
+    - None
+    - 0
+    - 
+    - false
+--- !u!114 &7380212386837482103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 23359c45-36b0-465b-9be6-70afd2ddd160
+  _nodeType: Cast
+  _editorPosition: {x: -368, y: 376}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - animation
+    - cast_time
+    _values:
+    - Attack
+    - 0.1

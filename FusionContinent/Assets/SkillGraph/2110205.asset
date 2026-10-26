@@ -1,0 +1,241 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8866676404811678121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -402, y: 549}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &-8342537872582594950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_Delay_001
+  _nodeType: Delay
+  _editorPosition: {x: 264, y: 557.5}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    - duration_attr
+    _values:
+    - 1
+    - BuffDurationTime
+--- !u!114 &-4852002914265898595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_PlayMixAnimation_001
+  _nodeType: PlayMixAnimation
+  _editorPosition: {x: 37, y: 549}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - anim_name
+    - track
+    - alpha
+    - loop
+    _values:
+    - awake
+    - 1
+    - 1.00
+    - true
+--- !u!114 &-4838252129226844030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_ApplyBuff_001
+  _nodeType: ApplyBuff
+  _editorPosition: {x: -192, y: 534}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - buff_id
+    - target
+    - duration
+    - duration_type
+    - effect_value
+    - attr_type
+    - cooldown_time
+    - skill_id
+    - probability
+    - stack
+    - tick_interval
+    _values:
+    - 10008
+    - Self
+    - -1
+    - Once
+    - 0
+    - 0
+    - 0
+    - 0
+    - 1
+    - 1
+    - 0
+--- !u!114 &-2179347150715218628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030010_StopMixAnimation_001
+  _nodeType: StopMixAnimation
+  _editorPosition: {x: 491, y: 559}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - track
+    - anim_name
+    - fade_duration
+    _values:
+    - 1
+    - awake
+    - 0.2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2110205
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2030010
+  _skillId: 2110205
+  _nodes:
+  - {fileID: -8866676404811678121}
+  - {fileID: -4838252129226844030}
+  - {fileID: -4852002914265898595}
+  - {fileID: -8342537872582594950}
+  - {fileID: -2179347150715218628}
+  _edges:
+  - _fromNodeId: 2030010_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_ApplyBuff_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_ApplyBuff_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_PlayMixAnimation_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_PlayMixAnimation_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_Delay_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030010_Delay_001
+    _fromPortId: exec_out
+    _toNodeId: 2030010_StopMixAnimation_001
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    - Effect
+    - RecycleEffect
+    - ApplyBuff
+    - PlayMixAnimation
+    - Delay
+    - StopMixAnimation
+    _values: 0100000001000000010000000100000002000000010000000100000001000000

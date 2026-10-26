@@ -1,0 +1,29 @@
+<module name="">
+
+    <!-- 融合宝石配置 -->
+    <bean name="GemFusionConfig" >
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Icon" type="string" />
+        <var name="Quality" type="QualityType" />
+        <var name="Desc" type="string" />
+        <var name="LevelList" type="list,GemFusionLevelListStruct" />
+	</bean>
+	<table name="TbGemFusionConfig" value="GemFusionConfig" input="GamePlay/GemFusionConfig.xlsx"/>
+
+    <!-- 融合石等级列表结构 -->
+    <bean name="GemFusionLevelListStruct">
+        <var name="Level" type="int" />
+        <var name="Quality" type="QualityType" />
+        <var name="FightNum" type="int" />
+        <var name="SuccessProbability" type="(list#sep=|),float" />
+        <var name="ProgressGuarantee" type="float" />
+        <var name="EntryNum" type="int" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+        <var name="MainAttributes" type="(list#sep=|),MainAttributeStruct" />
+        <var name="Desc" type="string" />
+        <var name="ConvertFragment" type="(list#sep=|),RewardAndNum" />
+
+    </bean>
+
+</module>

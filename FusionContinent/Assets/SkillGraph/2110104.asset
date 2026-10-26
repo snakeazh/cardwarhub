@@ -1,0 +1,453 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8471972998014236820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_FanProjectile_009
+  _nodeType: FanProjectile
+  _editorPosition: {x: 325, y: 102}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - move_angle_offset
+    - hit_modules
+    - speed
+    - max_time
+    - bullet_length
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - AnnaSkillArrows01
+    - 
+    - 
+    - 0
+    - 5
+    - 2
+    - 1
+    - 0
+    - 100
+    - 0
+    - 0
+    - 0
+    - 'Rect|0:0.2:0.65:0:0:3::::::0::0::0::0::0:::::0:;AttachBuff|10002:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10002:'
+    - 10
+    - 10
+    - 1
+    - SkillSalvoAngle
+    - SkillSalvosNum
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+--- !u!114 &-2394345034882892824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_FanProjectile_002
+  _nodeType: FanProjectile
+  _editorPosition: {x: 101, y: 189}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - move_angle_offset
+    - hit_modules
+    - speed
+    - max_time
+    - bullet_length
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - AnnaSkillArrows01
+    - 
+    - 
+    - 0
+    - 5
+    - 2
+    - 1
+    - 0
+    - 100
+    - 0
+    - 0
+    - 0
+    - 'Rect|0:0.2:0.65:0:0:3::::::0::0::0::0::0:::::0:'
+    - 10
+    - 10
+    - 1
+    - SkillSalvoAngle
+    - SkillSalvosNum
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2110104
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2030002
+  _skillId: 2110104
+  _nodes:
+  - {fileID: 2194459921210621327}
+  - {fileID: 7310142993867762637}
+  - {fileID: -2394345034882892824}
+  - {fileID: 7121165141835477130}
+  - {fileID: 8005435016060254805}
+  - {fileID: -8471972998014236820}
+  - {fileID: 918811933155477711}
+  _edges:
+  - _fromNodeId: 2030002_Branch_001
+    _fromPortId: true
+    _toNodeId: 2030002_Branch_005
+    _toPortId: exec_in
+  - _fromNodeId: 2030002_Branch_001
+    _fromPortId: false
+    _toNodeId: 2030002_FanProjectile_002
+    _toPortId: exec_in
+  - _fromNodeId: 2030002_Sound_001
+    _fromPortId: exec_out
+    _toNodeId: 2030002_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030002_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2030002_Sound_001
+    _toPortId: exec_in
+  - _fromNodeId: 2030002_Branch_005
+    _fromPortId: false
+    _toNodeId: 2030002_FanProjectile_009
+    _toPortId: exec_in
+  - _fromNodeId: 2030002_Branch_005
+    _fromPortId: true
+    _toNodeId: 2030002_FanProjectile_010
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    - FanProjectile
+    - LoopSequential
+    - Branch
+    - Sound
+    _values: 01000000010000000a000000010000000500000001000000
+--- !u!114 &918811933155477711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_FanProjectile_010
+  _nodeType: FanProjectile
+  _editorPosition: {x: 325, y: -19}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - move_angle_offset
+    - hit_modules
+    - speed
+    - max_time
+    - bullet_length
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - AnnaSkillArrows01
+    - 
+    - 
+    - 0
+    - 5
+    - 2
+    - 1
+    - 0
+    - 100
+    - 0
+    - 0
+    - 0
+    - 'Rect|0:0.2:0.65:0:0:3::::::0::0::0::0::0:::::0:;AttachBuff|10002:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10002:;AttachBuff|10003:0:0:0:1:0::::::1::0::1::0::0::::Enemy:10003:'
+    - 10
+    - 10
+    - 1
+    - SkillSalvoAngle
+    - SkillSalvosNum
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 1
+    - 
+--- !u!114 &2194459921210621327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -549.24, y: 105}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &7121165141835477130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_Branch_005
+  _nodeType: Branch
+  _editorPosition: {x: 101, y: 21}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 40
+    - 
+--- !u!114 &7310142993867762637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: -116, y: 105}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 30
+    - 
+--- !u!114 &8005435016060254805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2030002_Sound_001
+  _nodeType: Sound
+  _editorPosition: {x: -339, y: 105}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - sound
+    - volume
+    - loop
+    _values:
+    - 10003
+    - 1
+    - False

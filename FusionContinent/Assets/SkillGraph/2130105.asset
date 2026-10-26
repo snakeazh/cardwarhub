@@ -1,0 +1,627 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8300807377369497736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Delay_003
+  _nodeType: Delay
+  _editorPosition: {x: -554.0504, y: 1183}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    - duration_attr
+    _values:
+    - 0.4
+    - 
+--- !u!114 &-5909954694121570552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Effect_002
+  _nodeType: Effect
+  _editorPosition: {x: -1236.0002, y: 1079.7001}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    - vfx_scale
+    _values:
+    - LujiaSkillShadowCircle02Start
+    - 
+    - Target
+    - 0
+    - 
+    - false
+    - 1
+--- !u!114 &-3290964174008292240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Effect_005
+  _nodeType: Effect
+  _editorPosition: {x: 102.99978, y: 1183}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    - vfx_scale
+    _values:
+    - LujiaSkillShadowCircle02End
+    - 
+    - Target
+    - 0
+    - 
+    - false
+    - 1
+--- !u!114 &-2621565480034571195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_RecycleEffect_001
+  _nodeType: RecycleEffect
+  _editorPosition: {x: -110.54999, y: 1183.0002}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target
+    - effectName
+    _values:
+    - All
+    - 
+--- !u!114 &-2559217266215948640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Delay_001
+  _nodeType: Delay
+  _editorPosition: {x: -1236.0002, y: 961.6001}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    - duration_attr
+    _values:
+    - 1
+    - 
+--- !u!114 &-2249500695512603316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: -1016.3504, y: 1319.0001}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 40
+    - 
+--- !u!114 &-169830953393133032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_PullMonster_001
+  _nodeType: PullMonster
+  _editorPosition: {x: -774.7505, y: 1182.9999}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target
+    - pull_to
+    - duration
+    - pull_ratio
+    - drag_amplitude
+    - scale_drag_amplitude_by_distance
+    - shape
+    - range
+    - range_attr
+    - rect_width
+    - rect_height
+    - fan_angle
+    - center_source
+    _values:
+    - Aoe
+    - ReleasePoint
+    - 0.5
+    - 1
+    - 0
+    - false
+    - Circle
+    - 5
+    - 
+    - 10
+    - 2
+    - 60
+    - Target
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2130105
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2040001
+  _skillId: 2130105
+  _nodes:
+  - {fileID: 1356193161821264848}
+  - {fileID: 3175358966203124338}
+  - {fileID: 7716727788322237797}
+  - {fileID: -2621565480034571195}
+  - {fileID: -2559217266215948640}
+  - {fileID: -5909954694121570552}
+  - {fileID: 3788796801961018855}
+  - {fileID: -3290964174008292240}
+  - {fileID: 9101951000419430598}
+  - {fileID: -2249500695512603316}
+  - {fileID: -169830953393133032}
+  - {fileID: 1077530219344300077}
+  - {fileID: -8300807377369497736}
+  _edges:
+  - _fromNodeId: 2040001_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_LoopSequential_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_RecycleEffect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Delay_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Delay_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Effect_002
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_RecycleEffect_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Effect_005
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Effect_002
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Delay_002
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Delay_002
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Effect_004
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Effect_004
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_LoopSequential_001
+    _fromPortId: body
+    _toNodeId: 2040001_AoeDamage_002
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Branch_001
+    _fromPortId: false
+    _toNodeId: 2040001_LoopSequential_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Branch_001
+    _fromPortId: true
+    _toNodeId: 2040001_PullMonster_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_PullMonster_001
+    _fromPortId: exec_out
+    _toNodeId: 2040001_Delay_003
+    _toPortId: exec_in
+  - _fromNodeId: 2040001_Delay_003
+    _fromPortId: exec_out
+    _toNodeId: 2040001_LoopSequential_001
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Effect
+    - LoopSequential
+    - AoeDamage
+    - RecycleEffect
+    - Delay
+    - Branch
+    - PullMonster
+    _values: 0100000005000000020000000200000001000000030000000100000001000000
+--- !u!114 &1077530219344300077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_AoeDamage_002
+  _nodeType: AoeDamage
+  _editorPosition: {x: 102.999916, y: 1328.0001}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - shape
+    - range
+    - center_source
+    - range_attr
+    _values:
+    - Circle
+    - 1.5
+    - Target
+    - 
+--- !u!114 &1356193161821264848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -1235.6504, y: 701.0001}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []
+--- !u!114 &3175358966203124338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: -1236.0002, y: 830.00006}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    - vfx_scale
+    _values:
+    - LujiaSkillShadowCircle03
+    - 
+    - Target
+    - 0
+    - SkillRange
+    - false
+    - 
+--- !u!114 &3788796801961018855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Effect_004
+  _nodeType: Effect
+  _editorPosition: {x: -1236.0002, y: 1328.1003}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - vfx_scale_attr
+    - lock_x
+    - vfx_scale
+    _values:
+    - LujiaSkillShadowCircle02Loop
+    - 
+    - Target
+    - 0
+    - 
+    - false
+    - 1
+--- !u!114 &7716727788322237797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_LoopSequential_001
+  _nodeType: LoopSequential
+  _editorPosition: {x: -331.25037, y: 1328.0002}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: body
+    Name: Body
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - count
+    - interval
+    - duration
+    - times_per_second
+    - duration_loop_count
+    - count_attr
+    - interval_attr
+    - duration_attr
+    - times_per_second_attr
+    - duration_loop_count_attr
+    _values:
+    - 5
+    - 1
+    - 0
+    - 0
+    - 0
+    - 
+    - BuffTriggerInterval
+    - 
+    - 
+    - 
+--- !u!114 &9101951000419430598
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040001_Delay_002
+  _nodeType: Delay
+  _editorPosition: {x: -1235.9999, y: 1213.3502}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    - duration_attr
+    _values:
+    - 0.3
+    - 

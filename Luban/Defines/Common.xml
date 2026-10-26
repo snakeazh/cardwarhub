@@ -1,0 +1,82 @@
+<module name="">
+	
+	<!-- 奖励和数量结构 -->
+	<bean name="RewardAndNum" sep="_" >
+        <var name="Id" type="int#ref=TbItemConfig" />
+        <var name="Num" type="int" />
+    </bean>
+
+	<!-- 随机奖励结构 -->
+	<bean name="RewardAndNumAndPro" sep="_" >
+        <var name="Id" type="int#ref=TbItemConfig" />
+        <var name="Num" type="int" />
+		<var name="Pro" type="int" />
+    </bean>
+
+
+	<!-- 分解奖励和数量结构 -->
+	<bean name="FragmentRewardAndNum" sep="_" >
+        <var name="Id" type="int#ref=TbItemConfig" />
+        <var name="RandomNumRange" type="(list#sep=:),int" />
+    </bean>
+
+	<!-- 品质类型 -->
+    <enum name="QualityType">
+        <var name="Default" alias="默认" />
+        <var name="Ordinary" alias="普通" />
+        <var name="Rarity" alias="稀有" />
+        <var name="Epic" alias="史诗" />
+        <var name="Legend" alias="传说" />
+        <var name="Ultimate" alias="终极" />
+        <var name="Mythology" alias="神话" />
+	</enum>
+
+	<bean name="QualityInfoConfig">
+		<var name="Quality" type="QualityType" />
+		<var name="Name" type="text" />
+		<var name="Color" type="string" group="c" />
+		<var name="Color2" type="string" group="s" />
+	</bean>
+	<table name="TbQualityInfoConfig" value="QualityInfoConfig" input="Common/QualityInfoConfig.xlsx"/>
+
+
+	<bean name="CommonConst">
+		<var name="TimeZone" type="int" />
+		<var name="PlayableMinAppVerion" type="string" />
+		<var name="NewAppDownloadUrl" type="string" />
+		<var name="F3" type="float3" />
+	</bean>
+	<table name="TbCommonConst" value="CommonConst" mode="one" input="Common/CommonConst.xlsx"/>
+
+
+	<bean name="SymbolsConfig">
+		<var name="Symbol" type="string" />
+	</bean>
+	<table name="TbSymbolsConfig" value="SymbolsConfig" mode="list" input="Common/SymbolsConfig.xlsx" />
+
+	<bean name="KeywordsFilterConfig">
+		<var name="Keyword" type="string" />
+	</bean>
+	<table name="TbKeywordsFilterConfig" value="KeywordsFilterConfig" mode="list" input="Common/KeywordsFilterConfig.xlsx" />
+
+
+	<enum name="StateType">
+		<var name="Close" alias="关"/>
+		<var name="Open" alias="开"/>
+	</enum>
+
+	<enum name="RewardStatus">
+		<var name="Default" alias="默认"/>
+		<var name="CanReceive" alias="可领取"/>
+		<var name="Received" alias="已领取"/>
+	</enum>
+
+	<bean name="TextInfo">
+		<var name="key" type="string"/>
+		<var name="TextCH" type="string" />
+		<var name="TextCT" type="string" />
+		<var name="TextEN" type="string" />
+	</bean>
+	<table name="TbTextInfo" value="TextInfo" input="Common/TextInfo.xlsx" group="c" />
+
+</module>

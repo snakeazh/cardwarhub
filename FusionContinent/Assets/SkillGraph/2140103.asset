@@ -1,0 +1,557 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-2005848523566849406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400014_MultiTargetProjectile_003
+  _nodeType: MultiTargetProjectile
+  _editorPosition: {x: 85, y: 454}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target_count
+    - target_count_attr
+    - include_primary_target
+    - prefab
+    - hit_effect
+    - end_effect
+    - spawn_type
+    - move_type
+    - hit_modules
+    - speed
+    - max_time
+    - sweep_angle
+    - sweep_duration
+    - bounce_count
+    - bullet_length
+    - bullet_width
+    - fixed_rotation
+    - fixed_start_x
+    - fixed_start_y
+    - spawn_offset_x
+    - spawn_offset_y
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_time_interval
+    - burn_area_distance_interval
+    - burn_area_effect
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - bullet_width_attr
+    - fixed_rotation_attr
+    - arrive_distance
+    - search_speed
+    - search_duration
+    - homing_delay
+    - homing_rot_speed
+    - homing_strength
+    - wander_move_duration
+    - wander_wait_duration
+    - homing_move_duration
+    - homing_wait_duration
+    - wander_range
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - 3
+    - SkillContinuousAtkNum
+    - true
+    - KarenSkillShadowBlade01
+    - KarenSkillHit02
+    - 
+    - caster
+    - Straight
+    - 'Penetrate|1:0.1:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|2140104:0:0:0:1:0::::::1::0::1::0::0::::Enemy:2140104:;Catapult|1:0:0:0:0:0::::::0::0::0::0::0:::::0:'
+    - 10
+    - 10
+    - 50
+    - 5
+    - 3
+    - 100
+    - 100
+    - -1
+    - -999
+    - -999
+    - 0
+    - 0
+    - False
+    - Distance
+    - 0.2
+    - 1.5
+    - 
+    - 2
+    - 2
+    - 1
+    - 10
+    - false
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 0.05
+    - 3
+    - 5
+    - 0
+    - 180
+    - 0.5
+    - 2
+    - 1
+    - 2
+    - 1
+    - 5
+    - 0
+    - 1
+    - 
+--- !u!114 &-937314687184078612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400014_FanProjectile_001
+  _nodeType: FanProjectile
+  _editorPosition: {x: 370, y: 350}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - hit_modules
+    - speed
+    - speed_attr
+    - max_time
+    - max_time_attr
+    - bullet_length
+    - bullet_length_attr
+    - fixed_rotation_attr
+    _values:
+    - KarenSkillShadowBlade01
+    - KarenSkillHit02
+    - 
+    - 90
+    - 1
+    - 2
+    - 0
+    - 0.1
+    - 10000
+    - 0
+    - 0
+    - 
+    - 
+    - SkillContinuousAtkNum
+    - 
+    - 0
+    - 1
+    - 
+    - 'Penetrate|1:0.1:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|2140104:0:0:0:1:0::::::1::0::1::0::0::::Enemy:2140104:;Catapult|1:0:0:0:0:0::::::0::0::0::0::0:::::0:'
+    - 10
+    - 
+    - 10
+    - 
+    - 1
+    - 
+    - 
+--- !u!114 &-563166078469926683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400011_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -68, y: 239}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - animation
+    - cast_time
+    - move_speed
+    _values:
+    - Attack
+    - 0.3
+    - 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2140103
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 400014
+  _skillId: 2140103
+  _nodes:
+  - {fileID: -563166078469926683}
+  - {fileID: -937314687184078612}
+  - {fileID: 1681392240252928080}
+  - {fileID: 8907917739920242324}
+  - {fileID: -2005848523566849406}
+  - {fileID: 907575972509064222}
+  _edges:
+  - _fromNodeId: 400011_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 400014_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 400014_Branch_001
+    _fromPortId: false
+    _toNodeId: 400014_MultiTargetProjectile_003
+    _toPortId: exec_in
+  - _fromNodeId: 400014_Branch_001
+    _fromPortId: true
+    _toNodeId: 400014_MultiTargetProjectile_004
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Projectile
+    - MultiTargetProjectile
+    - MultiProjectile
+    - WaveProjectile
+    - FanProjectile
+    - Branch
+    - ApplyBuff
+    _values: 0100000001000000040000000200000002000000020000000100000001000000
+--- !u!114 &907575972509064222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400014_MultiTargetProjectile_004
+  _nodeType: MultiTargetProjectile
+  _editorPosition: {x: 338, y: 463}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target_count
+    - target_count_attr
+    - include_primary_target
+    - prefab
+    - hit_effect
+    - end_effect
+    - spawn_type
+    - move_type
+    - hit_modules
+    - speed
+    - max_time
+    - sweep_angle
+    - sweep_duration
+    - bounce_count
+    - bullet_length
+    - bullet_width
+    - fixed_rotation
+    - fixed_start_x
+    - fixed_start_y
+    - spawn_offset_x
+    - spawn_offset_y
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_time_interval
+    - burn_area_distance_interval
+    - burn_area_effect
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - bullet_width_attr
+    - fixed_rotation_attr
+    - arrive_distance
+    - search_speed
+    - search_duration
+    - homing_delay
+    - homing_rot_speed
+    - homing_strength
+    - wander_move_duration
+    - wander_wait_duration
+    - homing_move_duration
+    - homing_wait_duration
+    - wander_range
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - 3
+    - SkillContinuousAtkNum
+    - true
+    - KarenSkillShadowBlade01
+    - KarenSkillHit02
+    - 
+    - caster
+    - Straight
+    - 'Penetrate|1:0.1:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|2140104:0:0:0:1:0::::::1::0::1::0::0::::Enemy:2140104:;Catapult|1:0:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|30013:0:0:0:1:0::::::1::0::1::0::0::::Enemy:30013:'
+    - 10
+    - 10
+    - 50
+    - 5
+    - 3
+    - 100
+    - 100
+    - -1
+    - -999
+    - -999
+    - 0
+    - 0
+    - False
+    - Distance
+    - 0.2
+    - 1.5
+    - 
+    - 2
+    - 2
+    - 1
+    - 10
+    - false
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 0.05
+    - 3
+    - 5
+    - 0
+    - 180
+    - 0.5
+    - 2
+    - 1
+    - 2
+    - 1
+    - 5
+    - 0
+    - 1
+    - 
+--- !u!114 &1681392240252928080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400014_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: 151, y: 231}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillLevelGreaterOrEqual
+    - 40
+    - 
+--- !u!114 &8907917739920242324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 400014_FanProjectile_002
+  _nodeType: FanProjectile
+  _editorPosition: {x: 370, y: 207}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - fan_angle
+    - projectile_count
+    - forward_step
+    - total_rounds
+    - round_interval
+    - scale
+    - max_penetrate
+    - hit_target_duration
+    - fan_angle_attr
+    - projectile_count_attr
+    - total_rounds_attr
+    - round_interval_attr
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - hit_modules
+    - speed
+    - speed_attr
+    - max_time
+    - max_time_attr
+    - bullet_length
+    - bullet_length_attr
+    - fixed_rotation_attr
+    _values:
+    - KarenSkillShadowBlade01
+    - KarenSkillHit02
+    - 
+    - 90
+    - 1
+    - 2
+    - 0
+    - 0.1
+    - 10000
+    - 0
+    - 0
+    - 
+    - 
+    - SkillContinuousAtkNum
+    - 
+    - 0
+    - 1
+    - 
+    - 'Penetrate|1:0.1:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|2140104:0:0:0:1:0::::::1::0::1::0::0::::Enemy:2140104:;Catapult|1:0:0:0:0:0::::::0::0::0::0::0:::::0:;AttachBuff|30013:0:0:0:1:0::::::1::0::1::0::0::::Enemy:30013:'
+    - 10
+    - 
+    - 10
+    - 
+    - 1
+    - 
+    - 

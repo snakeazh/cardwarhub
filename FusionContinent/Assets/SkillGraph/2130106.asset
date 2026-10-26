@@ -1,0 +1,375 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7892902273342573728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_Projectile_001
+  _nodeType: Projectile
+  _editorPosition: {x: 544, y: 317}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - spawn_type
+    - move_type
+    - hit_modules
+    - speed
+    - max_time
+    - damage
+    - sweep_angle
+    - sweep_duration
+    - bounce_count
+    - bullet_length
+    - fixed_rotation
+    - fixed_start_x
+    - fixed_start_y
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_time_interval
+    - burn_area_distance_interval
+    - burn_area_effect
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_buff_duration
+    - burn_area_buff_tick_interval
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - fixed_rotation_attr
+    - arrive_distance
+    - search_speed
+    - search_duration
+    - homing_delay
+    - homing_rot_speed
+    - homing_strength
+    - wander_move_duration
+    - wander_wait_duration
+    - homing_move_duration
+    - homing_wait_duration
+    - wander_range
+    - max_distance
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    - spiral_radius
+    - spiral_speed
+    - spawn_offset_x
+    - spawn_offset_y
+    - bullet_width
+    - bullet_width_attr
+    _values:
+    - LujiaSkillMagicRay03Loop
+    - 
+    - LujiaSkillMagicRay03End
+    - caster
+    - LaserSweep
+    - 'Rect|0:40:3:0:0:0.3::::::0::0::0::0::0:::::0:'
+    - 10
+    - 10
+    - 100
+    - 0
+    - 5
+    - 3
+    - 120
+    - 0
+    - -999.0
+    - -999.0
+    - False
+    - Distance
+    - 0.2
+    - 1.5
+    - 
+    - 2
+    - 2
+    - 0.5
+    - 10
+    - 2
+    - 0.5
+    - 
+    - SkillDuration
+    - 
+    - 
+    - 0.05
+    - 3
+    - 5
+    - 0
+    - 180
+    - 0.5
+    - 2
+    - 1
+    - 2
+    - 1
+    - 5
+    - 20
+    - 0
+    - 1
+    - 
+    - 0.5
+    - 360
+    - 0.00
+    - 0.00
+    - 160
+    - 
+--- !u!114 &-7791526408195015005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_RecycleEffect_003
+  _nodeType: RecycleEffect
+  _editorPosition: {x: 991, y: 317}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - target
+    - effectName
+    _values:
+    - All
+    - 
+--- !u!114 &-6716068725309060473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_Delay_002
+  _nodeType: Delay
+  _editorPosition: {x: 765, y: 317}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - duration
+    - duration_attr
+    _values:
+    - 1
+    - SkillDuration
+--- !u!114 &-4711486916015484792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_Effect_002
+  _nodeType: Effect
+  _editorPosition: {x: 295, y: 339}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - lock_x
+    - vfx_scale_attr
+    - rotation
+    _values:
+    - LujiaSkillMagicRay02Loop
+    - 
+    - Caster
+    - 0
+    - false
+    - 
+    - None
+--- !u!114 &-3344899405727356796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_Effect_001
+  _nodeType: Effect
+  _editorPosition: {x: 57, y: 317}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - vfx
+    - sfx
+    - position
+    - random_offset_radius
+    - lock_x
+    - vfx_scale_attr
+    - rotation
+    _values:
+    - LujiaSkillMagicRay01
+    - 
+    - Caster
+    - 0
+    - false
+    - 
+    - None
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2130106
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2040004
+  _skillId: 2130106
+  _nodes:
+  - {fileID: 3092683695029620987}
+  - {fileID: -3344899405727356796}
+  - {fileID: -4711486916015484792}
+  - {fileID: -7892902273342573728}
+  - {fileID: -7791526408195015005}
+  - {fileID: -6716068725309060473}
+  _edges:
+  - _fromNodeId: 2040004_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2040004_Effect_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040004_Effect_001
+    _fromPortId: exec_out
+    _toNodeId: 2040004_Effect_002
+    _toPortId: exec_in
+  - _fromNodeId: 2040004_Effect_002
+    _fromPortId: exec_out
+    _toNodeId: 2040004_Projectile_001
+    _toPortId: exec_in
+  - _fromNodeId: 2040004_Projectile_001
+    _fromPortId: exec_out
+    _toNodeId: 2040004_Delay_002
+    _toPortId: exec_in
+  - _fromNodeId: 2040004_Delay_002
+    _fromPortId: exec_out
+    _toNodeId: 2040004_RecycleEffect_003
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - Effect
+    - LoopSequential
+    - AoeDamage
+    - RecycleEffect
+    - Projectile
+    - Delay
+    _values: 01000000020000000100000001000000030000000100000002000000
+--- !u!114 &3092683695029620987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2040004_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -173, y: 309}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys: []
+    _values: []

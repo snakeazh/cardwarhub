@@ -1,0 +1,387 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5576630007370126581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_Cast_001
+  _nodeType: Cast
+  _editorPosition: {x: -351, y: 589}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - animation
+    - cast_time
+    - move_speed
+    _values:
+    - Attack
+    - 0.3
+    - 0
+--- !u!114 &-4591208248036504775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_ApplyBuff_005
+  _nodeType: ApplyBuff
+  _editorPosition: {x: 571.28, y: 347}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - buff_id
+    - target
+    - duration
+    - effect_value
+    - probability
+    - duration_type
+    _values:
+    - 100090
+    - Selected
+    - 0
+    - 0
+    - 1
+    - 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8bc8fba24af15b468f49e662134fa3b, type: 3}
+  m_Name: 2150103
+  m_EditorClassIdentifier: 
+  _graphId: 0
+  _graphName: 2060001
+  _skillId: 2150103
+  _nodes:
+  - {fileID: -5576630007370126581}
+  - {fileID: 2411946300548818577}
+  - {fileID: 2874391325760854119}
+  - {fileID: -4591208248036504775}
+  - {fileID: 836246843120014376}
+  - {fileID: 4423218743823882510}
+  _edges:
+  - _fromNodeId: 2060001_Cast_001
+    _fromPortId: exec_out
+    _toNodeId: 2060001_ApplyBuff_001
+    _toPortId: exec_in
+  - _fromNodeId: 2060001_ApplyBuff_001
+    _fromPortId: exec_out
+    _toNodeId: 2060001_ApplyBuff_006
+    _toPortId: exec_in
+  - _fromNodeId: 2060001_ApplyBuff_006
+    _fromPortId: exec_out
+    _toNodeId: 2060001_Branch_001
+    _toPortId: exec_in
+  - _fromNodeId: 2060001_Branch_001
+    _fromPortId: true
+    _toNodeId: 2060001_Projectile_001
+    _toPortId: exec_in
+  _nodeTypeCounters:
+    _keys:
+    - Cast
+    - ApplyBuff
+    - Effect
+    - Branch
+    - SelectTarget
+    - Projectile
+    _values: 010000000600000004000000010000000200000001000000
+--- !u!114 &836246843120014376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_ApplyBuff_006
+  _nodeType: ApplyBuff
+  _editorPosition: {x: 77, y: 574}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - buff_id
+    - target
+    - duration
+    - effect_value
+    - probability
+    - duration_type
+    _values:
+    - 100091
+    - AllyGroup
+    - 0
+    - 0
+    - 1
+    - 0
+--- !u!114 &2411946300548818577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_ApplyBuff_001
+  _nodeType: ApplyBuff
+  _editorPosition: {x: -133, y: 584}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - buff_id
+    - target
+    - duration
+    - effect_value
+    - probability
+    - duration_type
+    _values:
+    - 10009
+    - AllyGroup
+    - 0
+    - 0
+    - 1
+    - 0
+--- !u!114 &2874391325760854119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_Branch_001
+  _nodeType: Branch
+  _editorPosition: {x: 286, y: 574}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: true
+    Name: True
+    Type: 0
+    Direction: 1
+    Optional: 0
+  - PortId: false
+    Name: False
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - condition
+    - compare_value
+    - compare_attr
+    _values:
+    - SkillAttrGreaterOrEqual
+    - 1
+    - YiLaiYaHolyLightMark
+--- !u!114 &4423218743823882510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8333630361d9f54a96990339c3fde15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _nodeId: 2060001_Projectile_001
+  _nodeType: Projectile
+  _editorPosition: {x: 515, y: 574}
+  _inputPorts:
+  - PortId: exec_in
+    Name: Exec
+    Type: 0
+    Direction: 0
+    Optional: 0
+  _outputPorts:
+  - PortId: exec_out
+    Name: Exec
+    Type: 0
+    Direction: 1
+    Optional: 0
+  _params:
+    _keys:
+    - prefab
+    - hit_effect
+    - end_effect
+    - spawn_type
+    - aim_target
+    - move_type
+    - hit_modules
+    - speed
+    - max_time
+    - damage
+    - sweep_angle
+    - sweep_duration
+    - bounce_count
+    - bullet_length
+    - bullet_width
+    - fixed_rotation
+    - fixed_start_x
+    - fixed_start_y
+    - spawn_offset_x
+    - spawn_offset_y
+    - spawn_burn_area_on_move
+    - burn_area_trigger_mode
+    - burn_area_time_interval
+    - burn_area_distance_interval
+    - burn_area_effect
+    - burn_area_duration
+    - burn_area_radius
+    - burn_area_tick_interval
+    - burn_area_damage
+    - burn_area_use_skill_damage
+    - burn_area_buff_id
+    - burn_area_buff_stay_time
+    - speed_attr
+    - max_time_attr
+    - bullet_length_attr
+    - bullet_width_attr
+    - fixed_rotation_attr
+    - arrive_distance
+    - search_speed
+    - search_duration
+    - homing_delay
+    - homing_rot_speed
+    - homing_strength
+    - wander_move_duration
+    - wander_wait_duration
+    - homing_move_duration
+    - homing_wait_duration
+    - wander_range
+    - max_distance
+    - move_angle_offset
+    - buff_hit_probability
+    - buff_hit_probability_attr
+    _values:
+    - EliaSkillSoothmark03
+    - 
+    - 
+    - caster
+    - Target
+    - Straight
+    - 'Rect|200:1:1:0:0:0::::::0::0::0::0::0:::::0:'
+    - 10
+    - 10
+    - 100
+    - 50
+    - 5
+    - 3
+    - 100
+    - 100
+    - 90
+    - 0.0
+    - -999.0
+    - 0.00
+    - 0.00
+    - False
+    - Distance
+    - 0.2
+    - 1.5
+    - 
+    - 2
+    - 2
+    - 1
+    - 10
+    - false
+    - 0
+    - 0
+    - 
+    - 
+    - 
+    - 
+    - 
+    - 0.05
+    - 3
+    - 5
+    - 0
+    - 180
+    - 0.5
+    - 2
+    - 1
+    - 2
+    - 1
+    - 5
+    - 20
+    - 0
+    - 1
+    - 

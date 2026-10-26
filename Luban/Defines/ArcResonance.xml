@@ -1,0 +1,36 @@
+<module name="">
+
+    <!-- 共鸣类型 -->
+    <enum name="ResonanceType">
+
+        <var name="Warrior" alias="战士共鸣" />
+        <var name="Archer" alias="射手共鸣" />
+        <var name="Mage" alias="法师共鸣" />
+        <var name="Assassin" alias="刺客共鸣" />
+        <var name="Assistant" alias="辅助共鸣" />
+        <var name="Skill" alias="技能共鸣" />
+       
+    </enum>
+    
+    <!-- 共鸣配置 -->
+    <bean name="ArcResonanceConfig" >
+        <var name="Id" type="int" />
+        <var name="Type" type="ResonanceType" />
+        <var name="Icon" type="string" />
+        <var name="MainDesc" type="string" />
+        <var name="ResonanceList" type="list,ResonanceListStruct" />
+	</bean>
+	<table name="TbArcResonanceConfig" value="ArcResonanceConfig" input="GamePlay/ArcResonanceConfig.xlsx"/>
+
+    <!-- 共鸣列表结构 -->
+    <bean name="ResonanceListStruct">
+        <var name="Level" type="int" />
+        <var name="Stage" type="int" />
+        <var name="ProbabilityOfSuccess" type="float" />
+        <var name="FightNum" type="int" />
+        <var name="Attributes" type="(list#sep=|),AttributeStruct" />
+        <var name="ConsumeItems" type="(list#sep=|),RewardAndNum" />
+        <var name="Desc" type="string" />
+    </bean>
+
+</module>

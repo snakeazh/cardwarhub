@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// /api/arcResonance/upgrade
+message UpgradeArcResonanceRequest {
+  int32 resonance_id = 1;
+  // 0 ~ 5分别表示6个卡槽id
+  int32 slot = 2;
+}
+
+message UpgradeArcResonanceResponse {
+  bool success = 1;
+  PlayerArcResonance resonance = 2;
+  ResultItems items = 3;
+}

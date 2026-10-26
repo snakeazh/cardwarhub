@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package cardwar;
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// 协议id
+enum MsgID {
+  TCP_MSG_ID_UNSPECIFIED = 0;
+  TCP_MSG_ID_PING = 1;
+  TCP_MSG_ID_PONG = 2;
+
+
+  // 推送相关
+  // 聊天推送
+  TCP_MSG_ID_CHAT_PUSH = 1000; // -> ChatPush
+  // 红点推送
+  TCP_MSG_ID_RED_DOT_PUSH = 1002; // -> RedDotNotify
+}

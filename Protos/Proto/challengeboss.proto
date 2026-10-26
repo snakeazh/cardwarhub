@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 领取Boss每日奖励
+// ============================================================
+
+message ReceiveChallengeBossDailyRewardRequest {
+  int32 boss_id = 1;
+}
+
+message ReceiveChallengeBossDailyRewardResponse {
+  PlayerChallengeBoss boss = 1;
+  ResultItems items = 2;
+  map<int32, int64> rewards = 3;
+}
+
+// ============================================================
+// 领取积分奖励
+// ============================================================
+
+message ReceiveChallengeBossScoreRewardRequest {
+  int32 boss_id = 1;
+  int32 score = 2;
+}
+
+message ReceiveChallengeBossScoreRewardResponse {
+  PlayerChallengeBoss boss = 1;
+  ResultItems items = 2;
+  map<int32, int64> rewards = 3;
+}

@@ -1,0 +1,114 @@
+<module name="">
+
+    <!-- BUFF持续类型 -->
+    <enum name="BuffDurationType">
+        <var name="Once" alias="单次生效" /> <!-- （立即生效一次，立即移除） -->
+        <var name="Duration" alias="持续时间" />
+        <var name="Permanent" alias="永久生效" /> <!-- （直到手动移除） -->
+    </enum>
+
+    <!-- BUFF状态类型 -->
+    <enum name="BuffType">
+        <var name="Burn" alias="灼烧" />
+        <var name="Vertigo" alias="冻结" />
+        <var name="Vulnerable" alias="易损" />
+        <var name="Moderate" alias="减速" />
+        <var name="KnockBack" alias="击退" />
+
+        <var name="Invincible" alias="无敌" />
+        <var name="Accelerate" alias="加速" />
+
+        <var name="RequiemChant" alias="慰灵圣咏" />
+        <var name="Disarm" alias="缴械" />
+        <var name="Health" alias="血量" />  
+        <var name="Weak" alias="虚弱" />  
+        <var name="MoonlightShield" alias="月影庇护" />  
+        <var name="EnergyPouring" alias="能量灌注" />  
+        <var name="Split" alias="分裂" />
+        <var name="Attrbute" alias="属性变化" />
+        <var name="Execute" alias="斩杀" />
+        <var name="ArmorPenetration" alias="物理穿透" />
+        
+    </enum>
+
+
+    <!-- 异常状态类型 -->
+    <enum name="UnusualStatusType">
+        <var name="Burn" alias="灼烧" />
+        <var name="Vertigo" alias="冻结" />
+        <var name="Vulnerable" alias="易损" />
+        <var name="Moderate" alias="减速" />
+        <var name="KnockBack" alias="击退" />
+
+        <var name="Invincible" alias="无敌" />
+        <var name="Accelerate" alias="加速" />
+
+        <var name="RequiemChant" alias="慰灵圣咏" />
+        <var name="Disarm" alias="缴械" />
+	</enum>
+
+
+    <!-- BUFF配置 -->
+    <bean name="BuffConfig" >
+        <var name="BuffType" type="BuffType" />
+        <var name="Name" type="string" />
+        <var name="Category" type="AttributeCategoryType" />
+	</bean>
+	<table name="TbBuffConfig" value="BuffConfig" input="GamePlay/BuffConfig.xlsx"/>
+
+    <!-- 新BUFF效果配置 -->
+    <bean name="BuffEffectsConfig" >
+        <var name="ID" type="int" />
+        <var name="ConditionType" type="ConditionsType" />
+        <var name="TriggerProbability" type="float" />
+        <var name="DurationTime" type="float" />
+        <var name="TakeEffects" type="(list#sep=|),int" />
+
+	</bean>
+	<table name="TbBuffEffectsConfig" value="BuffEffectsConfig" input="GamePlay/BuffEffectsConfig.xlsx"/>
+
+    <!-- 触发条件类型 -->
+    <enum name="ConditionsType">
+        <var name="none" alias="默认状态" />
+        <var name="OnAttackBefore" alias="普通攻击命中前触发" />
+        <var name="OnAttackAfter" alias="普通攻击命中后触发" />
+        <var name="OnAttackCriticalAfter" alias="普通攻击暴击命中后触发" />        
+        <var name="OnSkillBefore" alias="技能命中前触发" />
+        <var name="OnSkillAfter" alias="技能命中后触发" />
+        <var name="OnCriticalBefore" alias="暴击命中前触发" />
+        <var name="OnCriticalAfter" alias="暴击命中后触发" />
+        <var name="OnDamageBefore" alias="伤害命中前触发" />
+        <var name="OnDamageAfter" alias="伤害命中后触发" />
+        <var name="HeroFullBlood" alias="英灵满血时触发" />
+        <var name="SpecialOnAttackAfter" alias="破韧状态普攻命中后触发" />      
+        <var name="HeroNoFullBlood" alias="英灵不满血时触发" />  
+        <var name="NoCondition" alias="直接触发" />  
+        <var name="HeroAfterHarmed" alias="英灵受击后" />  
+        <var name="BloodFury" alias="血怒" />  
+	</enum>
+
+    
+    <!-- BUFF结构 -->
+    <bean name="BuffStruct" sep=":" >
+        <var name="Type" type="BuffType" />
+        <var name="DamageType" type="TakeDamageType" />
+        <var name="Value" type="float" />
+        <var name="ValueType" type="ValueType" />
+        <var name="Attributes" type="AttributeType" />
+        <var name="Duration" type="float" />
+        <var name="DamageTime" type="float" />
+    </bean>
+
+
+    <!-- 负收益Buff -->
+    <bean name="DeBuffConfig" >
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Icon" type="string" />
+        <var name="Desc" type="string" />
+        <var name="Weight" type="int" />
+        <var name="Attributes" type="(list#sep=|), AttributeStruct" />
+	</bean>
+	<table name="TbDeBuffConfig" value="DeBuffConfig" input="GamePlay/DeBuffConfig.xlsx"/>
+
+</module>

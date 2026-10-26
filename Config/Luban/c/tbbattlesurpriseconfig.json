@@ -1,0 +1,210 @@
+[
+  {
+    "Id": 4000001,
+    "Type": 0,
+    "Quality": 0,
+    "Name": "加冕礼",
+    "Icon": "CoronationGift",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "技能冷却时间-20%,等级最高的英灵技能造成的伤害-10%",
+    "Weight": 900,
+    "Attributes": [
+      {
+        "Type": 148,
+        "Value": -0.2,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 139,
+        "Value": -0.2,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "Id": 4000002,
+    "Type": 1,
+    "Quality": 0,
+    "Name": "双刀流",
+    "Icon": "",
+    "Tip": "习得双刀境界,强化普通攻击",
+    "Desc": "普通攻击有25%的概率会额外触发一次,但普通攻击造成的伤害-20%",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000003,
+    "Type": 2,
+    "Quality": 0,
+    "Name": "秘术冲拳",
+    "Icon": "",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "普通攻击有20%概率会使冷却中的技能-0.5秒冷却时间,但技能伤害-20%",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000004,
+    "Type": 3,
+    "Quality": 0,
+    "Name": "旷世奇才",
+    "Icon": "Genius",
+    "Tip": "激发自我潜能,将收益加倍增长",
+    "Desc": "英灵在获得攻击力加成时,加成效果为原先的150%",
+    "Weight": 300,
+    "Attributes": [
+      {
+        "Type": 39,
+        "Value": 1.5,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "Id": 4000005,
+    "Type": 4,
+    "Quality": 0,
+    "Name": "境界突破",
+    "Icon": "BreakthroughInRealm",
+    "Tip": "突破自我,获得双重增益",
+    "Desc": "英灵每拥有2点攻击力,就会增加1点魔法强度",
+    "Weight": 650,
+    "Attributes": [
+      {
+        "Type": 41,
+        "Value": 0.5,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "Id": 4000006,
+    "Type": 5,
+    "Quality": 0,
+    "Name": "取舍有道",
+    "Icon": "",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "英灵每释放1次技能会为自身提供25点魔法强度加成,至多40层,满层时额外提供50%的技能基础伤害,但每次触发暴击,会使该层数-2",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000007,
+    "Type": 6,
+    "Quality": 0,
+    "Name": "精致武器",
+    "Icon": "ExquisiteWeapons",
+    "Tip": "武器经过铁匠\"安德烈\"的强化,获得增益",
+    "Desc": "所有英灵攻击距离+600,但攻击速度-10%",
+    "Weight": 1000,
+    "Attributes": [
+      {
+        "Type": 17,
+        "Value": 600,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 4,
+        "Value": -0.1,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "Id": 4000008,
+    "Type": 7,
+    "Quality": 0,
+    "Name": "异能封锁",
+    "Icon": "PowerLockDown",
+    "Tip": "受到异能侵蚀,强化自身力量",
+    "Desc": "本局游戏将无法释放技能,但英灵的攻击力和攻击速度都增加300%",
+    "Weight": 650,
+    "Attributes": [
+      {
+        "Type": 40,
+        "Value": 1,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 2,
+        "Value": 2,
+        "ValueType": 0,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      },
+      {
+        "Type": 4,
+        "Value": 1500,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  },
+  {
+    "Id": 4000009,
+    "Type": 8,
+    "Quality": 0,
+    "Name": "暴击充能",
+    "Icon": "",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "触发暴击时,会为自身随机提供力量、智力、敏捷中任意一种维度10点加成,最多施加20次,但暴击伤害-25%",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000010,
+    "Type": 9,
+    "Quality": 0,
+    "Name": "利刃打击",
+    "Icon": "",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "造成的所有伤害都会无视敌人50%的双抗,但所有英灵攻击力、魔法强度-40%",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000011,
+    "Type": 10,
+    "Quality": 0,
+    "Name": "鼓舞士气",
+    "Icon": "",
+    "Tip": "接受王权加冕,获得技能增益",
+    "Desc": "所有英灵获得100%攻击速度,之后每击杀30个敌人就会额外提供20点攻击力、50点攻击速度",
+    "Weight": 0,
+    "Attributes": []
+  },
+  {
+    "Id": 4000012,
+    "Type": 11,
+    "Quality": 0,
+    "Name": "灵活摇摆",
+    "Icon": "SecretFistStrike",
+    "Tip": "轮语者领悟流派奥义,每次习得新流派将获得增益",
+    "Desc": "每有一种流派效果触发时,所有英灵+10%攻击力,+10%魔法强度,+10%攻击速度,+1%暴击率",
+    "Weight": 350,
+    "Attributes": [
+      {
+        "Type": 100,
+        "Value": 1,
+        "ValueType": 1,
+        "EffectParam": 0,
+        "ProbabilityTrigger": 0
+      }
+    ]
+  }
+]

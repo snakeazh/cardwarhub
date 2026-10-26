@@ -1,0 +1,66 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 激活武器
+// /api/cycleSpeaker/weapon/activate
+// ============================================================
+
+message WeaponActivateRequest {
+  int32 weapon_id = 1;
+}
+
+message WeaponActivateResponse {
+  PlayerWeapon weapon = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 武器升级
+// /api/cycleSpeaker/weapon/upgrade
+// ============================================================
+
+message WeaponUpgradeRequest {
+  int32 weapon_id = 1;
+}
+
+message WeaponUpgradeResponse {
+  PlayerWeapon weapon = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 装备武器
+// /api/cycleSpeaker/weapon/equip
+// ============================================================
+
+message WeaponEquipRequest {
+  int32 weapon_id = 1;
+}
+
+message WeaponEquipResponse {
+  PlayerSpeakerModule speaker = 1;
+  ResultItems items = 2;
+}
+
+// ============================================================
+// 卸载武器
+// /api/cycleSpeaker/weapon/unequip
+// ============================================================
+
+message WeaponUnequipRequest {
+  int32 weapon_id = 1;
+}
+
+message WeaponUnequipResponse {
+  PlayerSpeakerModule speaker = 1;
+  ResultItems items = 2;
+}
+
+
+

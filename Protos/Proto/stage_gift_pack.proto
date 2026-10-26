@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package cardwar;
+
+import "model.proto";
+
+option go_package = "ruoyi-go/proto/gen/cardwar";
+
+// ============================================================
+// 领取关卡礼包
+// /api/shop/buyStageGiftPack
+// ============================================================
+
+message BuyStageGiftPackRequest {
+  int32 chapter_id = 1;
+}
+
+message BuyStageGiftPackResponse {
+  map<int32, int64> rewards = 1;
+  ResultItems items = 2;
+  ChapterGiftPack chapter_gift_pack = 3;
+}

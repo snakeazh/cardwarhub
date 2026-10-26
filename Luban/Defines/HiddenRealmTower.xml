@@ -1,0 +1,19 @@
+<module name="">
+
+    <!-- 奇幻秘境配置 -->    
+
+    <bean name="HiddenRealmTowerConfig">
+        <var name="StageId" type="int#ref=TbStageBattleConfig" />
+        <var name="Id" type="int" />
+        <var name="Name" type="string" />
+        <var name="Desc" type="string" />
+        <var name="ChapterId" type="int" />
+        <var name="MonsterEntryNum" type="int" />
+        <var name="MonsterEntryLevel" type="int" />
+        <var name="BasicRewards" type="(list#sep=|),RewardAndNum" />
+        <var name="RandomRewards" type="(list#sep=|),RewardAndNumAndPro" />
+    </bean>
+
+	<table name="TbHiddenRealmTowerConfig" value="HiddenRealmTowerConfig" input="GamePlay/HiddenRealmTowerConfig.xlsx"/>
+
+</module>
