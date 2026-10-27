@@ -8,7 +8,6 @@ using FusionContinent.Model;
 using FusionContinent.Utils;
 using Game.Equip;
 using Game.HeroSeat;
-using Game.Player;
 using UIFramework.Services;
 using UnityEngine;
 
@@ -56,10 +55,8 @@ public class SceneInitAttributeAggregation : SceneMapBase
     {
         var attributeSources = new List<(string SourceName, AttributeAggregation Aggregation)>
         {
-            ("轮语者皮肤", GameServiceManager.Get<SpeakerService>().GetAttributes()),
             ("天赋", Talent.GetAttributes()),
             ("装备", Equip.GetAttributes()),
-            ("轮语者武器", GameServiceManager.Get<WeaponService>().GetAttributes()),
             ("城墙", GameServiceManager.Get<SeatService>().GetWallAttributes()),
             ("城墙槽位技能", GameServiceManager.Get<SeatService>().GetEquippedSlotSkillAttributes()),
         };

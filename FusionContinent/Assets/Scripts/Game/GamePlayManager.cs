@@ -24,7 +24,6 @@ using FusionContinent.Monster.Animation;
 using FusionContinent.SpineBake;
 using FusionContinent.Utils;
 using Game.Battle;
-using Game.Player;
 using Game.Soldier;
 using Game.Team;
 using Manager;
@@ -885,19 +884,13 @@ namespace FusionContinent
         }
 
         /// <summary>
-        /// 开局应用装备/武器 Module 类属性（含特殊规则），与奥数卡共用 AttributeManager 链路。
+        /// 开局应用装备 Module 类属性（含特殊规则），与奥数卡共用 AttributeManager 链路。
         /// 须在 ClearBattleSkillRules 之后、奥数卡 AddGeneralSkill 之前调用。
         /// </summary>
         private void ApplyEquipModuleAttributes()
         {
             var moduleEntries = Equip.GetModuleAttributeEntries();
             ApplyModuleAttributeEntries(moduleEntries, AttributeSourceType.Equip, "装备");
-
-            var weaponModuleEntries = GameServiceManager.Get<WeaponService>().GetModuleAttributeEntries();
-            ApplyModuleAttributeEntries(weaponModuleEntries, AttributeSourceType.SpeakerSkin, "轮语者武器");
-
-            var skinModuleEntries = GameServiceManager.Get<SpeakerService>().GetModuleAttributeEntries();
-            ApplyModuleAttributeEntries(skinModuleEntries, AttributeSourceType.SpeakerSkin, "轮语者皮肤");
 
             ApplyEquipBattleGoldBonus();
         }
