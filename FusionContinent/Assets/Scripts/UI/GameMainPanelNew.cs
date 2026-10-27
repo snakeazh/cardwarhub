@@ -48,6 +48,7 @@ namespace FusionContinent
         private Dictionary<string, System.Type> mSubPanelTypes = new Dictionary<string, System.Type>
         {
             { "Battle", typeof(MainInterfacePanelNew) },
+            { "Player", null }, // 暂未迁移
             { "Shop", typeof(ShopPanel01New) },
             { "Card", typeof(SoldierMainPanelNew) },
             { "Challenge", typeof(BigWorldPanelNew) },
@@ -239,14 +240,6 @@ namespace FusionContinent
 
                 var buttonConfig = buttonList[index];
                 Transform changeBtn = mOldPanel.Bottom.GetChild(index);
-
-                // 论语者功能已移除：配置表仍保留该按钮项，这里直接隐藏
-                if (buttonConfig.Type == GameMainButtonType.Player)
-                {
-                    changeBtn.gameObject.SetActive(false);
-                    continue;
-                }
-
                 UIPointerClickAndLongPress btn = changeBtn.GetComponent<UIPointerClickAndLongPress>();
                 
                 if (btn == null) continue;
@@ -300,14 +293,17 @@ namespace FusionContinent
 
             }
 
+            UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.Equip,1,GameMainButtonType.Player);
+            UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.EquipPhase,1,GameMainButtonType.Player);
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.GeneralSkill,1,GameMainButtonType.GeneralSkill);
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.ArcCardDecompose,1,GameMainButtonType.GeneralSkill);
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.ArcCardResonance,1,GameMainButtonType.GeneralSkill);
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.EndlessTower,1,GameMainButtonType.World);
 
-
+            
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.SoldierAtlas,1,GameMainButtonType.Hero);
             UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.SoldierSkillAtlas,1,GameMainButtonType.Hero);
+            UnlockGuideManager.Instance.SetUnlockTypeStep(ModuleFunctionType.FusionGemSlot,1,GameMainButtonType.Player);
 
         }
         
@@ -521,6 +517,9 @@ namespace FusionContinent
         {
             switch (type)
             {
+                case GameMainButtonType.Player:
+                    OpenSpeakWhellPanel();
+                    break;
                 case GameMainButtonType.Shop:
                     GotoShop();
                     break;
@@ -592,6 +591,24 @@ namespace FusionContinent
                 {
                     mCurrentSubPanel = panel;
                 });
+        }
+
+        /// <summary>
+        /// 打开轮语者界面（支持复用）
+        /// </summary>
+        private void OpenSpeakWhellPanel()
+        {
+            // 创建新的面板
+            var vm = new Game.Player.SpeakWhellPanelViewModel();
+            vm.OnCreate();
+
+            UIFramework.UIManager.OpenPanelAsync<SpeakWhellPanelNew, Game.Player.SpeakWhellPanelViewModel>(
+                vm,
+                UIFramework.UILevel.Common,
+                onComplete: panel =>
+                {
+                    mCurrentSubPanel = panel;
+                }).Forget();
         }
 
         public void GotoShop(ShopType shopType = ShopType.ItemMaterial, int param = 0)

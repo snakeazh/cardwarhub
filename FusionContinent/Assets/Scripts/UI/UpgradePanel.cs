@@ -152,6 +152,14 @@ namespace FusionContinent
                 case ModuleFunctionType.Shop:
                     return UnlockGuideManager.Instance.GetNavigation(GameMainButtonType.Shop).gameObject;
                 
+                case ModuleFunctionType.Talent:
+                case ModuleFunctionType.Equip:
+                case ModuleFunctionType.FusionGemSlot:
+                case ModuleFunctionType.PlayerAvatar:
+                case ModuleFunctionType.PlayerFigure:
+                    //轮语者节点
+                    return UnlockGuideManager.Instance.GetNavigation(GameMainButtonType.Player).gameObject;
+               
                 case ModuleFunctionType.GeneralSkill:
                     //奥术卡节点
                     return UnlockGuideManager.Instance.GetNavigation(GameMainButtonType.GeneralSkill).gameObject;

@@ -714,7 +714,7 @@ namespace FusionContinent
             {
                 if (Input.GetKeyUp(KeyCode.T))
                 {
-                    StartCoroutine(OpenToolPanelRoutine());
+                    UIKit.OpenPanel<ToolPanel>(QFramework.UILevel.PopUI).SetMainInterfacePanel();
                 }
                 
                 if (Input.GetKeyUp(KeyCode.F))
@@ -733,17 +733,6 @@ namespace FusionContinent
 
                     });
                 }
-            }
-        }
-
-        // WebGL 不支持同步加载，ToolPanel 统一走异步打开（prefabName 必须显式传，OpenPanelAsync 不会默认取类名）
-        private System.Collections.IEnumerator OpenToolPanelRoutine()
-        {
-            yield return UIKit.OpenPanelAsync<ToolPanel>(UILevel.PopUI, prefabName: typeof(ToolPanel).Name);
-            var panel = UIKit.GetPanel<ToolPanel>();
-            if (panel != null)
-            {
-                panel.SetMainInterfacePanel();
             }
         }
 

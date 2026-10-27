@@ -88,7 +88,9 @@ namespace Game.Battle
 
             return !string.IsNullOrEmpty(stackSourceKey)
                 && (stackSourceKey.StartsWith("Equip_")
-                    || stackSourceKey.StartsWith("EquipEffect_"));
+                    || stackSourceKey.StartsWith("EquipEffect_")
+                    || stackSourceKey.StartsWith("SpeakerWeapon_")
+                    || stackSourceKey.StartsWith("SpeakerSkin_"));
         }
 
         private static void ApplyOnce(
