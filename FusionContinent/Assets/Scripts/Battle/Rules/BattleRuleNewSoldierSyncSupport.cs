@@ -50,17 +50,6 @@ namespace Game.Battle
                 return;
             }
 
-            if (ShouldForceReevaluateForEquipSource(sourceType, stackSourceKey))
-            {
-                if (BattleRuleRosterCompositionSupport.IsGloballyEffectiveRule(ruleConfig))
-                {
-                    return;
-                }
-
-                ApplyReevaluate(conditionManager, soldier, ruleConfig, stackSourceKey, sourceType);
-                return;
-            }
-
             switch (ruleConfig.NewSoldierSync)
             {
                 case SyncType.None:
@@ -75,20 +64,6 @@ namespace Game.Battle
                     ApplyReevaluate(conditionManager, soldier, ruleConfig, stackSourceKey, sourceType);
                     break;
             }
-        }
-
-        private static bool ShouldForceReevaluateForEquipSource(
-            AttributeSourceType sourceType,
-            string stackSourceKey)
-        {
-            if (sourceType == AttributeSourceType.Equip)
-            {
-                return true;
-            }
-
-            return !string.IsNullOrEmpty(stackSourceKey)
-                && (stackSourceKey.StartsWith("Equip_")
-                    || stackSourceKey.StartsWith("EquipEffect_"));
         }
 
         private static void ApplyOnce(

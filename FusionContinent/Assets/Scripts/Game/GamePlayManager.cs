@@ -822,8 +822,8 @@ namespace FusionContinent
 
             void InitializeInitialTeamSkills()
             {
-                // 装备 Module 类属性（含 LearnSkillRule）与奥数卡同一时机走 AttributeManager 生效。
-                ApplyEquipModuleAttributes();
+                // 战斗货币初始数量修正：在 Module 属性聚合后叠加至局内金币
+                ApplyEquipBattleGoldBonus();
 
                 // 把首次技能/Buff 静态构造挪到加载阶段，避免命中帧 Mono.JIT / cctor 尖刺
                 WarmBattleStaticConstructors();
@@ -866,7 +866,7 @@ namespace FusionContinent
                 // 应用被动技能属性（被动技能对自身普通攻击生效）
                 GeneralSkillManager.Instance.ApplyPassiveSkillAttributes();
 
-                // 装备/入局阵容规则在 ApplyEquipModuleAttributes 时可能早于技能挂载；
+                // 入局阵容规则可能早于技能挂载；
                 // 技能向 ModifyAttr 与月影祝福叠加需在技能初始化完成后补同步。
                 ApplyPostSkillInitBattleRulesToVillageSoldiers();
 
@@ -884,52 +884,7 @@ namespace FusionContinent
         }
 
         /// <summary>
-        /// 开局应用装备 Module 类属性（含特殊规则），与奥数卡共用 AttributeManager 链路。
-        /// 须在 ClearBattleSkillRules 之后、奥数卡 AddGeneralSkill 之前调用。
-        /// </summary>
-        private void ApplyEquipModuleAttributes()
-        {
-            var moduleEntries = Equip.GetModuleAttributeEntries();
-            ApplyModuleAttributeEntries(moduleEntries, AttributeSourceType.Equip, "装备");
-
-            ApplyEquipBattleGoldBonus();
-        }
-
-        private void ApplyModuleAttributeEntries(
-            List<EquipModuleAttributeEntry> moduleEntries,
-            AttributeSourceType sourceType,
-            string sourceLabel)
-        {
-            if (moduleEntries.Count == 0)
-            {
-                return;
-            }
-
-            for (int i = 0; i < moduleEntries.Count; i++)
-            {
-                var entry = moduleEntries[i];
-                var entrySourceType = entry.SourceType;
-                if (entrySourceType == AttributeSourceType.Base)
-                {
-                    entrySourceType = sourceType;
-                }
-
-                var attrModifier = new AttributeModifier
-                {
-                    SourceKey = entry.StackSourceKey,
-                    SourceType = entrySourceType,
-                };
-                AttributeManager.SetAttributesLogic(
-                    attrModifier,
-                    new List<AttributeData> { entry.Attribute },
-                    true);
-            }
-
-            LogTool.Log($"[GamePlayManager] {sourceLabel} Module 属性生效: count={moduleEntries.Count}");
-        }
-
-        /// <summary>
-        /// 装备特效「战斗货币初始数量修正」(125)：在 Module 属性写入后叠加至局内金币。
+        /// 战斗货币初始数量修正：在 Module 属性聚合后叠加至局内金币。
         /// </summary>
         private void ApplyEquipBattleGoldBonus()
         {

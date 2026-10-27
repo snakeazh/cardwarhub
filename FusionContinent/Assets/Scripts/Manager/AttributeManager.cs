@@ -308,8 +308,7 @@ namespace Manager
                             
                             case AttributeType.SoldierMirror:// 英灵镜像
                                 if (v.RoleType != SoldierRoleType.Self) return;// 跳过复制体
-                                
-                                Global.MaxCityPopulation.Value = 5;// 设置最大人口五人
+
                                 var copySoldier = GamePlayManager.Default.AddSoldierCard(v.cardId, v.level.Value, -1, SoldierRoleType.Mirror);
                                 if (copySoldier != null)
                                 {

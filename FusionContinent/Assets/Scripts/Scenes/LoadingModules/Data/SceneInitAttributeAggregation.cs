@@ -6,9 +6,6 @@ using FusionContinent;
 using FusionContinent.Attribute;
 using FusionContinent.Model;
 using FusionContinent.Utils;
-using Game.Equip;
-using Game.HeroSeat;
-using UIFramework.Services;
 using UnityEngine;
 
 /// <summary>
@@ -37,16 +34,12 @@ public class SceneInitAttributeAggregation : SceneMapBase
 
         // 贪婪预支卡检测已移至 SceneInitGreedyAdvance 模块（在 SceneInitCardTeams 之后执行）
         
-        // 最大人口上限
-        Global.MaxCityPopulation.Value = Talent.GetPopulation();
-        
+        // 最大人口上限（同时上阵英雄数固定为 1）
+        Global.MaxCityPopulation.Value = 1;
+
         // 引导状态
         bool isStageGuide = !Global.Player.CheckGuideStatus(GuideType.GuideStage);
         gpm.SetIsStageGuide(isStageGuide);
-        if (isStageGuide) 
-        {
-            Global.MaxCityPopulation.Value += 10; // 引导关卡人口+10
-        }
 
         progress = 1.0f;
     }
@@ -56,9 +49,6 @@ public class SceneInitAttributeAggregation : SceneMapBase
         var attributeSources = new List<(string SourceName, AttributeAggregation Aggregation)>
         {
             ("天赋", Talent.GetAttributes()),
-            ("装备", Equip.GetAttributes()),
-            ("城墙", GameServiceManager.Get<SeatService>().GetWallAttributes()),
-            ("城墙槽位技能", GameServiceManager.Get<SeatService>().GetEquippedSlotSkillAttributes()),
         };
 
         gpm.ModuleAttributes = new AttributeSet();

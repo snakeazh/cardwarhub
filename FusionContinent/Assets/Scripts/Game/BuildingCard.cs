@@ -116,7 +116,7 @@ namespace FusionContinent
             }
             else if (selfType == BuildingType.Population)
             {
-                Global.MaxCityPopulation.Value++;
+                // 同时上阵英雄数固定为 1，人口建筑不再提升上限
             }
         }
         

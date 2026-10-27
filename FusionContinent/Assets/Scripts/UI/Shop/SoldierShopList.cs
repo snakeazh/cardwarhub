@@ -68,19 +68,8 @@ namespace FusionContinent
             referenceItem.shopNameText.text = goods.Name;
             referenceItem.shopIcon.sprite = Global.ShopGoodsIconAtlas.GetSpriteExt(goods.Shopgoodsicon);
             var shopiconbtn = referenceItem.clickBtn;
-            //装备详情
+            // 装备详情入口已随装备功能断开移除
             shopiconbtn.onClick.RemoveAllListeners();
-            shopiconbtn.onClick.AddListener(() =>
-            {
-                var equipId = _itemConfig.GetOrDefault(goods.BuyItemId).EffectValue;
-                GlobalFunc.OpenEquipDetailsPanel(equipId, 0, UIFramework.UILevel.Const, panel =>
-                {
-                    if (panel != null)
-                    {
-                        panel.transform.SetParent(transform);
-                    }
-                });
-            });
             // 限购显示
             bool isDailyLimit = goods.LimitType == GoodsLimitType.Daily;
             // item.buylimitnum.gameObject.SetActive(isDailyLimit);

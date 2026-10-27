@@ -56,7 +56,7 @@ namespace FusionContinent
         public static QFramework.BindableProperty<int> TreasureChestLevel = new QFramework.BindableProperty<int>(1);
         public static QFramework.BindableProperty<int> RotaryTableOpenMaxNum = new QFramework.BindableProperty<int>(0);// 转盘开启最大次数
         public static QFramework.BindableProperty<int> CityPopulation = new QFramework.BindableProperty<int>(0); // 城市人口
-        public static QFramework.BindableProperty<int> MaxCityPopulation = new QFramework.BindableProperty<int>(3); // 人口上限
+        public static QFramework.BindableProperty<int> MaxCityPopulation = new QFramework.BindableProperty<int>(1); // 人口上限（同时上阵英雄数，固定为1）
         public static QFramework.BindableProperty<int> BuildUnLock = new QFramework.BindableProperty<int>(0); // 建筑解锁
         public static QFramework.BindableProperty<int> SpeedMultiplier = new QFramework.BindableProperty<int>(1); // 速度倍率
         public static QFramework.BindableProperty<int> BuyCardLevel = new QFramework.BindableProperty<int>(1); // 购买卡的等级
@@ -333,7 +333,7 @@ namespace FusionContinent
             CityLevel.Value = 1;
             CityPopulation.Value = 0;
             RotaryTableOpenMaxNum.Value = 0;
-            MaxCityPopulation.Value = 3;
+            MaxCityPopulation.Value = 1;
             BuildUnLock.Value = 0;
             SpeedMultiplier.Value = 1;
             SpearmanAtk.Value = 0;
