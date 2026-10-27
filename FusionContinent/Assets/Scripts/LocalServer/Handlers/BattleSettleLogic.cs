@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Cardwar;
 using Config;
@@ -82,6 +83,8 @@ namespace FusionContinent.LocalServer
                         {
                             battle.ClearStageId = stageId;
                         }
+                        // 记录首通时间戳：每日限通（每天只能首次通关一个主线新关卡）以此为判定依据
+                        stage.ClearStageTime = (int)DateTimeOffset.Now.ToUnixTimeSeconds();
                     }
 
                     // 初始挂机时间（:255-259）；Go nil → 本地 proto 空串

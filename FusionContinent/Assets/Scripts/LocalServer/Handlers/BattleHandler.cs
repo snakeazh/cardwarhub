@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Cardwar;
 using Config;
+using FusionContinent.Manager;
 using Google.Protobuf.Collections;
 using Newtonsoft.Json;
 
@@ -186,6 +187,15 @@ namespace FusionContinent.LocalServer
                         LogTool.LogWarning($"userId={ctx.UserId} 关卡未解锁");
                         throw new LocalServerException("关卡未解锁");
                     }
+
+                    // 每日限通：主线关卡每天只能首次通关一个新关卡（已通关关卡可重复挑战）
+                    if (stageCfg.StageType == StageType.Main
+                        && (stage == null || stage.Condition1 == ConditionStatusNormal)
+                        && HasFirstClearedMainStageToday(ctx))
+                    {
+                        LogTool.LogWarning($"userId={ctx.UserId} 今日已通关新关卡，拦截开战: stageId={stageId}");
+                        throw new LocalServerException("今日已通关新关卡，请明天再来挑战");
+                    }
                     break;
             }
 
@@ -219,10 +229,26 @@ namespace FusionContinent.LocalServer
             return new StartBattleResponse { Stage = stage, Battle = battle, Items = rsItems };
         }
 
+        /// <summary>
+        /// 今日（每日重置点内）是否已首次通关过任意主线关卡。
+        /// 判定口径与 DailyResetRunner 一致：GetDayInterval==0 视为同一重置日。
+        /// </summary>
+        private bool HasFirstClearedMainStageToday(LocalServerContext ctx)
+        {
+            long nowTs = DateTimeOffset.Now.ToUnixTimeSeconds();
+            foreach (PlayerStage s in ctx.Store.Archive.Stages)
+            {
+                if (s.ClearStageTime == 0) continue;
+                StageBattleConfig cfg = DataConfigManager.Tables.TbStageBattleConfig.GetOrDefault(s.StageId);
+                if (cfg == null || cfg.StageType != StageType.Main) continue;
+                if (ServerTimeManager.GetDayInterval(s.ClearStageTime, nowTs) == 0) return true;
+            }
+            return false;
+        }
+
         // ============================================================
         // 退出战斗
         // ============================================================
-
         // 对照 application_battle.go:451-465 ExitBattle
         public ExitBattleResponse Exit(LocalServerContext ctx)
         {

@@ -185,8 +185,42 @@ public static class GlobalFunc
         }
             
     }
+    /// <summary>
+    /// 每日限通校验：主线关卡每天只能首次通关一个新关卡（已通关关卡可重复挑战）。
+    /// 返回 true 表示今日已达上限（并弹提示），与服务端 BattleHandler.Start 的拦截口径一致。
+    /// </summary>
+    public static bool CheckDailyFirstClearLimit(int stageId)
+    {
+        var stageCfg = DataConfigManager.Tables.TbStageBattleConfig.GetOrDefault(stageId);
+        if (stageCfg == null || stageCfg.StageType != StageType.Main) return false;
+
+        // 本关已通关过：可重复挑战，不受限
+        if (Global.PlayerStages.TryGetValue(stageId, out PlayerStage stage)
+            && stage.Condition1 != (int)ConditionStatus.Normal)
+        {
+            return false;
+        }
+
+        long nowTs = DateTimeOffset.Now.ToUnixTimeSeconds();
+        foreach (var kv in Global.PlayerStages)
+        {
+            PlayerStage s = kv.Value;
+            if (s.ClearStageTime == 0) continue;
+            var cfg = DataConfigManager.Tables.TbStageBattleConfig.GetOrDefault(s.StageId);
+            if (cfg == null || cfg.StageType != StageType.Main) continue;
+            if (FusionContinent.Manager.ServerTimeManager.GetDayInterval(s.ClearStageTime, nowTs) == 0)
+            {
+                FusionContinent.Toast.Show("今日已通关新关卡，请明天再来挑战");
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void PreparePanel(int stageId)
     {
+        if (CheckDailyFirstClearLimit(stageId)) return;
+
         var vm = new Game.CardGroup.CardGroupPanelViewModel();
         vm.OnCreate();
         vm.SetData(stageId);
