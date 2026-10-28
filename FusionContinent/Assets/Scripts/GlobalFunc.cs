@@ -185,11 +185,43 @@ public static class GlobalFunc
         }
             
     }
+    /// <summary>今日随机关卡 Id（未通关且章节已解锁的主线关中按重置日种子确定），0 = 今日无可用关卡。
+    /// 今日已首通过的关卡优先返回自身（当天指向“今日关卡”，可重复挑战）。</summary>
+    public static int GetTodayDailyStageId()
+    {
+        long nowTs = DateTimeOffset.Now.ToUnixTimeSeconds();
+
+        // 今日已首通的主线关即为“今日关卡”（通关后仍指向它，可重复挑战）
+        foreach (var kv in Global.PlayerStages)
+        {
+            PlayerStage s = kv.Value;
+            if (s.ClearStageTime == 0) continue;
+            var clearedCfg = DataConfigManager.Tables.TbStageBattleConfig.GetOrDefault(s.StageId);
+            if (clearedCfg == null || clearedCfg.StageType != StageType.Main) continue;
+            if (FusionContinent.Manager.ServerTimeManager.GetDayInterval(s.ClearStageTime, nowTs) == 0)
+            {
+                return s.StageId;
+            }
+        }
+
+        var cleared = new HashSet<int>();
+        foreach (var kv in Global.PlayerStages)
+        {
+            if (kv.Value.Condition1 != (int)ConditionStatus.Normal) cleared.Add(kv.Key);
+        }
+        List<int> pool = Game.Stage.DailyStageSelector.BuildCandidatePool(cleared, cfg =>
+        {
+            return Global.PlayerChapters.TryGetValue(cfg.ChapterId, out PlayerChapter chapter)
+                && chapter.UnlockStageId > 0 && chapter.UnlockStageId >= cfg.Id;
+        });
+        return Game.Stage.DailyStageSelector.GetTodayStageId(pool, nowTs);
+    }
+
     /// <summary>
-    /// 每日限通校验：主线关卡每天只能首次通关一个新关卡（已通关关卡可重复挑战）。
-    /// 返回 true 表示今日已达上限（并弹提示），与服务端 BattleHandler.Start 的拦截口径一致。
+    /// 每日随机关卡校验：主线新关每天只能首通“今日随机关”（已通关关卡可重复挑战）。
+    /// 返回 true 表示被拦截（并弹提示），与服务端 BattleHandler.Start 的拦截口径一致。
     /// </summary>
-    public static bool CheckDailyFirstClearLimit(int stageId)
+    public static bool CheckDailyStageLimit(int stageId)
     {
         var stageCfg = DataConfigManager.Tables.TbStageBattleConfig.GetOrDefault(stageId);
         if (stageCfg == null || stageCfg.StageType != StageType.Main) return false;
@@ -201,6 +233,7 @@ public static class GlobalFunc
             return false;
         }
 
+        // 今日已首通过一个主线新关：名额已用完
         long nowTs = DateTimeOffset.Now.ToUnixTimeSeconds();
         foreach (var kv in Global.PlayerStages)
         {
@@ -214,12 +247,20 @@ public static class GlobalFunc
                 return true;
             }
         }
+
+        // 每天只能首通“今日随机关”
+        int todayStageId = GetTodayDailyStageId();
+        if (todayStageId == 0 || stageId != todayStageId)
+        {
+            FusionContinent.Toast.Show("每天只能挑战今日指定的新关卡");
+            return true;
+        }
         return false;
     }
 
     public static void PreparePanel(int stageId)
     {
-        if (CheckDailyFirstClearLimit(stageId)) return;
+        if (CheckDailyStageLimit(stageId)) return;
 
         var vm = new Game.CardGroup.CardGroupPanelViewModel();
         vm.OnCreate();

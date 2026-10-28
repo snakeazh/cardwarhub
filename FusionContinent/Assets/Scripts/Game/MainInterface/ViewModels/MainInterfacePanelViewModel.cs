@@ -138,6 +138,19 @@ namespace Game.MainInterface
             return cfg != null && (cfg.StageType == StageType.Main || cfg.StageType == StageType.Guide);
         }
 
+        /// <summary>
+        /// 主界面默认指向的关卡：每日随机关存在时指向它（当天只能首通该关），否则回退到线性下一关。
+        /// </summary>
+        private int GetDefaultTargetStageId()
+        {
+            int todayStageId = GlobalFunc.GetTodayDailyStageId();
+            if (todayStageId > 0)
+            {
+                return todayStageId;
+            }
+            return GlobalFunc.GetNextStageId(Global.PlayerBattle.ClearStageId, 1);
+        }
+
         private void InitializeStage()
         {
             // 获取当前通关进度关卡
@@ -145,7 +158,7 @@ namespace Game.MainInterface
             int changeStageState = 0;
             if (Global.LastPlayStage.Value == 0)
             {
-                currentStage = DataConfigManager.Tables.TbStageBattleConfig.Get(GlobalFunc.GetNextStageId(Global.PlayerBattle.ClearStageId,1));
+                currentStage = DataConfigManager.Tables.TbStageBattleConfig.Get(GetDefaultTargetStageId());
                 changeStageState = 2;
             }
             else
@@ -155,7 +168,7 @@ namespace Game.MainInterface
 
             if (!IsMainOrGuide(currentStage))
             {
-                currentStage = DataConfigManager.Tables.TbStageBattleConfig.Get(GlobalFunc.GetNextStageId(Global.PlayerBattle.ClearStageId, 1));
+                currentStage = DataConfigManager.Tables.TbStageBattleConfig.Get(GetDefaultTargetStageId());
                 changeStageState = 2;
             }
             // changeStageState = 2;

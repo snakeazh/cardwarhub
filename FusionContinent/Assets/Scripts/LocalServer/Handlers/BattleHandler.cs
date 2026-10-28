@@ -188,13 +188,22 @@ namespace FusionContinent.LocalServer
                         throw new LocalServerException("关卡未解锁");
                     }
 
-                    // 每日限通：主线关卡每天只能首次通关一个新关卡（已通关关卡可重复挑战）
+                    // 每日随机关卡：主线新关每天只能首通“今日随机关”；已通关关卡可重复挑战
                     if (stageCfg.StageType == StageType.Main
-                        && (stage == null || stage.Condition1 == ConditionStatusNormal)
-                        && HasFirstClearedMainStageToday(ctx))
+                        && (stage == null || stage.Condition1 == ConditionStatusNormal))
                     {
-                        LogTool.LogWarning($"userId={ctx.UserId} 今日已通关新关卡，拦截开战: stageId={stageId}");
-                        throw new LocalServerException("今日已通关新关卡，请明天再来挑战");
+                        if (HasFirstClearedMainStageToday(ctx))
+                        {
+                            LogTool.LogWarning($"userId={ctx.UserId} 今日已通关新关卡，拦截开战: stageId={stageId}");
+                            throw new LocalServerException("今日已通关新关卡，请明天再来挑战");
+                        }
+
+                        int todayStageId = GetTodayDailyStageId(ctx);
+                        if (todayStageId == 0 || stageId != todayStageId)
+                        {
+                            LogTool.LogWarning($"userId={ctx.UserId} 非今日指定关卡，拦截开战: stageId={stageId}, todayStageId={todayStageId}");
+                            throw new LocalServerException("每天只能挑战今日指定的新关卡");
+                        }
                     }
                     break;
             }
@@ -227,6 +236,24 @@ namespace FusionContinent.LocalServer
 
             // 战斗日志 LogModel.CreateBattleLog（:179）流水表不迁移
             return new StartBattleResponse { Stage = stage, Battle = battle, Items = rsItems };
+        }
+
+        /// <summary>
+        /// 今日随机关卡：未通关且章节已解锁的主线关中，按重置日种子确定性选出的一关。0 = 今日无可用关卡。
+        /// </summary>
+        private int GetTodayDailyStageId(LocalServerContext ctx)
+        {
+            var cleared = new HashSet<int>();
+            foreach (PlayerStage s in ctx.Store.Archive.Stages)
+            {
+                if (s.Condition1 != ConditionStatusNormal) cleared.Add(s.StageId);
+            }
+            List<int> pool = Game.Stage.DailyStageSelector.BuildCandidatePool(cleared, cfg =>
+            {
+                PlayerChapter chapter = GetChapter(ctx, cfg.ChapterId);
+                return chapter != null && chapter.UnlockStageId > 0 && chapter.UnlockStageId >= cfg.Id;
+            });
+            return Game.Stage.DailyStageSelector.GetTodayStageId(pool, DateTimeOffset.Now.ToUnixTimeSeconds());
         }
 
         /// <summary>
